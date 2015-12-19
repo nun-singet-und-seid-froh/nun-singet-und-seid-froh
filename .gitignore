@@ -5,3 +5,6 @@
 *.mid
 *.log
 *~
+
+# Lilypond-book
+lilypond-book/
