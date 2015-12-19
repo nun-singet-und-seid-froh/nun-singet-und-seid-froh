@@ -7,9 +7,9 @@
 \include "output.ily"           % the paper and midi settings for this piece
 
 % global information (identical for all pieces)
-\include "../../include/version.ily"    % the lilypond version
-\include "../../include/sheet.ily"      % the layout information
-\include "../../include/sound.ily"      % variable declarations for midi
+\include ".:/../../include/version.ily"    % the lilypond version
+\include "../../../include/paper.ily"      % the layout information
+\include "../../../include/sound.ily"      % variable declarations for midi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                  the PDF & main MIDI producing part:             %
@@ -17,7 +17,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \book {
-  \header_generator
+  \include "../../../include/header.ily"
 
   \score {
     %for PDF
@@ -57,10 +57,12 @@
       >>
       \new Lyrics \lyricsto "bas" { \basLyrix }
     >> %end of StaffGroup
-    \stanzas
 
     \layout { }
   } %end of score (PDF)
+  
+  \stanzas
+
   \score {
     %for MIDI
     \unfoldRepeats
@@ -79,7 +81,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                      the MIDI producing part: 	           %
-%    1 midi per each voice with the respective voice highlighted   %
+%    1 MIDI per each voice with the respective voice highlighted   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % sopran
