@@ -1,4 +1,4 @@
-% based on templates/SATTB/modern/score.ly
+% based on templates/SATB/two-systems/modern/score.ly
 
 % local information (for this particular piece)
 \include "meta.ily"             % metadata for this piece
@@ -7,9 +7,9 @@
 \include "output.ily"           % the paper and midi settings for this piece
 
 % global information (identical for all pieces)
-\include "../../include/version.ily"    % the lilypond version
-\include "../../include/sheet.ily"      % the layout information
-\include "../../include/sound.ily"      % variable declarations for midi
+\include "../../../include/version.ily"    % the lilypond version
+\include "../../../include/paper.ily"      % the layout information
+\include "../../../include/sound.ily"      % variable declarations for midi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                  the PDF & main MIDI producing part:             %
@@ -17,7 +17,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \book {
-  \header_generator
+  \include "../../../include/header.ily"      % the header and tagline information
   
   \score { %for PDF
   \new StaffGroup <<
@@ -43,8 +43,11 @@
             \voiceTwo \basVoice }
     >> 
   >> %end of StaffGroup
-  \stanzas
+  \layout { }
+  
   } %end of score (PDF)
+  
+  \stanzas
   
 \score {
     %for MIDI
@@ -62,26 +65,25 @@
 } %end of book
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                      the midi producing part: 	           %
-%    1 midi per each voice with the respective voice highlighted   %
+%                      the MIDI producing part: 	           %
+%    1 MIDI per each voice with the respective voice highlighted   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % sopran
-\book { \bookOutputName "sopran"
+\book { \bookOutputSuffix "sopran"
   \score { 
     \unfoldRepeats
      \new Staff << \commonVoice                     
       \new Voice = "sop" { \highlightedVoice  \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "ten" { \global \tenVoice } 
-      \new Voice = "bas" { \global \basVoice } 
      >>
-     \staffperformertovoice
+      \staffperformertovoice
   }
 }
 
 % alt
-\book { \bookOutputName "alt"
+\book { \bookOutputSuffix "alt"
   \score {
   \unfoldRepeats
     \new Staff << \commonVoice                    
@@ -95,7 +97,7 @@
 }
 
 % tenor
-\book { \bookOutputName "tenor"
+\book { \bookOutputSuffix "tenor"
   \score {
   \unfoldRepeats
     \new Staff << \commonVoice                    
@@ -109,7 +111,7 @@
 }
 
 % bass
-\book { \bookOutputName "bass"
+\book { \bookOutputSuffix "bass"
   \score {
   \unfoldRepeats
     \new Staff << \commonVoice                    

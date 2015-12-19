@@ -1,11 +1,17 @@
-% based on templates/SATB/two-systems/lyrix.ily
+% based on templates/SATB/two-systems/modern/lyrix.ily
 
 % the lyrics within the staves
 
-lyrix = \lyricmode {
-  % for song with multiple stanzas
-  \set stanza =  "1. "
-  %lyrics here
+sopLyrix = \lyricmode {
+}
+
+altLyrix = \lyricmode {
+}
+
+tenLyrix = \lyricmode {
+}
+
+basLyrix = \lyricmode {
 }
 
 % the lyrics of the stanzas below the staves

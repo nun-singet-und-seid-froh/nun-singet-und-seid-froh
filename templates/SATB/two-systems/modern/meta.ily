@@ -1,4 +1,4 @@
-% enter the data below according to conventions.md
+% enter the data below according to conventions/meta-data.md
 
 % the meta-data printed in the sheet
 title             = ""

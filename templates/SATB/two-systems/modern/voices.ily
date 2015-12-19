@@ -1,4 +1,4 @@
-% based on templates/SATB/two-systems/voices.ily
+% based on templates/SATB/two-systems/modern/voices.ily
 
 % common settings of all voices
 global = {
@@ -7,6 +7,7 @@ global = {
   \partial 4
   \dynamicUp
   \autoBeamOff
+  \override DynamicLineSpanner.staff-padding = #3
 }
 
 % articulation, dynamics, fermata and breathing marks
