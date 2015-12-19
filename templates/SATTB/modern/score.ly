@@ -1,3 +1,4 @@
+% nun-singet-und-seid-froh
 % based on templates/SATTB/modern/score.ly
 
 % local information (for this particular piece)
