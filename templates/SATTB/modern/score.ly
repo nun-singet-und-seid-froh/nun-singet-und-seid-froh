@@ -60,7 +60,7 @@
 
     \layout { }
   } %end of score (PDF)
-  
+
   \stanzas
 
   \score {

@@ -18,33 +18,39 @@
 
 \book {
   \include "../../include/header.ily"  % the layout information
-  
+
   \score {
     %for PDF
     \new StaffGroup <<
-      \new Staff = "women" << \set Staff.instrumentName = \markup { \center-column { Sopran \line { Alt } } } 
-        \new Voice = "sop" \with { \consists "Ambitus_engraver" } 
-          { \voiceOne \global \sopVoice }
+      \new Staff = "women" <<
+        \set Staff.instrumentName = \markup { \center-column { Sopran \line { Alt } } }
+        \new Voice = "sop" \with { \consists "Ambitus_engraver" }
+        { \voiceOne \global \sopVoice }
         \new Voice = "alt"  \with { \consists "Ambitus_engraver"}
-          { \override Ambitus.X-offset = #2.0 
-            \voiceTwo \global \altVoice }
-      >>
-        \new Lyrics \with {
-          \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #2
-          \override VerticalAxisGroup.nonstaff-unrelatedstaff-spacing.padding = #2
+        {
+          \override Ambitus.X-offset = #2.0
+          \voiceTwo \global \altVoice
         }
-        \lyricsto "sop"{\lyrix}
-    
-    \new Staff = "men" << \set Staff.instrumentName = "Männer"   
-      \new Voice = "men" \with { \consists "Ambitus_engraver"}
-          { \override Ambitus.X-offset = #2.0 
-            \voiceTwo \menVoice }
-    >> 
-   >> %end of StaffGroup
+      >>
+      \new Lyrics \with {
+        \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #2
+        \override VerticalAxisGroup.nonstaff-unrelatedstaff-spacing.padding = #2
+      }
+      \lyricsto "sop"{\lyrix}
+
+      \new Staff = "men" <<
+        \set Staff.instrumentName = "Männer"
+        \new Voice = "men" \with { \consists "Ambitus_engraver"}
+        {
+          \override Ambitus.X-offset = #2.0
+          \voiceTwo \menVoice
+        }
+      >>
+    >> %end of StaffGroup
 
     \layout { }
   } %end of score (PDF)
-  
+
   \stanzas
 
   \score {
@@ -67,40 +73,46 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % sopran
-\book { \bookOutputSuffix "sopran"
-  \score { 
+\book {
+  \bookOutputSuffix "sopran"
+  \score {
     \unfoldRepeats
-     \new Staff << \commonVoice                     
+    \new Staff <<
+      \commonVoice
       \new Voice = "sop" { \highlightedVoice \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
-      \new Voice = "men" { \global \menVoice } 
-     >>
-     \staffperformertovoice
+      \new Voice = "men" { \global \menVoice }
+    >>
+    \staffperformertovoice
   }
 }
 
 % alt
-\book { \bookOutputSuffix "alt"
+\book {
+  \bookOutputSuffix "alt"
   \score {
-  \unfoldRepeats
-    \new Staff << \commonVoice                    
+    \unfoldRepeats
+    \new Staff <<
+      \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \highlightedVoice \global \altVoice }
       \new Voice = "men" { \global \menVoice }
-    >> 
-     \staffperformertovoice
+    >>
+    \staffperformertovoice
   }
 }
 
 % men
-\book { \bookOutputSuffix "men"
+\book {
+  \bookOutputSuffix "men"
   \score {
-  \unfoldRepeats
-    \new Staff << \commonVoice                    
+    \unfoldRepeats
+    \new Staff <<
+      \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "men" { \highlightedVoice \global \menVoice }
-    >> 
+    >>
     \staffperformertovoice
   }
 }

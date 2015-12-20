@@ -21,21 +21,21 @@ menArt = { }
 sopVoice = <<
   \sopArt
   \relative c''
-    {    
-    }
+  {
+  }
 >>
 
 altVoice = <<
   \altArt
   \relative c'
-    {
-    }
+  {
+  }
 >>
 
 menVoice = <<
   \menArt
   \relative c
-    {     
-    }
+  {
+  }
 >>
- 
+

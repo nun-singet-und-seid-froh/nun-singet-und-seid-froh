@@ -29,7 +29,7 @@ sopVoice = <<
   \sopArt
   \relative c'
   {
-%{00%}
+    %{00%}
   }
 >>
 
@@ -37,7 +37,7 @@ altVoice = <<
   \altArt
   \relative c'
   {
-%{00%}
+    %{00%}
   }
 >>
 
@@ -45,7 +45,7 @@ tenVoice = <<
   \tenArt
   \relative c'
   {
-%{00%}
+    %{00%}
   }
 >>
 
@@ -54,6 +54,6 @@ basVoice = <<
   \basArt
   \relative c
   {
-%{00%}
+    %{00%}
   }
 >>

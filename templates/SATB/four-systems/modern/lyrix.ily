@@ -17,7 +17,7 @@ basLyrix = \lyricmode {
 % the lyrics of the stanzas below the staves
 stanzas =
 \markup {
-  \magnify #1.2 {e
+  \magnify #1.2 {
     \fill-line {
       \center-column {
         \line {
