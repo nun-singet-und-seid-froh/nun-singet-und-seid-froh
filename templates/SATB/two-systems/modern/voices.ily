@@ -1,8 +1,8 @@
-% based on templates/SATTB/two-systems/modern/voices.ily
+% based on templates/SATB/two-systems/modern/voices.ily
 
 % common settings of all voices
 global = {
-  \key as \major
+  \key c \major
   \time 3/4
   \partial 4
   \dynamicUp
@@ -12,16 +12,16 @@ global = {
 
 % articulation, dynamics, fermata and breathing marks
 sopArt = {
-
 }
 
-altArt = \sopArt
+altArt = {
+}
 
-teniArt = \sopArt
+tenArt = {
+}
 
-teniiArt = \sopArt
-
-basArt = \sopArt
+basArt = {
+}
 
 
 % the tunes
@@ -29,7 +29,6 @@ sopVoice = <<
   \sopArt
   \relative c'
   {
-    \tempo "Andante."
     %{00%}
   }
 >>
@@ -42,21 +41,14 @@ altVoice = <<
   }
 >>
 
-teniVoice = <<
-  \teniArt
+tenVoice = <<
+  \tenArt
   \relative c'
   {
     %{00%}
   }
 >>
 
-teniiVoice = <<
-  \teniiArt
-  \relative c'
-  {
-    %{00%}
-  }
->>
 
 basVoice = <<
   \basArt

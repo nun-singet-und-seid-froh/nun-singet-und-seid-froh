@@ -19,11 +19,11 @@
 
       \null
       \fill-line {
-        \line { \override #'(font-name . "EBGaramond") \abs-fontsize #12 \caps \poet }
+        \line { \override #'(font-name . "EBGaramond") \abs-fontsize #12 \caps \poet \poet_data \text_date }
         \line {
           \column{
-            { { \override #'(font-name . "EBGaramond") \abs-fontsize #12 \caps  \composer } }
-            { { \override #'(font-name . "EBGaramond") \abs-fontsize #12 \caps \arranger } }
+            { { \override #'(font-name . "EBGaramond") \abs-fontsize #12 \caps \composer \composer_data \composition_date} }
+            { { \override #'(font-name . "EBGaramond") \abs-fontsize #12 \caps \arranger \arranger_data} }
           }
         }
       }
