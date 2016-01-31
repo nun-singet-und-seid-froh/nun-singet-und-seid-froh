@@ -1,18 +1,23 @@
-% enter the data below according to conventions/meta-data.md
+% enter the data below according to *conventions/conventions concerning meta.ily.md*
 
 % the meta-data printed in the sheet
 title             = ""
+
 composer          = "" % e.g. "Johann Sebastian Bach"
-composer_lifedate = "" % e.g. "(1685-1750)"
+composer_lifedata = "" % e.g. "1685-1750"
+
 arranger          = ""
-arranger_lifedate = "" % e.g. "(1685-1750)"
+arranger_lifedata = "" % e.g. "1685-1750"
+
 poet              = ""
-poet_lifedata     = "" % e.g. "(1685-1750)"
-text_date         = ""
-composition_date  = ""
-isin              = "" % collection or opus the piece is part of
-date              = "" % date of last edit, e.g. "19. September 2015"
-vers              = "1.0" % version of last edit
+poet_lifedata     = "" % e.g. "1685-1750"
+
+opus              = "" 
+no_in_opus        = ""
+title_in_opus     = ""
+
+last_edited       = "" % e.g. "19. September 2015"
+vers              = "" % e.g. "1.0.0"
 
 % other meta-data, used for the mediawiki-output
 epoque 						= "" 

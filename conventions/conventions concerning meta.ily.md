@@ -77,6 +77,7 @@ The variable *instrumentation* reflects the voices as well as their order. So, f
 	difficulty        = ""
 
 The variable *difficulty* the difficulty of the piece. Categorization of this cannot be sharp-edged, but the following criteria may give some intuition:
+
 + "sehr leicht" - two or three voices, or homophonic harmonization with easy harmonies
 + "leicht" - four or five voices, homophone
 + "mittelschwer" - polyphony with up to four voices
@@ -86,14 +87,13 @@ The variable *difficulty* the difficulty of the piece. Categorization of this ca
 ## form
 	form              = "" 
 
-The *form* is either "Motette", "Strophenlied" or "Durchkomponiertes Lied"
+The *form* is either "Motette", "Strophenlied" or "Durchkomponiertes Lied".
 	
 ## root	
 	root              = ""
 
-The *root*-field names the musical root . In many cases a piece will be considered as its own root. Some standard cases :
-+ the text is more popilar under a (slightly) different title - the root of "Es ist ein Reis entsprungen" is "Es ist ein Ros entsprungen")
-+ the lyrics of the piece are a translation of another piece - the root of "Herbei, o ihr Gläubigen" is "Adeste Fideles"
+The *root*-field names the musical root . In many cases a piece will be considered as its own root. Some standard cases:
+
++ the text is more popular under a (slightly) different title - e.g. the root of "Es ist ein Reis entsprungen" is "Es ist ein Ros entsprungen"
++ the lyrics of the piece are a translation of another piece - e.g. the root of "Herbei, o ihr Gläubigen" is "Adeste Fideles"
 + the piece is a contrafactum of another song or carol
-
-

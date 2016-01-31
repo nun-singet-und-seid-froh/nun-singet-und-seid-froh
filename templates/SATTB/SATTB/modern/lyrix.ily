@@ -1,6 +1,4 @@
-% this is standard version 1.0: SATTB
-
-% the lyrics within the staves
+% based on templates/SATTB/SATTB/modern/lyrix.ily
 
 sopLyrix = \lyricmode {
   % for song with stanzas

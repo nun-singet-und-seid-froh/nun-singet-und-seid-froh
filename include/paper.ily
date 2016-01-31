@@ -14,7 +14,7 @@
       }
       \fill-line {
         \center-align
-        { \abs-fontsize #12 \italic \isin }
+        { \line { \abs-fontsize #12 \opus, \no_in_opus (\title_in_opus)} }
       }
 
       \null

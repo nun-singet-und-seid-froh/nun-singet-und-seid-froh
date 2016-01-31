@@ -1,4 +1,4 @@
-% based on templates/SATTB/modern/score.ly
+% based on templates/SATB/SATB/modern/score.ly
 
 % local information (for this particular piece)
 \include "meta.ily"             % metadata for this piece
@@ -7,17 +7,17 @@
 \include "output.ily"           % the paper and midi settings for this piece
 
 % global information (identical for all pieces)
-\include ".:/../../include/version.ily"    % the lilypond version
-\include "../../../include/paper.ily"      % the layout information
+\include "../../../include/version.ily"    % the lilypond version
+\include "../../../include/sheet.ily"      % the layout information
 \include "../../../include/sound.ily"      % variable declarations for midi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                  the PDF & main MIDI producing part:             %
-%                       5 staves for 5 voices                      %
+%                       4 staves for 4 voices                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \book {
-  \include "../../../include/header.ily"
+  \include "../../../include/paper.ily"
 
   \score {
     %for PDF
@@ -38,17 +38,10 @@
 
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
-        \set Staff.instrumentName = "Tenor I"
-        \new Voice = "teni" { \clef "G_8" \global \teniVoice }
+        \set Staff.instrumentName = "Tenor"
+        \new Voice = "teni" { \clef "G_8" \global \tenVoice }
       >>
-      \new Lyrics \lyricsto "teni" { \teniLyrix }
-
-      \new Staff \with { \consists "Ambitus_engraver" }
-      <<
-        \set Staff.instrumentName = "Tenor II"
-        \new Voice = "tenii" { \clef "G_8" \global \teniiVoice }
-      >>
-      \new Lyrics \lyricsto "tenii" { \teniiLyrix }
+      \new Lyrics \lyricsto "teni" { \tenLyrix }
 
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
@@ -57,12 +50,11 @@
       >>
       \new Lyrics \lyricsto "bas" { \basLyrix }
     >> %end of StaffGroup
+    \stanzas
 
     \layout { }
   } %end of score (PDF)
-
-  \stanzas
-
+  
   \score {
     %for MIDI
     \unfoldRepeats
@@ -70,18 +62,18 @@
       \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
-      \new Voice = "teni" { \global \teniVoice }
-      \new Voice = "tenii" { \global \teniiVoice }
+      \new Voice = "ten" { \global \tenVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
     \stafftovoice
   } %end of score (MIDI)
+  
 } %end of book
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                      the MIDI producing part: 	           %
-%    1 MIDI per each voice with the respective voice highlighted   %
+%    1 midi per each voice with the respective voice highlighted   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % sopran
@@ -93,8 +85,7 @@
       \commonVoice
       \new Voice = "sop" { \highlightedVoice  \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
-      \new Voice = "teni" { \global \teniVoice }
-      \new Voice = "tenii" { \global \teniiVoice }
+      \new Voice = "ten" { \global \tenVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
     \stafftovoice
@@ -110,42 +101,23 @@
       \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \highlightedVoice \global \altVoice }
-      \new Voice = "teni" { \global \teniVoice }
-      \new Voice = "tenii" { \global \teniiVoice }
+      \new Voice = "teni" { \global \tenVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
     \stafftovoice
   }
 }
 
-% tenor1
+% tenor
 \book {
-  \bookOutputSuffix "tenor1"
+  \bookOutputSuffix "tenor"
   \score {
     \unfoldRepeats
     \new Staff <<
       \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
-      \new Voice = "teni" { \highlightedVoice \global \teniVoice }
-      \new Voice = "tenii" { \global \teniiVoice }
-      \new Voice = "bas" { \global \basVoice }
-    >>
-    \stafftovoice
-  }
-}
-
-% tenor2
-\book {
-  \bookOutputSuffix "tenor2"
-  \score {
-    \unfoldRepeats
-    \new Staff <<
-      \commonVoice
-      \new Voice = "sop" { \global \sopVoice }
-      \new Voice = "alt" { \global \altVoice }
-      \new Voice = "teni" { \global \teniVoice }
-      \new Voice = "tenii" { \highlightedVoice \global \teniiVoice }
+      \new Voice = "teni" { \highlightedVoice \global \tenVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
     \stafftovoice
@@ -161,8 +133,7 @@
       \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
-      \new Voice = "teni" { \global \teniVoice }
-      \new Voice = "tenii" { \global \teniiVoice }
+      \new Voice = "ten" { \global \tenVoice }
       \new Voice = "bas" { \highlightedVoice \global \basVoice }
     >>
     \stafftovoice

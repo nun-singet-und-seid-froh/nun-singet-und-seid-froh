@@ -1,4 +1,4 @@
-% based on templates/SATTB/two-systems/modern/voices.ily
+% based on templates/SATTB/modern/voices.ily
 
 % common settings of all voices
 global = {
@@ -17,9 +17,7 @@ sopArt = {
 
 altArt = \sopArt
 
-teniArt = \sopArt
-
-teniiArt = \sopArt
+tenArt = \sopArt
 
 basArt = \sopArt
 
@@ -42,16 +40,8 @@ altVoice = <<
   }
 >>
 
-teniVoice = <<
-  \teniArt
-  \relative c'
-  {
-    %{00%}
-  }
->>
-
-teniiVoice = <<
-  \teniiArt
+tenVoice = <<
+  \tenArt
   \relative c'
   {
     %{00%}
