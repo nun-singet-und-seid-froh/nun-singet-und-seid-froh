@@ -1,4 +1,4 @@
-% this is standard version 1.0: SATTB/mensural
+% based on templates/SSATTB/SSATTB/mensural/score.ly
 
 % local information (for this particular piece)
 \include "meta.ily"             % metadata for this piece
@@ -67,7 +67,7 @@
 % 	        1 main.midi with all voices equally		   %
 %    1 midi per each voice with the respective voice highlighted   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%{stafftovoice =
+{stafftovoice =
 \midi { 
      \context {
       \Staff

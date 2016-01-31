@@ -1,4 +1,4 @@
-% based on templates/SAM/two-systemss/modern/score.ly
+% based on templates/SAM/(SA)M/modern/score.ly
 
 % local information (for this particular piece)
 \include "meta.ily"             % metadata for this piece

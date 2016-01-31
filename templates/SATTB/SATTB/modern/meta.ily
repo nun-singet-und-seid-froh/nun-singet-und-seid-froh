@@ -1,23 +1,29 @@
 % enter the data below according to *conventions/conventions concerning meta.ily.md*
 
 % the meta-data printed in the sheet
-title             = ""
+title           	= ""
 
-composer          = "" % e.g. "Johann Sebastian Bach"
-composer_lifedata = "" % e.g. "1685-1750"
+composerPrename		= "" % e.g. "Johann Sebastian"
+composerSurname		= "" % e.g. "Bach"
+composerLifedata 	= "" % e.g. "1685-1750"
+compositionDate		= ""
 
-arranger          = ""
-arranger_lifedata = "" % e.g. "1685-1750"
+arrangerPrename		= "" % e.g. "Johann Sebastian"
+arrangerSurname		= "" % e.g. "Bach"
+arrangerLifedata 	= "" % e.g. "1685-1750"
+melodyDate				= ""
 
-poet              = ""
-poet_lifedata     = "" % e.g. "1685-1750"
+poetPrename				= "" % e.g. "Paul"
+poetSurname				= "" % e.g. "Gerhardt"
+poetLifedata     	= "" % e.g. "1607-1676"
+textDate					= ""
 
 opus              = "" 
-no_in_opus        = ""
-title_in_opus     = ""
+noInOpus 		      = ""
+titleInOpus 	    = "Adventlied"
 
-last_edited       = "" % e.g. "19. September 2015"
-vers              = "" % e.g. "1.0.0"
+lastEdited  	    = "" % e.g. "19. September 2015"
+vers              = "0.0.0" % e.g. "1.0.0"
 
 % other meta-data, used for the mediawiki-output
 epoque 						= "" 

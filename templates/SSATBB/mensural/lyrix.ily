@@ -1,4 +1,4 @@
-% this is standard version 1.0: SATTB/mensural
+% based on templates/SSATTB/SSATTB/mensural/lyrix.ily
 
 % the lyrics within the staves
 

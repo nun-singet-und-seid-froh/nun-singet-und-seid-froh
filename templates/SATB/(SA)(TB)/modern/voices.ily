@@ -1,4 +1,4 @@
-% based on templates/SATB/two-systems/modern/voices.ily
+% based on templates/SATB/(SA)(TB)/modern/voices.ily
 
 % common settings of all voices
 global = {
@@ -7,7 +7,6 @@ global = {
   \partial 4
   \dynamicUp
   \autoBeamOff
-  \override DynamicLineSpanner.staff-padding = #3
 }
 
 % articulation, dynamics, fermata and breathing marks
@@ -29,7 +28,7 @@ sopVoice = <<
   \sopArt
   \relative c'
   {
-    %{00%}
+%{00%}
   }
 >>
 
@@ -37,7 +36,7 @@ altVoice = <<
   \altArt
   \relative c'
   {
-    %{00%}
+%{00%}
   }
 >>
 
@@ -45,7 +44,7 @@ tenVoice = <<
   \tenArt
   \relative c'
   {
-    %{00%}
+%{00%}
   }
 >>
 
@@ -54,6 +53,6 @@ basVoice = <<
   \basArt
   \relative c
   {
-    %{00%}
+%{00%}
   }
 >>

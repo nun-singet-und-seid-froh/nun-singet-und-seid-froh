@@ -1,4 +1,4 @@
-% based on templates/SSATTBB/(SATB)(SATB)/mensural/score.ly
+% based on templates/SSATTBB/[SSAA][TTBB]/mensural/score.ly
 
 % local information (for this particular piece)
 \include "meta.ily"             % metadata for this piece

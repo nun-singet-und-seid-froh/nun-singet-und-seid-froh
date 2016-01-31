@@ -1,4 +1,4 @@
-% based on templates/SATB/four-systems/modern/lyrix.ily
+% based on templates/SATB/(SA)(TB)/modern/lyrix.ily
 
 % the lyrics within the staves
 
@@ -17,7 +17,7 @@ basLyrix = \lyricmode {
 % the lyrics of the stanzas below the staves
 stanzas =
 \markup {
-  \magnify #1.2 {
+  \magnify #1.2 {e
     \fill-line {
       \center-column {
         \line {
