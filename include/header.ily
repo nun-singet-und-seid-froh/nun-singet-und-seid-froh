@@ -11,7 +11,7 @@
           \fill-line {
             \line { #(string-append "LilyPond " (lilypond-version)) }
             \line { \italic "nun-singet-und-seid-froh.info" }
-            \line { "Revision Nr. " \vers"| " \date }
+            \line { "Revision Nr. " \vers"| " \lastEdited }
           }
         }
       }
