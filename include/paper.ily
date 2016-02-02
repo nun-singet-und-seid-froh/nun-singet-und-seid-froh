@@ -1,27 +1,62 @@
-%concatenate the header-information
+%assemble the header-information
  
 #(define subtitle opus)
-#(if (string=? noInOpus "") () (define subtitle (string-append subtitle ", Nr. " noInOpus)))
-#(if (string=? titleInOpus "") () (define subtitle (string-append subtitle ": »" titleInOpus "«")))
+#(if (> (string-length noInOpus) 0) 
+     (define subtitle (string-append subtitle ", Nr. " noInOpus))
+     #f
+)
+#(if (> (string-length titleInOpus) 0) 
+     (define subtitle (string-append subtitle ": »" titleInOpus "«"))
+     #f
+)
+#(if (> (string-length arrangementDate) 0) 
+     (define subtitle (string-append subtitle " (" arrangementDate ")"))
+     #f
+)
 
-#(define poetBlock "")
-#(if (string=? poetPrename "") () (define poetBlock (string-append poetBlock poetPrename)))
-#(if (string=? poetSurname "") () (define poetBlock (string-append poetBlock " " poetSurname)))
-#(if (string=? poetLifedata "") () (define poetBlock (string-append poetBlock " (" poetLifedata ")")))
-#(if (string=? textDate "") () (define poetBlock (string-append poetBlock ": " textDate)))
+#(define composerBlock (string-append composerPrename " " composerSurname))
+#(if (> (string-length composerLifedata) 0) 
+     (define composerBlock (string-append composerBlock " (" composerLifedata ")"))
+     #f
+)
 
-#(define composerBlock "")
-#(if (string=? composerPrename "") () (define composerBlock (string-append composerBlock composerPrename)))
-#(if (string=? composerSurname "") () (define composerBlock (string-append composerBlock " " composerSurname)))
-#(if (string=? composerLifedata "") () (define composerBlock (string-append composerBlock " (" composerLifedata ")")))
-#(if (string=? compositionDate "") () (define composerBlock (string-append composerBlock ": " compositionDate)))
+#(define poetBlock (string-append poetPrename " " poetSurname))
+#(if (> (string-length poetLifedata) 0) 
+     (define poetBlock (string-append poetBlock " (" poetLifedata ")"))
+     #f
+)
 
-#(define arrangerBlock "")
-#(if (string=? arrangerPrename "") () (define arrangerBlock (string-append arrangerBlock arrangerPrename)))
-#(if (string=? arrangerSurname "") () (define arrangerBlock (string-append arrangerBlock " " arrangerSurname)))
-#(if (string=? arrangerLifedata "") () (define arrangerBlock (string-append arrangerBlock " (" arrangerLifedata ")")))
-#(if (string=? melodyDate "") () (define arrangerBlock (string-append arrangerBlock ": " melodyDate)))
- 
+#(define arrangerBlock (string-append arrangerPrename " " arrangerSurname))
+#(if (> (string-length arrangerLifedata) 0) 
+     (define arrangerBlock (string-append arrangerBlock " (" arrangerLifedata ")"))
+     #f
+)
+
+#(if (and (string=? poetBlock " ") (> (string-length textDate) 0 ))
+     (define poetBlock (string-append "Unbekannter Dichter: " textDate))
+     #f
+)
+
+#(if (> (string-length melodyDate) 0) 
+     (define arrangerBlock (string-append arrangerBlock ": " melodyDate))
+     #f
+)
+
+#(if (and (> (string-length composerSurname) 0) (> (string-length arrangerSurname) 0))
+     (
+       define arrangerBlock (string-append "Satz: " arrangerBlock)
+      )
+     #f
+)
+
+#(if (and (> (string-length composerSurname) 0) (> (string-length arrangerSurname) 0))
+     (
+       define composerBlock (string-append "Melodie: " composerBlock)
+      )
+     #f
+)
+
+% the layout-information
 \paper {
   system-separator-markup = \slashSeparator
   #(define fonts
@@ -36,9 +71,7 @@
         \title
       }
        \fill-line {
-        \center-align
-       
-               
+        \center-align        
          { \line { \abs-fontsize #12 \italic \subtitle} }
       }
 
@@ -47,8 +80,8 @@
         \line { \override #'(font-name . "EBGaramond") \abs-fontsize #12 \caps \poetBlock }
         \line {
           \column{
-            { { \override #'(font-name . "EBGaramond") \abs-fontsize #12 \caps \composerBlock } }
             { { \override #'(font-name . "EBGaramond") \abs-fontsize #12 \caps \arrangerBlock } }
+            { { \override #'(font-name . "EBGaramond") \abs-fontsize #12 \caps \composerBlock } }
           }
         }
       }
