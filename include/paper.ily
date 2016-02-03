@@ -58,6 +58,9 @@
 
 % the layout-information
 \paper {
+   oddHeaderMarkup = \markup \fill-line { " " \abs-fontsize #18 \on-the-fly #not-first-page \fromproperty #'page:page-number-string }
+   evenHeaderMarkup = \markup \fill-line { \abs-fontsize #18 \on-the-fly #not-first-page \fromproperty #'page:page-number-string " " }
+   
   system-separator-markup = \slashSeparator
   #(define fonts
      (make-pango-font-tree "EBGaramond"
@@ -87,5 +90,12 @@
       }
       \null
     }
+  }
+}
+
+\layout { 
+  \context {
+    \Score
+    \override BarNumber #'font-size = #2
   }
 }
