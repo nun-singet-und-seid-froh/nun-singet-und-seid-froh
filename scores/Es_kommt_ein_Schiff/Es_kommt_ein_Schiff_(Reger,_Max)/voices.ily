@@ -12,23 +12,28 @@ global = {
 
 % articulation, dynamics, fermata and breathing marks
 sopArt = {
+  \repeat volta 6 {
   s4\p\<
   s2 s4\!
   s2.
   s4 s4\> s4
-  s4\! s4 s4\<
+  s4\! s4\bar ""\break s4\<
   s4 s4\! s4
   s2.
   s4\> s4 s4
   s4\! s4 s4\p\<
-  s2.
-  s2.
+  s2. |
+  s2. |
   s4\f\> s4 s4
   s4 s4\! s4\p\<
   s2 s4\!
   s2 s4\>
   s2.
-  s4\pp s4\bar"|."
+  }
+  \alternative {
+    { s4\pp s4 }
+    { s4\pp s4 }
+  }
 }
 
 altArt = \sopArt
@@ -46,6 +51,7 @@ sopVoice = <<
   \relative c'
   {
     \tempo "Andante."
+    \repeat volta 6 {
     %{00%} f4
     %{01%} f2 f4
     %{02%} g2 g4
@@ -62,7 +68,11 @@ sopVoice = <<
     %{13%} c2 bes4
     %{14%} as2 g4
     %{15%} f2.~
-    %{16%} f4 r
+    }
+    \alternative {
+      { %{16%} f4 r \bar "||"}
+      { %{16%} f4 r \bar"|."}
+    }
   }
 >>
 
@@ -70,6 +80,7 @@ altVoice = <<
   \altArt
   \relative c'
   {
+    \repeat volta 6 {
     %{00%} f4
     %{01%} f4.( c8) f4
     %{02%} c4.( d8) es4
@@ -85,8 +96,12 @@ altVoice = <<
     %{12%} es) des f
     %{13%} es2 des4
     %{14%} c( des8[ c]) bes4
-    %{15%} as2.~_"6.V.: a"
-    %{16%} as4 r4
+    %{15%} as2.~
+    }
+    \alternative {  
+      %{16%} { as4 r4 }
+      %{16%} { a4 r4 }
+    }
   }
 >>
 
@@ -94,6 +109,7 @@ teniVoice = <<
   \teniArt
   \relative c'
   {
+    \repeat volta 6 {
     %{00%} c4
     %{01%} c( bes) as
     %{02%} g( a8[ b]) c4
@@ -110,7 +126,11 @@ teniVoice = <<
     %{13%} ges2 g4~
     %{14%} g4 f4. e8
     %{15%} f2.~
-    %{16%} f4 r4
+    }
+    \alternative {
+    %{16%} { f4 r4 }
+    %{16%} { f4 r4 }
+    }
   }
 >>
 
@@ -118,6 +138,7 @@ teniiVoice = <<
   \teniiArt
   \relative c'
   {
+    \repeat volta 6 {
     %{00%} as4
     %{01%} as( bes) c
     %{02%} c( f,) es8[ c']
@@ -134,7 +155,11 @@ teniiVoice = <<
     %{13%} ges4( es') bes
     %{14%} f2 c'4
     %{15%} c2.~
-    %{16%} c4 r
+    }
+    \alternative {
+    %{16%} { c4 r }
+    %{16%} { c4 r }
+    }
   }
 >>
 
@@ -142,6 +167,7 @@ basVoice = <<
   \basArt
   \relative c
   {
+    \repeat volta 6 {
     %{00%} f4
     %{01%} as( g) f
     %{02%} es( d) c
@@ -157,7 +183,11 @@ basVoice = <<
     %{12%} f'2 des4
     %{13%} es( c) e
     %{14%} f( bes,) c
-    %{15%} << { \voiceOne c2.~ c4 } \new Voice { \voiceTwo f,2.~ f4 } >>
-    %{16%} \oneVoice r
+    %{15%} << { \voiceOne c2.~ } \new Voice { \voiceTwo f,2.~  } >>
+    }
+    \alternative {
+     { %{16%} << { \voiceOne c'4 } \new Voice { \voiceTwo f,4 } >> \oneVoice r }
+     { %{16%} << { \voiceOne c'4 } \new Voice { \voiceTwo f,4 } >> \oneVoice r }
+    }
   }
 >>

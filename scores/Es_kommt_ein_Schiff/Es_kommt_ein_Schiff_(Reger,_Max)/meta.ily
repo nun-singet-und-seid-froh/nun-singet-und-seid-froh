@@ -3,15 +3,15 @@
 % the meta-data printed in the sheet
 title             = "Es kommt ein Schiff, geladen"
 
-composerPrename	= "Max" % e.g. "Johann Sebastian"
-composerSurname	= "Reger" % e.g. "Bach"
-composerLifedata = "1873-1916" % e.g. "1685-1750"
-compositionDate	= "1899"
+composerPrename	= "" % e.g. "Johann Sebastian"
+composerSurname	= "" % e.g. "Bach"
+composerLifedata = "" % e.g. "1685-1750"
+compositionDate	= ""
 
-arrangerPrename	= "" % e.g. "Johann Sebastian"
-arrangerSurname	= "" % e.g. "Bach"
-arrangerLifedata = "" % e.g. "1685-1750"
-melodyDate	= ""
+arrangerPrename	= "Max" % e.g. "Johann Sebastian"
+arrangerSurname	= "Reger" % e.g. "Bach"
+arrangerLifedata = "1873-1916" % e.g. "1685-1750"
+melodyDate	= "1899"
 
 poetPrename	= "" % e.g. "Paul"
 poetSurname	= "" % e.g. "Gerhardt"
@@ -22,8 +22,8 @@ opus              = "Zwölf deutsche geistliche Gesänge (WoO VI/13)"
 noInOpus        = "2"
 titleInOpus     = "Adventlied"
 
-lastEdited       = "19. September 2015" % e.g. "19. September 2015"
-vers              = "0.0.0" % e.g. "1.0.0"
+lastEdited       = "3. Februar 2016" % e.g. "19. September 2015"
+vers              = "1.0.0" % e.g. "1.0.0"
 
 % other meta-data, used for the mediawiki-output
 epoque 						= "Romantik" 
@@ -32,3 +32,5 @@ instrumentation   = "SATTB" % "SATB", "SSAATTBB", "(SATB)(SATB)" for double-choi
 difficulty        = "mittelschwer" % "sehr leicht", "leicht", "mittelschwer", "schwer", "sehr schwer"
 form              = "Strophenlied" % "Motette", "Strophenlied", "Durchkomponiertes Lied"
 root              = "Es kommt ein Schiff, geladen"
+
+noInNsusf         = "1" %the publication number in the nun-singet-und-seid-froh edition
