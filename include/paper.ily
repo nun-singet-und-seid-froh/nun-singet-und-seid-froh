@@ -1,101 +1,37 @@
-%assemble the header-information
- 
-#(define subtitle opus)
-#(if (> (string-length noInOpus) 0) 
-     (define subtitle (string-append subtitle ", Nr. " noInOpus))
-     #f
-)
-#(if (> (string-length titleInOpus) 0) 
-     (define subtitle (string-append subtitle ": »" titleInOpus "«"))
-     #f
-)
-#(if (> (string-length arrangementDate) 0) 
-     (define subtitle (string-append subtitle " (" arrangementDate ")"))
-     #f
-)
-
-#(define composerBlock (string-append composerPrename " " composerSurname))
-#(if (> (string-length composerLifedata) 0) 
-     (define composerBlock (string-append composerBlock " (" composerLifedata ")"))
-     #f
-)
-
-#(define poetBlock (string-append poetPrename " " poetSurname))
-#(if (> (string-length poetLifedata) 0) 
-     (define poetBlock (string-append poetBlock " (" poetLifedata ")"))
-     #f
-)
-
-#(define arrangerBlock (string-append arrangerPrename " " arrangerSurname))
-#(if (> (string-length arrangerLifedata) 0) 
-     (define arrangerBlock (string-append arrangerBlock " (" arrangerLifedata ")"))
-     #f
-)
-
-#(if (and (string=? poetBlock " ") (> (string-length textDate) 0 ))
-     (define poetBlock (string-append "Unbekannter Dichter: " textDate))
-     #f
-)
-
-#(if (> (string-length melodyDate) 0) 
-     (define arrangerBlock (string-append arrangerBlock ": " melodyDate))
-     #f
-)
-
-#(if (and (> (string-length composerSurname) 0) (> (string-length arrangerSurname) 0))
-     (
-       define arrangerBlock (string-append "Satz: " arrangerBlock)
-      )
-     #f
-)
-
-#(if (and (> (string-length composerSurname) 0) (> (string-length arrangerSurname) 0))
-     (
-       define composerBlock (string-append "Melodie: " composerBlock)
-      )
-     #f
-)
-
 % the layout-information
+
+#(define (book-second-page? layout props)
+   "Return #t iff the current page number, got from @code{props}, is the
+    book second one."
+   (= (chain-assoc-get 'page:page-number props -1)
+      ))
+      
+#(define (not-second-page layout props arg)
+   (if (not (book-second-page? layout props))
+       (interpret-markup layout props arg)
+       empty-stencil))
+
 \paper {
-   oddHeaderMarkup = \markup \fill-line { " " \abs-fontsize #18 \on-the-fly #not-first-page \fromproperty #'page:page-number-string }
-   evenHeaderMarkup = \markup \fill-line { \abs-fontsize #18 \on-the-fly #not-first-page \fromproperty #'page:page-number-string " " }
-   
+  left-margin = 2\cm
+  right-margin = 2\cm
+  first-page-number = 0
+  oddHeaderMarkup= \markup { \column { { \abs-fontsize #18 \on-the-fly #not-second-page \fromproperty #'page:page-number-string }}}
+  evenHeaderMarkup = \markup { { \column { \fill-line {"" \abs-fontsize #18 \on-the-fly #not-first-page \fromproperty #'page:page-number-string }}}}
+  
+ %two-sided = ##t
   system-separator-markup = \slashSeparator
   #(define fonts
      (make-pango-font-tree "EBGaramond"
        "Nimbus Sans"
        "Luxi Mono"
        (/ staff-height pt 20)))
-  bookTitleMarkup = \markup {
-    \column {
-      \fill-line {
-        \override #'(font-name . "EBGaramond") \center-align \abs-fontsize #18 \caps
-        \title
-      }
-       \fill-line {
-        \center-align        
-         { \line { \abs-fontsize #12 \italic \subtitle} }
-      }
-
-      \null
-      \fill-line {
-        \line { \override #'(font-name . "EBGaramond") \abs-fontsize #12 \caps \poetBlock }
-        \line {
-          \column{
-            { { \override #'(font-name . "EBGaramond") \abs-fontsize #12 \caps \arrangerBlock } }
-            { { \override #'(font-name . "EBGaramond") \abs-fontsize #12 \caps \composerBlock } }
-          }
-        }
-      }
-      \null
-    }
-  }
 }
 
 \layout { 
   \context {
     \Score
+    %increases the size of numbers, because numbers in EB Garamond are a bit small
     \override BarNumber #'font-size = #2
+    \override ClefModifier.font-size = #0.5 %the size of the 8 in the G_8-clef (tenor-clef)
   }
 }
