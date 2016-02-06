@@ -28,11 +28,10 @@ sopArt = {
   s4 s4\! s4\p\<
   s2 s4\!
   s2 s4\>
-  s2.
   }
   \alternative {
-    { s4\pp s4 }
-    { s4\pp s4 }
+    { s2. s4\pp s4 }
+    { s2. s4\pp s4 }
   }
 }
 
@@ -67,11 +66,13 @@ sopVoice = <<
     %{12%} as2 bes4
     %{13%} c2 bes4
     %{14%} as2 g4
-    %{15%} f2.~
+   
     }
     \alternative {
-      { %{16%} f4 r \bar "||"}
-      { %{16%} f4 r \bar"|."}
+      { %{15%} f2.~
+        %{16%} f4 r \bar "||"}
+      { %{15%} f2.~
+        %{16%} f4 r \bar"|."}
     }
   }
 >>
@@ -96,11 +97,15 @@ altVoice = <<
     %{12%} es) des f
     %{13%} es2 des4
     %{14%} c( des8[ c]) bes4
-    %{15%} as2.~
+   
     }
     \alternative {  
-      %{16%} { as4 r4 }
-      %{16%} { a4 r4 }
+      {  
+         %{15%} as2.~
+         %{16%} as4 r4 }
+      {
+        %{15%} a2.~
+        %{16%} a4 r4 }
     }
   }
 >>
@@ -125,11 +130,13 @@ teniVoice = <<
     %{12%} ges) f f
     %{13%} ges2 g4~
     %{14%} g4 f4. e8
-    %{15%} f2.~
+
     }
     \alternative {
-    %{16%} { f4 r4 }
-    %{16%} { f4 r4 }
+     { %{15%} f2.~ 
+       %{16%} f4 r4 }
+     { %{15%} f2.~ 
+       %{16%} f4 r4 }
     }
   }
 >>
@@ -154,11 +161,17 @@ teniiVoice = <<
     %{12%} c4) des8[ c] bes4
     %{13%} ges4( es') bes
     %{14%} f2 c'4
-    %{15%} c2.~
+    
     }
     \alternative {
-    %{16%} { c4 r }
-    %{16%} { c4 r }
+    {
+      %{15%} c2.~
+      %{16%}  c4 r 
+    }
+    {
+      %{15%} c2.~
+      %{16%}  c4 r 
+    }
     }
   }
 >>
@@ -183,11 +196,10 @@ basVoice = <<
     %{12%} f'2 des4
     %{13%} es( c) e
     %{14%} f( bes,) c
-    %{15%} << { \voiceOne c2.~ } \new Voice { \voiceTwo f,2.~  } >>
     }
     \alternative {
-     { %{16%} << { \voiceOne c'4 } \new Voice { \voiceTwo f,4 } >> \oneVoice r }
-     { %{16%} << { \voiceOne c'4 } \new Voice { \voiceTwo f,4 } >> \oneVoice r }
+     { %{15%} << { \voiceOne c2.~ c4 } \new Voice { \voiceTwo f,2.~ f4 } >> \oneVoice r4}
+     { %{15%} << { \voiceOne c'2.~ c4 } \new Voice { \voiceTwo f,2.~ f4 } >> \oneVoice r4 }
     }
   }
 >>
