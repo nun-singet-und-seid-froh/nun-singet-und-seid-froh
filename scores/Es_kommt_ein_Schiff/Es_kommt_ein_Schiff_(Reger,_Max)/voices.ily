@@ -30,8 +30,12 @@ sopArt = {
   s2 s4\>
   }
   \alternative {
-    { s2. s4\pp s4 }
-    { s2. s4\pp s4 }
+    { s2. 
+      s4\pp s4
+      \bar "||"}
+    { s2. 
+      s4\pp s4 
+      \bar "|."}
   }
 }
 
@@ -70,10 +74,23 @@ sopVoice = <<
     }
     \alternative {
       { %{15%} f2.~
-        %{16%} f4 r \bar "||"}
+        %{16%} f4 r 
+      }
       { %{15%} f2.~
-        %{16%} f4 r \bar"|."}
-    }
+        %{16%} f4 r
+      }
+    }%{00%} f4
+    %{01%} f2 f4
+    %{02%} g2 g4
+    %{03%} as( bes c)
+    %{04%} c2 c4
+    %{05%} bes2 bes4
+    %{06%} f2 g4
+    %{07%} as2.~
+    %{08%} as2 as4
+    %{09%} c2 es4
+    %{10%} f2 f4
+    %{11%
   }
 >>
 
@@ -161,7 +178,6 @@ teniiVoice = <<
     %{12%} c4) des8[ c] bes4
     %{13%} ges4( es') bes
     %{14%} f2 c'4
-    
     }
     \alternative {
     {

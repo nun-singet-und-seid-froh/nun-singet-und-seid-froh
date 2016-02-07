@@ -3,7 +3,7 @@
 % local information (for this particular piece)
 \include "meta.ily"             % metadata for this piece
 \include "voices.ily"           % the tunes, dynamic and articulation marks
-\include "lyrix.ily"            % the lyrics within the staves
+\include "lyrics.ily"            % the lyrics within the staves
 \include "output.ily"           % the paper and midi settings for this piece
 
 % global information (identical for all pieces)
@@ -39,9 +39,9 @@
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
         \set Staff.instrumentName = "Tenor"
-        \new Voice = "teni" { \clef "G_8" \global \tenVoice }
+        \new Voice = "tenI" { \clef "G_8" \global \tenVoice }
       >>
-      \new Lyrics \lyricsto "teni" { \tenLyrix }
+      \new Lyrics \lyricsto "tenI" { \tenLyrix }
 
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
@@ -101,7 +101,7 @@
       \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \highlightedVoice \global \altVoice }
-      \new Voice = "teni" { \global \tenVoice }
+      \new Voice = "tenI" { \global \tenVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
     \stafftovoice
@@ -117,7 +117,7 @@
       \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
-      \new Voice = "teni" { \highlightedVoice \global \tenVoice }
+      \new Voice = "tenI" { \highlightedVoice \global \tenVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
     \stafftovoice

@@ -3,7 +3,7 @@
 % local information (for this particular piece)
 \include "meta.ily"             % metadata for this piece
 \include "voices.ily"           % the tunes, dynamic and articulation marks
-\include "lyrix.ily"            % the lyrics within the staves
+\include "lyrics.ily"            % the lyrics within the staves
 \include "output.ily"           % the paper and midi settings for this piece
 
 % global information (identical for all pieces)
@@ -25,40 +25,40 @@
    \new Score <<
     \new StaffGroup <<  
       \new Staff << \set Staff.instrumentName = "Sopran I"
-      \new Voice = "sopi" \with { \consists "Ambitus_engraver" }  { \global \sopiVoice } >>
-      \new Lyrics \lyricsto "sopi" { \sopiLyrix }
+      \new Voice = "sopI" \with { \consists "Ambitus_engraver" }  { \global \sopiVoice } >>
+      \new Lyrics \lyricsto "sopI" { \sopiLyrix }
       
       \new Staff << \set Staff.instrumentName = "Alt I" 
-      \new Voice = "alti" \with { \consists "Ambitus_engraver" } { \global \altiVoice } >>
-      \new Lyrics \lyricsto "alti" { \altiLyrix }
+      \new Voice = "altI" \with { \consists "Ambitus_engraver" } { \global \altiVoice } >>
+      \new Lyrics \lyricsto "altI" { \altiLyrix }
       
       \new Staff << \set Staff.instrumentName = "Tenor I"
-      \new Voice = "teni" \with { \consists "Ambitus_engraver" } { \global  \clef "G_8" \teniVoice } >>
-      \new Lyrics \lyricsto "teni" { \teniLyrix }
+      \new Voice = "tenI" \with { \consists "Ambitus_engraver" } { \global  \clef "G_8" \teniVoice } >>
+      \new Lyrics \lyricsto "tenI" { \teniLyrix }
    
       \new Staff << \set Staff.instrumentName = "Bass I"
-      \new Voice = "basi" \with { \consists "Ambitus_engraver" } { \global \clef bass \basiVoice } >>
-      \new Lyrics \lyricsto "basi" { \basiLyrix }
+      \new Voice = "basI" \with { \consists "Ambitus_engraver" } { \global \clef bass \basiVoice } >>
+      \new Lyrics \lyricsto "basI" { \basiLyrix }
     
     >>
   
     \new StaffGroup <<  
       \new Staff << \set Staff.instrumentName = "Sopran II"
-      \new Voice = "sopii" \with { \consists "Ambitus_engraver" } { \global \sopiiVoice } >>
-      \new Lyrics \lyricsto "sopii" { \sopiiLyrix } 
+      \new Voice = "sopII" \with { \consists "Ambitus_engraver" } { \global \sopiiVoice } >>
+      \new Lyrics \lyricsto "sopII" { \sopiiLyrix } 
    
       \new Staff <<\set Staff.instrumentName = "Alt II"
-      \new Voice = "altii" \with { \consists "Ambitus_engraver" }  { \global \altiiVoice } >>
-      \new Lyrics \lyricsto "altii" { \altiiLyrix } 
+      \new Voice = "altII" \with { \consists "Ambitus_engraver" }  { \global \altiiVoice } >>
+      \new Lyrics \lyricsto "altII" { \altiiLyrix } 
       
       \new Staff << \set Staff.instrumentName = "Tenor II"
-      \new Voice = "tenii" \with { \consists "Ambitus_engraver" } { \global \clef "G_8" \teniiVoice } >>
-      \new Lyrics \lyricsto "tenii" { \teniiLyrix }  
+      \new Voice = "tenII" \with { \consists "Ambitus_engraver" } { \global \clef "G_8" \teniiVoice } >>
+      \new Lyrics \lyricsto "tenII" { \teniiLyrix }  
     
    
       \new Staff << \set Staff.instrumentName = "Bass II" 
-      \new Voice = "basii" \with { \consists "Ambitus_engraver" } { \global \clef bass \basiiVoice } >>
-      \new Lyrics \lyricsto "basii" { \basiiLyrix }
+      \new Voice = "basII" \with { \consists "Ambitus_engraver" } { \global \clef bass \basiiVoice } >>
+      \new Lyrics \lyricsto "basII" { \basiiLyrix }
     >>   
   >>%end of Score
   }%end of score
@@ -87,14 +87,14 @@ stafftovoice =
   \score { 
     \unfoldRepeats
      \new Staff << \commonVoice                     
-      \new Voice = "sopi" { \global \sopiVoice }
-      \new Voice = "sopii" { \global \sopiiVoice }
-      \new Voice = "alti" { \global \altiVoice }
-      \new Voice = "altii" { \global \altiiVoice }
-      \new Voice = "teni" { \global \teniVoice } 
-      \new Voice = "tenii" { \global \teniiVoice } 
-      \new Voice = "basi" { \global \basiVoice } 
-      \new Voice = "basii" { \global \basiiVoice } 
+      \new Voice = "sopI" { \global \sopiVoice }
+      \new Voice = "sopII" { \global \sopiiVoice }
+      \new Voice = "altI" { \global \altiVoice }
+      \new Voice = "altII" { \global \altiiVoice }
+      \new Voice = "tenI" { \global \teniVoice } 
+      \new Voice = "tenII" { \global \teniiVoice } 
+      \new Voice = "basI" { \global \basiVoice } 
+      \new Voice = "basII" { \global \basiiVoice } 
      >> 
    \stafftovoice
   }
@@ -105,14 +105,14 @@ stafftovoice =
   \score { 
     \unfoldRepeats
      \new Staff << \commonVoice                     
-      \new Voice = "sopi" { \highlightedVoice  \global \sopiVoice }
-      \new Voice = "sopii" { \global \sopiiVoice }
-      \new Voice = "alti" { \global \altiVoice }
-      \new Voice = "altii" { \global \altiiVoice }
-      \new Voice = "teni" { \global \teniVoice } 
-      \new Voice = "tenii" { \global \teniiVoice } 
-      \new Voice = "basi" { \global \basiVoice } 
-      \new Voice = "basii" { \global \basiiVoice } 
+      \new Voice = "sopI" { \highlightedVoice  \global \sopiVoice }
+      \new Voice = "sopII" { \global \sopiiVoice }
+      \new Voice = "altI" { \global \altiVoice }
+      \new Voice = "altII" { \global \altiiVoice }
+      \new Voice = "tenI" { \global \teniVoice } 
+      \new Voice = "tenII" { \global \teniiVoice } 
+      \new Voice = "basI" { \global \basiVoice } 
+      \new Voice = "basII" { \global \basiiVoice } 
      >> 
    \stafftovoice
   }
@@ -123,14 +123,14 @@ stafftovoice =
   \score { 
     \unfoldRepeats
      \new Staff << \commonVoice                     
-      \new Voice = "sopi" { \global \sopiVoice }
-      \new Voice = "sopii" { \highlightedVoice \global \sopiiVoice }
-      \new Voice = "alti" { \global \altiVoice }
-      \new Voice = "altii" { \global \altiiVoice }
-      \new Voice = "teni" { \global \teniVoice } 
-      \new Voice = "tenii" { \global \teniiVoice } 
-      \new Voice = "basi" { \global \basiVoice } 
-      \new Voice = "basii" { \global \basiiVoice } 
+      \new Voice = "sopI" { \global \sopiVoice }
+      \new Voice = "sopII" { \highlightedVoice \global \sopiiVoice }
+      \new Voice = "altI" { \global \altiVoice }
+      \new Voice = "altII" { \global \altiiVoice }
+      \new Voice = "tenI" { \global \teniVoice } 
+      \new Voice = "tenII" { \global \teniiVoice } 
+      \new Voice = "basI" { \global \basiVoice } 
+      \new Voice = "basII" { \global \basiiVoice } 
      >> 
    \stafftovoice
   }
@@ -141,14 +141,14 @@ stafftovoice =
   \score { 
     \unfoldRepeats
      \new Staff << \commonVoice                     
-      \new Voice = "sopi" { \global \sopiVoice }
-      \new Voice = "sopii" { \global \sopiiVoice }
-      \new Voice = "alti" { \highlightedVoice \global \altiVoice }
-      \new Voice = "altii" { \global \altiiVoice }
-      \new Voice = "teni" { \global \teniVoice } 
-      \new Voice = "tenii" { \global \teniiVoice } 
-      \new Voice = "basi" { \global \basiVoice } 
-      \new Voice = "basii" { \global \basiiVoice } 
+      \new Voice = "sopI" { \global \sopiVoice }
+      \new Voice = "sopII" { \global \sopiiVoice }
+      \new Voice = "altI" { \highlightedVoice \global \altiVoice }
+      \new Voice = "altII" { \global \altiiVoice }
+      \new Voice = "tenI" { \global \teniVoice } 
+      \new Voice = "tenII" { \global \teniiVoice } 
+      \new Voice = "basI" { \global \basiVoice } 
+      \new Voice = "basII" { \global \basiiVoice } 
      >> 
    \stafftovoice
   }
@@ -159,14 +159,14 @@ stafftovoice =
   \score { 
     \unfoldRepeats
      \new Staff << \commonVoice                     
-      \new Voice = "sopi" { \global \sopiVoice }
-      \new Voice = "sopii" { \global \sopiiVoice }
-      \new Voice = "alti" { \global \altiVoice }
-      \new Voice = "altii" { \highlightedVoice \global \altiiVoice }
-      \new Voice = "teni" { \global \teniVoice } 
-      \new Voice = "tenii" { \global \teniiVoice } 
-      \new Voice = "basi" { \global \basiVoice } 
-      \new Voice = "basii" { \global \basiiVoice } 
+      \new Voice = "sopI" { \global \sopiVoice }
+      \new Voice = "sopII" { \global \sopiiVoice }
+      \new Voice = "altI" { \global \altiVoice }
+      \new Voice = "altII" { \highlightedVoice \global \altiiVoice }
+      \new Voice = "tenI" { \global \teniVoice } 
+      \new Voice = "tenII" { \global \teniiVoice } 
+      \new Voice = "basI" { \global \basiVoice } 
+      \new Voice = "basII" { \global \basiiVoice } 
      >> 
    \stafftovoice
   }
@@ -177,14 +177,14 @@ stafftovoice =
   \score { 
     \unfoldRepeats
      \new Staff << \commonVoice                     
-      \new Voice = "sopi" { \global \sopiVoice }
-      \new Voice = "sopii" { \global \sopiiVoice }
-      \new Voice = "alti" { \global \altiVoice }
-      \new Voice = "altii" { \global \altiiVoice }
-      \new Voice = "teni" { \highlightedVoice \global \teniVoice } 
-      \new Voice = "tenii" { \global \teniiVoice } 
-      \new Voice = "basi" { \global \basiVoice } 
-      \new Voice = "basii" { \global \basiiVoice } 
+      \new Voice = "sopI" { \global \sopiVoice }
+      \new Voice = "sopII" { \global \sopiiVoice }
+      \new Voice = "altI" { \global \altiVoice }
+      \new Voice = "altII" { \global \altiiVoice }
+      \new Voice = "tenI" { \highlightedVoice \global \teniVoice } 
+      \new Voice = "tenII" { \global \teniiVoice } 
+      \new Voice = "basI" { \global \basiVoice } 
+      \new Voice = "basII" { \global \basiiVoice } 
      >> 
    \stafftovoice
   }
@@ -195,14 +195,14 @@ stafftovoice =
   \score { 
     \unfoldRepeats
      \new Staff << \commonVoice                     
-      \new Voice = "sopi" { \global \sopiVoice }
-      \new Voice = "sopii" { \global \sopiiVoice }
-      \new Voice = "alti" { \global \altiVoice }
-      \new Voice = "altii" { \global \altiiVoice }
-      \new Voice = "teni" { \global \teniVoice } 
-      \new Voice = "tenii" { \highlightedVoice \global \teniiVoice } 
-      \new Voice = "basi" { \global \basiVoice } 
-      \new Voice = "basii" { \global \basiiVoice } 
+      \new Voice = "sopI" { \global \sopiVoice }
+      \new Voice = "sopII" { \global \sopiiVoice }
+      \new Voice = "altI" { \global \altiVoice }
+      \new Voice = "altII" { \global \altiiVoice }
+      \new Voice = "tenI" { \global \teniVoice } 
+      \new Voice = "tenII" { \highlightedVoice \global \teniiVoice } 
+      \new Voice = "basI" { \global \basiVoice } 
+      \new Voice = "basII" { \global \basiiVoice } 
      >> 
    \stafftovoice
   }
@@ -213,14 +213,14 @@ stafftovoice =
   \score { 
     \unfoldRepeats
      \new Staff << \commonVoice                     
-      \new Voice = "sopi" { \global \sopiVoice }
-      \new Voice = "sopii" { \global \sopiiVoice }
-      \new Voice = "alti" { \global \altiVoice }
-      \new Voice = "altii" { \global \altiiVoice }
-      \new Voice = "teni" { \global \teniVoice } 
-      \new Voice = "tenii" { \global \teniiVoice } 
-      \new Voice = "basi" { \highlightedVoice \global \basiVoice } 
-      \new Voice = "basii" { \global \basiiVoice } 
+      \new Voice = "sopI" { \global \sopiVoice }
+      \new Voice = "sopII" { \global \sopiiVoice }
+      \new Voice = "altI" { \global \altiVoice }
+      \new Voice = "altII" { \global \altiiVoice }
+      \new Voice = "tenI" { \global \teniVoice } 
+      \new Voice = "tenII" { \global \teniiVoice } 
+      \new Voice = "basI" { \highlightedVoice \global \basiVoice } 
+      \new Voice = "basII" { \global \basiiVoice } 
      >> 
    \stafftovoice
   }
@@ -231,14 +231,14 @@ stafftovoice =
   \score { 
     \unfoldRepeats
      \new Staff << \commonVoice                     
-      \new Voice = "sopi" { \global \sopiVoice }
-      \new Voice = "sopii" { \global \sopiiVoice }
-      \new Voice = "alti" { \global \altiVoice }
-      \new Voice = "altii" { \global \altiiVoice }
-      \new Voice = "teni" { \global \teniVoice } 
-      \new Voice = "tenii" { \global \teniiVoice } 
-      \new Voice = "basi" { \global \basiVoice } 
-      \new Voice = "basii" { \highlightedVoice \global \basiiVoice } 
+      \new Voice = "sopI" { \global \sopiVoice }
+      \new Voice = "sopII" { \global \sopiiVoice }
+      \new Voice = "altI" { \global \altiVoice }
+      \new Voice = "altII" { \global \altiiVoice }
+      \new Voice = "tenI" { \global \teniVoice } 
+      \new Voice = "tenII" { \global \teniiVoice } 
+      \new Voice = "basI" { \global \basiVoice } 
+      \new Voice = "basII" { \highlightedVoice \global \basiiVoice } 
      >> 
    \stafftovoice
   }

@@ -9,7 +9,7 @@
 % local information (for this particular piece)
 
 \include "voices.ily" 	 % the tunes, dynamic and articulation marks
-\include "lyrix.ily" 	 % the lyrics within the staves
+\include "lyrics.ily" 	 % the lyrics within the staves
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -24,13 +24,13 @@
   \new StaffGroup<<
     \new Staff \with { \consists "Ambitus_engraver" } 
       << \set Staff.instrumentName = "Sopran I"
-      \new Voice = "sopi" { \global \sopiVoice } >>
-      \new Lyrics \lyricsto "sopi" { \sopiLyrix }
+      \new Voice = "sopI" { \global \sopiVoice } >>
+      \new Lyrics \lyricsto "sopI" { \sopiLyrix }
     
     \new Staff \with { \consists "Ambitus_engraver" }
     << \set Staff.instrumentName = "Sopran II"
-      \new Voice = "sopii" { \global \sopiiVoice } >> 
-      \new Lyrics \lyricsto "sopii" { \sopiiLyrix }
+      \new Voice = "sopII" { \global \sopiiVoice } >> 
+      \new Lyrics \lyricsto "sopII" { \sopiiLyrix }
    
    \new Staff \with { \consists "Ambitus_engraver" }
    << \set Staff.instrumentName = "Alt"
@@ -75,8 +75,8 @@ stafftovoice =
   \score { 
     \unfoldRepeats
      \new Staff << \commonVoice                     
-      \new Voice = "sopi" { \global \sopiVoice }
-      \new Voice = "sopii" { \global \sopiiVoice }
+      \new Voice = "sopI" { \global \sopiVoice }
+      \new Voice = "sopII" { \global \sopiiVoice }
       \new Voice = "alt" { \global \altVoice } 
       \new Voice = "ten" { \global \tenVoice } 
       \new Voice = "bas" { \global \basVoice } 
@@ -89,8 +89,8 @@ stafftovoice =
   \score { 
     \unfoldRepeats
      \new Staff << \commonVoice                     
-      \new Voice = "sopi" { \highlightedVoice  \global \sopiVoice }
-      \new Voice = "sopii" { \global \sopiiVoice }
+      \new Voice = "sopI" { \highlightedVoice  \global \sopiVoice }
+      \new Voice = "sopII" { \global \sopiiVoice }
       \new Voice = "alt" { \global \altVoice } 
       \new Voice = "ten" { \global \tenVoice } 
       \new Voice = "bas" { \global \basVoice } 
@@ -99,13 +99,13 @@ stafftovoice =
   }
 }
 
-% sopii
+% sopII
 \book { \bookOutputSuffix "sopran2"
   \score {
   \unfoldRepeats
     \new Staff << \commonVoice                    
-      \new Voice = "sopi" { \global \sopiVoice }
-      \new Voice = "sopii" { \highlightedVoice \global \sopiiVoice }
+      \new Voice = "sopI" { \global \sopiVoice }
+      \new Voice = "sopII" { \highlightedVoice \global \sopiiVoice }
       \new Voice = "alt" { \global \altVoice } 
       \new Voice = "ten" { \global \tenVoice } 
       \new Voice = "bas" { \global \basVoice }
@@ -119,8 +119,8 @@ stafftovoice =
   \score {
   \unfoldRepeats
     \new Staff << \commonVoice                    
-      \new Voice = "sopi" { \global \sopiVoice }
-      \new Voice = "sopii" { \global \sopiiVoice }
+      \new Voice = "sopI" { \global \sopiVoice }
+      \new Voice = "sopII" { \global \sopiiVoice }
       \new Voice = "alt" { \highlightedVoice \global \altVoice } 
       \new Voice = "ten" { \global \tenVoice } 
       \new Voice = "bas" { \global \basVoice }
@@ -134,8 +134,8 @@ stafftovoice =
   \score {
   \unfoldRepeats
     \new Staff << \commonVoice                    
-      \new Voice = "sopi" { \global \sopiVoice }
-      \new Voice = "sopii" { \global \sopiiVoice }
+      \new Voice = "sopI" { \global \sopiVoice }
+      \new Voice = "sopII" { \global \sopiiVoice }
       \new Voice = "alt" { \global \altVoice } 
       \new Voice = "ten" { \highlightedVoice \global \tenVoice } 
       \new Voice = "bas" { \global \basVoice }
@@ -149,8 +149,8 @@ stafftovoice =
   \score {
   \unfoldRepeats
     \new Staff << \commonVoice                    
-      \new Voice = "sopi" { \global \sopiVoice }
-      \new Voice = "sopii" { \global \sopiiVoice }
+      \new Voice = "sopI" { \global \sopiVoice }
+      \new Voice = "sopII" { \global \sopiiVoice }
       \new Voice = "alt" { \global \altVoice } 
       \new Voice = "ten" { \global \tenVoice } 
       \new Voice = "bas" { \highlightedVoice \global \basVoice }

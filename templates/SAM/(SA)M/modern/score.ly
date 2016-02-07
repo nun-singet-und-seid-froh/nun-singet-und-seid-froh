@@ -3,7 +3,7 @@
 % local information (for this particular piece)
 \include "meta.ily"             % metadata for this piece
 \include "voices.ily"           % the tunes, dynamic and articulation marks
-\include "lyrix.ily"            % the lyrics within the staves
+\include "lyrics.ily"            % the lyrics within the staves
 \include "output.ily"           % the paper and midi settings for this piece
 
 % global information (identical for all pieces)
@@ -36,7 +36,7 @@
         \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #2
         \override VerticalAxisGroup.nonstaff-unrelatedstaff-spacing.padding = #2
       }
-      \lyricsto "sop"{\lyrix}
+      \lyricsto "sop"{\lyrics}
 
       \new Staff = "men" <<
         \set Staff.instrumentName = "Männer"
