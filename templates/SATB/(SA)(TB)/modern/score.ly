@@ -32,7 +32,7 @@
         \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #2
         \override VerticalAxisGroup.nonstaff-unrelatedstaff-spacing.padding = #2
       }
-      \lyricsto "sop"{\lyrics}
+      \lyricsto "sop"{\commonLyrics}
   
     \new Staff = "men" << \set Staff.instrumentName = \markup { \center-column { Tenor \line { Bass } } } 
       \new Voice = "ten" \with { \consists "Ambitus_engraver" } 
@@ -66,60 +66,69 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                      the MIDI producing part: 	           %
-%    1 MIDI per each voice with the respective voice highlighted   %
+%    1 midi per each voice with the respective voice highlighted   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % sopran
-\book { \bookOutputSuffix "sopran"
-  \score { 
+\book {
+  \bookOutputSuffix "sopran"
+  \score {
     \unfoldRepeats
-     \new Staff << \commonVoice                     
+    \new Staff <<
+      \commonVoice
       \new Voice = "sop" { \highlightedVoice  \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
-      \new Voice = "ten" { \global \tenVoice } 
-     >>
-      \staffperformertovoice
+      \new Voice = "ten" { \global \tenVoice }
+      \new Voice = "bas" { \global \basVoice }
+    >>
+    \stafftovoice
   }
 }
 
 % alt
-\book { \bookOutputSuffix "alt"
+\book {
+  \bookOutputSuffix "alt"
   \score {
-  \unfoldRepeats
-    \new Staff << \commonVoice                    
+    \unfoldRepeats
+    \new Staff <<
+      \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \highlightedVoice \global \altVoice }
-      \new Voice = "ten" { \global \tenVoice } 
+      \new Voice = "tenI" { \global \tenVoice }
       \new Voice = "bas" { \global \basVoice }
-    >> 
-     \staffperformertovoice
+    >>
+    \stafftovoice
   }
 }
 
 % tenor
-\book { \bookOutputSuffix "tenor"
+\book {
+  \bookOutputSuffix "tenor"
   \score {
-  \unfoldRepeats
-    \new Staff << \commonVoice                    
+    \unfoldRepeats
+    \new Staff <<
+      \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
-      \new Voice = "ten" { \highlightedVoice \global \tenVoice } 
+      \new Voice = "tenI" { \highlightedVoice \global \tenVoice }
       \new Voice = "bas" { \global \basVoice }
-    >> 
-    \staffperformertovoice
+    >>
+    \stafftovoice
   }
 }
 
 % bass
-\book { \bookOutputSuffix "bass"
+\book {
+  \bookOutputSuffix "bass"
   \score {
-  \unfoldRepeats
-    \new Staff << \commonVoice                    
+    \unfoldRepeats
+    \new Staff <<
+      \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
-      \new Voice = "ten" { \global \tenVoice } 
+      \new Voice = "ten" { \global \tenVoice }
       \new Voice = "bas" { \highlightedVoice \global \basVoice }
-    >> 
-    \staffperformertovoice
+    >>
+    \stafftovoice
   }
 }
