@@ -15,6 +15,7 @@
 %                      the sheet producing part: 	           %
 % 	                4 staves for 4 voices		           %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#(set-global-staff-size 21)
 \book {
    \include "../../../include/header.ily"
   \score {
