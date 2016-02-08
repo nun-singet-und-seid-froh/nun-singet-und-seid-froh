@@ -85,7 +85,7 @@ stencil."
         \abs-fontsize #20 { \italic \with-url  #"http://www.nun-singet-und-seid-froh.info" { "www.nun-singet-und-seid-froh.info" } }
         \vspace #0.5
         \line { \abs-fontsize #20 { "– Nr. " \noInNsusf " –"} }
-        \vspace #1
+        \vspace #7
         
       }
     }
@@ -137,7 +137,7 @@ bookTitleMarkup  =
    \line{
       \column {
         \fill-line {
-        \override #'(font-name . "EBGaramond") \center-align \abs-fontsize #18 \caps
+        \override #'(font-name . "EBGaramond") \center-align \abs-fontsize #25 \caps
         \title
       }
        \fill-line {
