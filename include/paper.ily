@@ -1,15 +1,25 @@
 % the layout-information
 
+#(define (looking-up layout props symbol)
+   (define (ancestor layout)
+     "Return the topmost layout ancestor"
+     (let ((parent (ly:output-def-parent layout)))
+       (if (not (ly:output-def? parent))
+           layout
+           (ancestor parent))))
+   (ly:output-def-lookup (ancestor layout) symbol))
+
 #(define (book-second-page? layout props)
    "Return #t iff the current page number, got from @code{props}, is the
     book second one."
    (= (chain-assoc-get 'page:page-number props -1)
-      ))
-      
+      (+ (looking-up layout props 'first-page-number) 1)))
+
 #(define (not-second-page layout props arg)
    (if (not (book-second-page? layout props))
        (interpret-markup layout props arg)
        empty-stencil))
+
 
 \paper {
   left-margin = 2\cm
