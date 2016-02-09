@@ -13,7 +13,6 @@
 %                      the sheet producing part: 	           %
 % 	            8 voices in 4 groups á 2 staves 		   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-#(set-global-staff-size 14.2)
 \book {
   \include "../../../include/header.ily" 
   \score {
