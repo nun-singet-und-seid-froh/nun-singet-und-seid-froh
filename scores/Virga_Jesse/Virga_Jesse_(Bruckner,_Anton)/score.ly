@@ -119,8 +119,8 @@
       \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
-      \new Voice = "ten" { \global \tenVoice }
       \new Voice = "ten" { \highlightedVoice \global\tenCommonPartOne \tenIPartOne \tenCommonPartTwo \tenIIPartTwo \tenCommonPartThree \tenIPartThree \tenCommonPartFour}
+      \new Voice = "bas" { \global \basVoice }
     >>
     \stafftovoice
   }
@@ -135,8 +135,8 @@
       \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
-      \new Voice = "ten" { \global \tenVoice }
       \new Voice = "ten" { \highlightedVoice \global\tenCommonPartOne \tenIIPartOne \tenCommonPartTwo \tenIIPartTwo \tenCommonPartThree \tenIIPartThree \tenCommonPartFour}
+      \new Voice = "bas" { \global \basVoice }
     >>
     \stafftovoice
   }
