@@ -1,4 +1,11 @@
-% based on templates/SATTB/SATTB/modern/score.ly
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     This file is part of the edition www.nun-singet-und-seid-froh.info        %
+% This file as well as the music represented in it is within the public domain. %
+%  If you think that this file violates your copyright or other rights of you,  % 
+%           please contact us at mail@nun-singet-und-seid-froh.info.            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% based ontemplates/SATTB/SATTB/modern/score.ly
 
 % local information (for this particular piece)
 \include "meta.ily"             % metadata for this piece
@@ -21,7 +28,7 @@
 
   \score {
     %for PDF
-    \new StaffGroup<<
+    \new SemiChoirStaff<<
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
         \set Staff.instrumentName = "Sopran"

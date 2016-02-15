@@ -1,5 +1,5 @@
 % the layout-information
-
+% these definitions will be used to suppress page numbering on second page (which is the first page after the cover page)
 #(define (looking-up layout props symbol)
    (define (ancestor layout)
      "Return the topmost layout ancestor"
@@ -20,13 +20,45 @@
        (interpret-markup layout props arg)
        empty-stencil))
 
+% these definitions will be used to print the page numbers on the margin of the page
+#(define page-number-offsets '(
+  (even . (6 . 0))
+  (odd . (-6 . 0))
+  ))
+
+#(define-markup-command (place-folio layout props folio) (markup?)
+   (let* ((pageno (chain-assoc-get 'page:page-number props))
+          (even-odd-page (if (even? pageno) 'even 'odd))
+          (m (interpret-markup layout props folio))
+          (x-ext (ly:stencil-extent m X))
+          (y-ext (ly:stencil-extent m Y)))
+   (interpret-markup layout props
+     (markup
+        #:with-dimensions x-ext y-ext
+        #:line (#:translate (assoc-get even-odd-page page-number-offsets) folio)
+       ))))
 
 \paper {
   left-margin = 2\cm
   right-margin = 2\cm
   first-page-number = 0
-  oddHeaderMarkup= \markup { \column { { \abs-fontsize #18 \on-the-fly #not-second-page \fromproperty #'page:page-number-string }}}
-  evenHeaderMarkup = \markup { { \column { \fill-line {"" \abs-fontsize #18 \on-the-fly #not-first-page \fromproperty #'page:page-number-string }}}}
+  ragged-right = ##f 
+  oddHeaderMarkup= \markup { 
+    \column { 
+      \line { 
+        \place-folio \abs-fontsize #18 \on-the-fly #not-second-page \fromproperty #'page:page-number-string 
+      }
+    }
+  }
+  
+  evenHeaderMarkup = \markup { 
+    \column { 
+      \fill-line {
+        {""}
+        { \place-folio \abs-fontsize #18 \on-the-fly #not-first-page \fromproperty #'page:page-number-string }
+      }
+    }
+  }
   
  %two-sided = ##t
   system-separator-markup = \slashSeparator
@@ -43,5 +75,20 @@
     %increases the size of numbers, because numbers in EB Garamond are a bit small
     \override BarNumber #'font-size = #2
     \override ClefModifier.font-size = #0.5 %the size of the 8 in the G_8-clef (tenor-clef)
+  }
+
+  \context {
+    \ChoirStaff
+    \name "SemiChoirStaff"
+    \consists "Span_bar_engraver"
+    \override SpanBar.stencil =
+      #(lambda (grob) 
+        (if (string=? (ly:grob-property grob 'glyph-name) "|")
+            (set! (ly:grob-property grob 'glyph-name) ""))
+        (ly:span-bar::print grob))
+  }
+  \context {
+    \Score
+    \accepts SemiChoirStaff
   }
 }

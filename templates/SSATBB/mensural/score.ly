@@ -1,4 +1,11 @@
-% based on templates/SSATTB/SSATTB/mensural/score.ly
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     This file is part of the edition www.nun-singet-und-seid-froh.info        %
+% This file as well as the music represented in it is within the public domain. %
+%  If you think that this file violates your copyright or other rights of you,  % 
+%           please contact us at mail@nun-singet-und-seid-froh.info.            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% based ontemplates/SSATTB/SSATTB/mensural/score.ly
 
 % local information (for this particular piece)
 \include "meta.ily"             % metadata for this piece
@@ -23,13 +30,13 @@
   \score {
     \layout { #(layout-set-staff-size 17) 
     }
-  \new StaffGroup<<
+  \new SemiChoirStaff<<
     \new Staff \with { \consists "Ambitus_engraver" } 
       << \set Staff.instrumentName = "Sopran I"
       \new Voice = "sopI" { \global \sopiVoice } >>
       \new Lyrics \lyricsto "sopI" { \sopiLyrix }
       
-      \new StaffGroup<<
+      \new SemiChoirStaff<<
     \new Staff \with { \consists "Ambitus_engraver" } 
       << \set Staff.instrumentName = "Sopran II"
       \new Voice = "sopII" { \global \sopiiVoice } >>

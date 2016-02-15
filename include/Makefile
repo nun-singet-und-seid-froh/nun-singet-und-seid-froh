@@ -1,7 +1,7 @@
 SHELL=/bin/bash
 
 DIRNAME=$(shell basename "$(PWD)")
-LYS=score.ly voices.ily meta.ily lyrix.ily output.ily ../../../include/header.ily ../../../include/paper.ily ../../../include/sound.ily ../../../include/version.ily
+LYS=score.ly voices.ily meta.ily lyrics.ily output.ily ../../../include/header.ily ../../../include/paper.ily ../../../include/sound.ily ../../../include/version.ily
 
 all: standalone midi
 

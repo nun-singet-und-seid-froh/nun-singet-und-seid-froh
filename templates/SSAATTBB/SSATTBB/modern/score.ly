@@ -1,4 +1,11 @@
-% based on templates/SSAATTBB/SSATTBB/modern/score.ly
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     This file is part of the edition www.nun-singet-und-seid-froh.info        %
+% This file as well as the music represented in it is within the public domain. %
+%  If you think that this file violates your copyright or other rights of you,  % 
+%           please contact us at mail@nun-singet-und-seid-froh.info.            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% based ontemplates/SSAATTBB/SSATTBB/modern/score.ly
 
 % local information (for this particular piece)
 \include "meta.ily"             % metadata for this piece
@@ -22,7 +29,7 @@
   \score {
    %for PDF
    \new Score <<
-    \new StaffGroup <<  
+    \new SemiChoirStaff <<  
       \new Staff << \set Staff.instrumentName = "Sopran 1"
       \new Voice = "sopI" \with { \consists "Ambitus_engraver" }  { \global \sopiVoice } >>
       \new Lyrics \lyricsto "sopI" { \sopiLyrix }
@@ -32,7 +39,7 @@
       \new Lyrics \lyricsto "sopII" { \sopiiLyrix } 
     >>
   
-    \new StaffGroup <<  
+    \new SemiChoirStaff <<  
       \new Staff << \set Staff.instrumentName = "Alt I" 
       \new Voice = "altI" \with { \consists "Ambitus_engraver" } { \global \altiVoice } >>
       \new Lyrics \lyricsto "altI" { \altiLyrix }
@@ -42,7 +49,7 @@
       \new Lyrics \lyricsto "altII" { \altiiLyrix } 
     >>
   
-    \new StaffGroup <<
+    \new SemiChoirStaff <<
       \new Staff << \set Staff.instrumentName = "Tenor 1"
       \new Voice = "tenI" \with { \consists "Ambitus_engraver" } { \global  \clef "G_8" \teniVoice } >>
       \new Lyrics \lyricsto "tenI" { \teniLyrix }
@@ -52,7 +59,7 @@
       \new Lyrics \lyricsto "tenII" { \teniiLyrix }  
     >>
   
-    \new StaffGroup <<
+    \new SemiChoirStaff <<
       \new Staff << \set Staff.instrumentName = "Bass 1"
       \new Voice = "basI" \with { \consists "Ambitus_engraver" } { \global \clef bass \basiVoice } >>
       \new Lyrics \lyricsto "basI" { \basiLyrix }

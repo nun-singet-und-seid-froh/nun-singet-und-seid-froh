@@ -21,7 +21,7 @@
   \include "../../include/header.ily"
  
   \score {
-  \new StaffGroup<<
+  \new SemiChoirStaff<<
     \new Staff \with { \consists "Ambitus_engraver" } 
       << \set Staff.instrumentName = "Sopran I"
       \new Voice = "sopI" { \global \sopiVoice } >>
