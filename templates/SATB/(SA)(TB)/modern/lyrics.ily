@@ -9,17 +9,9 @@
 
 % the lyrics within the staves
 
-sopLyrics = \lyricmode {
+commonLyrics = \lyricmode {
 }
 
-altLyrics = \lyricmode {
-}
-
-tenLyrics = \lyricmode {
-}
-
-basLyrics = \lyricmode {
-}
 
 % the lyrics of the stanzas below the staves
 stanzas =
