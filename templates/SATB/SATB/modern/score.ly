@@ -1,9 +1,9 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     This file is part of the edition www.nun-singet-und-seid-froh.info        %
-% This file as well as the music represented in it is within the public domain. %
-%  If you think that this file violates your copyright or other rights of you,  % 
-%           please contact us at mail@nun-singet-und-seid-froh.info.            %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%         This file is part of the edition www.nun-singet-und-seid-froh.info            %
+% This file as well as the music or data represented in it is within the public domain. %
+%      If you think that this file violates your copyright or other rights of you,      %
+%               please contact us at mail@nun-singet-und-seid-froh.info                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % based ontemplates/SATB/SATB/modern/score.ly
 
@@ -15,7 +15,7 @@
 
 % global information (identical for all pieces)
 \include "../../../include/version.ily"    % the lilypond version
-\include "../../../include/sheet.ily"      % the layout information
+\include "../../../include/paper.ily"      % the layout information
 \include "../../../include/sound.ily"      % variable declarations for midi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -24,7 +24,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \book {
-  \include "../../../include/paper.ily"
+  \include "../../../include/header.ily"
 
   \score {
     %for PDF
@@ -34,34 +34,35 @@
         \set Staff.instrumentName = "Sopran"
         \new Voice = "sop" { \global \sopVoice }
       >>
-      \new Lyrics \lyricsto "sop" { \sopLyrix }
+      \new Lyrics \lyricsto "sop" { \sopLyrics }
 
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
         \set Staff.instrumentName = "Alt"
         \new Voice = "alt" { \global \altVoice }
       >>
-      \new Lyrics \lyricsto "alt" { \altLyrix }
+      \new Lyrics \lyricsto "alt" { \altLyrics }
 
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
         \set Staff.instrumentName = "Tenor"
-        \new Voice = "tenI" { \clef "G_8" \global \tenVoice }
+        \new Voice = "ten" { \clef "G_8" \global \tenVoice }
       >>
-      \new Lyrics \lyricsto "tenI" { \tenLyrix }
+      \new Lyrics \lyricsto "ten" { \tenLyrics }
 
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
         \set Staff.instrumentName = "Bass"
         \new Voice = "bas" { \clef bass \global \basVoice }
       >>
-      \new Lyrics \lyricsto "bas" { \basLyrix }
+      \new Lyrics \lyricsto "bas" { \basLyrics }
     >> %end of StaffGroup
-    \stanzas
 
     \layout { }
   } %end of score (PDF)
-  
+
+  \stanzas
+
   \score {
     %for MIDI
     \unfoldRepeats
@@ -74,7 +75,7 @@
     >>
     \stafftovoice
   } %end of score (MIDI)
-  
+
 } %end of book
 
 
@@ -108,7 +109,7 @@
       \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \highlightedVoice \global \altVoice }
-      \new Voice = "tenI" { \global \tenVoice }
+      \new Voice = "ten" { \global \tenVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
     \stafftovoice
@@ -124,7 +125,7 @@
       \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
-      \new Voice = "tenI" { \highlightedVoice \global \tenVoice }
+      \new Voice = "ten" { \highlightedVoice \global \tenVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
     \stafftovoice

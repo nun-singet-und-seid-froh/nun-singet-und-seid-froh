@@ -1,11 +1,11 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     This file is part of the edition www.nun-singet-und-seid-froh.info        %
-% This file as well as the music represented in it is within the public domain. %
-%  If you think that this file violates your copyright or other rights of you,  % 
-%           please contact us at mail@nun-singet-und-seid-froh.info.            %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%         This file is part of the edition www.nun-singet-und-seid-froh.info            %
+% This file as well as the music or data represented in it is within the public domain. %
+%      If you think that this file violates your copyright or other rights of you,      %
+%               please contact us at mail@nun-singet-und-seid-froh.info                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% based ontemplates/SAM/(SA)M/modern/score.ly
+% based on templates/SAM/(SA)M/modern/score.ly
 
 % local information (for this particular piece)
 \include "meta.ily"             % metadata for this piece
@@ -14,9 +14,9 @@
 \include "output.ily"           % the paper and midi settings for this piece
 
 % global information (identical for all pieces)
-\include "../../include/version.ily"    % the lilypond version
-\include "../../include/paper.ily"      % the layout information
-\include "../../include/sound.ily"      % variable declarations for midi
+\include "../../../include/version.ily"   % the lilypond version
+\include "../../../include/paper.ily"      % the layout information
+\include "../../../include/sound.ily"      % variable declarations for midi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                  the PDF & main MIDI producing part:             %
@@ -24,7 +24,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \book {
-  \include "../../include/header.ily"  % the layout information
+  \include "../../../include/header.ily"  % the layout information
 
   \score {
     %for PDF
@@ -43,10 +43,10 @@
         \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #2
         \override VerticalAxisGroup.nonstaff-unrelatedstaff-spacing.padding = #2
       }
-      \lyricsto "sop"{\lyrics}
+      \lyricsto "sop"{\commonLyrics}
 
       \new Staff = "men" <<
-        \set Staff.instrumentName = "Männer"
+        \set Staff.instrumentName = "men"
         \new Voice = "men" \with { \consists "Ambitus_engraver"}
         {
           \override Ambitus.X-offset = #2.0
@@ -90,7 +90,7 @@
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "men" { \global \menVoice }
     >>
-    \staffperformertovoice
+    \stafftovoice
   }
 }
 
@@ -105,7 +105,7 @@
       \new Voice = "alt" { \highlightedVoice \global \altVoice }
       \new Voice = "men" { \global \menVoice }
     >>
-    \staffperformertovoice
+    \stafftovoice
   }
 }
 
@@ -120,6 +120,6 @@
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "men" { \highlightedVoice \global \menVoice }
     >>
-    \staffperformertovoice
+    \stafftovoice
   }
 }

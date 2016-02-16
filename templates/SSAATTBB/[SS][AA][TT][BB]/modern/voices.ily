@@ -5,7 +5,7 @@
 %               please contact us at mail@nun-singet-und-seid-froh.info                 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% based on templates/SSAATTBB/SSAATTBB/modern/voices.ily
+% based on templates/SSAATTBB/[SS][AA][TT][BB]/modern/voices.ily
 
 global = {
   \key c \major

@@ -1,3 +1,10 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%         This file is part of the edition www.nun-singet-und-seid-froh.info            %
+% This file as well as the music or data represented in it is within the public domain. %
+%      If you think that this file violates your copyright or other rights of you,      %
+%               please contact us at mail@nun-singet-und-seid-froh.info                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % based on templates/SSAATTBB/(SS)(AA)(TT)(BB)/modern/voices.ily
 
 global = {
@@ -11,87 +18,87 @@ global = {
 commonMarks = {
 }
 
-sopiMarks = {
+sopIMarks = {
 }
 
-sopiiMarks = {
+sopIIMarks = {
 }
 
-altiMarks = {
+altIMarks = {
 }
 
-altiiMarks = {
+altIIMarks = {
 }
 
-teniMarks = {
+tenIMarks = {
 }
 
-teniiMarks = {
+tenIIMarks = {
 }
 
-basiMarks = {
+basIMarks = {
 }
 
-basiiMarks = {
+basIIMarks = {
 }
 
 
 
-sopiVoice = \relative c'' {<< 
+sopIVoice = \relative c'' {<< 
 { \commonMarks }
-{ \sopiMarks }
+{ \sopIMarks }
 {
 
 }
 >>}
 
-sopiiVoice = \relative c'' {<< 
+sopIIVoice = \relative c'' {<< 
 { \commonMarks }
-{ \sopiiMarks }
+{ \sopIIMarks }
 {
 }
 >>}
 
-altiVoice = \relative c' {<< 
+altIVoice = \relative c' {<< 
 { \commonMarks }
-{ \altiMarks }
+{ \altIMarks }
 {
 }
 >>}
 
-altiiVoice = \relative c' {<< 
+altIIVoice = \relative c' {<< 
 { \commonMarks }
-{ \altiiMarks }
+{ \altIIMarks }
 {
 }
 >>}
 
-teniVoice = \relative c' {<< 
+tenIVoice = \relative c' {<< 
 { \commonMarks }
-{ \teniMarks }
+{ \tenIMarks }
 {
 }
 >>}
 
-teniiVoice = \relative c' {<< 
+tenIIVoice = \relative c' {<< 
 { \commonMarks }
-{ \teniiMarks }
+{ \tenIIMarks }
 {
 }
 >>}
 
-basiVoice = \relative c { << 
+basIVoice = \relative c { << 
 { \commonMarks }
-{ \basiMarks }
+{ \basIMarks }
 {
 }
 >> }
 
 
-basiiVoice = \relative c {
+basIIVoice = \relative c {
 <<
 { \commonMarks }
-{ \basiiMarks }
+{ \basIIMarks }
 {
 }
 >>

@@ -5,22 +5,33 @@
 %               please contact us at mail@nun-singet-und-seid-froh.info                 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% this is standard version 1.0: SSATB
-
-% the lyrics within the staves
+% based on templates/SSATTBB/[SS][AA][TT][BB]/modern/lyrics.ily
 
 sopILyrics = \lyricmode {
+	% for song with stanzas
+  %\set stanza =  "1. "
+  %lyrics here
 }
 
 sopIILyrics = \lyricmode {
 }
 
-altLyrics = \lyricmode {
+altILyrics = \lyricmode {
 }
 
-tenLyrics = \lyricmode {
+altIILyrics = \lyricmode {
 }
 
-basLyrics = \lyricmode {
+tenILyrics = \lyricmode {
 }
 
+tenIILyrics = \lyricmode {
+}
+
+basILyrics = \lyricmode {
+}
+
+basIILyrics = \lyricmode {
+}
+
+stanzas = { }
