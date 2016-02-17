@@ -42,8 +42,8 @@ stencil."
      (define subtitle (string-append subtitle ": »" titleInOpus "«"))
      #f
      )
-#(if (> (string-length melodyDate) 0)
-     (define subtitle (string-append subtitle " (" melodyDate ")"))
+#(if (> (string-length arrangementDate) 0)
+     (define subtitle (string-append subtitle " (" arrangementDate ")"))
      #f
      )
 
