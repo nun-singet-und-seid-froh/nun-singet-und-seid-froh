@@ -4,21 +4,27 @@
 title             = "Frohlocket, ihr Völker auf Erden"
 
 %composer is the one who wrote the melody
-composerPrename	  = "" % e.g. "Johann Sebastian"
-composerSurname	  = "" % e.g. "Bach"
+composerChristianName	  = "" % e.g. "Johann Sebastian"
+composerSurName	  = "" % e.g. "Bach"
 composerLifedata  = "" % e.g. "1685-1750"
 melodyDate	      = ""
 
 %arranger is the one who composed the voices
-arrangerPrename	  = "Felix" % e.g. "Johann Sebastian"
-arrangerSurname	  = "Mendelssohn Bartholdy" % e.g. "Bach"
+arrangerChristianName	  = "Felix" % e.g. "Johann Sebastian"
+arrangerSurName	  = "Mendelssohn Bartholdy" % e.g. "Bach"
 arrangerLifedata  = "1809-1847" % e.g. "1685-1750"
 arrangementDate   = ""
 
-poetPrename	  = "" % e.g. "Paul"
-poetSurname       = "" % e.g. "Gerhardt"
+poetChristianName	  = "" % e.g. "Paul"
+poetSurName       = "" % e.g. "Gerhardt"
 poetLifedata      = "" % e.g. "1607-1676"
 textDate          = ""
+
+% if the lyrics are a translation 
+translatorChristianName = "" % e.g. "Martin"
+translatorSurName       = "" % e.g. "Luther"
+translatorLifedata      = "" % e.g. "1483-1546"
+translationDate         = ""
 
 opus              = "Sechs Sprüche für achtstimmigen Chor (MWV SD 42)" 
 noInOpus          = "1"

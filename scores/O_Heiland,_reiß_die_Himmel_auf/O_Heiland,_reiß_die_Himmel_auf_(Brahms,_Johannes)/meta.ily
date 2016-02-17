@@ -4,21 +4,27 @@
 title             = "O Heiland, reiß die Himmel auf"
 
 %composer is the one who wrote the melody
-composerPrename	  = "" % e.g. "Johann Sebastian"
-composerSurname	  = "" % e.g. "Bach"
+composerChristianName	  = "" % e.g. "Johann Sebastian"
+composerSurName	  = "" % e.g. "Bach"
 composerLifedata  = "" % e.g. "1685-1750"
 melodyDate	      = ""
 
 %arranger is the one who composed the voices
-arrangerPrename	  = "Johannes" % e.g. "Johann Sebastian"
-arrangerSurname	  = "Brahms" % e.g. "Bach"
+arrangerChristianName	  = "Johannes" % e.g. "Johann Sebastian"
+arrangerSurName	  = "Brahms" % e.g. "Bach"
 arrangerLifedata  = "1833-1897" % e.g. "1685-1750"
 arrangementDate   = "1878"
 
-poetPrename	      = "Friedrich" % e.g. "Paul"
-poetSurname       = "Spee" % e.g. "Gerhardt"
+poetChristianName	      = "Friedrich" % e.g. "Paul"
+poetSurName       = "Spee" % e.g. "Gerhardt"
 poetLifedata      = "1591-1634" % e.g. "1607-1676"
 textDate          = ""
+
+% if the lyrics are a translation 
+translatorChristianName = "" % e.g. "Martin"
+translatorSurName       = "" % e.g. "Luther"
+translatorLifedata      = "" % e.g. "1483-1546"
+translationDate         = ""
 
 opus              = "2 Motetten (op. 74)" 
 noInOpus          = "2"
