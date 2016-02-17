@@ -1,0 +1,27 @@
+{{Infobox
+|label1 = Arrangeur
+|label2 = Wurzel
+|label3 = Opus
+|label4 = Sprache
+|label5 = Besetzung
+|label6 = Epoche
+|label7 = Typ
+|label8 = Schwierigkeitsgrad
+
+|data1 = [[:Category:Bach, Johann Sebastian|Johann Sebastian Bach]]
+|data2 = [[:Category:Es ist ein Ros entsprungen]]
+|data3 = [[:Category:Musae Sioniae]]
+|data4 = [[:Category:deutsch]]
+|data5 = [[:Category:SATB]]
+|data6 = [[:Category:Romantik]]
+|data7 = [[:Category:Motette]]
+|data8 = [[:Category:schwer]]
+}}
+
+== pdf und midi mit hervorgehobenen Einzelstimmen ==
+[[Media:Lobt_Gott,_ihr_Christen_alle_gleich_(Bach,_Johann Sebastian).zip|Download der pdf- und midi-Dateien als zip-Archiv]]
+
+== pdf-Vorschau ==
+<pdf>Datei:Lobt_Gott,_ihr_Christen_alle_gleich_(Bach,_Johann Sebastian).pdf</pdf>
+
+[[Category:Bach, Johann Sebastian]] [[Category:Es ist ein Ros entsprungen]] [[Category:Musae Sioniae]] [[Category:deutsch]] [[Category:SATB]] [[Category:Romantik]] [[Category:Motette]] [[Category:schwer]] 

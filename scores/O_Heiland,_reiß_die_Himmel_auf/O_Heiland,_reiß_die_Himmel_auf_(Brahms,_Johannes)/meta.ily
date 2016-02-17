@@ -1,3 +1,10 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%         This file is part of the edition www.nun-singet-und-seid-froh.info            %
+% This file as well as the music or data represented in it is within the public domain. %
+%      If you think that this file violates your copyright or other rights of you,      %
+%               please contact us at mail@nun-singet-und-seid-froh.info                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % enter the data below according to *conventions/conventions concerning meta.ily.md*
 
 % the meta-data printed in the sheet
@@ -5,18 +12,18 @@ title             = "O Heiland, reiß die Himmel auf"
 
 %composer is the one who wrote the melody
 composerPrename	  = "" % e.g. "Johann Sebastian"
-composerSurname	  = "" % e.g. "Bach"
+composerSurName	  = "" % e.g. "Bach"
 composerLifedata  = "" % e.g. "1685-1750"
 melodyDate	      = ""
 
 %arranger is the one who composed the voices
 arrangerPrename	  = "Johannes" % e.g. "Johann Sebastian"
-arrangerSurname	  = "Brahms" % e.g. "Bach"
+arrangerSurName	  = "Brahms" % e.g. "Bach"
 arrangerLifedata  = "1833-1897" % e.g. "1685-1750"
 arrangementDate   = "1878"
 
 poetPrename	      = "Friedrich" % e.g. "Paul"
-poetSurname       = "Spee" % e.g. "Gerhardt"
+poetSurName       = "Spee" % e.g. "Gerhardt"
 poetLifedata      = "1591-1634" % e.g. "1607-1676"
 textDate          = ""
 

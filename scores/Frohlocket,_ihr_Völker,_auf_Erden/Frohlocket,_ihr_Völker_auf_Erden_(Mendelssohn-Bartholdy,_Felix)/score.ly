@@ -1,3 +1,10 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%         This file is part of the edition www.nun-singet-und-seid-froh.info            %
+% This file as well as the music or data represented in it is within the public domain. %
+%      If you think that this file violates your copyright or other rights of you,      %
+%               please contact us at mail@nun-singet-und-seid-froh.info                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % local information (for this particular piece)
 \include "meta.ily"             % metadata for this piece
 \include "voices.ily"           % the tunes, dynamic and articulation marks
@@ -17,7 +24,7 @@
   \include "../../../include/header.ily" 
   \score {
    \new Score <<
-    \new StaffGroup <<  
+    \new SemiChoirStaff <<  
       
       \new Staff << \set Staff.instrumentName = "Sopran I" 
                 
@@ -29,7 +36,7 @@
       \new Lyrics \lyricsto "sopII" { \sopIILyrics } 
     >>
   
-    \new StaffGroup <<  
+    \new SemiChoirStaff <<  
       \new Staff << \set Staff.instrumentName = "Alt I" 
       \new Voice = "altI" \with { \consists "Ambitus_engraver" } { \global \altIVoice } >>
       \new Lyrics \lyricsto "altI" { \altILyrics }
@@ -39,7 +46,7 @@
       \new Lyrics \lyricsto "altII" { \altIILyrics } 
     >>
   
-    \new StaffGroup <<
+    \new SemiChoirStaff <<
       \new Staff << \set Staff.instrumentName = "Tenor I"
       \new Voice = "tenI" \with { \consists "Ambitus_engraver" } { \global  \clef "G_8" \tenIVoice } >>
       \new Lyrics \lyricsto "tenI" { \tenILyrics }
@@ -49,7 +56,7 @@
       \new Lyrics \lyricsto "tenII" { \tenIILyrics }  
     >>
   
-    \new StaffGroup <<
+    \new SemiChoirStaff <<
       \new Staff << \set Staff.instrumentName = "Bass I"
       \new Voice = "basI" \with { \consists "Ambitus_engraver" } { \global \clef bass \basIVoice } >>
       \new Lyrics \lyricsto "basI" { \basILyrics }

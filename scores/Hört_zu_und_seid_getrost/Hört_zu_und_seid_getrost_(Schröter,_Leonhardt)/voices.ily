@@ -5,7 +5,8 @@
 %               please contact us at mail@nun-singet-und-seid-froh.info                 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% based on templates/SATTB/mensural/voices.ily
+
+% based on templates/SATB/SATB/mensural/voices.ily
 
 % common settings of all voices
 global = {

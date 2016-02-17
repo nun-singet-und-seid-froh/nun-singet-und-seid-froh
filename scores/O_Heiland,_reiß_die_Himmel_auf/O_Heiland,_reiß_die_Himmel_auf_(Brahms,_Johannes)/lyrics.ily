@@ -1,8 +1,15 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%         This file is part of the edition www.nun-singet-und-seid-froh.info            %
+% This file as well as the music or data represented in it is within the public domain. %
+%      If you think that this file violates your copyright or other rights of you,      %
+%               please contact us at mail@nun-singet-und-seid-froh.info                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % this is standard version 1.0: SATB/polyphonic
 
 % the lyrics within the staves
 
-sopLyrix = \lyricmode {
+sopLyrics = \lyricmode {
   \set stanza = "1. "
   O Hei -- land, reiß die Him -- mel auf,
   her -- ab, her -- auf vom Him -- mel lauf,
@@ -45,7 +52,7 @@ sopLyrix = \lyricmode {
   A -- men, A -- men, A -- men, A -- men, A -- men, A -- men.
 }
 
-altLyrix = \lyricmode {
+altLyrics = \lyricmode {
   \set stanza = "1. "
   O Hei -- land, reiß __ die Him -- mel auf,
   her -- ab,__ her -- auf __ vom __ Him -- mel lauf,
@@ -93,7 +100,7 @@ altLyrix = \lyricmode {
   A -- men, A -- men, A -- men, A -- men, A -- men.
 }
 
-tenLyrix = \lyricmode {
+tenLyrics = \lyricmode {
   \set stanza = "1. "
   O Hei -- land, reiß die Him -- mel auf, __
   her -- ab, her -- auf __ vom Him -- mel lauf,
@@ -139,7 +146,7 @@ tenLyrix = \lyricmode {
   A -- men, A -- men, A -- men, A -- men, A -- men.
 }
 
-basLyrix = \lyricmode {
+basLyrics = \lyricmode {
   \set stanza = "1. "
   O Hei -- land, reiß __ die Him -- mel auf, __
   her -- ab, her -- auf vom Him -- mel lauf, __

@@ -36,11 +36,11 @@ if composerPrename:
 else:
   print "error: "+ path + " is not well-formatted - no composerPrename found!"
   
-composerSurname = re.search('composerSurname.*?=.*?"(.*?)"', meta, flags=0)
-if composerSurname:
-  composerSurname = composerSurname.group(1) 
+composerSurName = re.search('composerSurName.*?=.*?"(.*?)"', meta, flags=0)
+if composerSurName:
+  composerSurName = composerSurName.group(1) 
 else:
-  print "error: "+ path + " is not well-formatted - no composerSurname found!"
+  print "error: "+ path + " is not well-formatted - no composerSurName found!"
 
 arrangerPrename = re.search('arrangerPrename.*?=.*?"(.*?)"', meta, flags=0)
 if arrangerPrename:
@@ -48,11 +48,11 @@ if arrangerPrename:
 else:
   print "error: "+ path + " is not well-formatted - no arrangerPrename found!"
   
-arrangerSurname = re.search('arrangerSurname.*?=.*?"(.*?)"', meta, flags=0)
-if arrangerSurname:
-  arrangerSurname = arrangerSurname.group(1) 
+arrangerSurName = re.search('arrangerSurName.*?=.*?"(.*?)"', meta, flags=0)
+if arrangerSurName:
+  arrangerSurName = arrangerSurName.group(1) 
 else:
-  print "error: "+ path + " is not well-formatted - no arrangerSurname found!"
+  print "error: "+ path + " is not well-formatted - no arrangerSurName found!"
 
 poetPrename = re.search('poetPrename.*?=.*?"(.*?)"', meta, flags=0)
 if poetPrename:
@@ -60,11 +60,11 @@ if poetPrename:
 else:
   print "error: "+ path + " is not well-formatted - no poetPrename found!"
   
-poetSurname = re.search('poetSurname.*?=.*?"(.*?)"', meta, flags=0)
-if poetSurname:
-  poetSurname = poetSurname.group(1) 
+poetSurName = re.search('poetSurName.*?=.*?"(.*?)"', meta, flags=0)
+if poetSurName:
+  poetSurName = poetSurName.group(1) 
 else:
-  print "error: "+ path + " is not well-formatted - no poetSurname found!"
+  print "error: "+ path + " is not well-formatted - no poetSurName found!"
 
 opus = re.search('opus.*?=.*?"(.*?)"', meta, flags=0)
 if opus:
@@ -118,35 +118,35 @@ m = open(os.path.join(path, 'mediawiki.txt'),'w')
 print 'writing ' + os.path.join(path, 'mediawiki.txt') + ' ...'
 
 #creating the infobox
-if not(composerSurname == ""):
+if not(composerSurName == ""):
   if not(composerPrename == ""):    
-    categories = categories + '[[Category: ' + composerSurname + ', ' + composerPrename + ']] '
+    categories = categories + '[[Category: ' + composerSurName + ', ' + composerPrename + ']] '
     labels.append("Komponist")
-    data.append(composerSurname + ', ' + composerPrename)
+    data.append(composerSurName + ', ' + composerPrename)
   else:
-    categories = categories + '[[Category: ' + composerSurname + ']] '
+    categories = categories + '[[Category: ' + composerSurName + ']] '
     labels.append("Komponist")
-    data.append(composerSurname + '')
+    data.append(composerSurName + '')
 
-if not(arrangerSurname == ""):
+if not(arrangerSurName == ""):
   if not(arrangerPrename == ""):    
-    categories = categories + '[[Category: ' + arrangerSurname + ', ' + arrangerPrename + ']] '
+    categories = categories + '[[Category: ' + arrangerSurName + ', ' + arrangerPrename + ']] '
     labels.append("Arrangeur")
-    data.append(arrangerSurname + ', ' + arrangerPrename)
+    data.append(arrangerSurName + ', ' + arrangerPrename)
   else:
-    categories = categories + '[[Category: ' + arrangerSurname + ']] '
+    categories = categories + '[[Category: ' + arrangerSurName + ']] '
     labels.append("Arrangeur")
-    data.append(arrangerSurname)
+    data.append(arrangerSurName)
 
-if not(poetSurname == ""):
+if not(poetSurName == ""):
   if not(poetPrename == ""):    
-    categories = categories + '[[Category: ' + poetSurname + ', ' + poetPrename + ']] '
+    categories = categories + '[[Category: ' + poetSurName + ', ' + poetPrename + ']] '
     labels.append("Dichter")
-    data.append(poetSurname + ', ' + poetPrename)
+    data.append(poetSurName + ', ' + poetPrename)
   else:
-    categories = categories + '[[Category: ' + poetSurname + ']] '
+    categories = categories + '[[Category: ' + poetSurName + ']] '
     labels.append("Dichter")
-    data.append(poetSurname)
+    data.append(poetSurName)
 
 if not(root == ""):
   categories = categories + '[[Category: ' + root + ']] '
