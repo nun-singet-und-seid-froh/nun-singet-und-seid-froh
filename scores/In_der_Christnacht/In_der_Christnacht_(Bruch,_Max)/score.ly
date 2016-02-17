@@ -15,7 +15,7 @@
 %                      the sheet producing part: 	           %
 % 	                4 staves for 4 voices		           %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-#(set-global-staff-size 21)
+
 \book {
    \include "../../../include/header.ily"
   \score {
@@ -71,15 +71,7 @@
    >>
   >>%end of ChoirStaff
   
-    \layout { 
-       #(layout-set-staff-size 17)
-      \override LyricText.font-name = "EBGaramond"
-      \override LyricText.font-size = #2
-      \override Score.BarNumber.font-name = "EBGaramond"
-      \override Score.BarNumber.font-size = #2
-      \override Staff.InstrumentName.font-name = "EBGaramond"
-      \override Staff.InstrumentName.font-size = #2
-    }
+   \layout { }
     
   }%end of score
 }%end of book

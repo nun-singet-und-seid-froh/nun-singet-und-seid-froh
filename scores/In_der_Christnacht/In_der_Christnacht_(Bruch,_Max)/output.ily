@@ -1,9 +1,11 @@
+%#(set-global-staff-size 16.8)
+
 \midi {
   \tempo 4=90
 }
 
 \paper {
-  system-count = 4
-  page-count = 3
-  max-systems-per-page = 2
+  system-count = 6
+  page-count = 4
+  %max-systems-per-page = 2
 }
