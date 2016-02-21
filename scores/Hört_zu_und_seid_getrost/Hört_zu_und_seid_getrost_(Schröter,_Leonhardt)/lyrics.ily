@@ -16,6 +16,11 @@ sopLyrics = \lyricmode {
   Ich bring euch Freud und gu -- te Mär,
   die al -- lem Volk soll wie -- der -- fahrn,
   denn euch ist heut der Hei -- land ge -- born.
+
+  Das soll eich ein Zei -- chen sein
+  ihr werdt fin -- den das Kind -- lein klein
+  ge -- wi -- ckelt in die Win -- deln zwar
+  und lie -- gen in der Krip -- pen dar.
 }
 
 altLyrics = \lyricmode {
@@ -26,6 +31,20 @@ altLyrics = \lyricmode {
   die al -- lem Volk soll wie -- der -- fahrn,
   denn euch ist heut, denn euch ist heut der Hei -- land ge -- born,
   denn euch ist heut der Hei -- land ge -- born.
+
+  Wel -- cher ge -- nannt wird Je -- su Christ
+  in der Stadt Da -- vid ge -- born ist
+  von Ma -- ri -- a der Jung -- frau schön
+  des al -- ler -- höch -- sten Got -- tes Sohn,
+  des al -- ler -- höch -- sten Got -- tes Sohn,
+  des al -- ler -- höch -- sten Got -- tes Sohn.
+
+  Das soll euch ein Zei -- chen sein
+  Ihr werdt fin -- den das Kind -- lein klein
+  ge -- wi -- ckelt in die Win -- deln zwar
+  und lie -- gen in der Krip -- pen dar,
+  in der Krip -- pen dar,
+  in der Krip -- pen dar.
 }
 
 tenLyrics = \lyricmode {
@@ -36,6 +55,18 @@ tenLyrics = \lyricmode {
   die al -- lem Volk soll wie -- der -- fahrn,
   denn euch ist heut, denn euch ist heut der Hei -- land ge -- born,
   denn euch ist heut der Hei -- land ge -- born.
+
+  Wel -- cher ge -- nannt wird Je -- sus Christ
+  in der Stadt Da -- vid ge -- bo -- ren ist
+  von Ma -- ri -- a der Jung -- frau schön
+  des al -- ler -- höch -- sten,
+  des al -- ler -- höch -- sten Got -- tes Sohn
+  des al -- ler -- höch -- sten Got -- tes Sohn
+
+  Das soll euch ein Zei -- chen sein
+  ihr werdt fin -- den das Kind -- lein klein
+  ge -- wi -- ckelt in die Win -- deln zwar
+  und lie -- gen in der Krip -- pen dar, in der Krip -- pen dar.
 }
 
 basLyrics = \lyricmode {
@@ -45,6 +76,12 @@ basLyrics = \lyricmode {
   die al -- lem Volk soll wie -- der -- fahrn
   denn euch ist heut, denn euch ist heut der Hei -- land ge -- born,
   denn euch ist heut der Hei -- land ge -- born.
+
+
+  Das soll euch ein Zei -- chen sein
+  ihr werdt fin -- den das Kind -- lein klein
+  ge -- wi -- ckelt in die Win -- deln zwar
+  und lie -- gen in der Krip -- pen, in der Krip -- pen dar, in der Krip -- pen dar.
 }
 
 % with stanzas

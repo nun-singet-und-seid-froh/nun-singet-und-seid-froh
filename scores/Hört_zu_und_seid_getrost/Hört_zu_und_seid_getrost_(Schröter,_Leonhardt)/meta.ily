@@ -39,8 +39,8 @@ opus                    = "Newe Weinacht Liedlein"
 noInOpus                = "10"
 titleInOpus             = ""
 
-lastEdited              = "" % e.g. "19. September 2015"
-vers                    = "0.0.0" % write "0.0.0" for the first draft
+lastEdited              = "17. Februar 2016" % e.g. "19. September 2015"
+vers                    = "0.0.1" % write "0.0.0" for the first draft
 noInNsusf               = "X" % write "X" as long piece is not ready to be published
 
 % other meta-data, used for the MediaWiki-output
