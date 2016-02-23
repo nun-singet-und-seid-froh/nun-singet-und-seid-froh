@@ -5,12 +5,13 @@
 %               please contact us at mail@nun-singet-und-seid-froh.info                 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-#(set-global-staff-size 16)
+#(set-global-staff-size 15)
 
 \paper{
-   %system-count = 4
-   %systems-per-page = 3
+   system-count = 5
    page-count = 3
+   systems-per-page = 3
+   
 }
 
 \midi {

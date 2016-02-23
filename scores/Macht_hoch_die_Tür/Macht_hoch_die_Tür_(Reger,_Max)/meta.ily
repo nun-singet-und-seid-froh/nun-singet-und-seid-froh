@@ -12,7 +12,7 @@
 title                   = "Macht hoch die Tür"
 
 % composer is the one who wrote the melody (leave this empty if it is identical to the arranger)
-composerChristianName   = "Johann Anastasius" % e.g. "Johann Sebastian"
+composerChristianName   = "Johann A." % e.g. "Johann Sebastian"
 composerSurName	        = "Freylinghausen" % e.g. "Bach"
 composerLifedata        = "1670-1739" % e.g. "1685-1750"
 melodyDate	        = "1704"
@@ -20,7 +20,7 @@ melodyDate	        = "1704"
 % arranger is the one who composed the voices
 arrangerChristianName   = "Max" % e.g. "Johann Sebastian"
 arrangerSurName	        = "Reger" % e.g. "Bach"
-arrangerLifedata        = "" % e.g. "1685-1750"
+arrangerLifedata        = "1873-1916" % e.g. "1685-1750"
 arrangementDate         = ""
 
 % poet is the one who wrote (the main part of) the lyrics (also see translator)
