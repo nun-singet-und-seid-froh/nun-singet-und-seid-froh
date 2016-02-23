@@ -81,7 +81,48 @@ commonArt = {
   %{27%} s |
   %{28%} s |
   %{29%} s |
-  %{30%} s \once \undo \hide Staff.BarLine \bar "||" |
+  %{30%} s \once \undo \hide Staff.BarLine \bar "||" \break |
+  %{31%} \mark "Secunda pars" s |
+  %{32%} s |
+  %{33%} s |
+  %{34%} s |
+  %{35%} s |
+  %{36%} s |
+  %{37%} s |
+  %{38%} s |
+  %{39%} s |
+  %{40%} s |
+  %{41%} s |
+  %{42%} s |
+  %{43%} s |
+  %{44%} s |
+  %{45%} s |
+  %{46%} s |
+  %{47%} s |
+  %{48%} s |
+  %{49%} s |
+  %{50%} s |
+  %{51%} s |
+  %{52%} s \once \undo \hide Staff.BarLine \bar "||" \break |
+  %{53%} \mark "Tertia pars" s |
+  %{54%} s |
+  %{55%} s |
+  %{56%} s |
+  %{57%} s |
+  %{58%} s |
+  %{59%} s |
+  %{60%} s |
+  %{61%} s |
+  %{62%} s |
+  %{63%} s |
+  %{64%} s |
+  %{65%} s |
+  %{66%} s |
+  %{67%} s |
+  %{68%} s |
+  %{69%} s |
+  %{70%} s |
+  %{71%} s \once \undo \hide Staff.BarLine \bar "|." |
 }
 
 sopArt = {
@@ -115,6 +156,47 @@ sopArt = {
   %{28%} s |
   %{29%} s |
   %{30%} s |
+  %{31%} s |
+  %{32%} s |
+  %{33%} s |
+  %{34%} s |
+  %{35%} s |
+  %{36%} s |
+  %{37%} s |
+  %{38%} s |
+  %{39%} s |
+  %{40%} s |
+  %{41%} s |
+  %{42%} s |
+  %{43%} s |
+  %{44%} s |
+  %{45%} s |
+  %{46%} s |
+  %{47%} s |
+  %{48%} s |
+  %{49%} s |
+  %{50%} s |
+  %{51%} s |
+  %{52%} s |
+  %{53%} s |
+  %{54%} s |
+  %{55%} s |
+  %{56%} s |
+  %{57%} s |
+  %{58%} s |
+  %{59%} s |
+  %{60%} s |
+  %{61%} s |
+  %{62%} s |
+  %{63%} s |
+  %{64%} s |
+  %{65%} s |
+  %{66%} s |
+  %{67%} s |
+  %{68%} s |
+  %{69%} s |
+  %{70%} s |
+  %{71%} s |
 }
 
 altArt = {
@@ -148,6 +230,47 @@ altArt = {
   %{28%} s |
   %{29%} s |
   %{30%} s |
+  %{31%} s |
+  %{32%} s |
+  %{33%} s |
+  %{34%} s |
+  %{35%} s |
+  %{36%} s |
+  %{37%} s |
+  %{38%} s |
+  %{39%} s |
+  %{40%} s |
+  %{41%} s |
+  %{42%} s |
+  %{43%} s |
+  %{44%} s |
+  %{45%} s |
+  %{46%} s |
+  %{47%} s |
+  %{48%} s |
+  %{49%} s |
+  %{50%} s |
+  %{51%} s |
+  %{52%} s |
+  %{53%} s |
+  %{54%} s |
+  %{55%} s |
+  %{56%} s |
+  %{57%} s |
+  %{58%} s |
+  %{59%} s |
+  %{60%} s |
+  %{61%} s |
+  %{62%} s |
+  %{63%} s |
+  %{64%} s |
+  %{65%} s |
+  %{66%} s |
+  %{67%} s |
+  %{68%} s |
+  %{69%} s |
+  %{70%} s |
+  %{71%} s |
 }
 
 tenArt = {
@@ -181,6 +304,47 @@ tenArt = {
   %{28%} s |
   %{29%} s |
   %{30%} s |
+  %{31%} s |
+  %{32%} s |
+  %{33%} s |
+  %{34%} s |
+  %{35%} s |
+  %{36%} s |
+  %{37%} s |
+  %{38%} s |
+  %{39%} s |
+  %{40%} s |
+  %{41%} s |
+  %{42%} s |
+  %{43%} s |
+  %{44%} s |
+  %{45%} s |
+  %{46%} s |
+  %{47%} s |
+  %{48%} s |
+  %{49%} s |
+  %{50%} s |
+  %{51%} s |
+  %{52%} s |
+  %{53%} s |
+  %{54%} s |
+  %{55%} s |
+  %{56%} s |
+  %{57%} s |
+  %{58%} s |
+  %{59%} s |
+  %{60%} s |
+  %{61%} s |
+  %{62%} s |
+  %{63%} s |
+  %{64%} s |
+  %{65%} s |
+  %{66%} s |
+  %{67%} s |
+  %{68%} s |
+  %{69%} s |
+  %{70%} s |
+  %{71%} s |
 }
 
 basArt = {
@@ -214,6 +378,47 @@ basArt = {
   %{28%} s |
   %{29%} s |
   %{30%} s |
+  %{31%} s |
+  %{32%} s |
+  %{33%} s |
+  %{34%} s |
+  %{35%} s |
+  %{36%} s |
+  %{37%} s |
+  %{38%} s |
+  %{39%} s |
+  %{40%} s |
+  %{41%} s |
+  %{42%} s |
+  %{43%} s |
+  %{44%} s |
+  %{45%} s |
+  %{46%} s |
+  %{47%} s |
+  %{48%} s |
+  %{49%} s |
+  %{50%} s |
+  %{51%} s |
+  %{52%} s |
+  %{53%} s |
+  %{54%} s |
+  %{55%} s |
+  %{56%} s |
+  %{57%} s |
+  %{58%} s |
+  %{59%} s |
+  %{60%} s |
+  %{61%} s |
+  %{62%} s |
+  %{63%} s |
+  %{64%} s |
+  %{65%} s |
+  %{66%} s |
+  %{67%} s |
+  %{68%} s |
+  %{69%} s |
+  %{70%} s |
+  %{71%} s |
 }
 
 
@@ -249,9 +454,50 @@ sopVoice = <<
     %{24%} f4.\melisma g8 a4\melismaEnd g4.\melisma
     %{25%}  f8 f2\melismaEnd e4 |
     %{26%} f1 |
-    %{27%} R1*4 |
+    %{27%} R1*4
 
-    %{31%}
+    %{30%}  |
+    %{31%} s1 |
+    %{32%} s |
+    %{33%} s |
+    %{34%} s |
+    %{35%} s |
+    %{36%} s |
+    %{37%} s |
+    %{38%} s |
+    %{39%} s |
+    %{40%} s |
+    %{41%} s |
+    %{42%} s |
+    %{43%} s |
+    %{44%} s |
+    %{45%} s |
+    %{46%} s |
+    %{47%} s |
+    %{48%} s |
+    %{49%} s |
+    %{50%} s |
+    %{51%} s |
+    %{52%} s |
+    %{53%} c=''2 c |
+    %{54%} d c |
+    %{55%} c bes |
+    %{56%} a r4  a |
+    %{57%} a2 c |
+    %{58%} c4.\melisma bes8 a4\melismaEnd g4.\melisma
+    %{59%}  f8\melismaEnd f2 e4 |
+    %{60%} f2 r4 f |
+    %{61%} f2 g |
+    %{62%} a a |
+    %{63%} f g |
+    %{64%} a r4 c |
+    %{65%} c2 c |
+    %{66%} c a |
+    %{67%} bes4.\melisma a8[ g f] g4.
+    %{68%}  f8 f2\melismaEnd e4 |
+    %{69%} f1 |
+    %{70%} R1*2
+    %{71%}  |
   }
 >>
 
@@ -290,6 +536,47 @@ altVoice = <<
     %{28%} c a] d4. c16[ bes] c4\melismaEnd |
     %{29%} d2. d4 |
     %{30%} c1 |
+    %{31%} f2 e4 e |
+    %{32%} f2. f,4 |
+    %{33%} c'2\melisma f4. e8 |
+    %{34%} d4\melismaEnd d e a |
+    %{35%} g a d,8[\melisma e f d] |
+    %{36%} e[ f] g4. f16[ e] f4\melismaEnd |
+    %{37%} g4.\melisma f8[ e d] c2\melismaEnd
+    %{38%}  d4 bes2 |
+    %{39%} c r4 c |
+    %{40%} d f4.\melisma e16[ d] e4\melismaEnd |
+    %{41%} d d f8[\melisma e d c] |
+    %{42%} d[ e] f2\melismaEnd e4 |
+    %{43%} f2 r4 f, |
+    %{44%} f' g a e |
+    %{45%} f f e e |
+    %{46%} a4. g8 f4\melisma e8[ d] |
+    %{47%} e4\melismaEnd f g g |
+    %{48%} c, c d4.\melisma c8 |
+    %{49%} bes[ a bes c] d2.\melismaEnd
+    %{50%}  d4 f4.\melisma e8 |
+    %{51%} d4\melismaEnd c d d |
+    %{52%} c1 |
+    %{53%} a'2. a4 |
+    %{54%} f4.\melisma g8 a4. g16[ f] |
+    %{55%} e4\melismaEnd f g g |
+    %{56%} c,2 r4 f |
+    %{57%} f2 g |
+    %{58%} a4.\melisma g8 f4\melismaEnd e |
+    %{59%} d2 c |
+    %{60%} a4 bes d2.
+    %{61%}  c4 d8[\melisma c d e]\melismaEnd |
+    %{62%} f2. e4\melisma |
+    %{63%} d8[ c] f2\melismaEnd e4 |
+    %{64%} f f e f |
+    %{65%} g a g2.
+    %{66%}  g4 c,2 |
+    %{67%} f4.\melisma e8 d4\melismaEnd c |
+    %{68%} d d c2 |
+    %{69%} r4 d2 c4 |
+    %{70%} bes4.\melisma c8 d4\melismaEnd d |
+    %{71%} c1 |
   }
 >>
 
@@ -328,6 +615,47 @@ tenVoice = <<
     %{28%} f,4 bes4.\melisma a16[ g16] a4\melismaEnd |
     %{29%} bes2. bes4 |
     %{30%} a1 |
+    %{31%} f2 c'4 c |
+    %{32%} bes4.\melisma c8[ d e] f2\melismaEnd
+    %{33%}  e4 d2 |
+    %{34%} bes a4 f'4
+    %{35%} e f4.\melisma e8 d4\melismaEnd |
+    %{36%} c4.\melisma bes8 a2\melismaEnd |
+    %{37%} g c4.\melisma bes8 |
+    %{38%} a4\melismaEnd bes g2 |
+    %{39%} f r4 f |
+    %{40%} bes d c c |
+    %{41%} f4.\melisma e8[ d c] bes4.
+    %{42%}  c8 d4\melismaEnd c2 |
+    %{43%} f,4 f f'4.\melisma g8 |
+    %{44%} a4\melismaEnd e  f c |
+    %{45%} r f, c' c |
+    %{46%} f4.\melisma e8 d4 c8[ bes] |
+    %{47%} c4\melismaEnd d c c |
+    %{48%} f, f f'4.\melisma e8 |
+    %{49%} d[ c d a] bes4\melismaEnd bes |
+    %{50%} bes8[\melisma a bes c] d4. c8 |
+    %{51%} bes4\melismaEnd a bes bes |
+    %{52%} f1 |
+    %{53%} f'2. f4 |
+    %{54%} d8[\melisma c d e] f2\melismaEnd |
+    %{55%} c d4 e |
+    %{56%} f2 r4 c |
+    %{57%} d2 e |
+    %{58%} f c4.\melisma bes8 |
+    %{59%} a4\melismaEnd bes g2 |
+    %{60%} f r |
+    %{61%} r4 f bes bes |
+    %{62%} c2. a4 |
+    %{63%} d4.\melisma c8 bes4\melismaEnd bes |
+    %{64%} c a c4.\melisma d8[ |
+    %{65%} e c] f2 e8[ d] |
+    %{66%} e4\melismaEnd e f4.\melisma e8[ |
+    %{67%} d c] bes4. a8 g4\melismaEnd |
+    %{68%} a bes g2 |
+    %{69%} f4 bes2 c4 |
+    %{70%} d4.\melisma c8 bes4\melismaEnd bes |
+    %{71%} a1 |
   }
 >>
 
@@ -366,5 +694,27 @@ basVoice = <<
     %{28%} a4\melismaEnd bes f2 |
     %{29%} bes,2. bes4 |
     %{30%} f'1 |
+    %{31%} R1*22
+
+    %{52%}  |
+    %{53%} f2 f |
+    %{54%} bes f |
+    %{55%} a g |
+    %{56%} f r4 f |
+    %{57%} d2 c |
+    %{58%} f2. c4 |
+    %{59%} d bes c2 |
+    %{60%} r4 f bes2.
+    %{61%}  a4 g g |
+    %{62%} f4.\melisma g8[ a bes c a] |
+    %{63%} bes4. a8 g4\melismaEnd g |
+    %{64%} f2 a |
+    %{65%} c2. c4 |
+    %{66%} c c, f2 |
+    %{67%} bes,4 bes2 es4 |
+    %{68%} d bes c2 |
+    %{69%} r4 bes2 a4 |
+    %{70%} bes2. bes4 |
+    %{71%} f'1 |
   }
 >>
