@@ -5,7 +5,7 @@
 %               please contact us at mail@nun-singet-und-seid-froh.info                 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-#(set-global-staff-size 16)
+#(set-global-staff-size 17)
 
 \paper{
    system-count = 12
