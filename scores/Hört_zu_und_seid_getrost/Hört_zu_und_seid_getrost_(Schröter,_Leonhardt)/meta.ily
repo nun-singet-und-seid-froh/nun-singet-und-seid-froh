@@ -12,15 +12,15 @@
 title                   = "Hört zu und seid getrost"
 
 % composer is the one who wrote the melody (leave this empty if it is identical to the arranger)
-composerChristianName   = "Leonhart" % e.g. "Johann Sebastian"
-composerSurName	        = "Schröter" % e.g. "Bach"
-composerLifedata        = "1532-1601" % e.g. "1685-1750"
+composerChristianName   = "" % e.g. "Johann Sebastian"
+composerSurName	        = "" % e.g. "Bach"
+composerLifedata        = "" % e.g. "1685-1750"
 melodyDate	        = ""
 
 % arranger is the one who composed the voices
-arrangerChristianName   = "" % e.g. "Johann Sebastian"
-arrangerSurName	        = "" % e.g. "Bach"
-arrangerLifedata        = "" % e.g. "1685-1750"
+arrangerChristianName   = "Leonhart" % e.g. "Johann Sebastian"
+arrangerSurName	        = "Schröter" % e.g. "Bach"
+arrangerLifedata        = "1532-1601" % e.g. "1685-1750"
 arrangementDate         = ""
 
 % poet is the one who wrote (the main part of) the lyrics (also see translator)

@@ -17,7 +17,7 @@ sopLyrics = \lyricmode {
   die al -- lem Volk soll wie -- der -- fahrn,
   denn euch ist heut der Hei -- land ge -- born.
 
-  Das soll eich ein Zei -- chen sein
+  Das soll euch ein Zei -- chen sein
   ihr werdt fin -- den das Kind -- lein klein
   ge -- wi -- ckelt in die Win -- deln zwar
   und lie -- gen in der Krip -- pen dar.
