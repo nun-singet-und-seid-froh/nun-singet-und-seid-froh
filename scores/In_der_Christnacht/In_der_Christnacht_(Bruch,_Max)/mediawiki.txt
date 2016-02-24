@@ -7,13 +7,13 @@
 |label6 = Typ
 |label7 = Schwierigkeitsgrad
 
-|data1 = [[:Category: Bruch, Max]]
-|data2 = [[:Category: Nachtenhöfer, Kaspar Friedrich]]
-|data3 = [[:Category: detusch]]
-|data4 = [[:Category: SATB]]
-|data5 = [[:Category: Romantik]]
-|data6 = [[:Category: Strophenlied]]
-|data7 = [[:Category: leicht]]
+|data1 = [[:Category:Bruch, Max|Bruch, Max]]
+|data2 = [[:Category:Nachtenhöfer, Kaspar Friedrich|Nachtenhöfer, Kaspar Friedrich]]
+|data3 = [[:Category:detusch|detusch]]
+|data4 = [[:Category:SATB|SATB]]
+|data5 = [[:Category:Romantik|Romantik]]
+|data6 = [[:Category:Strophenlied|Strophenlied]]
+|data7 = [[:Category:leicht|leicht]]
 }}
 
 == pdf und midi mit hervorgehobenen Einzelstimmen ==
@@ -25,4 +25,4 @@
 == Quellcode ==
 [https://github.com/nun-singet-und-seid-froh/nun-singet-und-seid-froh/tree/master/scores/In_der_Christnacht/In_der_Christnacht_(Bruch,_Max) in unserem GitHub-Repositorium]
 
-[[Category: Bruch, Max]] [[Category: Nachtenhöfer, Kaspar Friedrich]] [[Category: detusch]] [[Category: SATB]] [[Category: Romantik]] [[Category: Strophenlied]] [[Category: leicht]] 
+[[Category:Bruch, Max]] [[Category:Nachtenhöfer, Kaspar Friedrich]] [[Category:detusch]] [[Category:SATB]] [[Category:Romantik]] [[Category:Strophenlied]] [[Category:leicht]] 
