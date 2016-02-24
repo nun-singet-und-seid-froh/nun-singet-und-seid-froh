@@ -1,9 +1,18 @@
 # conventions for entering a piece
+The conventions for entering a piece are lead by the principle of code-readability. We want our lilypond-code to be easily read by human beings. This is important not only for proof-reading, but can also be relevant in the future, if want to use the musical information stored in our lilypond files, e.g. for any kind of remixing, rearranging or other uses we now can only imagine.
 
-The conventions for entering a piece are all lead by one big principle: Readability of the code. We want our lilypond-code to be easily read by human beings. This is important not only for proof-reading, but can also be relevant in the future, if . What experimental data mean for a scientist, the lilypond-code means for our edition: We want to make it easy to be checked by others.
+# do use templates
+For creating a score you should always use a template. If there is no template for the kind of piece you want to typeset, create one. That has two advantages: 1. Chances are that lateron in the progress of the project someone else will have to typeset a piece that is analogously structured. 2. If in the future we should find out that earlier we had made a conceptual not-so-good decision which forces us to make a change across all pieces, we can run automatic procedures on pieces only if they are represented in a standardized form, clearly defined by the template you used to typeset the piece. That said, we admit that indeed there *are* exceptions. But they are definitly *very rare*. 
+
+For creating a new template read the *conventions for creating a new template*. If creating a template is too complicated, open an issue at GitHub and we will create the template for you. If you think that your piece is the one-out-of-thousand exception, open an issue at GitHub as well, so we can discuss this before you start working.
 
 # separating articulation and tune
+Articulation and tune information shall be separated in different variables. The templates reflect this with the variables sopArt and sopVoice.
 
-# bar numbering
+# bar numbering and bar checks
+Every bar is supposed to take one separate line of source code. Within the code bars should be numbered (with a commentary) at least every 10th bar, to make orientation easy.
 
-# bar check
+Every bar should be finished by a pipe ("|") - which tells LilyPond to check whether and to produce a warning if that's not the case.
+
+#variable naming
+If you need to use variables additionally to the predefined variables of the template you use, name those variables in a way which makes it easy to recognize what the variables are ment to be used for. If you think you are forced to define new variables, always wonder if it's not a new template that you actually need to create.
