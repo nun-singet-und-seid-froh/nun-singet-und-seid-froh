@@ -124,66 +124,66 @@ print 'writing ' + os.path.join(path, 'mediawiki.txt') + ' ...'
 #creating the infobox
 if not(composerSurName == ""):
   if not(composerChristianName == ""):    
-    categories = categories + '[[Category: ' + composerSurName + ', ' + composerChristianName + ']] '
+    categories = categories + '[[Category:' + composerSurName + ', ' + composerChristianName + ']] '
     labels.append("Komponist")
     data.append(composerSurName + ', ' + composerChristianName)
   else:
-    categories = categories + '[[Category: ' + composerSurName + ']] '
+    categories = categories + '[[Category:' + composerSurName + ']] '
     labels.append("Komponist")
     data.append(composerSurName + '')
 
 if not(arrangerSurName == ""):
   if not(arrangerChristianName == ""):    
-    categories = categories + '[[Category: ' + arrangerSurName + ', ' + arrangerChristianName + ']] '
+    categories = categories + '[[Category:' + arrangerSurName + ', ' + arrangerChristianName + ']] '
     labels.append("Komponist")
     data.append(arrangerSurName + ', ' + arrangerChristianName)
   else:
-    categories = categories + '[[Category: ' + arrangerSurName + ']] '
+    categories = categories + '[[Category:' + arrangerSurName + ']] '
     labels.append("Arrangeur")
     data.append(arrangerSurName)
 
 if not(poetSurName == ""):
   if not(poetChristianName == ""):    
-    categories = categories + '[[Category: ' + poetSurName + ', ' + poetChristianName + ']] '
+    categories = categories + '[[Category:' + poetSurName + ', ' + poetChristianName + ']] '
     labels.append("Dichter")
     data.append(poetSurName + ', ' + poetChristianName)
   else:
-    categories = categories + '[[Category: ' + poetSurName + ']] '
+    categories = categories + '[[Category:' + poetSurName + ']] '
     labels.append("Dichter")
     data.append(poetSurName)
 
 if not(root == ""):
-  categories = categories + '[[Category: ' + root + ']] '
+  categories = categories + '[[Category:' + root + ']] '
   labels.append("Wurzel")
   data.append(root)
 
 if not(opus == ""):
-  categories = categories + '[[Category: ' + opus + ']] '
+  categories = categories + '[[Category:' + opus + ']] '
   labels.append("Opus")
   data.append(opus)
 
 if not(language == ""):
-  categories = categories + '[[Category: ' + language + ']] '
+  categories = categories + '[[Category:' + language + ']] '
   labels.append("Sprache")
   data.append(language)
   
 if not(instrumentation== ""):
-  categories = categories + '[[Category: ' + instrumentation + ']] '
+  categories = categories + '[[Category:' + instrumentation + ']] '
   labels.append("Besetzung")
   data.append(instrumentation)
     
 if not(epoque == ""):
-  categories = categories + '[[Category: ' + epoque + ']] '
+  categories = categories + '[[Category:' + epoque + ']] '
   labels.append("Epoche")
   data.append(epoque)
   
 if not(form == ""):
-  categories = categories + '[[Category: ' + form + ']] '
+  categories = categories + '[[Category:' + form + ']] '
   labels.append("Typ")
   data.append(form)
 
 if not(difficulty == ""):
-  categories = categories + '[[Category: ' + difficulty + ']] '
+  categories = categories + '[[Category:' + difficulty + ']] '
   labels.append("Schwierigkeitsgrad")
   data.append(difficulty)
   
@@ -194,7 +194,7 @@ for i in range(0,len(labels)):
   m.write('|label' + str(i+1) + ' = ' + labels[i] + '\n')
 m.write('\n')
 for i in range(0,len(data)):
-  m.write('|data' + str(i+1) + ' = [[:Category: ' + data[i] + ']]\n')
+  m.write('|data' + str(i+1) + ' = [[:Category:' + data[i] + '|' + data[i] + ']]\n')
 m.write('}}\n\n')
 
 #create the content of the article- link to zip, pdf with preview and hyperlink to source code on GitHub
