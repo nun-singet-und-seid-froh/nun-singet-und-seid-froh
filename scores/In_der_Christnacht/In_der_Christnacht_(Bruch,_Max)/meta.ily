@@ -35,7 +35,7 @@ vers              = "1.0.0" % e.g. "1.0.0"
 
 % other meta-data, used for the mediawiki-output
 epoque            = "Romantik" 
-language          = "detusch" 
+language          = "deutsch" 
 instrumentation   = "SATB" % "SATB", "SSAATTBB", "(SATB)(SATB)" for double-choired works, etc.
 difficulty        = "leicht" % "sehr leicht", "leicht", "mittelschwer", "schwer", "sehr schwer"
 form              = "Strophenlied" % "Motette", "Strophenlied", "Durchkomponiertes Lied"
