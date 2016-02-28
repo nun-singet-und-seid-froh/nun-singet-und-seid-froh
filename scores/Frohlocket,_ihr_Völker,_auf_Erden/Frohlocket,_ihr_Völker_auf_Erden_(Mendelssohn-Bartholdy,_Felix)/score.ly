@@ -60,31 +60,9 @@
     >>   
   >>%end of Score
   }%end of score
-}%end of book
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                      the midi producing part: 	           %
-% 	        1 main.midi with all voices equally		   %
-%    1 midi per each voice with the respective voice highlighted   %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-stafftovoice =
-\midi { 
-     \context {
-      \Staff
-      \remove "Staff_performer"
-     }
-     \context {
-      \Voice
-      \consists "Staff_performer"
-     }
-}
-
-% main
-\book { \bookOutputSuffix "main"
   \score { 
     \unfoldRepeats
-     \new Staff << \commonVoice                     
+     \new Staff << \commonVoice
       \new Voice = "sopI" { \global \sopIVoice }
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "altI" { \global \altIVoice }
@@ -96,13 +74,18 @@ stafftovoice =
      >> 
    \stafftovoice
   }
-}
+}%end of book
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      the midi producing part: 	           %
+%    1 midi per each voice with the respective voice highlighted   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % sopran I
 \book { \bookOutputSuffix "sopran1"
   \score { 
     \unfoldRepeats
-     \new Staff << \commonVoice                     
+     \new Staff << \backgroundVoice                     
       \new Voice = "sopI" { \highlightedVoice  \global \sopIVoice }
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "altI" { \global \altIVoice }
@@ -120,7 +103,7 @@ stafftovoice =
 \book { \bookOutputSuffix "sopran2"
   \score { 
     \unfoldRepeats
-     \new Staff << \commonVoice                     
+     \new Staff << \backgroundVoice                     
       \new Voice = "sopI" { \global \sopIVoice }
       \new Voice = "sopII" { \highlightedVoice \global \sopIIVoice }
       \new Voice = "altI" { \global \altIVoice }
@@ -138,7 +121,7 @@ stafftovoice =
 \book { \bookOutputSuffix "alt1"
   \score { 
     \unfoldRepeats
-     \new Staff << \commonVoice                     
+     \new Staff << \backgroundVoice                     
       \new Voice = "sopI" { \global \sopIVoice }
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "altI" { \highlightedVoice \global \altIVoice }
@@ -156,7 +139,7 @@ stafftovoice =
 \book { \bookOutputSuffix "alt2"
   \score { 
     \unfoldRepeats
-     \new Staff << \commonVoice                     
+     \new Staff << \backgroundVoice                     
       \new Voice = "sopI" { \global \sopIVoice }
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "altI" { \global \altIVoice }
@@ -174,7 +157,7 @@ stafftovoice =
 \book { \bookOutputSuffix "tenor1"
   \score { 
     \unfoldRepeats
-     \new Staff << \commonVoice                     
+     \new Staff << \backgroundVoice                     
       \new Voice = "sopI" { \global \sopIVoice }
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "altI" { \global \altIVoice }
@@ -192,7 +175,7 @@ stafftovoice =
 \book { \bookOutputSuffix "tenor2"
   \score { 
     \unfoldRepeats
-     \new Staff << \commonVoice                     
+     \new Staff << \backgroundVoice                     
       \new Voice = "sopI" { \global \sopIVoice }
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "altI" { \global \altIVoice }
@@ -210,7 +193,7 @@ stafftovoice =
 \book { \bookOutputSuffix "bass1"
   \score { 
     \unfoldRepeats
-     \new Staff << \commonVoice                     
+     \new Staff << \backgroundVoice                     
       \new Voice = "sopI" { \global \sopIVoice }
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "altI" { \global \altIVoice }
@@ -228,7 +211,7 @@ stafftovoice =
 \book { \bookOutputSuffix "bass2"
   \score { 
     \unfoldRepeats
-     \new Staff << \commonVoice                     
+     \new Staff << \backgroundVoice                     
       \new Voice = "sopI" { \global \sopIVoice }
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "altI" { \global \altIVoice }

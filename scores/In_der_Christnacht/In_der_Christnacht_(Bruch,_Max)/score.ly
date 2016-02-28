@@ -74,27 +74,6 @@
    \layout { }
     
   }%end of score
-}%end of book
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                      the midi producing part: 	           %
-% 	        1 main.midi with all voices equally		   %
-%    1 midi per each voice with the respective voice highlighted   %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-stafftovoice =
-\midi { 
-     \context {
-      \Staff
-      \remove "Staff_performer"
-     }
-     \context {
-      \Voice
-      \consists "Staff_performer"
-     }
-}
-% 
-\book { \bookOutputSuffix "main"
   \score { 
     \unfoldRepeats
      \new Staff << \commonVoice                     
@@ -105,12 +84,18 @@ stafftovoice =
      >> 
    \stafftovoice
   }
-}
+}%end of book
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      the midi producing part: 	           %
+%    1 midi per each voice with the respective voice highlighted   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % sopran
 \book { \bookOutputSuffix "sopran"
   \score { 
     \unfoldRepeats
-     \new Staff << \commonVoice                     
+     \new Staff << \backgroundVoice                     
       \new Voice = "sop" { \highlightedVoice  \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "ten" { \global \tenVoice } 
@@ -124,7 +109,7 @@ stafftovoice =
 \book { \bookOutputSuffix "alt"
   \score {
   \unfoldRepeats
-    \new Staff << \commonVoice                    
+    \new Staff << \backgroundVoice                    
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \highlightedVoice \global \altVoice }
       \new Voice = "ten" { \global \tenVoice } 
@@ -138,7 +123,7 @@ stafftovoice =
 \book { \bookOutputSuffix "tenor"
   \score {
   \unfoldRepeats
-    \new Staff << \commonVoice                    
+    \new Staff << \backgroundVoice                    
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "ten" { \highlightedVoice \global \tenVoice } 
@@ -152,7 +137,7 @@ stafftovoice =
 \book { \bookOutputSuffix "bass"
   \score {
   \unfoldRepeats
-    \new Staff << \commonVoice                    
+    \new Staff << \backgroundVoice                    
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "ten" { \global \tenVoice } 
