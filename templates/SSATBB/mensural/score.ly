@@ -102,7 +102,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sopI" { \highlightedVoice  \global \sopIVoice }
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "alt" { \global \altVoice }
@@ -120,7 +120,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sopI" { \global \sopIVoice }
       \new Voice = "sopII" { \highlightedVoice \global \sopIIVoice }
       \new Voice = "alt" { \global \altVoice }
@@ -138,7 +138,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sopI" { \global \sopIVoice }
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "alt" { \highlightedVoice \global \altVoice }
@@ -156,7 +156,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sopI" { \global \sopIVoice }
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "alt" { \global \altVoice }
@@ -174,7 +174,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sopI" { \global \sopIVoice }
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "alt" { \global \altVoice }
@@ -192,7 +192,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sopI" { \global \sopIVoice }
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "alt" { \global \altVoice }
