@@ -8,10 +8,18 @@ filius  dei
 ```
 
 ## the ilf-standard
-For that purpose we defined a file format that makes it to and align them correctly using LaTex, we called it *.ilf* (which stands for "**i**nter**l**inear **f**ile")
+For that purpose we defined a file format that makes it easy to create a .tex-file which align the texts of the different languages correctly using LaTex. We called it *.ilf* (which stands for "**i**nter**l**inear **f**ile")
 
 ### boxes
 The ilf-standard uses a concept of *boxes* to achieve the desired alignment-behaviour of the interlinear translation: A box can contain multiple words, and the boxes of the different languages are aligned to each other, so that the first box of each language will be aligned with the first box of the original language, the second box of each language will be aligned with the second box of the original language, and so on.
+
+```
+ 1st box | 2nd box 
+-------------------
+| filius |  dei   |
+|  son   | of god |
+-------------------
+```
 
 ### rows
 An ilf consists of a user-defined number of *rows*. Each row itself consists of boxes and represents a language. 
