@@ -50,7 +50,7 @@ basIncipit = {
 }
 
 % articulation, dynamics, fermata and breathing marks
-commonArt = {
+commonArtPartI = {
   %{01%} s1 |
   %{02%} s |
   %{03%} s |
@@ -81,6 +81,9 @@ commonArt = {
   %{28%} s |
   %{29%} s |
   %{30%} s \once \undo \hide Staff.BarLine \bar "||" \break |
+}
+
+commonArtPartII = {
   %{31%} \mark "Secunda pars" s |
   %{32%} s |
   %{33%} s |
@@ -103,6 +106,9 @@ commonArt = {
   %{50%} s |
   %{51%} s |
   %{52%} s \once \undo \hide Staff.BarLine \bar "||" \break |
+}
+
+commonArtPartIII = {
   %{53%} \mark "Tertia pars" s |
   %{54%} s |
   %{55%} s |
@@ -124,7 +130,9 @@ commonArt = {
   %{71%} s \once \undo \hide Staff.BarLine \bar "|." |
 }
 
-sopArt = {
+commonArt = { \commonArtPartI \commonArtPartII \commonArtPartIII }
+
+sopArtPartI = {
   %{01%} s1 |
   %{02%} s |
   %{03%} s |
@@ -155,6 +163,9 @@ sopArt = {
   %{28%} s |
   %{29%} s |
   %{30%} s |
+}
+
+sopArtPartII = {
   %{31%} s |
   %{32%} s |
   %{33%} s |
@@ -177,6 +188,9 @@ sopArt = {
   %{50%} s |
   %{51%} s |
   %{52%} s |
+}
+
+sopArtPartIII = {
   %{53%} s |
   %{54%} s |
   %{55%} s |
@@ -198,7 +212,9 @@ sopArt = {
   %{71%} s |
 }
 
-altArt = {
+sopArt = { \sopArtPartI \sopArtPartII \sopArtPartIII }
+
+altArtPartI = {
   %{01%} s1 |
   %{02%} s |
   %{03%} s2 s1.\fermata
@@ -229,275 +245,132 @@ altArt = {
   %{28%} s |
   %{29%} s |
   %{30%} s |
-  %{31%} s |
-  %{32%} s |
-  %{33%} s |
-  %{34%} s |
-  %{35%} s |
-  %{36%} s |
-  %{37%} s |
-  %{38%} s |
-  %{39%} s |
-  %{40%} s |
-  %{41%} s |
-  %{42%} s |
-  %{43%} s |
-  %{44%} s |
-  %{45%} s |
-  %{46%} s |
-  %{47%} s |
-  %{48%} s |
-  %{49%} s |
-  %{50%} s |
-  %{51%} s |
-  %{52%} s |
-  %{53%} s |
-  %{54%} s |
-  %{55%} s |
-  %{56%} s |
-  %{57%} s |
-  %{58%} s |
-  %{59%} s |
-  %{60%} s |
-  %{61%} s |
-  %{62%} s |
-  %{63%} s |
-  %{64%} s |
-  %{65%} s |
-  %{66%} s |
-  %{67%} s |
-  %{68%} s |
-  %{69%} s |
-  %{70%} s |
-  %{71%} s |
 }
 
-tenArt = {
-  %{01%} s1 |
-  %{02%} s |
-  %{03%} s |
-  %{04%} s\fermata |
-  %{05%} s |
-  %{06%} s |
-  %{07%} s |
-  %{08%} s |
-  %{09%} s |
-  %{10%} s |
-  %{11%} s |
-  %{12%} s1. |
-  %{13%} s |
-  %{14%} s |
-  %{15%} s |
-  %{16%} s |
-  %{17%} s1 |
-  %{18%} s |
-  %{19%} s |
-  %{20%} s |
-  %{21%} s |
-  %{22%} s |
-  %{23%} s |
-  %{24%} s |
-  %{25%} s |
-  %{26%} s |
-  %{27%} s |
-  %{28%} s |
-  %{29%} s |
-  %{30%} s |
-  %{31%} s |
-  %{32%} s |
-  %{33%} s |
-  %{34%} s |
-  %{35%} s |
-  %{36%} s |
-  %{37%} s |
-  %{38%} s |
-  %{39%} s |
-  %{40%} s |
-  %{41%} s |
-  %{42%} s |
-  %{43%} s |
-  %{44%} s |
-  %{45%} s |
-  %{46%} s |
-  %{47%} s |
-  %{48%} s |
-  %{49%} s |
-  %{50%} s |
-  %{51%} s |
-  %{52%} s |
-  %{53%} s |
-  %{54%} s |
-  %{55%} s |
-  %{56%} s |
-  %{57%} s |
-  %{58%} s |
-  %{59%} s |
-  %{60%} s |
-  %{61%} s |
-  %{62%} s |
-  %{63%} s |
-  %{64%} s |
-  %{65%} s |
-  %{66%} s |
-  %{67%} s |
-  %{68%} s |
-  %{69%} s |
-  %{70%} s |
-  %{71%} s |
-}
+altArt = { \altArtPartI \sopArtPartII \sopArtPartIII }
 
-basArt = {
-  %{01%} s1 |
-  %{02%} s |
-  %{03%} s |
-  %{04%} s\fermata |
-  %{05%} s |
-  %{06%} s |
-  %{07%} s |
-  %{08%} s |
-  %{09%} s |
-  %{10%} s |
-  %{11%} s |
-  %{12%} s1. |
-  %{13%} s |
-  %{14%} s |
-  %{15%} s |
-  %{16%} s |
-  %{17%} s1 |
-  %{18%} s
-  %{19%} s |
-  %{20%} s |
-  %{21%} s |
-  %{22%} s |
-  %{23%} s |
-  %{24%} s |
-  %{25%} s |
-  %{26%} s |
-  %{27%} s |
-  %{28%} s |
-  %{29%} s |
-  %{30%} s |
-  %{31%} s |
-  %{32%} s |
-  %{33%} s |
-  %{34%} s |
-  %{35%} s |
-  %{36%} s |
-  %{37%} s |
-  %{38%} s |
-  %{39%} s |
-  %{40%} s |
-  %{41%} s |
-  %{42%} s |
-  %{43%} s |
-  %{44%} s |
-  %{45%} s |
-  %{46%} s |
-  %{47%} s |
-  %{48%} s |
-  %{49%} s |
-  %{50%} s |
-  %{51%} s |
-  %{52%} s |
-  %{53%} s |
-  %{54%} s |
-  %{55%} s |
-  %{56%} s |
-  %{57%} s |
-  %{58%} s |
-  %{59%} s |
-  %{60%} s |
-  %{61%} s |
-  %{62%} s |
-  %{63%} s |
-  %{64%} s |
-  %{65%} s |
-  %{66%} s |
-  %{67%} s |
-  %{68%} s |
-  %{69%} s |
-  %{70%} s |
-  %{71%} s |
-}
+tenArt = \sopArt
+
+basArt = \sopArt
 
 
 % the tunes
+sopNotesPartI = \relative c'' {
+  %{01%} a2 a |
+  %{02%} r f |
+  %{03%} g4 g bes2 |
+  %{04%} a1 |
+  %{05%} c2 c |
+  %{06%} d2. c4 |
+  %{07%} c4.\melisma bes16[ a] bes8[ a] a2\melismaEnd
+  %{08%} g4 a1.
+  %{09%} |
+  %{10%} R1 |
+  %{11%} R1 |
+  %{12%} r1 a2 |
+  %{13%} a1 c2 |
+  %{14%} c1 bes2 |
+  %{15%} \[ a\melisma g2. \] f4 |
+  %{16%} f1\melismaEnd e2 |
+  %{17%} f2 r4 f |
+  %{18%} f2 g |
+  %{19%} a2. a4 |
+  %{20%} f2 g |
+  %{21%} a r4 c |
+  %{22%} c2 c |
+  %{23%} c4.\melisma bes8 a4\melismaEnd g |
+  %{24%} f4.\melisma g8 a4\melismaEnd g4.\melisma
+  %{25%}  f8 f2\melismaEnd e4 |
+  %{26%} f1 |
+  %{27%} R1*4
+
+  %{30%}  |
+}
+
+sopINotesPartII = \relative c'' {
+  %{31%} c2 c4 c |
+  %{32%} d2. c4 |
+  %{33%} c4.\melisma bes16[ a bes8 a] a2\melismaEnd
+  %{34%}  g4 a2 |
+  %{35%} r4 a a2 |
+  %{36%} c c2.
+  %{37%}  bes4 a g4.\melisma
+  %{38%}  f8 f2\melismaEnd e4 |
+  %{39%} f2 r4 f |
+  %{40%} f2 g |
+  %{41%} a2. g4 |
+  %{42%} f2 g |
+  %{43%} a r4 c |
+  %{44%} c2 c |
+  %{45%} c4.\melisma bes8 a4\melismaEnd g |
+  %{46%} f4.\melisma g8[ a f] g4.
+  %{47%}  f8 f2\melismaEnd e4 |
+  %{48%} f1 |
+  %{49%} s |
+  %{50%} s |
+  %{51%} s |
+  %{52%} s |
+}
+
+sopIINotesPartII = \relative c'' {
+  \set Staff.shortInstrumentName = "D II"
+  %{31%} a2 g4 a |
+  %{32%} \[ bes2\melisma a\melismaEnd \] |
+  %{33%} g2 d'2.
+  %{34%}  d4 c2 |
+  %{35%} c d |
+  %{36%} g, a |
+  %{37%} d, e |
+  %{38%} f g |
+  %{39%} a r4 a |
+  %{40%} bes a c2 |
+  %{41%} d d4 d4.\melisma
+  %{42%}  c16[ bes a8 bes] c2\melismaEnd |
+  %{43%} c1 |
+  %{44%} r4 c, f g |
+  %{45%} a8[\melisma g a bes] c2\melismaEnd |
+  %{46%} c r4 c4.\melisma
+  %{47%}  bes8[ bes a16 bes] c4\melismaEnd c |
+  %{48%} a1 |
+  %{49%} r4 f f'4.\melisma e8[ |
+  %{50%} d c] bes2\melismaEnd a4 |
+  %{51%} bes c bes bes |
+  %{52%} a1 |
+  \set Staff.shortInstrumentName = "D"
+}
+
+sopNotesPartIII = \relative c'' {
+  %{53%} c2 c |
+  %{54%} d c |
+  %{55%} c bes |
+  %{56%} a r4  a |
+  %{57%} a2 c |
+  %{58%} c4.\melisma bes8 a4\melismaEnd g4.\melisma
+  %{59%}  f8\melismaEnd f2 e4 |
+  %{60%} f2 r4 f |
+  %{61%} f2 g |
+  %{62%} a a |
+  %{63%} f g |
+  %{64%} a r4 c |
+  %{65%} c2 c |
+  %{66%} c a |
+  %{67%} bes4.\melisma a8[ g f] g4.
+  %{68%}  f8 f2\melismaEnd e4 |
+  %{69%} f1 |
+  %{70%} R1*2
+  %{71%}  |
+}
+
 sopVoice = <<
   \commonArt
   \sopArt
-  \relative c''
-  {
-    %{01%} a2 a |
-    %{02%} r f |
-    %{03%} g4 g bes2 |
-    %{04%} a1 |
-    %{05%} c2 c |
-    %{06%} d2. c4 |
-    %{07%} c4.\melisma bes16[ a] bes8[ a] a2\melismaEnd
-    %{08%} g4 a1.
-    %{09%} |
-    %{10%} R1 |
-    %{11%} R1 |
-    %{12%} r1 a2 |
-    %{13%} a1 c2 |
-    %{14%} c1 bes2 |
-    %{15%} \[ a\melisma g2. \] f4 |
-    %{16%} f1\melismaEnd e2 |
-    %{17%} f2 r4 f |
-    %{18%} f2 g |
-    %{19%} a2. a4 |
-    %{20%} f2 g |
-    %{21%} a r4 c |
-    %{22%} c2 c |
-    %{23%} c4.\melisma bes8 a4\melismaEnd g |
-    %{24%} f4.\melisma g8 a4\melismaEnd g4.\melisma
-    %{25%}  f8 f2\melismaEnd e4 |
-    %{26%} f1 |
-    %{27%} R1*4
+  { \sopNotesPartI \sopIINotesPartII \sopNotesPartIII }
+>>
 
-    %{30%}  |
-    %{31%} s1 |
-    %{32%} s |
-    %{33%} s |
-    %{34%} s |
-    %{35%} s |
-    %{36%} s |
-    %{37%} s |
-    %{38%} s |
-    %{39%} s |
-    %{40%} s |
-    %{41%} s |
-    %{42%} s |
-    %{43%} s |
-    %{44%} s |
-    %{45%} s |
-    %{46%} s |
-    %{47%} s |
-    %{48%} s |
-    %{49%} s |
-    %{50%} s |
-    %{51%} s |
-    %{52%} s |
-    %{53%} c=''2 c |
-    %{54%} d c |
-    %{55%} c bes |
-    %{56%} a r4  a |
-    %{57%} a2 c |
-    %{58%} c4.\melisma bes8 a4\melismaEnd g4.\melisma
-    %{59%}  f8\melismaEnd f2 e4 |
-    %{60%} f2 r4 f |
-    %{61%} f2 g |
-    %{62%} a a |
-    %{63%} f g |
-    %{64%} a r4 c |
-    %{65%} c2 c |
-    %{66%} c a |
-    %{67%} bes4.\melisma a8[ g f] g4.
-    %{68%}  f8 f2\melismaEnd e4 |
-    %{69%} f1 |
-    %{70%} R1*2
-    %{71%}  |
-  }
+sopIVoice = <<
+  \commonArt
+  { s1*11 | s1.*5 | s1*14 | \sopArtPartII s1*19 | }
+  { s1*11 | s1.*5 | s1*14 | \sopINotesPartII s1*19 | }
 >>
 
 altVoice = <<

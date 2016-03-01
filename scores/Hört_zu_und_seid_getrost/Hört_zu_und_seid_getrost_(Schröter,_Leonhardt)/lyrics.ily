@@ -17,10 +17,23 @@ sopLyrics = \lyricmode {
   die al -- lem Volk soll wie -- der -- fahrn,
   denn euch ist heut der Hei -- land ge -- born.
 
+  Wel -- cher ge -- nannt wird Je -- su Christ
+  In der Stadt Da -- vid ge -- bo -- ren ist.
+  Von Ma -- ri -- a der Jung -- Frau schon
+  des al -- ler -- höch -- sten Got -- tes Sohn,
+  des al -- ler -- höch -- sten Got -- tes Sohn.
+
   Das soll euch ein Zei -- chen sein
   ihr werdt fin -- den das Kind -- lein klein
   ge -- wi -- ckelt in die Win -- deln zwar
   und lie -- gen in der Krip -- pen dar.
+}
+
+sopILyrics = \lyricmode {
+  Wel -- cher ge -- nannt wird Je -- sus Christ
+  In der Stadt Da -- vid ge -- bo -- ren ist
+  Von Ma -- ri -- a der Jung -- frau schon
+  des Al -- ler -- höch -- sten Got -- tes Sohn.
 }
 
 altLyrics = \lyricmode {
