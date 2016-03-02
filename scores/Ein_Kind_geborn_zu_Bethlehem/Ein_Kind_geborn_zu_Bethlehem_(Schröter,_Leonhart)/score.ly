@@ -28,54 +28,66 @@
 
   \score {
     %for PDF
-    \new StaffGroup <<
-      \new Staff \with { \consists "Ambitus_engraver" } <<
-        \set Staff.instrumentName = "Primus Discantus"
-        \new Voice = "sopI" { \incipit \sopIIncipit \global \sopIVoice }
-      >>
-      \new Lyrics \lyricsto "sopI" { \sopILyrics }
+    <<
+      \new StaffGroup <<
+        \new Staff \with { \consists "Ambitus_engraver" } <<
+          \set Staff.instrumentName = "Primus Discantus"
+          \set Staff.shortInstrumentName = "D I"
+          \new Voice = "sopI" { \incipit \sopIIncipit \global \sopIVoice }
+        >>
+        \new Lyrics \lyricsto "sopI" { \sopILyrics }
 
-      \new Staff \with { \consists "Ambitus_engraver" } <<
-        \set Staff.instrumentName = "Secundus Discantus"
-        \new Voice = "sopII" { \incipit \sopIIIncipit \global \sopIIVoice }
-      >>
-      \new Lyrics \lyricsto "sopII" { \sopIILyrics }
+        \new Staff \with { \consists "Ambitus_engraver" } <<
+          \set Staff.instrumentName = "Secundus Discantus"
+          \set Staff.shortInstrumentName = "D II"
+          \new Voice = "sopII" { \incipit \sopIIIncipit \global \sopIIVoice }
+        >>
+        \new Lyrics \lyricsto "sopII" { \sopIILyrics }
 
-      \new Staff \with { \consists "Ambitus_engraver" } <<
-        \set Staff.instrumentName = "Primus Altus"
-        \new Voice = "altI" { \incipit \altIIncipit \global \altIVoice }
-      >>
-      \new Lyrics \lyricsto "altI" { \altILyrics }
+        \new Staff \with { \consists "Ambitus_engraver" } <<
+          \set Staff.instrumentName = "Primus Altus"
+          \set Staff.shortInstrumentName = "A I"
+          \new Voice = "altI" { \incipit \altIIncipit \global \altIVoice }
+        >>
+        \new Lyrics \lyricsto "altI" { \altILyrics }
 
-      \new Staff \with { \consists "Ambitus_engraver" } <<
-        \set Staff.instrumentName = "Secundus Altus"
-        \new Voice = "altII" { \incipit \altIIIncipit \global \altIIVoice }
+        \new Staff \with { \consists "Ambitus_engraver" } <<
+          \set Staff.instrumentName = "Primus Tenor"
+          \set Staff.shortInstrumentName = "T I"
+          \new Voice = "tenI" { \incipit \tenIIncipit \global \clef "G_8" \tenIVoice }
+        >>
+        \new Lyrics \lyricsto "tenI" { \tenILyrics }
       >>
-      \new Lyrics \lyricsto "altII" { \altIILyrics }
 
-      \new Staff \with { \consists "Ambitus_engraver" } <<
-        \set Staff.instrumentName = "Primus Tenor"
-        \new Voice = "tenI" { \incipit \tenIIncipit \global \clef "G_8" \tenIVoice }
-      >>
-      \new Lyrics \lyricsto "tenI" { \tenILyrics }
+      \new StaffGroup <<
+        \new Staff \with { \consists "Ambitus_engraver" } <<
+          \set Staff.instrumentName = "Secundus Altus"
+          \set Staff.shortInstrumentName = "A II"
+          \new Voice = "altII" { \incipit \altIIIncipit \global \altIIVoice }
+        >>
+        \new Lyrics \lyricsto "altII" { \altIILyrics }
 
-      \new Staff \with { \consists "Ambitus_engraver" } <<
-        \set Staff.instrumentName = "Secundus Tenor"
-        \new Voice = "tenII" { \incipit \tenIIIncipit \global \clef "G_8" \tenIIVoice }
-      >>
-      \new Lyrics \lyricsto "tenII" { \tenIILyrics }
+        \new Staff \with { \consists "Ambitus_engraver" } <<
+          \set Staff.instrumentName = "Secundus Tenor"
+          \set Staff.shortInstrumentName = "T II"
+          \new Voice = "tenII" { \incipit \tenIIIncipit \global \clef "G_8" \tenIIVoice }
+        >>
+        \new Lyrics \lyricsto "tenII" { \tenIILyrics }
 
-      \new Staff \with { \consists "Ambitus_engraver" } <<
-        \set Staff.instrumentName = "Primus Bassus"
-        \new Voice = "basI" { \incipit \basIIncipit \global \clef bass \basIVoice }
-      >>
-      \new Lyrics \lyricsto "basI" { \basILyrics }
+        \new Staff \with { \consists "Ambitus_engraver" } <<
+          \set Staff.instrumentName = "Primus Bassus"
+          \set Staff.shortInstrumentName = "B I"
+          \new Voice = "basI" { \incipit \basIIncipit \global \clef bass \basIVoice }
+        >>
+        \new Lyrics \lyricsto "basI" { \basILyrics }
 
-      \new Staff \with { \consists "Ambitus_engraver" } <<
-        \set Staff.instrumentName = "Secundus Bassus"
-        \new Voice = "basII" { \incipit \basIIIncipit \global \clef bass \basIIVoice }
+        \new Staff \with { \consists "Ambitus_engraver" } <<
+          \set Staff.instrumentName = "Secundus Bassus"
+          \set Staff.shortInstrumentName = "B II"
+          \new Voice = "basII" { \incipit \basIIIncipit \global \clef bass \basIIVoice }
+        >>
+        \new Lyrics \lyricsto "basII" { \basIILyrics }
       >>
-      \new Lyrics \lyricsto "basII" { \basIILyrics }
     >>
     \layout {
       \context {
@@ -89,7 +101,6 @@
       }
       \context {
         \Lyrics
-        \consists "Bar_engraver"
         \consists "Separating_line_group_engraver"
       }
       indent = 5\cm

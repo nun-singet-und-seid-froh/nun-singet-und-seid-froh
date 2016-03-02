@@ -69,18 +69,18 @@ basIIIncipit = {
 sopIArt = {
   %{00%} s4 |
   %{01%} s1. |
-  %{00%} s |
-  %{00%} s |
-  %{00%} s |
-  %{00%} s |
-  %{00%} s |
-  %{00%} s |
-  %{00%} s |
-  %{00%} s |
-  %{00%} s |
-  %{00%} s |
-  %{00%} s |
-  %{00%} s \once \undo \hide Staff.BarLine \bar "|." |
+  %{02%} s |
+  %{03%} s |
+  %{04%} s2. s2 \bar "" s4 |
+  %{05%} s1. |
+  %{06%} s |
+  %{07%} s |
+  %{08%} s2. s2 \bar "" \break s4 |
+  %{09%} s1. |
+  %{10%} s |
+  %{11%} s |
+  %{12%} s |
+  %{13%} s \once \undo \hide Staff.BarLine \bar "|." |
 }
 
 sopIIArt = \sopIArt
@@ -195,7 +195,7 @@ tenIVoice = <<
     %{10%}  d8 d'4\melismaEnd a bes2 bes4 |
     %{11%} \[ bes\melisma d\melismaEnd \] c a f c' |
     %{12%} bes2 c4 g4. d8 d'4 |
-    %{13%} cis1. |
+    %{13%} b1. |
   }
 >>
 
@@ -207,6 +207,15 @@ tenIIVoice = <<
 
     %{03%}  |
     %{04%} r2. r2 bes4 |
+    %{05%} bes2 bes4 c2 c4 |
+    %{06%} d4.\melisma e8[ f d] es2\melismaEnd es4 |
+    %{07%} d2 d d,4 d'4.\melisma
+    %{08%}  c16[ bes] c4\melismaEnd d2 r4 d |
+    %{09%} d2 bes4 c2 c4 |
+    %{10%} bes a2 g r4 |
+    %{11%} r2. f4 c'8[ \melisma bes a g] |
+    %{12%} f4\melismaEnd f a c bes a |
+    %{13%} g1. |
   }
 >>
 
@@ -218,6 +227,15 @@ basIVoice = <<
 
     %{03%}  |
     %{04%} r2. r2 g4 |
+    %{05%} g2 g4 c2 c4 |
+    %{06%} bes4.\melisma c8[ d bes] c2\melismaEnd c4 |
+    %{07%} bes2 bes'4 a4.\melisma g8[ f e] |
+    %{08%} \[ d4 bes\melismaEnd \] f' bes,2 bes4 |
+    %{09%} bes2 bes4 f2 c'4 |
+    %{10%} g d'2 g, r4 |
+    %{11%} r2. r2 f4 |
+    %{12%} bes bes f c' g d' |
+    %{13%} g,1. |
   }
 >>
 
@@ -229,5 +247,14 @@ basIIVoice = <<
 
     %{03%}  |
     %{04%} r2. r2 g4 |
+    %{05%} g2 g4 g2 g4 |
+    %{06%} bes2 bes4 g4.\melisma f8[ g a] |
+    %{07%} bes2\melismaEnd g4 d8[\melisma c d e f g] |
+    %{08%} a[ f] bes4\melismaEnd a bes2 bes,4 |
+    %{09%} d2 f4 f c8[\melisma d e c] |
+    %{10%} g'4\melismaEnd d d d2. |
+    %{11%} r2 c4 c'8[\melisma bes a g f e] |
+    %{12%} d4\melismaEnd d8 f4 c8 \[ e4\melisma g\melismaEnd \] d |
+    %{13%} d1. |
   }
 >>
