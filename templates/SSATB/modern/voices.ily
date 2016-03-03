@@ -5,7 +5,7 @@
 %               please contact us at mail@nun-singet-und-seid-froh.info                 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% this is standard version 1.0: SATTB
+% this is standard version 1.0: SSATB
 
 % common settings of all voices
 global = {
@@ -16,20 +16,27 @@ global = {
 }
 
 % articulation, dynamics, fermata and breathing marks
-sopArt = { }
+sopIArt = { }
+
+sopIIArt = { }
 
 altArt = { }
 
-tenIArt = { }
-
-tenIIArt = { }
+tenArt = { }
 
 basArt = { }
 
 
 % the tunes
-sopVoice = <<
-  \sopArt
+sopIVoice = <<
+  \sopIArt
+  \relative c''
+    {    
+    }
+>>
+
+sopIIVoice = <<
+  \sopIIArt
   \relative c''
     {    
     }
@@ -42,19 +49,12 @@ altVoice = <<
     }
 >>
 
-tenIVoice = <<
-  \tenIArt
+tenVoice = <<
+  \tenArt
   \relative c'
     {  
     }
 >>    
-
-tenIIVoice = <<
-  \tenIIArt
-  \relative c'
-    {  
-    }
->>
 
 basVoice = <<
   \basArt
