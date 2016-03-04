@@ -49,7 +49,7 @@ sopLyrics = \lyricmode { \set stanza = "1. "
                         Macht hoch die Tür, die Tor’ macht weit; 
                         es kommt der Herr der Herr -- lich -- keit,
                         ein Kö -- nig al -- ler Kö -- nig -- reich,
-                        ein Hei -- land all -- ller Welt zu -- gleich,
+                        ein Hei -- land al -- ler Welt zu -- gleich,
                         der Heil und Le -- ben mit sich bringt,
                         der -- hal -- ben jauchzt, mit Freu -- den singt:
                         Ge -- lo -- bet sei mein Gott,
