@@ -205,31 +205,31 @@ basLyricsVerseTwo = \lyricmode {
 sopLyricsVerseThree = \lyricmode {
   Das Blü -- me -- lein so klei -- ne,
   das duf -- tet uns so süß, so süß __
-  mit __ sei -- nem hel -- len Schei -- ne ver -- treibts __
+  mit sei -- nem hel -- len Schei -- ne ver -- treibts __
   die Fin -- ster -- nis.
   Wahr Mensch und wah -- rer Gott,
-  hilft __ uns aus al -- lem Lei -- de,
+  hilft uns aus al -- lem Lei -- de,
   ret -- tet von Sünd und Tod, von Sünd und Tod.
 }
 
 altLyricsVerseThree =  \lyricmode {
   Das Blü -- me -- lein so klei -- ne,
-  das duf -- tet uns so süß,
-  mit __ sei -- nem hel -- len Schei -- ne ver -- treibts __
+  das duf -- tet uns so süß, __
+  mit sei -- nem hel -- len Schei -- ne ver -- treibts __
   die Fin -- ster -- nis.
   Wahr Mensch und wah -- rer Gott,
-  hilft __ uns aus al -- lem Lei -- de,
+  hilft uns aus al -- lem Lei -- de,
   ret -- tet von Sünd, von Sünd und Tod.
 }
 
 tenLyricsVerseThree =  \lyricmode {
   Das Blü -- me -- lein so klei -- ne,
-  das duf -- tet uns so süß,
-  mit __ sei -- nem hel -- len Schei -- ne ver -- treibts __
+  das duf -- tet uns so süß, __
+  mit sei -- nem hel -- len Schei -- ne ver -- treibts
   die Fin -- ster -- nis.
   Wahr Mensch und wah -- rer Gott,
-  hilft __ uns aus al -- lem Lei -- de,
-  ret -- tet von Sünd und Tod, von Sünd und Tod.
+  hilft uns aus al -- lem Lei -- de,
+  ret -- tet von Sünd und Tod. __
 }
 
 basLyricsVerseThree = \lyricmode {
