@@ -660,14 +660,14 @@ sopTune = \relative c' {
 %{63%} f\p r4 bes b( c) cis( d)
 %{64%} es2 bes a as
 %{65%} g^\markup{\italic dim.} ges4( as) bes2 r
-%{66%} f f4 f f( e) g( c)
+%{66%} f^\markup{\dynamic{mf}\italic{cresc.}} f4 f f( e) g( c)
 %{67%} c2\f d es4( d) c( bes)
 %{68%} es( f8[ g] es2~ es~ es8[ d]) c4
 %{69%} d2 d2^\markup{\dynamic f \italic dim.} des c
 %{70%} ces bes c4\mp( des) des( c)
 %{71%} b2. b4 c( bes) as g
 %{72%} g\<( f) f( es\!) d\>( e2) f4
-%{73%} e2\!^\markup{\italic dim.} f g\fermata
+%{73%} \tempo "Lento" e2\!^\markup{\italic dim.} f g\fermata
 \bar"|." \once \override Staff.BarLine.allow-span-bar = ##t \bar"||" \break
 
 % fifth stanza
@@ -763,13 +763,13 @@ altTune = \relative c' {
        r2
 %{37%} r4 es\staccato\f c\staccato es\staccato g\staccato r4
 %{38%} r4 g\staccato es\staccato g\staccato as\staccato r4
-%{39%} r4 c, f2( \times 2/3 { f4 e) d }
+%{39%} r4 c, f2~( \times 2/3 { f4 e) d }
 %{40%} g2( \times 2/3 { c2) bes4 } \times 2/3 { as( c) bes} 
 %{41%} as2 r2 r4 c, 
 %{42%} f as c2 bes4( as)
 %{43%} g( as) bes( g) c2
-%{44%} r4 es, as2( \times 2/3 { as4 g) as}
-%{45%} \times 2/3 { as( bes as) } g( f) g2
+%{44%} r4 es, as2~( \times 2/3 { as4 g) as}
+%{45%} \times 2/3 { as( \stemUp bes \stemNeutral as) } g( f) g2
 %{46%} as r r
 %{47%} r4 g bes g es es
 %{48%} g( es c2) es
@@ -779,7 +779,7 @@ altTune = \relative c' {
 %{52%} as2( \times 2/3 { as4 g as) } bes4( as)
 %{53%} g( f) e( g) c,( c')
 %{54%} \times 2/3 { f,4( g as} g2) \times 2/3 { f4( g as) }
-%{55%} d,2 \times 2/3 { c2( d4) } \times 2/3 { e( f) g }
+%{55%} d,2 \times 2/3 { c2( d4) } \times 2/3 { e( f) g } % TODO: text alignment (+spring?)
 %{56%} \times 2/3 {c,( f) f} \times 2/3{ f( bes) g} as4\fermata 
 \once \override Staff.BarLine.allow-span-bar = ##t
 
@@ -794,9 +794,9 @@ altTune = \relative c' {
 %{60%} r r4 g\< f( es) es( d)
 %{61%} as'\f( g) g( as) as( g) g( f)
 %{62%} e2^\markup{\italic dim.} e f r
-%{63%} r bes a as
+%{63%} r bes^\p a as
 %{64%} as4( g) f( es) es2 f
-%{65%} bes,1^\markup{\italic dim.} es2 es4 es
+%{65%} bes,1^\markup{\italic dim.} es2^\markup{\italic{cresc.}} es4 es
 %{66%} es( d2) des4 c( c'2) e,4
 %{67%} e\f( f) bes,( bes') bes( as) g( bes) 
 %{68%} bes1~( bes4 g) a2
@@ -881,7 +881,7 @@ tenTune = \relative c {
 %{20%}      
 %{21%}    
 %{22%} r4 c\f d es f c   
-%{23%} es8([ d]) es4 bes2 r4 bes4
+%{23%} es8([ d]) es4 bes2 r4 bes4 %TODO: check last bes
 %{24%} as g f f' c d 
 %{25%} es( d c2) r4 bes
 %{26%} g f es es' c d
@@ -902,7 +902,7 @@ tenTune = \relative c {
        f,2\f
 %{37%} as1 bes2  
 %{38%} c1 f,2 
-%{39%} as2( \times 2/3 { as4 bes) as } g2(
+%{39%} as2~( \times 2/3 { as4 bes) as } g2~(
 %{10%} \times 2/3 { g4 as) g } f1~
 %{41%} f2 r r
 %{42%} c' c d 
@@ -912,12 +912,12 @@ tenTune = \relative c {
 %{46%} as1 r2
 %{47%} es'2 es es
 %{48%} es1 c2
-%{49%} f2( \times 2/3 { f4 g f } \times 2/3 { es d c}
+%{49%} f2~( \times 2/3 { f4 g f } \times 2/3 { es d c}
 %{50%} \times 2/3 { bes c) d} es1~
 %{51%} es2 r r
 %{52%} c c bes
 %{53%} c1 as2
-%{54%} bes2( \times 2/3 { bes4 as g } \times 2/3 { as g f }
+%{54%} bes2~( \times 2/3 { bes4 as g } \times 2/3 { as g f }
 %{55%} \times 2/3 { g as bes) } g1
 %{56%} f1~ f4\fermata 
 \once \override Staff.BarLine.allow-span-bar = ##t \bar"||"
@@ -932,15 +932,15 @@ tenTune = \relative c {
 %{59%} d2. r4 r4 c bes as
 %{60%} g\<( as) bes( g) as( a) bes( b)
 %{61%} b\f( c) c( f) f( es) es( des)
-%{62%} bes^\markup{\italic dim.}( as) g( des') des( c) c( es)
-%{63%} es\p( d f as ges2) f
+%{62%} bes?^\markup{\italic dim.}( as) g( des') des( c) c( es)
+%{63%} es\p( d? f as ges2) f
 %{64%} bes, r4 bes b( c) cis( d) 
 %{65%} f^\markup{\italic dim.}( d es bes ges2\!) r2
-%{66%} r1 g'2\f g4 g
+%{66%} r1 g'?2\f g4 g
 %{67%} g( f2) f4 es( f) g( f)
 %{68%} g( f8[ es] g4. f8 es4. d8 c4) f4
 %{69%} fis2 g4^\markup{\dynamic f \italic dim.} ( f) e2 f4( es)
-%{70%} d2 e4( des) c\mp( bes) as( f')
+%{70%} d2 es4( des) c\mp( bes) as( f')
 %{71%} f2 es4( d?) c( des) c bes
 %{72%} bes\<( as2) f4\! r g2\> g4 
 %{73%} g2\!^\markup{\italic dim.} as4( f) c'2\fermata
@@ -1044,23 +1044,23 @@ basTune = \relative c {
        r2
 %{37%} r4 as'\staccato as,\staccato c\staccato es\staccato r
 %{38%} r c'\staccato c,\staccato es\staccato f\staccato r
-%{39%} r2 f bes2(
+%{39%} r2 r4 f bes2~(
 %{40%} \times 2/3 { bes4 c) bes } \times 2/3 { bes( c) as } f2
 %{41%} r4 as, c f as2
 %{42%} as g4( f) bes2
-%{43%} es, as4( f) as2
+%{43%} es, g4( es) as2
 %{44%} r r r4 f
 %{45%} bes bes es,2. es4
 %{46%} es' c as as c( as
 %{47%} g2) g c,4 c'
 %{48%} es c as as c as
 %{49%} f2 r4 f c' as
-%{50%} bes2( es,) as
-%{51%} bes r4 c4 as( es)
+%{50%} bes2( es,) g
+%{51%} as r4 c4 as( es)
 %{52%} c as' f( es) d2
 %{53%} e4( d c e) f2
 %{54%} d( es?) f
-%{55%} bes,2( c \times 2/3 { c4 d) e}
+%{55%} bes,2( c~ \times 2/3 { c4 d) e}
 %{56%} \times 2/3 { f2( g4 } \times 2/3 { as g) c } 
           << c f,\fermata >>
        
@@ -1080,7 +1080,7 @@ basTune = \relative c {
 %{63%} bes1 es,2( f)
 %{64%} g2.( ges4 f2) bes,2
 %{65%} es1.^\markup{\italic dim.} r2
-%{66%} bes'1 bes2 bes
+%{66%} bes'1^\markup{\dynamic{mf}\italic{cresc.}} bes2 bes
 %{67%} as2.\f as4 g( f) es( d)
 %{68%} c2( c'1) f,2
 %{69%} bes1. r2
