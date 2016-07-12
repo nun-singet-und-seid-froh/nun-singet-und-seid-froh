@@ -6,5 +6,5 @@
 }
 
 \midi {
-  % \tempo 4 = 100
+  \tempo 4 = 100
 }

@@ -40,4 +40,4 @@ instrumentation   = "SATB" % "SATB", "SSAATTBB", "(SATB)(SATB)" for double-choir
 difficulty        = "mittelschwer" % "sehr leicht", "leicht", "mittelschwer", "schwer", "sehr schwer"
 form              = "Motette" % "Motette", "Strophenlied", "Durchkomponiertes Lied"
 root              = "O Heiland, reiß die Himmel auf"
-noInNsusf         = "2"
+noInNsusf         = "3"

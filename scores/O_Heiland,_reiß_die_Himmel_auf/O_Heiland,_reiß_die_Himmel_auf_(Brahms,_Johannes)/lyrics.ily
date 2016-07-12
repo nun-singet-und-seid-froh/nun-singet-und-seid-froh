@@ -29,18 +29,18 @@ sopLyrix = \lyricmode {
   
   \set stanza = "4. "
   Hie lei -- den wir die__ größ -- te, größ -- te __ Not,
-  hie __ lei -- den __ wir __ die__ größ -- te,__ größ -- te__ Not,
-  vor Au -- gen steht der__ bitt -- re, bitt -- re__ Tod,
-  ach komm, führ uns mit star -- ker__ Hand,
-  mit__ star -- ker Hand
+  hie lei -- den __ wir __ die__ größ -- te,__ größ -- te__ Not,
+  vor Au -- gen __ steht der__ bitt -- re, bitt -- re__ Tod,
+  ach komm, führ uns __ mit __ star -- ker__ Hand, __
+  mit __ star -- ker Hand
   vom E -- lend zu dem Va -- ter -- land.
-  vom E -- lend, vom E -- lend __ zu dem Va -- ter -- land.
+  vom E -- lend, vom E -- lend __ zu __ dem Va -- ter -- land.
  
   \set stanza = "5. "
   Da __ wol -- len __ wir all __ dan -- ken dir,
   un -- serm Er -- lö -- ser __ für __ und für, __
   da wol -- len wir all  lo -- ben dich,
-  je all -- zeit im -- mer und e -- wig -- lich.
+  je all -- zeit im -- mer __ und e -- wig -- lich.
   
   A -- men, A -- men, A -- men, A -- men, A -- men, A -- men.
 }
@@ -48,14 +48,14 @@ sopLyrix = \lyricmode {
 altLyrix = \lyricmode {
   \set stanza = "1. "
   O Hei -- land, reiß __ die Him -- mel auf,
-  her -- ab,__ her -- auf __ vom __ Him -- mel lauf,
-  reiß ab__ vom Him -- mel Tor und Tür,
+  her -- ab, __ her -- auf __ vom __ Him -- mel lauf,
+  reiß ab __ vom Him -- mel Tor und Tür,
   reiß ab, reiß ab, __ was Schloss __ und Rie -- gel __ für.
   
   \set stanza = "2. "
    O Gott, ein’ Tau vom Him -- mel gieß,
    o Gott,__ ein__ Tau vom Him -- mel__ gieß,
-   im Tau her -- ab, im Tau __ her -- ab,__ o Hei -- land fließ,
+   im Tau her -- ab, im Tau __ her -- ab, __ o Hei -- land fließ,
    ihr Wol -- ken brecht und reg -- net aus,
    ihr Wol -- ken brecht und reg -- net aus 
    den Kö -- nig, den Kö -- nig  ü -- ber Ja -- kobs Haus.
@@ -75,7 +75,7 @@ altLyrix = \lyricmode {
   \set stanza = "4. "
   Hie lei -- den wir die__ größ -- te Not,
   hie lei -- den, __ lei -- den __ wir __ die __ größ -- te Not,
-  vor Au -- gen steht __ der__ bitt -- re Tod,
+  vor Au -- gen steht __ der __ bitt -- re Tod,
   ach komm, führ uns __ mit star -- ker, star -- ker __ Hand,
   mit __ star -- ker Hand
   vom __ E -- lend __ zu dem __ Va -- ter -- land,
@@ -84,10 +84,10 @@ altLyrix = \lyricmode {
   \set stanza = "5. "
   Da __ wol -- len __ wir all __ dan -- ken dir,
   all dan -- ken. __ all dan -- ken dir,
-  un -- serm Er -- lö -- ser __ für __ und für, __
-  für und für,
+  un -- serm Er -- lö -- ser für und für,
+  für und für, __
   da wol -- len wir all  lo -- ben dich,
-  je all -- zeit im -- mer und e -- wig -- lich,
+  je all -- zeit im -- mer __ und e -- wig -- lich,
   e -- wig -- lich.
   
   A -- men, A -- men, A -- men, A -- men, A -- men.
@@ -123,13 +123,13 @@ tenLyrix = \lyricmode {
   hie lei -- den wir, __ 
   hie __ lei -- den __ wir __ die __ größ -- te, __ größ -- te __ Not,__
   vor __ Au -- gen steht der bitt -- re__ Tod, __
-  ach komm, führ uns __ mit star -- ker__, star -- ker Hand
+  ach komm, führ uns __ mit star -- ker, __ star -- ker Hand
   vom __ E -- lend __ zu dem __ Va -- ter -- land,
   vom __ E -- lend, vom E -- lend zu dem Va -- ter -- land.
   
   \set stanza = "5. "
-  Da __ wol -- len wir __ all __ dan -- ken dir,
-  all dan -- ken dir, __ 
+  Da __ wol -- len wir all dan -- ken dir, __
+  all dan -- ken __ dir, __ 
   un -- serm Er -- lö -- ser für __ und für, __
   da wol -- len __ wir __ all __ lo -- ben __ dich, __
   all __ lo -- ben __ dich,
@@ -151,7 +151,7 @@ basLyrix = \lyricmode {
    o Gott, ein’ Tau vom Him -- mel gieß,
    O Gott, ein’ Tau __ vom Him -- mel gieß,
    im Tau her -- ab, o Hei -- land fließ,
-   im Tau, im Tau her -- ab, o Hei -- land__ fließ,
+   im Tau, im Tau her -- ab, o Hei -- land __ fließ,
    
    ihr Wol -- ken brecht und reg -- net aus 
    den Kö -- nig ü -- ber Ja -- kobs Haus.
@@ -159,7 +159,7 @@ basLyrix = \lyricmode {
   \set stanza = "3. "
   O Erd schlag aus,
   o Erd schlag aus, 
-  schlag aus, __ schlag aus, __ o Erd, __
+  schlag aus, __ schlag aus, __ o Erd,
   dass Berg und Tal grün al -- les,
   al -- les __ werd,
   grün al -- les werd,
@@ -171,8 +171,8 @@ basLyrix = \lyricmode {
   
   \set stanza = "4. "
   Hie lei -- den wir die__ größ -- te Not,
-  vor Au -- gen steht der__ bitt -- re__ Tod,
-  ach komm, führ uns mit star -- ker,__  star -- ker Hand
+  vor Au -- gen steht der __ bitt -- re__ Tod,
+  ach komm, führ uns mit star -- ker, __  star -- ker Hand
   vom E -- lend zu dem Va -- ter -- land.
   
   \set stanza = "5. "
