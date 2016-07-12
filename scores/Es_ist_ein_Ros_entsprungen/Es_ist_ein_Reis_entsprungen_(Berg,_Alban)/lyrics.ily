@@ -31,8 +31,8 @@ sopLyrics = \lyricmode {
       Aus Got -- tes ew' -- gem Rat,
       aus Got -- tes ew' -- gem Rat,
       hat sie ein Kind __ ge -- bo -- ren
-      und blieb ein' rei -- ne Magd,
-      und blieb ein' rei -- ne Magd.
+      und blieb ein’ rei -- ne Magd,
+      und blieb ein’ rei -- ne Magd.
     }
   >>
 }
@@ -59,8 +59,8 @@ altLyrics = \lyricmode {
       Aus Got -- tes ew' -- gem Rat,
       aus Got -- tes ew' -- gem Rat,
       hat sie ein Kind __ ge -- bo -- ren
-      und blieb ein' rei -- ne Magd,
-      und blieb ein' rei -- ne Magd.
+      und blieb ein’ rei -- ne Magd,
+      und blieb ein’ rei -- ne Magd.
     }
   >>
 
@@ -88,8 +88,8 @@ tenLyrics = \lyricmode {
       Aus Got -- tes ew' -- gem Rat,
       aus Got -- tes ew' -- gem Rat,
       hat sie ein Kind, ____ ein Kind ge -- bo -- ren
-      und blieb ein' rei -- ne Magd,
-      und blieb ein' rei -- ne Magd.
+      und blieb ein’ rei -- ne Magd,
+      und blieb ein’ rei -- ne Magd.
     }
   >>
 
@@ -117,8 +117,8 @@ basLyrics = \lyricmode {
       Aus Got -- tes ew' -- gem Rat, __
       aus Got -- tes ew' -- gem Rat, __
       hat sie ein Kind, ____ ein Kind ge -- bo -- ren
-      und blieb ein' rei -- ne Magd,
-      und blieb ein' rei -- ne Magd.
+      und blieb ein’ rei -- ne Magd,
+      und blieb ein’ rei -- ne Magd.
     }
   >>
 }
