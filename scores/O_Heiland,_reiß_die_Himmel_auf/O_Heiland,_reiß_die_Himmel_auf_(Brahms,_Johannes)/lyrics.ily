@@ -1,3 +1,10 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%         This file is part of the edition www.nun-singet-und-seid-froh.info            %
+% This file as well as the music or data represented in it is within the public domain. %
+%      If you think that this file violates your copyright or other rights of you,      %
+%               please contact us at mail@nun-singet-und-seid-froh.info                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % this is standard version 1.0: SATB/polyphonic
 
 % the lyrics within the staves
@@ -69,7 +76,7 @@ altLyrix = \lyricmode {
   o Erd, her -- für dies Blüm -- lein bring,
   her -- für __ dies Blüm -- lein bring,
   o Hei -- land, aus der Er -- den __ spring, __
-  aus __ der __ Er -- den, aus der Er -- den,
+  aus __ der __ Er -- den spring, aus der Er -- den,
   aus __ der Er -- den __ spring.
 
   \set stanza = "4. "
@@ -78,8 +85,8 @@ altLyrix = \lyricmode {
   vor Au -- gen steht __ der __ bitt -- re Tod,
   ach komm, führ uns __ mit star -- ker, star -- ker __ Hand,
   mit __ star -- ker Hand
-  vom __ E -- lend __ zu dem __ Va -- ter -- land,
-  vom E -- lend zu dem Va -- ter -- land.
+  von __ E-- lend __ zu dem __ Va -- ter -- land,
+  von E-- lend zu dem Va -- ter -- land.
 
   \set stanza = "5. "
   Da __ wol -- len __ wir all __ dan -- ken dir,
@@ -124,8 +131,8 @@ tenLyrix = \lyricmode {
   hie __ lei -- den __ wir __ die __ größ -- te, __ größ -- te __ Not,__
   vor __ Au -- gen steht der bitt -- re__ Tod, __
   ach komm, führ uns __ mit star -- ker, __ star -- ker Hand
-  vom __ E -- lend __ zu dem __ Va -- ter -- land,
-  vom __ E -- lend, vom E -- lend zu dem Va -- ter -- land.
+  von __ E-- lend __ zu dem __ Va -- ter -- land,
+  von __ E-- lend, von E-- lend zu dem Va -- ter -- land.
 
   \set stanza = "5. "
   Da __ wol -- len wir all dan -- ken dir, __

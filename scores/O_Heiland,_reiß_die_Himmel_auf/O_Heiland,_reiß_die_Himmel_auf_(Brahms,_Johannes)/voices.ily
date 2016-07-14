@@ -1,3 +1,10 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%         This file is part of the edition www.nun-singet-und-seid-froh.info            %
+% This file as well as the music or data represented in it is within the public domain. %
+%      If you think that this file violates your copyright or other rights of you,      %
+%               please contact us at mail@nun-singet-und-seid-froh.info                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % common settings of all voices
 global = {
   \override Staff.BarLine.allow-span-bar = ##f
@@ -779,7 +786,7 @@ altTune = \relative c' {
 %{52%} as2( \times 2/3 { as4 g as) } bes4( as)
 %{53%} g( f) e( g) c,( c')
 %{54%} \times 2/3 { f,4( g as} g2) \times 2/3 { f4( g as) }
-%{55%} d,2 \times 2/3 { c2( d4) } \times 2/3 { e( f) g } % TODO: text alignment (+spring?)
+%{55%} d,2 \times 2/3 { c2 d4 } \times 2/3 { e( f) g }
 %{56%} \times 2/3 {c,( f) f} \times 2/3{ f( bes) g} as4\fermata
 \once \override Staff.BarLine.allow-span-bar = ##t
 
@@ -881,7 +888,7 @@ tenTune = \relative c {
 %{20%}
 %{21%}
 %{22%} r4 c\f d es f c
-%{23%} es8([ d]) es4 bes2 r4 bes4 %TODO: check last bes
+%{23%} es8([ d]) es4 bes2 r4 c
 %{24%} as g f f' c d
 %{25%} es( d c2) r4 bes
 %{26%} g f es es' c d
