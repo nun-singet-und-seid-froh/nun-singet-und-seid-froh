@@ -37,8 +37,8 @@ opus              = "2 Motetten (op. 74)"
 noInOpus          = "2"
 titleInOpus       = ""
 
-lastEdited        = "8. Februar 2016" % e.g. "19. September 2015"
-vers              = "0.0.0" % e.g. "1.0.0"
+lastEdited        = "14. Juli 2016" % e.g. "19. September 2015"
+vers              = "1.0.0" % e.g. "1.0.0"
 
 % other meta-data, used for the mediawiki-output
 epoque            = "Romantik"

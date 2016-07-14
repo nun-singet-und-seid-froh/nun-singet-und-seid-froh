@@ -97,7 +97,7 @@ altLyrix = \lyricmode {
   je all -- zeit im -- mer __ und e -- wig -- lich,
   e -- wig -- lich.
 
-  A -- men, A -- men, A -- men, A -- men, A -- men.
+  A -- men, A -- men, A -- men, A -- men, A -- men, A -- men.
 }
 
 tenLyrix = \lyricmode {

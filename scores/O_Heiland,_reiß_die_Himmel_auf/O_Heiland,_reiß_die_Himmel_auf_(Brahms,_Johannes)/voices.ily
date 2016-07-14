@@ -514,8 +514,7 @@ basArt = {
        \once \override Staff.BarLine.allow-span-bar = ##t
 
 % fourth stanza
-\time 2/1
-\set Timing.measurePosition = #(ly:make-moment 7/4)
+\time 2/1 \partial 4
        s4
 %{57%} s1 s2 s\mp
 %{58%} s1 s
@@ -537,8 +536,7 @@ basArt = {
        \once \override Staff.BarLine.allow-span-bar = ##t
 
 % fifth stanza
-\time 4/4
-\set Timing.measurePosition = #(ly:make-moment 2/4)
+\time 4/4 \partial 2
        s2
 %{74%} s1*3
 %{75%}
@@ -655,8 +653,7 @@ sopTune = \relative c' {
 
 % fourth stanza
 
-\time 2/1
-%\set Timing.measurePosition = #(ly:make-moment 7/4)
+\time 2/1 \partial 4
        r4\tempo "Adagio"
 %{57%} r1 r2 r4 c^\markup{\dynamic mp \italic espress.}
 %{58%} bes( as) as( g) f2. f'4
@@ -678,47 +675,46 @@ sopTune = \relative c' {
 \bar"|." \once \override Staff.BarLine.allow-span-bar = ##t \bar"||" \break
 
 % fifth stanza
-\time 4/4 \partial 2 r2
-
+\time 4/4 \partial 2
+       r2
 %{74%} R1
 %{75%} R1
-%{76%}
-%{77%} r2 f4\f( g)
-%{78%} as2 as4( bes)
-%{79%} c2 f,4( g)
-%{80%} as2 g
-%{81%} f r
-%{82%} R1
-%{83%} c'2 d4 d
-%{84%} es2 as,4( bes)
-%{85%} c2( des4) as
-%{86%} bes( as) r2
-%{87%} es'2 es4 es
-%{88%} des2 c
-%{89%} f f
-%{90%} es r
-%{91%} r4 c c2~
-%{92%} c4 bes bes( c)
-%{93%} c( des) c( bes)
-%{94%} bes( as) g2
-%{95%} f1
-%{96%} R1*2
-%{97%}
-%{98%}  r2 c'2\f\melisma
-%{99%}  bes8[ as g bes] as[ g f as]
-%{100%} g[ f e g] f[ e]\melismaEnd f4
-%{101%} r4 es'~\melisma es8[ des] es[ ges]
-%{102%} f[ es f es] des[ c] des4~
-%{103%} des8[ c des c] bes[ as] bes4~
-%{104%} bes8[ as bes as] g[ f]\melismaEnd g4
-%{105%} r4 des'8\f c f4.\melisma es8 |
-%{106%} des[ c bes as] g[ f]\melismaEnd f4
-%{107%} r8 c'[ des] c g'\melisma f4 es8
+%{76%} r2 f4\f( g)
+%{77%} as2 as4( bes)
+%{78%} c2 f,4( g)
+%{79%} as2 g
+%{80%} f r
+%{81%} R1
+%{82%} c'2 d4 d
+%{83%} es2 as,4( bes)
+%{84%} c2( des4) as
+%{85%} bes( as) r2
+%{86%} es'2 es4 es
+%{87%} des2 c
+%{88%} f f
+%{89%} es r
+%{90%} r4 c c2~
+%{91%} c4 bes bes( c)
+%{92%} c( des) c( bes)
+%{93%} bes( as) g2
+%{94%} f1
+%{95%} R1*2
+%{96%}
+%{97%}  r2 c'2\f\melisma
+%{98%}  bes8[ as g bes] as[ g f as]
+%{99%} g[ f e g] f[ e]\melismaEnd f4
+%{100%} r4 es'?~\melisma es8[ des es ges]
+%{101%} f[ es f es] des[ c] des4~
+%{102%} des8[ c des c] bes[ as] bes4~
+%{103%} bes8[ as bes as] g[ f]\melismaEnd g4
+%{104%} r4 des'8\f c f4.\melisma es8 |
+%{105%} des[ c bes as] g[ f]\melismaEnd g4
+%{106%} r8 c[ des] c g'(\melisma f4) es8
 
 \time 3/2
 
-%{108%} des[ c] bes[ as] g1\melismaEnd
-%{109%} f1
+%{107%} des[ c] bes[ as] g1\melismaEnd
+%{108%} f1
 \bar"|." \once \override Staff.BarLine.allow-span-bar = ##t
     }
 altTune = \relative c' {
@@ -783,7 +779,7 @@ altTune = \relative c' {
 %{49%} as r4 c,4 as'2~
 %{50%} as4 f bes g bes2
 %{51%} r4 c, es as c as
-%{52%} as2( \times 2/3 { as4 g as) } bes4( as)
+%{52%} as2~( \times 2/3 { as4 g as) } bes4( as)
 %{53%} g( f) e( g) c,( c')
 %{54%} \times 2/3 { f,4( g as} g2) \times 2/3 { f4( g as) }
 %{55%} d,2 \times 2/3 { c2 d4 } \times 2/3 { e( f) g }
@@ -792,8 +788,7 @@ altTune = \relative c' {
 
 % fourth stanza
 
-\time 2/1
-%\set Timing.measurePosition = #(ly:make-moment 7/4)
+\time 2/1 \partial 4
        r4
 %{57%} r1 r2 r4 as^\markup{\dynamic mp \italic espress.}
 %{58%} g( f) f( es) c2 as'2
@@ -817,18 +812,18 @@ altTune = \relative c' {
 % fifth stanza
 \time 4/4 \partial 2
 
-%{74%} c4\f( d)
-%{75%} es2 f
-%{76%} g4( f) e( c)
-%{77%} f( es?) des2
-%{78%} c4( d?) es( g)
-%{79%} as2 c,4( e)
-%{80%} f4 f2 e4
-%{81%} f2 r
-%{82%} c' bes4 bes
-%{83%} as( c bes as)
-
-%{84%} g g2 f4 es as2 f4
+       c4\f( d)
+%{74%} es2 f
+%{75%} g4( f) e( c)
+%{76%} f( es?) des2
+%{77%} c4( d?) es?( g)
+%{78%} as2 c,4( e)
+%{79%} f4 f2 e4
+%{80%} f2 r
+%{81%} c' bes4 bes
+%{82%} as( c bes as)
+%{83%} g g2 f4
+%{84%} es as2 f4
 %{85%} g( as) r as
 %{86%} g( as bes) c~
 %{87%} c bes2 as4
@@ -842,19 +837,18 @@ altTune = \relative c' {
 %{95%} f bes2 as4
 %{96%} g2) f
 %{97%} g2. r4
-
 % Amen
 
 %{98%}  des'2\f\melisma c8[ bes as c]
 %{99%}  bes[ as g bes] as[ g f as]
 %{100%} g[ f]\melismaEnd g4 r c\melisma
 %{101%} des8[ c des c] bes[ a] bes4~
-%{102%} bes8[ as bes as] g[ f g e]
+%{102%} bes8[ as? bes as] g[ f g e]
 %{103%} des[ c des c] e[ d]\melismaEnd e4
 %{104%} r4 r8 f\f\melisma g[ a bes c] |
-%{105%} bes[ as g f] e[ d e d]\melismaEnd
+%{105%} bes[ as? g f] e[ d? e d]\melismaEnd
 %{106%} c4 e8 f g[\melisma a bes c]
-%{107%} bes[ as g f] f2 e2\melismaEnd
+%{107%} bes[ as]\melismaEnd g[ f] f2( e2)
 %{108%} c1
 \once \override Staff.BarLine.allow-span-bar = ##t
 }
@@ -909,12 +903,12 @@ tenTune = \relative c {
        f,2\f
 %{37%} as1 bes2
 %{38%} c1 f,2
-%{39%} as2~( \times 2/3 { as4 bes) as } g2~(
-%{10%} \times 2/3 { g4 as) g } f1~
+%{39%} as2~( \times 2/3 { as4 \stemUp bes) \stemNeutral as } g2~(
+%{40%} \times 2/3 { g4 as) g } f1~
 %{41%} f2 r r
 %{42%} c' c d
 %{43%} es1 as,2
-%{44%} c2( \times 2/3 { c4 d) c } f2(
+%{44%} c2~( \times 2/3 { c4 d) c } f2~(
 %{45%} \times 2/3 { f4 g) f } es4( d) c( bes)
 %{46%} as1 r2
 %{47%} es'2 es es
@@ -931,8 +925,7 @@ tenTune = \relative c {
 
 % fourth stanza
 
-\time 2/1
-%\set Timing.measurePosition = #(ly:make-moment 7/4)
+\time 2/1 \partial 4
        as4^\markup{\dynamic mp \italic espress.}
 %{57%} bes( c) c( d) es2. es,4
 %{58%} bes'2. bes4 as( as') f( es)
@@ -956,47 +949,47 @@ tenTune = \relative c {
 % fifth stanza
 \time  4/4 \partial 2
 
-%{74%} r2
-%{75%} r4 c\f bes as
-%{76%} g2 c
-%{77%} as bes
-%{78%} c4( f,) c'( des)
-%{79%} es( e) f( bes,)
-%{80%} c2 r
-%{81%} c d4 d
-%{82%} e( c d e
-%{83%} f2.) f4
-%{84%} bes,( c) des2
-%{85%} es2( des)
-%{86%} r4 c es c
-%{87%} es( f) g( es)
-%{88%} f( g) es( f)
-%{89%} as,( bes) c( des)
-%{90%} bes( es) des( c)
-%{91%} es2 es
-%{92%} es4( des) des( c)
-%{93%} c( as) as bes
-%{94%} c( des) bes2
-%{95%} as4( bes) bes c
-%{96%} d?2( f2~
-%{97%} f4 e2) d4
-%{98%} e2. r4
+       r2
+%{74%} r4 c\f bes as
+%{75%} g2 c
+%{76%} as bes
+%{77%} c4( f,) c'( des)
+%{78%} es( e) f( bes,)
+%{79%} c2 r
+%{80%} c d?4 d
+%{81%} e( c d e
+%{82%} f2.) f4
+%{83%} bes,( c) des2
+%{84%} es2( des)
+%{85%} r4 c es c
+%{86%} es( f) g( es)
+%{87%} f( g) es( f)
+%{88%} as,( bes) c( des)
+%{89%} bes( es) des( c)
+%{90%} es2 es
+%{91%} es4( des) des( c)
+%{92%} c( as) as bes
+%{93%} c( des) bes2
+%{94%} as4( bes) bes c
+%{95%} d?2( f2~
+%{96%} f4 e2) d4
+%{97%} e2. r4
 
 % Amen
 
-%{99%} R1
-%{100%} e,2\f\melisma f8[ g as f]
-%{101%} g[ as bes g] a[ bes c a]
-%{102%} bes[ c]\melismaEnd bes4 r f\melisma
-%{103%} e8[ f e f] g[ as] g4~
-%{104%} g8[ as g as] bes[ c bes des]
-%{105%} e[ f e f] des[ es]\melismaEnd des4 |
-%{106%} r4 r8 c8\melisma bes[ as g f]
-%{107%} g[ as bes c] des[ es des es]\melismaEnd
+%{98%} R1
+%{99%} e,2\f\melisma f8[ g as f]
+%{100%} g[ as bes g] a[ bes c a]
+%{101%} bes[ c]\melismaEnd bes4 r f\melisma
+%{102%} e8[ f e f] g[ as] g4~
+%{103%} g8[ as g as] bes[ c bes des]
+%{104%} e[ f e f] des[ es]\melismaEnd des4 |
+%{105%} r4 r8 c8\melisma bes[ as g f]
+%{106%} g[ as bes c] des[ es des es]\melismaEnd
 
 
-%{108%} f4 des8 c des2( c4 bes)
-%{109%} a1
+%{107%} f4 des8 c des2( c4 bes)
+%{108%} a1
 \once \override Staff.BarLine.allow-span-bar = ##t
 }
 basTune = \relative c {
@@ -1075,8 +1068,7 @@ basTune = \relative c {
 
 % fourth stanza
 
-\time 2/1
-\set Timing.measurePosition = #(ly:make-moment 7/4)
+\time 2/1 \partial 4
        r4
 %{57%} r1 r2 c^\markup{\dynamic mp \italic espress.}
 %{58%} es1 f
@@ -1098,8 +1090,8 @@ basTune = \relative c {
        \once \override Staff.BarLine.allow-span-bar = ##t
 
 % fifth stanza
-\time 4/4 \partial 2 r2
-
+\time 4/4 \partial 2
+       r2
 %{74%} R1*3
 %{75%}
 %{76%}
@@ -1119,7 +1111,7 @@ basTune = \relative c {
 %{90%} c c
 %{91%} des r4 f
 %{92%} f2.( g4)
-%{93%} g( f) f( es)
+%{93%} g( f) f( e)
 %{94%} f( g) g( as)
 %{95%} bes1
 %{96%} c1
@@ -1134,7 +1126,7 @@ basTune = \relative c {
 %{102%} c[ d? c d] e[ f] e4~
 %{103%} e8[ f e f] g[ as] g4~
 %{104%} g8[ as g as] bes[ c]\melismaEnd bes4 |
-%{105%} r4 e,8 f c4.\melisma d8
+%{105%} r4 e,8 f c4.\melisma d?8
 %{106%} e[ f g as] bes[ c]\melismaEnd bes4
 
 %{107%} r8 f8[ e] f bes,2( c)
