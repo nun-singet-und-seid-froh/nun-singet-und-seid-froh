@@ -1,5 +1,5 @@
 # conventions concerning templates
-This document describes the conventions existing templates are built upon and new templates shall be consistent with. Since we cannot pre-imagine all kinds of music sheets that will be part of the edition of *nun singet und seid froh* there might be cases of musical pieces for which these conventions turn out to be incomplete or even inappropriate. When you have the feeling that these conventions do not match your needs (or just your taste) in a particular case, write an email to the project-owners and toghether we can adapt the conventions.
+This document describes the conventions existing templates are built upon and new templates shall be consistent with. Since we cannot pre-imagine all kinds of music sheets that will be part of the edition of *nun singet und seid froh* there might be cases of musical pieces for which these conventions turn out to be incomplete or even inappropriate. When you have the feeling that these conventions do not match your needs (or just your taste) in a particular case, open a new issue here on GitHub and toghether we can adapt the conventions.
 
 When setting up a new template it is not very smart to write it from scratch. It's rahter wise to orientate yourself at existing templates similar to the template you want to create and work with copy-and-paste.
 
