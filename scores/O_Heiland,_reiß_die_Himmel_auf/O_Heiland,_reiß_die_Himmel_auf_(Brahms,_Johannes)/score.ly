@@ -21,7 +21,7 @@
 
   \score {
     %for PDF
-    \new StaffGroup<<
+    \new StaffGroup <<
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
         \set Staff.instrumentName = "Sopran"
@@ -54,7 +54,7 @@
 
     \layout { }
   } %end of score (PDF)
-  
+
   \score {
     %for MIDI
     \unfoldRepeats
@@ -67,7 +67,6 @@
     >>
     \stafftovoice
   } %end of score (MIDI)
-  
 } %end of book
 
 
@@ -101,7 +100,7 @@
       \backgroundVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \highlightedVoice \global \altVoice }
-      \new Voice = "tenI" { \global \tenVoice }
+      \new Voice = "ten" { \global \tenVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
     \stafftovoice
@@ -117,7 +116,7 @@
       \backgroundVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
-      \new Voice = "tenI" { \highlightedVoice \global \tenVoice }
+      \new Voice = "ten" { \highlightedVoice \global \tenVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
     \stafftovoice

@@ -20,13 +20,13 @@ poetSurName       = "Spee" % e.g. "Gerhardt"
 poetLifedata      = "1591-1634" % e.g. "1607-1676"
 textDate          = ""
 
-% if the lyrics are a translation 
+% if the lyrics are a translation
 translatorChristianName = "" % e.g. "Martin"
 translatorSurName       = "" % e.g. "Luther"
 translatorLifedata      = "" % e.g. "1483-1546"
 translationDate         = ""
 
-opus              = "2 Motetten (op. 74)" 
+opus              = "2 Motetten (op. 74)"
 noInOpus          = "2"
 titleInOpus       = ""
 
@@ -34,8 +34,8 @@ lastEdited        = "8. Februar 2016" % e.g. "19. September 2015"
 vers              = "0.0.0" % e.g. "1.0.0"
 
 % other meta-data, used for the mediawiki-output
-epoque            = "Romantik" 
-language          = "deutsch" 
+epoque            = "Romantik"
+language          = "deutsch"
 instrumentation   = "SATB" % "SATB", "SSAATTBB", "(SATB)(SATB)" for double-choired works, etc.
 difficulty        = "mittelschwer" % "sehr leicht", "leicht", "mittelschwer", "schwer", "sehr schwer"
 form              = "Motette" % "Motette", "Strophenlied", "Durchkomponiertes Lied"
