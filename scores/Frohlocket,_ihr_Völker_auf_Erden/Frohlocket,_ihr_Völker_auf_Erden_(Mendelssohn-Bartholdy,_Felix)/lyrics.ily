@@ -4,15 +4,15 @@ sopILyrics = \lyricmode {
   Der Hei -- land ist er -- schie -- nen,
   ist er -- schie -- nen,
   den der Herr ver -- hei -- ßen.
-  
-  Er hat sei -- ne Ge -- rech -- tig -- keit 
+
+  Er hat sei -- ne Ge -- rech -- tig -- keit
   der Welt of -- fen -- ba -- ret.
   Hal -- le -- lu -- ja, Hal -- le -- lu -- ja!
-  Er hat sei -- ne Ge -- rech -- tig -- keit 
+  Er hat sei -- ne Ge -- rech -- tig -- keit
   der Welt of -- fen -- ba -- ret.
   Hal -- le -- lu -- ja, Hal -- le -- lu -- ja!
   Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja!
-  
+
   Froh -- loc -- ket, ihr Völ -- ker auf Er -- den,
   Hal -- le -- lu -- ja!
 }
@@ -23,14 +23,14 @@ sopIILyrics = \lyricmode{
   Der Hei -- land ist er -- schie -- nen,
   der Hei -- land ist er -- schie -- nen,
   den der Herr ver -- hei -- ßen.
-  
-  Er hat sei -- ne Ge -- rech -- tig -- keit 
+
+  Er hat sei -- ne Ge -- rech -- tig -- keit
   der Welt of -- fen -- ba -- ret.
   Hal -- le -- lu -- ja!
-  Er hat sei -- ne Ge -- rech -- tig -- keit 
+  Er hat sei -- ne Ge -- rech -- tig -- keit
   der Welt of -- fen -- ba -- ret.
   Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja!
-  
+
   Froh -- loc -- ket, ihr Völ -- ker auf Er -- den,
   Hal -- le -- lu -- ja!
 }
@@ -41,14 +41,14 @@ altILyrics = \lyricmode {
   Der Hei -- land ist er -- schie -- nen,
   der Hei -- land ist er -- schie -- nen,
   den der Herr ver -- hei -- ßen.
-  
-  Er hat sei -- ne Ge -- rech -- tig -- keit 
+
+  Er hat sei -- ne Ge -- rech -- tig -- keit
   der Welt of -- fen -- ba -- ret.
   Hal -- le -- lu -- ja, Hal -- le -- lu -- ja!
-  Er hat sei -- ne Ge -- rech -- tig -- keit 
+  Er hat sei -- ne Ge -- rech -- tig -- keit
   der Welt of -- fen -- ba -- ret.
   Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja!
-  
+
   Froh -- loc -- ket, ihr Völ -- ker auf Er -- den,
   Hal -- le -- lu -- ja!
 }
@@ -59,13 +59,13 @@ altIILyrics = \lyricmode {
   Der Hei -- land ist er -- schie -- nen,
   der Hei -- land ist er -- schie -- nen,
   den der Herr ver -- hei -- ßen.
-  
-  Er hat sei -- ne Ge -- rech -- tig -- keit 
+
+  Er hat sei -- ne Ge -- rech -- tig -- keit
   der Welt of -- fen -- ba -- ret. Hal -- le -- lu -- ja!
-  Er hat sei -- ne Ge -- rech -- tig -- keit 
-  der Welt of -- fen -- ba -- ret. 
+  Er hat sei -- ne Ge -- rech -- tig -- keit
+  der Welt of -- fen -- ba -- ret.
   Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja!
-  
+
   Froh -- loc -- ket, ihr Völ -- ker auf Er -- den,
   Hal -- le -- lu -- ja!
 }
@@ -75,11 +75,11 @@ tenILyrics = \lyricmode {
   Froh -- loc -- ket, ihr Völ -- ker auf Er -- den,
   der Hei -- land ist er -- schie -- nen,
   den der Herr ver -- hei -- ßen.
-  Er hat sei -- ne Ge -- rech -- tig -- keit 
+  Er hat sei -- ne Ge -- rech -- tig -- keit
   der Welt of -- fen -- ba -- ret.  Hal -- le -- lu -- ja, Hal -- le -- lu -- ja!
- 
-  Er hat sei -- ne Ge -- rech -- tig -- keit 
-  der Welt of -- fen -- ba -- ret.  
+
+  Er hat sei -- ne Ge -- rech -- tig -- keit
+  der Welt of -- fen -- ba -- ret.
   Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja!
 }
 
@@ -88,12 +88,12 @@ tenIILyrics = \lyricmode {
   Froh -- loc -- ket, ihr Völ -- ker auf Er -- den,
   der Hei -- land ist er -- schie -- nen,
   den der Herr ver -- hei -- ßen.
-  Er hat sei -- ne Ge -- rech -- tig -- keit 
+  Er hat sei -- ne Ge -- rech -- tig -- keit
   der Welt of -- fen -- ba -- ret. Hal -- le -- lu -- ja, Hal -- le -- lu -- ja!
 
-  Er hat sei -- ne Ge -- rech -- tig -- keit 
-  der Welt of -- fen -- ba -- ret.  
-  
+  Er hat sei -- ne Ge -- rech -- tig -- keit
+  der Welt of -- fen -- ba -- ret.
+
   Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja!
 }
 
@@ -102,13 +102,13 @@ basILyrics = \lyricmode {
   Froh -- loc -- ket, ihr Völ -- ker auf Er -- den,
   der Hei -- land ist er -- schie -- nen,
   den der Herr ver -- hei -- ßen.
-  Er hat sei -- ne Ge -- rech -- tig -- keit 
+  Er hat sei -- ne Ge -- rech -- tig -- keit
   der Welt of -- fen -- ba -- ret. Hal -- le -- lu -- ja, Hal -- le -- lu -- ja!
-  
-  Er hat sei -- ne Ge -- rech -- tig -- keit 
-  der Welt of -- fen -- ba -- ret.  
 
- Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja!
+  Er hat sei -- ne Ge -- rech -- tig -- keit
+  der Welt of -- fen -- ba -- ret.
+
+  Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja!
 }
 
 basIILyrics = \lyricmode {
@@ -116,10 +116,10 @@ basIILyrics = \lyricmode {
   Froh -- loc -- ket, ihr Völ -- ker auf Er -- den,
   der Hei -- land ist er -- schie -- nen,
   den der Herr ver -- hei -- ßen.
-  Er hat sei -- ne Ge -- rech -- tig -- keit 
+  Er hat sei -- ne Ge -- rech -- tig -- keit
   der Welt of -- fen -- ba -- ret.  Hal -- le -- lu -- ja!
-  Er hat sei -- ne Ge -- rech -- tig -- keit 
-  der Welt of -- fen -- ba -- ret.  
+  Er hat sei -- ne Ge -- rech -- tig -- keit
+  der Welt of -- fen -- ba -- ret.
   Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja!
-  
+
 }
