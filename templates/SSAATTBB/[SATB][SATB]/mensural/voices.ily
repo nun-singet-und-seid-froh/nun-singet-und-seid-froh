@@ -1,97 +1,106 @@
-% based on templates/SSAATTBB/[SSAA][TTBB]/mensural/voices.ily
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%         This file is part of the edition www.nun-singet-und-seid-froh.info            %
+% This file as well as the music or data represented in it is within the public domain. %
+%      If you think that this file violates your copyright or other rights of you,      %
+%               please contact us at mail@nun-singet-und-seid-froh.info                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% based on templates/SSAATTBB/[SATB][SATB]/mensural/voices.ily
 
 global = {
-  \override Staff.BarLine.allow-span-bar = ##f
   \key c \major
   \time 4/4
   \partial 4
   \dynamicUp
+  \hide Staff.BarLine 
+  %use 
+  %\once \undo \hide Staff.BarLine \bar"|" to create a bar that spans the systems
 }
 
-commonMarks = {
+commonArt = {
 }
 
-sopiMarks = {
+sopIArt = {
 }
 
-sopiiMarks = {
+sopIIArt = {
 }
 
-altiMarks = {
+altIArt = {
 }
 
-altiiMarks = {
+altIIArt = {
 }
 
-teniMarks = {
+tenIArt = {
 }
 
-teniiMarks = {
+tenIIArt = {
 }
 
-basiMarks = {
+basIArt = {
 }
 
-basiiMarks = {
+basIIArt = {
 }
 
 
 
-sopiVoice = \relative c'' {<< 
-{ \commonMarks }
-{ \sopiMarks }
+sopIVoice = \relative c'' {<< 
+{ \commonArt }
+{ \sopIArt }
 {
 
 }
 >>}
 
-sopiiVoice = \relative c'' {<< 
-{ \commonMarks }
-{ \sopiiMarks }
+sopIIVoice = \relative c'' {<< 
+{ \commonArt }
+{ \sopIIArt }
 {
 }
 >>}
 
-altiVoice = \relative c' {<< 
-{ \commonMarks }
-{ \altiMarks }
+altIVoice = \relative c' {<< 
+{ \commonArt }
+{ \altIArt }
 {
 }
 >>}
 
-altiiVoice = \relative c' {<< 
-{ \commonMarks }
-{ \altiiMarks }
+altIIVoice = \relative c' {<< 
+{ \commonArt }
+{ \altIIArt }
 {
 }
 >>}
 
-teniVoice = \relative c' {<< 
-{ \commonMarks }
-{ \teniMarks }
+tenIVoice = \relative c' {<< 
+{ \commonArt }
+{ \tenIArt }
 {
 }
 >>}
 
-teniiVoice = \relative c' {<< 
-{ \commonMarks }
-{ \teniiMarks }
+tenIIVoice = \relative c' {<< 
+{ \commonArt }
+{ \tenIIArt }
 {
 }
 >>}
 
-basiVoice = \relative c { << 
-{ \commonMarks }
-{ \basiMarks }
+basIVoice = \relative c { << 
+{ \commonArt }
+{ \basIArt }
 {
 }
 >> }
 
 
-basiiVoice = \relative c {
+basIIVoice = \relative c {
 <<
-{ \commonMarks }
-{ \basiiMarks }
+{ \commonArt }
+{ \basIIArt }
 {
 }
 >>

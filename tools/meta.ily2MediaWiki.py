@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 Created on Sun Jan 31 22:34:46 2016
@@ -5,66 +6,69 @@ Created on Sun Jan 31 22:34:46 2016
 @author: jonathan_scholbach
 """
 
-# this script extracts information from a  from a meta.ily formatted
+# this script extracts information from a meta.ily formatted
 # corresponding to the nun-singet-und-seid-froh standard and writes it into
 # a text file that describes a well-formatted MediaWiki infobox
 
-# script needs to be called with the path of the meta.ily as paramater
+# script needs to be called from the directory the meta.ily is in, the relative
+# path (relative to the directory the script is in) to the directory where the
+# mediawiki.txt shall be put into must be given as argument
 
 import sys
 import os
 import re
 
-#get the path of the meta.ily as first argument of call
-if not(len(sys.argv) == 1):
-  path = str(sys.argv[1])
-else:
-  print "error: No path given."
 
-filename = os.path.join(path,'meta.ily')
+path = os.getcwd()#<-- absolute dir the script is in, should be [..]\tools
+filename = 'meta.ily'
+
 print "processing " + filename
 
 with open(filename,'r') as f: 
   meta = f.read() 
 
-
 #reading
-
-composerPrename = re.search('composerPrename.*?=.*?"(.*?)"', meta, flags=0)
-if composerPrename:
-  composerPrename = composerPrename.group(1) 
+title = re.search('title.*?=.*?"(.*?)"', meta, flags=0)
+if title:
+	title = title.group(1)
 else:
-  print "error: "+ path + " is not well-formatted - no composerPrename found!"
+  print "error: "+ path + " is not well-formatted - no title found!"
   
-composerSurname = re.search('composerSurname.*?=.*?"(.*?)"', meta, flags=0)
-if composerSurname:
-  composerSurname = composerSurname.group(1) 
+composerChristianName = re.search('composerChristianName.*?=.*?"(.*?)"', meta, flags=0)
+if composerChristianName:
+  composerChristianName = composerChristianName.group(1) 
 else:
-  print "error: "+ path + " is not well-formatted - no composerSurname found!"
-
-arrangerPrename = re.search('arrangerPrename.*?=.*?"(.*?)"', meta, flags=0)
-if arrangerPrename:
-  arrangerPrename = arrangerPrename.group(1) 
-else:
-  print "error: "+ path + " is not well-formatted - no arrangerPrename found!"
+  print "error: "+ path + " is not well-formatted - no composerChristianName found!"
   
-arrangerSurname = re.search('arrangerSurname.*?=.*?"(.*?)"', meta, flags=0)
-if arrangerSurname:
-  arrangerSurname = arrangerSurname.group(1) 
+composerSurName = re.search('composerSurName.*?=.*?"(.*?)"', meta, flags=0)
+if composerSurName:
+  composerSurName = composerSurName.group(1) 
 else:
-  print "error: "+ path + " is not well-formatted - no arrangerSurname found!"
+  print "error: "+ path + " is not well-formatted - no composerSurName found!"
 
-poetPrename = re.search('poetPrename.*?=.*?"(.*?)"', meta, flags=0)
-if poetPrename:
-  poetPrename = poetPrename.group(1) 
+arrangerChristianName = re.search('arrangerChristianName.*?=.*?"(.*?)"', meta, flags=0)
+if arrangerChristianName:
+  arrangerChristianName = arrangerChristianName.group(1) 
 else:
-  print "error: "+ path + " is not well-formatted - no poetPrename found!"
+  print "error: "+ path + " is not well-formatted - no arrangerChristianName found!"
   
-poetSurname = re.search('poetSurname.*?=.*?"(.*?)"', meta, flags=0)
-if poetSurname:
-  poetSurname = poetSurname.group(1) 
+arrangerSurName = re.search('arrangerSurName.*?=.*?"(.*?)"', meta, flags=0)
+if arrangerSurName:
+  arrangerSurName = arrangerSurName.group(1) 
 else:
-  print "error: "+ path + " is not well-formatted - no poetSurname found!"
+  print "error: "+ path + " is not well-formatted - no arrangerSurName found!"
+
+poetChristianName = re.search('poetChristianName.*?=.*?"(.*?)"', meta, flags=0)
+if poetChristianName:
+  poetChristianName = poetChristianName.group(1) 
+else:
+  print "error: "+ path + " is not well-formatted - no poetChristianName found!"
+  
+poetSurName = re.search('poetSurName.*?=.*?"(.*?)"', meta, flags=0)
+if poetSurName:
+  poetSurName = poetSurName.group(1) 
+else:
+  print "error: "+ path + " is not well-formatted - no poetSurName found!"
 
 opus = re.search('opus.*?=.*?"(.*?)"', meta, flags=0)
 if opus:
@@ -114,83 +118,92 @@ categories = '' #the string calling the categories of the piece
 labels = []
 data = []
 
-m = open(os.path.join(path, 'mediawiki.txt'),'w')
+m = open(os.path.join(path, 'mediawiki.txt'), 'w')
+
 print 'writing ' + os.path.join(path, 'mediawiki.txt') + ' ...'
 
 #creating the infobox
-if not(composerSurname == ""):
-  if not(composerPrename == ""):    
-    categories = categories + '[[Category: ' + composerSurname + ', ' + composerPrename + ']] '
+if not(composerSurName == ""):
+  if not(composerChristianName == ""):    
+    categories = categories + '[[Category:' + composerSurName + ', ' + composerChristianName + ']] '
     labels.append("Komponist")
-    data.append(composerSurname + ', ' + composerPrename)
+    data.append(composerSurName + ', ' + composerChristianName)
   else:
-    categories = categories + '[[Category: ' + composerSurname + ']] '
+    categories = categories + '[[Category:' + composerSurName + ']] '
     labels.append("Komponist")
-    data.append(composerSurname + '')
+    data.append(composerSurName + '')
 
-if not(arrangerSurname == ""):
-  if not(arrangerPrename == ""):    
-    categories = categories + '[[Category: ' + arrangerSurname + ', ' + arrangerPrename + ']] '
-    labels.append("Arrangeur")
-    data.append(arrangerSurname + ', ' + arrangerPrename)
+if not(arrangerSurName == ""):
+  if not(arrangerChristianName == ""):    
+    categories = categories + '[[Category:' + arrangerSurName + ', ' + arrangerChristianName + ']] '
+    labels.append("Komponist")
+    data.append(arrangerSurName + ', ' + arrangerChristianName)
   else:
-    categories = categories + '[[Category: ' + arrangerSurname + ']] '
+    categories = categories + '[[Category:' + arrangerSurName + ']] '
     labels.append("Arrangeur")
-    data.append(arrangerSurname)
+    data.append(arrangerSurName)
 
-if not(poetSurname == ""):
-  if not(poetPrename == ""):    
-    categories = categories + '[[Category: ' + poetSurname + ', ' + poetPrename + ']] '
+if not(poetSurName == ""):
+  if not(poetChristianName == ""):    
+    categories = categories + '[[Category:' + poetSurName + ', ' + poetChristianName + ']] '
     labels.append("Dichter")
-    data.append(poetSurname + ', ' + poetPrename)
+    data.append(poetSurName + ', ' + poetChristianName)
   else:
-    categories = categories + '[[Category: ' + poetSurname + ']] '
+    categories = categories + '[[Category:' + poetSurName + ']] '
     labels.append("Dichter")
-    data.append(poetSurname)
+    data.append(poetSurName)
 
 if not(root == ""):
-  categories = categories + '[[Category: ' + root + ']] '
+  categories = categories + '[[Category:' + root + ']] '
   labels.append("Wurzel")
   data.append(root)
 
 if not(opus == ""):
-  categories = categories + '[[Category: ' + opus + ']] '
+  categories = categories + '[[Category:' + opus + ']] '
   labels.append("Opus")
   data.append(opus)
 
 if not(language == ""):
-  categories = categories + '[[Category: ' + language + ']] '
+  categories = categories + '[[Category:' + language + ']] '
   labels.append("Sprache")
   data.append(language)
   
 if not(instrumentation== ""):
-  categories = categories + '[[Category: ' + instrumentation + ']] '
+  categories = categories + '[[Category:' + instrumentation + ']] '
   labels.append("Besetzung")
   data.append(instrumentation)
     
 if not(epoque == ""):
-  categories = categories + '[[Category: ' + epoque + ']] '
+  categories = categories + '[[Category:' + epoque + ']] '
   labels.append("Epoche")
   data.append(epoque)
   
 if not(form == ""):
-  categories = categories + '[[Category: ' + form + ']] '
+  categories = categories + '[[Category:' + form + ']] '
   labels.append("Typ")
   data.append(form)
 
 if not(difficulty == ""):
-  categories = categories + '[[Category: ' + difficulty + ']] '
+  categories = categories + '[[Category:' + difficulty + ']] '
   labels.append("Schwierigkeitsgrad")
   data.append(difficulty)
   
 
-
+#create and fill the infobox
 m.write('{{Infobox\n')
 for i in range(0,len(labels)):
   m.write('|label' + str(i+1) + ' = ' + labels[i] + '\n')
 m.write('\n')
 for i in range(0,len(data)):
-  m.write('|data' + str(i+1) + ' = [[:Category: ' + data[i] + ']]\n')
+  m.write('|data' + str(i+1) + ' = [[:Category:' + data[i] + '|' + data[i] + ']]\n')
 m.write('}}\n\n')
 
+#create the content of the article- link to zip, pdf with preview and hyperlink to source code on GitHub
+m.write('== pdf und midi mit hervorgehobenen Einzelstimmen ==\n')
+m.write('[[Media:' + title.replace(' ','_') + '_(' + arrangerSurName + ',_' + arrangerChristianName + ').zip|Download der midi-Dateien und pdf als zip-Archiv]]\n\n')
+m.write('== pdf-Vorschau ==\n<pdf>Datei:' + title.replace(' ','_') + '_(' + arrangerSurName + ',_' + arrangerChristianName + ').pdf</pdf>\n\n')
+m.write('== Quellcode ==\n')
+m.write('[https://github.com/nun-singet-und-seid-froh/nun-singet-und-seid-froh/tree/master/scores/'+ title.replace(' ','_') +'/' + title.replace(' ','_') + '_(' + arrangerSurName + ',_' + arrangerChristianName + ') in unserem GitHub-Repositorium]\n\n')
+
+#write the categories
 m.write(categories)

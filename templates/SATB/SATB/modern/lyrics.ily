@@ -1,16 +1,23 @@
-% based on templates/SATB/SATB/modern/lyrix.ily
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%         This file is part of the edition www.nun-singet-und-seid-froh.info            %
+% This file as well as the music or data represented in it is within the public domain. %
+%      If you think that this file violates your copyright or other rights of you,      %
+%               please contact us at mail@nun-singet-und-seid-froh.info                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-sopLyrix = \lyricmode {
+% based on templates/SATB/SATB/modern/lyrics.ily
+
+sopLyrics = \lyricmode {
   % for song with stanzas
   %\set stanza =  "1. "
   %lyrics here
 }
 
-altLyrix = \sopLyrix
+altLyrics = \sopLyrics
 
-teniLyrix = \sopLyrix
+tenLyrics = \sopLyrics
 
-basLyrix = \sopLyrix
+basLyrics = \sopLyrics
 
 % with stanzas
 stanzas =

@@ -1,3 +1,10 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%         This file is part of the edition www.nun-singet-und-seid-froh.info            %
+% This file as well as the music or data represented in it is within the public domain. %
+%      If you think that this file violates your copyright or other rights of you,      %
+%               please contact us at mail@nun-singet-und-seid-froh.info                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % the layout-information
 % these definitions will be used to suppress page numbering on second page (which is the first page after the cover page)
 #(define (looking-up layout props symbol)
@@ -22,9 +29,9 @@
 
 % these definitions will be used to print the page numbers on the margin of the page
 #(define page-number-offsets '(
-  (even . (6 . 0))
-  (odd . (-6 . 0))
-  ))
+                                (even . (6 . 0))
+                                (odd . (-6 . 0))
+                                ))
 
 #(define-markup-command (place-folio layout props folio) (markup?)
    (let* ((pageno (chain-assoc-get 'page:page-number props))
@@ -32,36 +39,35 @@
           (m (interpret-markup layout props folio))
           (x-ext (ly:stencil-extent m X))
           (y-ext (ly:stencil-extent m Y)))
-   (interpret-markup layout props
-     (markup
+     (interpret-markup layout props
+       (markup
         #:with-dimensions x-ext y-ext
         #:line (#:translate (assoc-get even-odd-page page-number-offsets) folio)
-       ))))
+        ))))
 
 \paper {
   left-margin = 2\cm
   right-margin = 2\cm
   first-page-number = 0
-  ragged-right = ##f 
-  oddHeaderMarkup= \markup { 
-    \column { 
-      \line { 
-        \place-folio \abs-fontsize #18 \on-the-fly #not-second-page \fromproperty #'page:page-number-string 
+  ragged-right = ##f
+  oddHeaderMarkup= \markup {
+    \column {
+      \line {
+        \place-folio \abs-fontsize #18 \on-the-fly #not-second-page \fromproperty #'page:page-number-string
       }
     }
   }
-  
-  evenHeaderMarkup = \markup { 
-    \column { 
+
+  evenHeaderMarkup = \markup {
+    \column {
       \fill-line {
         {""}
         { \place-folio \abs-fontsize #18 \on-the-fly #not-first-page \fromproperty #'page:page-number-string }
       }
     }
   }
-  
- %two-sided = ##t
-  system-separator-markup = \slashSeparator
+
+  %system-separator-markup = \slashSeparator
   #(define fonts
      (make-pango-font-tree "EBGaramond"
        "Nimbus Sans"
@@ -69,7 +75,7 @@
        (/ staff-height pt 20)))
 }
 
-\layout { 
+\layout {
   \context {
     \Score
     %increases the size of numbers, because numbers in EB Garamond are a bit small
@@ -82,10 +88,10 @@
     \name "SemiChoirStaff"
     \consists "Span_bar_engraver"
     \override SpanBar.stencil =
-      #(lambda (grob) 
-        (if (string=? (ly:grob-property grob 'glyph-name) "|")
-            (set! (ly:grob-property grob 'glyph-name) ""))
-        (ly:span-bar::print grob))
+    #(lambda (grob)
+       (if (string=? (ly:grob-property grob 'glyph-name) "|")
+           (set! (ly:grob-property grob 'glyph-name) ""))
+       (ly:span-bar::print grob))
   }
   \context {
     \Score
