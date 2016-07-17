@@ -20,24 +20,24 @@ poetSurName       = "" % e.g. "Gerhardt"
 poetLifedata      = "" % e.g. "1607-1676"
 textDate          = ""
 
-% if the lyrics are a translation 
+% if the lyrics are a translation
 translatorChristianName = "" % e.g. "Martin"
 translatorSurName       = "" % e.g. "Luther"
 translatorLifedata      = "" % e.g. "1483-1546"
 translationDate         = ""
 
-opus              = "Sechs Sprüche für achtstimmigen Chor (MWV SD 42)" 
+opus              = "Sechs Sprüche für achtstimmigen Chor (MWV SD 42)"
 noInOpus          = "1"
 titleInOpus       = "Weihnachten"
 
 lastEdited        = "17. Juli 2016" % e.g. "19. September 2015"
-vers              = "0.9.0" % e.g. "1.0.0"
+vers              = "1.0.0" % e.g. "1.0.0"
 
 % other meta-data, used for the mediawiki-output
-epoque            = "Romantik" 
-language          = "deutsch" 
+epoque            = "Romantik"
+language          = "deutsch"
 instrumentation   = "SSAATTBB" % "SATB", "SSAATTBB", "(SATB)(SATB)" for double-choired works, etc.
 difficulty        = "mittelschwer" % "sehr leicht", "leicht", "mittelschwer", "schwer", "sehr schwer"
-form              = "" % "Motette", "Strophenlied", "Durchkomponiertes Lied"
+form              = "Motette" % "Motette", "Strophenlied", "Durchkomponiertes Lied"
 root              = ""
 noInNsusf	  = "6"
