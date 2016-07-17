@@ -7,7 +7,17 @@
 
 % based on templates/SSATTBB/[SS][AA][TT][BB]/modern/lyrics.ily
 
+sopILyrics = \lyricmode {
+  Herr, Gott, du bist un -- sre Zu -- flucht für und für.
+  E -- he denn die Ber -- ge wor -- den,
+  und die Er -- de und die Welt er -- schaf -- fen wor -- den,
+  bist du Gott von E -- wig -- keit zu E -- wig -- keit.
 
+  E -- he denn die Welt, die Welt er -- schaf -- fen wor -- den,
+  bist du Gott von E -- wig -- keit zu E -- wig -- keit.
+
+  Hal -- le -- lu -- ja, Hal -- le -- lu -- ja!
+}
 
 sopIILyrics = \lyricmode {
   Herr, Gott, du bist un -- sre Zu -- flucht für und für.
@@ -39,7 +49,7 @@ altIILyrics = \lyricmode {
   und die Er -- de und die Welt er -- schaf -- fen wor -- den,
   bist du Gott von E -- wig -- keit zu E -- wig -- keit.
   
-  E -- he denn die die Welt, die Welt er -- schaf -- fen wor -- den,
+  E -- he denn die Welt, die Welt er -- schaf -- fen wor -- den,
   bist du Gott von E -- wig -- keit zu E -- wig -- keit.
   
   Hal -- le -- lu -- ja, Hal -- le -- lu -- ja!
@@ -92,15 +102,4 @@ basIILyrics = \lyricmode {
   E -- he denn die Ber -- ge,
   e -- he denn die Ber -- ge wor -- den,
   und die Er -- de und die Welt er -- schaf -- fen wor -- den,
-}
-sopILyrics = \lyricmode {
-  Herr, Gott, du bist un -- sre Zu -- flucht für und für.
-  E -- he denn die Ber -- ge wor -- den,
-  und die Er -- de und die Welt er -- schaf -- fen wor -- den,
-  bist du Gott von E -- wig -- keit zu E -- wig -- keit.
-  
-  E -- he denn die Welt, die Welt er -- schaf -- fen wor -- den,
-  bist du Gott von E -- wig -- keit zu E -- wig -- keit.
-  
-  Hal -- le -- lu -- ja, Hal -- le -- lu -- ja!
 }
