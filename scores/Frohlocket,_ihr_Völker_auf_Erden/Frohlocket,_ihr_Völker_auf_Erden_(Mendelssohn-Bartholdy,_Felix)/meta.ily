@@ -30,8 +30,8 @@ opus              = "Sechs Sprüche für achtstimmigen Chor (MWV SD 42)"
 noInOpus          = "1"
 titleInOpus       = "Weihnachten"
 
-lastEdited        = "9. Februar 2016" % e.g. "19. September 2015"
-vers              = "0.0.0" % e.g. "1.0.0"
+lastEdited        = "17. Juli 2016" % e.g. "19. September 2015"
+vers              = "0.9.0" % e.g. "1.0.0"
 
 % other meta-data, used for the mediawiki-output
 epoque            = "Romantik" 
@@ -40,4 +40,4 @@ instrumentation   = "SSAATTBB" % "SATB", "SSAATTBB", "(SATB)(SATB)" for double-c
 difficulty        = "mittelschwer" % "sehr leicht", "leicht", "mittelschwer", "schwer", "sehr schwer"
 form              = "" % "Motette", "Strophenlied", "Durchkomponiertes Lied"
 root              = ""
-noInNsusf	  = "3"
+noInNsusf	  = "6"
