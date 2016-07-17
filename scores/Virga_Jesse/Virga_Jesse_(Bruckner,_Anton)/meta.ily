@@ -24,8 +24,8 @@ opus              = "(WAB 52)"
 noInOpus          = ""
 titleInOpus       = ""
 
-lastEdited        = "14. Februar 2016" % e.g. "19. September 2015"
-vers              = "0.0.0" % e.g. "1.0.0"
+lastEdited        = "18. Juli 2016" % e.g. "19. September 2015"
+vers              = "1.0.0" % e.g. "1.0.0"
 
 % other meta-data, used for the mediawiki-output
 epoque            = "Romantik" 
@@ -34,4 +34,4 @@ instrumentation   = "SATB" % "SATB", "SSAATTBB", "(SATB)(SATB)" for double-choir
 difficulty        = "" % "sehr leicht", "leicht", "mittelschwer", "schwer", "sehr schwer"
 form              = "" % "Motette", "Strophenlied", "Durchkomponiertes Lied"
 root              = ""
-noInNsusf         = "X"
+noInNsusf         = "10"
