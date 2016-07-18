@@ -7,6 +7,7 @@ global = {
   \dynamicUp
   \autoBeamOff
   \override DynamicLineSpanner.staff-padding = #3
+  \phrasingSlurDashed
 }
 
 % articulation, dynamics, fermata and breathing marks
@@ -32,10 +33,11 @@ sopVoice = <<
   b2. b4^\markup{ \italic { cresc. sempre } }
   c2 b\breathe
   b( a4) g
-  a2 b
-  c\ff( a4 b
-  c2 d2~
-  d4..) d16 d2\break
+  a2 
+  b\(
+  c\)(\ff a4 b
+  c2 d2~ 
+  d4.. ) d16 d2\break
 %{10%}
   R1^\markup{ \italic { G.P. } }
   d2.\p d4
@@ -51,13 +53,13 @@ sopVoice = <<
   R1^\markup{ \italic { G.P. } }
   bes,1^\markup{ \dynamic ff \italic sempre }~
   bes2 bes
-  ges'1-^(
+  ges'1^^(
   f2 es)
   bes\breathe bes
   bes4.. bes16 bes2
-  ges'1-^(
+  ges'1^^(
   f2) es
-  d?4 d2^> d4
+  d!4 d2^> d4
 %{30%}
   d^> d^> r d
   d2 es4 d
@@ -65,7 +67,7 @@ sopVoice = <<
   d4..) d16 d2
   R1^\markup{ \italic { G.P. } }\break
   c2\pp g
-  a4^\markup{ \italic cresc. }(bes) bes( c)
+  a4^\markup{ \italic cresc. }(b) bes( c)
   d4..^> d16 d2
   R1
   d2\mf a
@@ -74,7 +76,7 @@ sopVoice = <<
   e4.. e16 e2
   R1
   e2\ff( b
-  c?4^> d^>) es^>( f^>)\breathe
+  c!4^> d^>) es^>( f^>)\breathe
   g2( bes,
   c4^\markup{ \italic cresc. } d es f
   g2\fff) d
@@ -91,16 +93,16 @@ sopVoice = <<
   g2 f4 g
   gis2^\markup{ \dynamic mf \italic cresc. }( cis~\noBreak
 % 60  
-  cis4) b dis,( e)
-  gis2( fis4) e^\markup{ \italic dim. }
+  cis4) b dis,( e)\(
+  gis2^>\)( fis4) e^\markup{ \italic dim. }
   e2( dis)
   e4 e8.\ff e16 e2~(
   e8[ fis e fis] gis[ a] b4)
   gis4 e'8.^>\fff e16 e2~
   e4 dis^> e^> fis^>
-  gis1-^ 
-  e2-^ r
-  c?2\pp cis
+  gis1^^ 
+  e2^^ r
+  c!2\pp cis
 % 70
   cis4 b r e,8 e
   a1\<(
@@ -111,10 +113,10 @@ sopVoice = <<
   R1
   r4 e'8.\fff e16 e2~
   e4 dis^> e^> fis^>
-  gis1-^~(
+  gis1^^~(
 % 80  
   gis
-  a2) a-^
+  a2) a^^
   r r4 a,8.\pp a16
   a2 gis
   r r4 cis8.\p cis16
@@ -139,8 +141,8 @@ altVoice = <<
   fis2( g4) fis^\markup{ \italic { cresc. sempre } }
   e2 d\breathe
   c2. c4
-  c2 e
-  e\ff( c4 d
+  c2 e\(
+  e\ff\)( c4 d
   e2 fis
   g4..) g16 g2
 %{10%}
@@ -158,20 +160,20 @@ altVoice = <<
   R1  
   bes1^\markup{ \dynamic ff \italic sempre }~
   bes2 bes
-  des,1(
+  des,1^^(
   es4 f ges as)
   bes2\breathe bes
   bes4.. bes16 bes2
-  d,1-^(
+  d,1^^(
   es4 f) ges( as)
   bes4 bes2^> f4
 %{30%}
-  g?^> g^> r g
+  g!^> g^> r g
   es2 es4 es
   es2.( f4
   g4..) g16 g2
   R1
-  e?2\pp e
+  e!2\pp e
   e^\markup{ \italic cresc. }  e
   g d
   e4( fis) fis( g)
@@ -180,12 +182,12 @@ altVoice = <<
   a2\f e
   fis4( gis) gis( a)
   b4.. b16 b2
-  r2 g?4^\markup{ \italic cresc. }  a\breathe
+  r2 g!4^\markup{ \italic cresc. }  a\breathe
   
   bes2\ff( f
   g4^\markup{ \italic cresc. } as bes ces
   bes2\fff) as
-  g4( c?) bes( d)
+  g4( c!) bes( d)
   d1~
   d2 es
   es r
@@ -195,30 +197,30 @@ altVoice = <<
   r c
   es r
   r2 dis
-  e? e4 e
+  e! e4 e
   e2^\markup{ \dynamic mf \italic cresc. }( dis
-  e4) e a,( gis)
-  cis2. cis4^\markup{ \italic dim. }
+  e4) e a,( gis)\(
+  cis2.^>\) cis4^\markup{ \italic dim. }
   b1
   b4 r r e8.\ff e16 
   e2.( fis4)
-  gis4 gis8.\fff gis16 gis2~
+  gis4 gis8.^>\fff gis16 gis2~
   gis4 gis^> gis^> gis^>
-  cis1-^
-  cis2-^ r
-  gis2\pp gis
+  cis1^^
+  cis2^^ r
+  g!2\pp g
   fis4 fis r e8 e
   cis1\<(
   bis\!
   cis^\markup{ \italic dim. }
-  b?)
+  b!)
   b4 r r e8.\ff e16
   e2 e4 e8.\fff e16
   gis1~
   gis4 gis^> gis^> gis^>
-  cis1-^~
+  cis1^^~
   cis~
-  cis2 cis-^
+  cis2 cis^^
   r r4 dis,8.\pp dis16
   e4 e r2
   r r4 dis8.\p dis16
@@ -245,8 +247,8 @@ tenCommonPartOne =
   b2 b
   g2. g4^\markup{ \italic { cresc. sempre } } 
   g2 g\breathe
-  e2. e4 a2 gis
-  c4\ff( d e d
+  e2. e4 a2 \phrasingSlurDashed gis\(
+  c4\ff\)( d e d
   c1~
   c4..) c16 b2
 %{10%}
@@ -256,7 +258,7 @@ tenCommonPartOne =
   d4^\markup{ \italic { cresc. sempre } }( e f) bes,
   bes2 bes4( as)\breathe
   g2. g4
-  c2 b?
+  c2 b!
   c\ff( g'4 f
   es1~
   es4..) es16 d2
@@ -264,13 +266,13 @@ tenCommonPartOne =
   R1
   r2 bes2^\markup{ \dynamic ff \italic sempre }~
   bes bes
-  bes1-^( ges2 es')
+  bes1^^( ges2 es')
   f\breathe bes,
   bes4.. bes16 bes2
-  bes1-^(
+  bes1^^(
   ges2) es'
   f4 f2^> bes,4
-  b?^> b^> r b
+  b!^> b^> r b
   g2 g4 g
   c1(
   c4..) c16 b2
@@ -310,12 +312,12 @@ tenCommonPartThree = \relative c' {
 
 tenIPartThree = \relative c' {
   e2.\ff( fis4
-  g?2) es\breathe
+  g!2) es\breathe
 }
 
 tenIIPartThree = \relative c' {
   e1~
-  e2 c?
+  e2 c!
 }
 
 tenCommonPartFour = \relative c' {
@@ -335,13 +337,13 @@ tenCommonPartFour = \relative c' {
   g r
   r a
   bes a4 ais
-  b?1^\markup{ \dynamic mf \italic cresc. }~
-  b4 b fis( e)
-  b'2^>( a4) gis^\markup{ \italic dim. }
+  b!1^\markup{ \dynamic mf \italic cresc. }~
+  b4 b fis( e)\(
+  b'2^>\)( a4) gis^\markup{ \italic dim. }
   fis2( gis4 a)
   gis r  r2
   r4 e'8.\ff e16 e2
-  e4 e8.\fff e16 e2~
+  e4 e8.^>\fff e16 e2~
   e4 dis^> dis^> dis^>
   e1^>
   gis2^> r
@@ -350,7 +352,7 @@ tenCommonPartFour = \relative c' {
   f1\<(
   dis\!
   cis2 b'4^\markup{ \italic dim. } a
-  fis2 g4 a)
+  fis2 gis4 a)
   gis4 r r2
   r4 e'8.\ff e16 e2
   e4 e8.\ff e16 e2~
@@ -403,8 +405,8 @@ basCommonPartOne =
   e2.\p d4^\markup{ \italic { cresc. sempre } }
   c2 g\breathe
   a2. c4
-  f2 e
-  a1~(
+  f2 \phrasingSlurDashed e\(
+  a1~\)(
   a
   g4..) g16 g2
 %{10%}
@@ -422,16 +424,16 @@ basCommonPartOne =
   R1
   r2 bes2^\markup{ \dynamic ff \italic sempre }~
   bes bes
-  ges,1-^(
+  ges,1^^(
   ces2 ces')
   bes\breathe bes
   bes4.. bes16 bes2
-  ges,1-^(
+  ges,1^^(
   ces2) ces'
   bes4 bes2^> as4
   g^> g^> r g
   c,2 c4 c
-  bes'1(
+  as'1(
   g4..) g16 g2
   R1
   R1
@@ -457,11 +459,11 @@ basCommonPartTwo = \relative c {
 
 basIPartTwo = \relative c {
   cis'2^\markup{ \italic cresc. } a
-  a4.. s16 gis2
+  a4.. a16 gis2
 }
 
 basIIPartTwo = \relative c {
-  a'2 f
+  a'2 fis
   e4.. e16 e2
 }
 
@@ -479,13 +481,13 @@ basCommonPartThree = \relative c {
   R1
   r2 g,\pp
   as r
-  r a?
+  r a!
   bes r
   r b
   c c4 c
   b2^\markup{ \dynamic mf \italic cresc. }( a'
-  gis4) gis b,( cis)
-  a2.^> a4^\markup{ \italic dim. }
+  gis4) gis b,( cis)\(
+  a2.^>\) a4^\markup{ \italic dim. }
   b1
   e,4 r r2
   R1
