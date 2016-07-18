@@ -5,20 +5,26 @@ title             = "Virga Jesse"
 
 %composer is the one who wrote the melody
 composerChristianName	  = "" % e.g. "Johann Sebastian"
-composerSurname	  = "" % e.g. "Bach"
+composerSurName	  = "" % e.g. "Bach"
 composerLifedata  = "" % e.g. "1685-1750"
 compositionDate	      = ""
 
 %arranger is the one who composed the voices
 arrangerChristianName	  = "Anton" % e.g. "Johann Sebastian"
-arrangerSurname	  = "Bruckner" % e.g. "Bach"
+arrangerSurName	  = "Bruckner" % e.g. "Bach"
 arrangerLifedata  = "1824-1896" % e.g. "1685-1750"
 arrangementDate   = "1885"
 
 poetChristianName	  = "" % e.g. "Paul"
-poetSurname       = "" % e.g. "Gerhardt"
+poetSurName       = "" % e.g. "Gerhardt"
 poetLifedata      = "" % e.g. "1607-1676"
 textDate          = ""
+
+% if the lyrics are a translation 
+translatorChristianName = "" % e.g. "Martin"
+translatorSurName       = "" % e.g. "Luther"
+translatorLifedata      = "" % e.g. "1483-1546"
+translationDate = ""
 
 opus              = "(WAB 52)" 
 noInOpus          = ""
