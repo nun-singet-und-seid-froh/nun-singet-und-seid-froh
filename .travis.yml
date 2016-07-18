@@ -10,3 +10,6 @@ before_install:
     - cp EBGaramond-0.016/otf/*.otf $HOME/.fonts/
     - popd && rm -r tmp
 script: pushd scores && make && popd
+branches:
+    only:
+        - master
