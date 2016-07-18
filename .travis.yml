@@ -5,7 +5,7 @@ addons:
         packages:
             - fonts-ebgaramond
             - fonts-ebgaramond-extra
-before_script:
+after_install:
     - wget http://download.linuxaudio.org/lilypond/binaries/linux-64/lilypond-2.19.45-1.linux-64.sh
     - sudo sh lilypond-2.19.45-1.linux-64.sh --batch
-script: make
+script: pushd scores && make && popd
