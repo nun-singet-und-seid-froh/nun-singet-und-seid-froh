@@ -1,0 +1,15 @@
+sudo: false
+before_install:
+    - wget http://download.linuxaudio.org/lilypond/binaries/linux-64/lilypond-2.19.45-1.linux-64.sh
+    - sh lilypond-2.19.45-1.linux-64.sh --batch
+    - export PATH=$PATH:$HOME/bin
+    - mkdir tmp && pushd tmp
+    - wget https://bitbucket.org/georgd/eb-garamond/downloads/EBGaramond-0.016.zip
+    - unzip EBGaramond-0.016.zip
+    - mkdir -p $HOME/.fonts
+    - cp EBGaramond-0.016/otf/*.otf $HOME/.fonts/
+    - popd && rm -r tmp
+script: pushd scores && make && popd
+branches:
+    only:
+        - master
