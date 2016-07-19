@@ -40,7 +40,7 @@ sopVoice = <<
     f2 f4 |
     a2 bes4
     c2( d4
-    c2)\fermata c4
+    c2)\(\fermata c4\)
     f,2 f4
     a2 bes4
     c2( d4
@@ -48,7 +48,7 @@ sopVoice = <<
     c2 d4
     c2 bes4
     a4.( bes8[ a g])
-    f2\fermata f4
+    f2\(\fermata f4\)
     g2 g4
     a2 g4
     f2( g4
@@ -82,7 +82,7 @@ altVoice = <<
     d2 d4
     e2 e4
     f2.~
-    f2 f4
+    f2\( f4\)
     f4( e) d
     c2 d4
     c( e g
@@ -91,7 +91,7 @@ altVoice = <<
     f2 f4
     e( f) g
     cis,( d e)
-    a,2 f'4
+    a,2\( f'4\)
     f( e8[ d]) e4
     f2 e4
     f4.( g8[ f e]
@@ -125,7 +125,7 @@ tenVoice = <<
     a2 bes4
     c2 bes4
     a2( bes4
-    a2)\fermata a4
+    a2)\(\fermata a4\)
     a2 bes4
     a( g) f
     g( c bes
@@ -134,7 +134,7 @@ tenVoice = <<
     a2 bes4
     g2 e'4
     e( d cis)
-    a2\fermata c!4
+    a2\fermata\( c!4\)
     d( bes) c
     c2 c4
     c( a c~
@@ -170,7 +170,7 @@ basVoice = <<
     d( c) bes
     a( bes8[ a]) g([ a])
     f([ f' es d c bes]
-    f'2) f4
+    f'2)\( f4\)
 
     d4( c) b
     f'( e) d
@@ -180,7 +180,7 @@ basVoice = <<
     f2 bes4
     bes( a) g
     g( f e)
-    d2 a4
+    d2\( a4\)
     bes( g) c
     f,8([ g a bes]) c([ bes])
     a4( f c'
