@@ -8,6 +8,10 @@
 % based on templates/SSATTBB/[SATB][SATB]/mensural/lyrics.ily
 
 sopILyrics = \lyricmode {
+% for a piece with multiple stanzas
+  %\set stanza =  "1. "
+  
+%lyrics here
 }
 
 sopIILyrics = \lyricmode {

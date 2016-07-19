@@ -5,28 +5,14 @@
 %               please contact us at mail@nun-singet-und-seid-froh.info                 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% based on templates/SSATTBB/[SATB][SATB]/mensural/lyrics.ily
+%#(set-global-staff-size 18)
 
-sopILyrics = \lyricmode {
+\paper{
+  % system-count = 3
+  % systems-per-page = 3
+  % page-count = 2
 }
 
-sopIILyrics = \lyricmode {
-}
-
-altILyrics = \lyricmode {
-}
-
-altIILyrics = \lyricmode {
-}
-
-tenILyrics = \lyricmode {
-}
-
-tenIILyrics = \lyricmode {
-}
-
-basILyrics = \lyricmode {
-}
-
-basIILyrics = \lyricmode {
+\midi {
+  % \tempo 4 = 100
 }

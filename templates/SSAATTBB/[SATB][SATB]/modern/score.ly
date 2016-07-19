@@ -30,79 +30,54 @@
     \new Score <<
       \new StaffGroup <<
         \new Staff <<
-          \set Staff.instrumentName = \markup{ \center-column { 
-            { \smallCaps { "Cantus" } }
-            { \italic \teeny "Sopran I" } } 
-          }
-          \new Voice = "sopI" \with { \consists "Ambitus_engraver" }  { \incipit \sopIincipit \global \sopIVoice }
+          \set Staff.instrumentName = "Sopran I"
+          \new Voice = "sopI" \with { \consists "Ambitus_engraver" }  { \global \sopIVoice }
         >>
         \new Lyrics \lyricsto "sopI" { \sopILyrics }
 
         \new Staff <<
-          \set Staff.instrumentName = \markup{ \center-column { 
-            { \smallCaps { "Altus" } }
-            { \italic \teeny "Alt I" } } 
-          }
-          \new Voice = "altI" \with { \consists "Ambitus_engraver" } { \incipit \altIincipit \global \altIVoice }
+          \set Staff.instrumentName = "Alt I"
+          \new Voice = "altI" \with { \consists "Ambitus_engraver" } { \global \altIVoice }
         >>
         \new Lyrics \lyricsto "altI" { \altILyrics }
 
         \new Staff <<
-          \set Staff.instrumentName =   \markup{ \center-column { 
-            { \smallCaps { "Tenor" } }
-            { \italic \teeny "Tenor I" } } 
-          }
-          \new Voice = "tenI" \with { \consists "Ambitus_engraver" } { \incipit \tenIincipit \global  \clef "G_8" \tenIVoice }
+          \set Staff.instrumentName = "Tenor I"
+          \new Voice = "tenI" \with { \consists "Ambitus_engraver" } { \global  \clef "G_8" \tenIVoice }
         >>
         \new Lyrics \lyricsto "tenI" { \tenILyrics }
 
         \new Staff <<
-          \set Staff.instrumentName =  \markup{ \center-column { 
-            { \smallCaps { "Bassus" } }
-            { \italic \teeny "Bass I" } } 
-          }
-          \new Voice = "basI" \with { \consists "Ambitus_engraver" } { \incipit \basIincipit \global \clef bass \basIVoice }
+          \set Staff.instrumentName = "Bass I"
+          \new Voice = "basI" \with { \consists "Ambitus_engraver" } { \global \clef bass \basIVoice }
         >>
         \new Lyrics \lyricsto "basI" { \basILyrics }
+
       >>
 
-      \new StaffGroup <<
+      \new SemiChoirStaff <<
         \new Staff <<
-          \set Staff.instrumentName = 
-          \markup{ \center-column { 
-            { \smallCaps { "Quinta Vox" } }
-            { \italic \teeny "Sopran II" } } 
-          }
-          
-          \new Voice = "sopII" \with { \consists "Ambitus_engraver" } { \incipit \sopIIincipit \global \sopIIVoice }
+          \set Staff.instrumentName = "Sopran II"
+          \new Voice = "sopII" \with { \consists "Ambitus_engraver" } { \global \sopIIVoice }
         >>
         \new Lyrics \lyricsto "sopII" { \sopIILyrics }
 
         \new Staff <<
-          \set Staff.instrumentName = \markup{ \center-column { 
-            { \smallCaps { "Sexta Vox" } }
-            { \italic \teeny "Alt II" } } 
-          }
-          \new Voice = "altII" \with { \consists "Ambitus_engraver" }  { \incipit \altIIincipit \global \altIIVoice }
+          \set Staff.instrumentName = "Alt II"
+          \new Voice = "altII" \with { \consists "Ambitus_engraver" }  { \global \altIIVoice }
         >>
         \new Lyrics \lyricsto "altII" { \altIILyrics }
 
         \new Staff <<
-          \set Staff.instrumentName = \markup{ \center-column { 
-            { \smallCaps { "Septima Vox" } }
-            { \italic \teeny "Tenor II" } } 
-          }
-          \new Voice = "tenII" \with { \consists "Ambitus_engraver" } { \incipit \tenIIincipit \global \clef "G_8" \tenIIVoice }
+          \set Staff.instrumentName = "Tenor II"
+          \new Voice = "tenII" \with { \consists "Ambitus_engraver" } { \global \clef "G_8" \tenIIVoice }
         >>
         \new Lyrics \lyricsto "tenII" { \tenIILyrics }
 
 
         \new Staff <<
-          \set Staff.instrumentName = \markup{ \center-column { 
-            { \smallCaps { "Octava Vox"} }
-            { \italic \teeny "Bass II" } } 
-          }
-          \new Voice = "basII" \with { \consists "Ambitus_engraver" } { \incipit \basIIincipit \global \clef bass \basIIVoice }
+          \set Staff.instrumentName = "Bass II"
+          \new Voice = "basII" \with { \consists "Ambitus_engraver" } { \global \clef bass \basIIVoice }
         >>
         \new Lyrics \lyricsto "basII" { \basIILyrics }
       >>
@@ -111,6 +86,7 @@
 
   \score {
     %for MIDI
+    \score {
       \unfoldRepeats
       \new Staff <<
         \commonVoice

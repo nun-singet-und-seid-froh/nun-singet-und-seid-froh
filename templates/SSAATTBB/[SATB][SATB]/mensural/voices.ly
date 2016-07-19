@@ -5,73 +5,90 @@
 %               please contact us at mail@nun-singet-und-seid-froh.info                 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% based on templates/SATB/SATB/mensural/voices.ily
+% based on templates/SSAATTBB/[SATB][SATB]/mensural/voices.ily
 
-% common settings of all voices
 global = {
   \key f \major
   \time 3/2
-  \partial 4
+  \partial 2
   \dynamicUp
-  \autoBeamOff
-  \override DynamicLineSpanner.staff-padding = #3
+  \hide Staff.BarLine
+  %use
+  %\once \undo \hide Staff.BarLine \bar"|" to create a bar that spans the systems
 }
 
 % the incipites
-
-sopIncipit = {
+sopIincipit = {
   \clef "mensural-c1"
   \key f \major
   \time 3/2
 }
 
-altIncipit = {
+altIincipit = {
   \clef "mensural-c2"
   \key f \major
   \time 3/2
 }
 
-tenIncipit = {
+tenIincipit = {
   \clef "mensural-c4"
   \key f \major
   \time 3/2
 }
 
-basIncipit = {
+basIincipit = {
   \clef "mensural-f"
   \key f \major
   \time 3/2
 }
 
+sopIIincipit = {
+  \clef "mensural-c1"
+  \key f \major
+  \time 3/2
+}
+
+altIIincipit = {
+  \clef "mensural-c2"
+  \key f \major
+  \time 3/2
+}
+
+tenIIincipit = {
+  \clef "mensural-c4"
+  \key f \major
+  \time 3/2
+}
+
+basIIincipit = {
+  \clef "mensural-f"
+  \key f \major
+  \time 3/2
+}
 
 % the tunes
-sopVoice = <<
-  \sopArt
-  \relative c'
-  {
-  }
->>
+sopIVoice = \relative c' {
+}
 
-altVoice = <<
-  \altArt
-  \relative c'
-  {
-    %{00%}
-  }
->>
+altIVoice = \relative c' {
+}
 
-tenVoice = <<
-  \tenArt
-  \relative c'
-  {
-    %{00%}
-  }
->>
+tenIVoice = \relative c' {
+}
 
-basVoice = <<
-  \basArt
-  \relative c
-  {
-    %{00%}
-  }
->>
+basIVoice = \relative c' {
+}
+
+
+
+sopIIVoice = \relative c'' {
+}
+
+altIIVoice = \relative c' {
+}
+
+tenIIVoice = \relative c' {
+}
+
+basIIVoice = \relative c' {
+}
