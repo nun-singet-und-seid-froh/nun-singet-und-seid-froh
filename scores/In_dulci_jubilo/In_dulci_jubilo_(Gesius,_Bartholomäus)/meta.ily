@@ -44,12 +44,12 @@ opus                    = "Geistliche Deutsche Lieder D. Martin Lutheri: Vnd and
 noInOpus                = "17"
 titleInOpus             = "In dulci iubilo"
 
-lastEdited              = "" % e.g. "19. September 2015"
+lastEdited              = "20. Juli 2016" % e.g. "19. September 2015"
 vers                    = "0.0.0" % write "0.0.0" for the first draft
-noInNsusf               = "X" % write "X" as long piece is not ready to be published
+noInNsusf               = "16" % write "X" as long piece is not ready to be published
 
 % other meta-data, used for the MediaWiki-output
-epoque                  = "" 
+epoque                  = "Renaissance" 
 language                = "deutsch / latein" 
 instrumentation         = "SATB" % "SATB", "SSAATTBB", etc.
 difficulty              = "" % "sehr leicht", "leicht", "mittelschwer", "schwer", "sehr schwer"

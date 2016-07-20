@@ -8,51 +8,166 @@
 % based on templates/SATB/SATB/mensural/lyrics.ily
 
 sopLyrics = \lyricmode {
-  \set stanza = "1. "
-  In dul -- ci Iu -- bi -- lo, __
-  Nun sin -- get und seid froh, __
-  un -- sers Her -- zen Won -- ne
-  liegt in __ præ -- se -- pi -- o, __
-  und leuch -- tet als die Son -- ne
-  Ma -- tris in gre -- mi -- o __
-  Al -- pha es & O, __
-  Al -- pha es & O,
+  <<
+    {
+
+      \set stanza = "1. "
+      In dul -- ci Iu -- bi -- lo, __
+      Nun sin -- get und seid froh, __
+      un -- sers Her -- zen Won -- ne
+      liegt in __ prae -- se -- pi -- o, __
+      und leuch -- tet als die Son -- ne
+      Ma -- tris in gre -- mi -- o __
+      Al -- pha es et O, __
+      Al -- pha es et O!
+    }
+    \new Lyrics \lyricsto "sop"
+    {
+      \set stanza = "2. " O Je -- su par -- vu -- le! __
+      Nach dir ist mir so weh! __
+      Tröst mir mein Ge -- mü -- te,
+      O pu -- er op -- ti -- me __
+      Durch al -- le dei -- ne Gü -- te,
+      O prin -- ceps glo -- ri -- ae. __
+      Tra -- he me post te, __
+      Tra -- he me post te!
+    }
+  >>
 }
 
-altLyrics = \lyricmode {
-  \set stanza = "2. " O Je -- su par -- vu -- le! __
-  Nach dir ist mir so weh! __
-  Tröst mir mein Ge -- mü -- te,
-  O pu -- er op -- ti -- me __
-  Durch al -- le dei -- ne Gü -- te,
-  O prin -- ceps glo -- ri -- æ. __
-  Tra -- he me post te! __
-  Tra -- he me post te! __
-}
+altLyrics =  \lyricmode {
+  <<
+    {
 
-tenLyrics = \lyricmode {
-  \set stanza = "3. "
-  O pa -- tris ca -- ri -- tas! __
-  O na -- ti le -- ni -- tas! __
-  Wir wärn all ver -- lo -- ren
-  per nos -- tra cri -- mi -- na, __
-  so hat er uns er -- wor -- ben
-  cæ -- lo -- rum gau -- di -- a. __
-  Ei -- a, wärn wir da! __
-  Ei -- a, wärn wir da! __
+      \set stanza = "1. "
+      In dul -- ci Iu -- bi -- lo, __
+      Nun sin -- get und seid froh, __
+      un -- sers Her -- zen Won -- ne
+      liegt in __ prae -- se -- pi -- o, __
+      und leuch -- tet als die Son -- ne
+      Ma -- tris in gre -- mi -- o __
+      Al -- pha es et O, __
+      Al -- pha es et O!
+    }
+    \new Lyrics \lyricsto "alt"
+    {
+      \set stanza = "2. " O Je -- su par -- vu -- le! __
+      Nach dir ist mir so weh! __
+      Tröst mir mein Ge -- mü -- te,
+      O pu -- er op -- ti -- me __
+      Durch al -- le dei -- ne Gü -- te,
+      O prin -- ceps glo -- ri -- ae. __
+      Tra -- he me post te, __
+      Tra -- he me post te!
+    }
+  >>
 }
+tenLyrics =  \lyricmode {
+  <<
+    {
 
-basLyrics = \lyricmode {
-  \set stanza = "4. "
-  U -- bi sunt gau -- di -- a? __
-  \markup { \rest #"2" } Nir -- gend mehr denn da, __
-  da die Eng -- el sing -- en __
-  no -- va can -- ti -- ca, __
-  und die Schel -- len kling -- en
-  in re -- gis cu -- ri -- a. __
-  Ei -- a, wärn wir da! __
-  Ei -- a, wärn wir da! __
+      \set stanza = "1. "
+      In dul -- ci Iu -- bi -- lo, __
+      Nun sin -- get und seid froh, __
+      un -- sers Her -- zen Won -- ne
+      liegt in __ prae -- se -- pi -- o, __
+      und leuch -- tet als die Son -- ne
+      Ma -- tris in gre -- mi -- o __
+      Al -- pha es et O, __
+      Al -- pha es et O!
+    }
+    \new Lyrics \lyricsto "ten"
+    {
+      \set stanza = "2. " O Je -- su par -- vu -- le! __
+      Nach dir ist mir so weh! __
+      Tröst mir mein Ge -- mü -- te,
+      O pu -- er op -- ti -- me __
+      Durch al -- le dei -- ne Gü -- te,
+      O prin -- ceps glo -- ri -- ae. __
+      Tra -- he me post te!
+      Tra -- he me post te!
+    }
+  >>
 }
+basLyrics =  \lyricmode {
+  <<
+    {
 
+      \set stanza = "1. "
+      In dul -- ci Iu -- bi -- lo, __
+      Nun sin -- get und seid froh, __
+      un -- sers Her -- zen Won -- ne
+      liegt in __ prae -- se -- pi -- o, __
+      und leuch -- tet als die Son -- ne
+      Ma -- tris in gre -- mi -- o __
+      Al -- pha es et O, __
+      Al -- pha es et O!
+    }
+    \new Lyrics \lyricsto "bas"
+    {
+      \set stanza = "2. " O Je -- su par -- vu -- le! __
+      Nach dir ist mir so weh! __
+      Tröst mir mein Ge -- mü -- te,
+      O pu -- er op -- ti -- me __
+      Durch al -- le dei -- ne Gü -- te,
+      O prin -- ceps glo -- ri -- ae. __
+      Tra -- he me post te, __
+      Tra -- he me post te!
+    }
+  >>
+}
 % with stanzas
-stanzas = { }
+stanzas =
+\markup {
+  \magnify #1.2 {
+    \fill-line {
+      \center-column {
+        \line {
+          %left column of stanzas
+          \column {
+            \line {
+              \column { "3. " }
+              \column {
+                "O patris caritas!"
+                "O nati lenitas!"
+                "Wir wärn all verloren"
+                "per nostra crimina,"
+                "so hat er uns erworben"
+                "caelorum gaudia."
+                "Eia, wärn wir da!"
+                "Eia, wärn wir da!"
+                \null
+              }
+            }
+          }
+          %space between the two columns of stanzas
+          \column {
+            \line {
+              \column {
+                \hspace #5
+              }
+            }
+          }
+
+          %right column of stanzas
+          \column {
+            \line {
+              \column { "4. " }
+              \column {
+                "Ubi sunt gaudia?"
+                \line{ \rest #"2" " Nirgend mehr denn da," }
+                "da die Engel singen"
+                "nova cantica,"
+                "und die Schellen klingen"
+                "in regis curia."
+                "Eia, wärn wir da!"
+                "Eia, wärn wir da!"
+                \null
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
