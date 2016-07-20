@@ -63,6 +63,10 @@
         \Staff
         \hide Staff.BarLine
       }
+      \context {
+        \Voice
+        \remove "Ligature_bracket_engraver"
+      }
       indent = 5\cm
       incipit-width = 3\cm
     }
