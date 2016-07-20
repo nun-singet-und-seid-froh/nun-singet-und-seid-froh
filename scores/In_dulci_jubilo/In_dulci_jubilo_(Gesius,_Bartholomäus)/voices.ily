@@ -22,6 +22,7 @@ global = {
 sopIncipit = {
   \clef "mensural-c1"
   \key f \major
+  \once \override Staff.TimeSignature.style = #'single-digit
   \time 3/2
   r1 r f'
 }
@@ -29,27 +30,32 @@ sopIncipit = {
 altIncipit = {
   \clef "mensural-c3"
   \key f \major
+  \once \override Staff.TimeSignature.style = #'single-digit
   \time 3/2
-  r2 r c'
+  r1 r c'
 }
 
 tenIncipit = {
   \clef "mensural-c4"
   \key f \major
+  \once \override Staff.TimeSignature.style = #'single-digit
   \time 3/2
-  bes\breve bes1
+  r1 r a
 }
 
 basIncipit = {
   \clef "mensural-f"
   \key f \major
+  \once \override Staff.TimeSignature.style = #'single-digit
   \time 3/2
-  g\breve g1
+  r1 r f
 }
 
 % articulation, dynamics, fermata and breathing marks
 sopArt = {
-
+  s2
+  s1.*30
+  s1 \once \undo \hide Staff.BarLine \bar "|."
 }
 
 altArt = \sopArt
@@ -61,11 +67,7 @@ basArt = \sopArt
 % the tunes
 sopVoice = <<
   \sopArt
-   
-  \relative c'
-  {
-    % change to modern clef before publication
-    \clef "mensural-c1"
+  \relative c' {
     f2 |
     f1 f2 |
     a1 bes2
@@ -74,51 +76,108 @@ sopVoice = <<
     f,1 f2
     a1 bes2
     c1\melisma d2
-    c1\melismaEnd
+    c1\melismaEnd r2
     c1 d2
     c1 bes2
-    a1 fis1
-    f!2 g1 g2 a1 g2 fis1\melisma g2 a1\melismaEnd a2 c1 d2 c1 bes2 a1 fis1 f!2 g1 g2 a1 g2 fis1\melisma g2 a1\melismaEnd d,1 d2 e1 e2 f\breve\melisma c'1\melismaEnd a1 a2 g2^\markup{"?"}\melisma f1\melismaEnd e2 f\breve 
-    \bar"|." 
+    a1.
+    fis1 f?2
+    g1 g2
+    a1 g2
+    fis1\melisma g2
+    a1\melismaEnd a2
+    c1 d2
+    c1 bes2
+    a1.
+    fis1 f!2
+    g1 g2
+    a1 g2
+    fis1\melisma g2
+    a1\melismaEnd r2
+    d,1 d2
+    e1 e2
+    \[ f1.\melisma
+    c'1\melismaEnd \] r2
+    a1 a2
+    \[ g2\melisma f\melismaEnd \] e2
+    f1
   }
 >>
 
-altVoice = 
-  %\altArt
-  \relative c'
-  {
+altVoice = <<
+  \altArt
+  \relative c' {
     % change to modern clef before publication
     c2
     c1 c2
     c1 f2
-    e1\melisma d2 
+    e1\melisma d2
     e1\melismaEnd f2
     c1 c2
-    f1 f2 e1\melisma d2 e1\melismaEnd
+    f1 f2
+    e1\melisma d2
+    e1\melismaEnd r2
     f1 f2
     e1 d2
-    cis1 d1 
-       d2 e1 e2 
-    f1 e2 
+    cis1.
+    d1 d2
+    e1 e2
+    f1 e2
     d1\melisma e2
     f1\melismaEnd f2
     f1 f2
-    c1 g'2 
-    e1 d1 d2 d1
-    e2 
-    f1
-    d2 d1\melisma e2 f1\melismaEnd
+    \[ f2\melisma c\melismaEnd \] g'
+    e1.
+    d1 d2
+    d1 e2
+    f1 d2
+    d1\melisma e2
+    f1\melismaEnd r2
     f,1 bes2
     g1 g2
-
+    \[ d'1.\melisma
+    e1\melismaEnd \] r2
+    f1 e2
+    d1 c2
+    c1
   }
+>>
 
 tenVoice = <<
   \tenArt
   \relative c'
   {
-   R2
-   
+    a2
+    a1 a2
+    a1 f2
+    g2.\melisma a4 b2
+    c1\melismaEnd a2
+    a1 a2
+    c1 d2
+    g,2.\melisma a4 b2
+    c1\melismaEnd r2
+    a1 bes2
+    g1 g2
+    e1.
+    d1 a'2
+    c1 c2
+    c1 c2
+    a1\melisma b2
+    c1\melismaEnd c2
+    a1 bes2
+    a1 d2
+    cis1.
+    d2 a1
+    b c2
+    c1 bes2
+    a1\melisma b2
+    c1\melismaEnd r2
+    bes1 f2
+    c'1 c2
+    a2.\melisma g4 f2
+    g1\melismaEnd r2
+    d'1 c2
+    bes2.\melisma a4\melismaEnd g2
+    f1
   }
 >>
 
@@ -126,6 +185,37 @@ basVoice = <<
   \basArt
   \relative c
   {
-    R2
+    f2
+    f1 f2
+    f1 d2
+    c1\melisma g'2
+    c,1\melismaEnd f2
+    f1 f2
+    f1 d2
+    c1\melisma g'2
+    c,1\melismaEnd r2
+    f1 bes,2
+    c1 g2
+    a1.
+    d1 d2
+    c1 c2
+    f1 c2
+    d1\melisma g2
+    f1\melismaEnd f2
+    f1 bes,2
+    f'1 g2
+    a1.
+    d,1 d2
+    g1 c,2
+    f1 g2
+    d1\melisma g2
+    f1\melismaEnd r2
+    bes,1 bes2
+    c1 c2
+    \[ d1.\melisma
+    c1\melismaEnd \] r2
+    d1 a2
+    bes1 c2
+    f,1
   }
 >>
