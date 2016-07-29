@@ -1,0 +1,3 @@
+- verify for every \markup, if it can't be written any different.
+  + change if nessecary (for example custom dynamics, use \tempo)
+- rework line breaks
