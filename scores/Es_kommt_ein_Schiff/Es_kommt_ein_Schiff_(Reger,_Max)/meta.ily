@@ -11,7 +11,7 @@ compositionDate	= ""
 arrangerChristianName	= "Max" % e.g. "Johann Sebastian"
 arrangerSurName	= "Reger" % e.g. "Bach"
 arrangerLifedata = "1873-1916" % e.g. "1685-1750"
-melodyDate	= "1899"
+arrangementDate	= "1899"
 
 poetChristianName	= "" % e.g. "Paul"
 poetSurName	= "" % e.g. "Gerhardt"
