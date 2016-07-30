@@ -7,6 +7,45 @@
 
 % based on templates/SATTB/SATTB/modern/lyrics.ily
 
+% definitions for writing the dynamics in the markup
+
+#(define-markup-command (cresc layout props dest)(number?)
+  #:properties ((thickness 0.1)
+                (direction 1))
+  (interpret-markup layout props
+    #{
+      \markup
+        \rotate #(if (not (= 1 direction)) 180 0)
+        \path
+          #thickness
+          #`((moveto ,dest -0.3)
+             (lineto 0 0)
+             (lineto ,dest 0.3))
+    #}))
+
+#(define-markup-command (decresc layout props dest)(number?)
+  #:properties ((thickness 0.1))
+  (interpret-markup layout (prepend-alist-chain 'direction -1 props)
+    #{
+      \markup \cresc #dest
+    #}))
+
+
+#(define-markup-command (empt layout props dest)(number?)
+  #:properties ((thickness 0)
+                (direction 1))
+  (interpret-markup layout props
+    #{
+      \markup
+        \rotate #(if (not (= 1 direction)) 180 0)
+        \path
+          #thickness
+          #`((moveto ,dest -0.3)
+             )
+    #}))
+
+
+
 sopLyrics = \lyricmode {
   <<
     {
@@ -119,6 +158,7 @@ basLyrics = \lyricmode {
 
 
 stanzas = \markup {
+  \vspace #6
   \abs-fontsize #12
   \fill-line {
     \center-column {
@@ -128,10 +168,29 @@ stanzas = \markup {
           \line {
             \column { "3. " }
             \column {
-              "Sehet, was hat Gott gegeben!"
-              "Seinen Sohn zum ewgen Leben."
-              "Dieser kann und will uns heben"
-              "Aus dem Leid ins Himmels-Freud."
+              \override #'(direction . 1) { \dir-column {
+              \line { Sehet, was hat Gott gegeben! }
+              \line { \fontsize #-6 {\dynamic f \cresc #7 \empt #13 \decresc #6 } }
+              }}
+              \vspace #0.4
+
+              \override #'(direction . 1) { \dir-column {
+              \line { Seinen Sohn zum ewgen Leben. }
+              \line { \fontsize #-6 {\cresc #7 \empt #13 \decresc #8 \dynamic p } }
+              }}
+              \vspace #0.4
+    
+              \override #'(direction . 1) { \dir-column {
+              \line { Dieser kann und will uns heben }
+              \line { \fontsize #-6 { \dynamic mp \cresc #23 \decresc #6 } }
+              }}
+              \vspace #0.4
+    
+              \override #'(direction . 1) { \dir-column {
+              \line { Aus dem Leid in Himmelsfreud. }
+              \line { \fontsize #-6 { \cresc #18 \dynamic f \empt #5 \decresc #6 } }
+              }}
+              \vspace #0.4
               \null
             }
           }
@@ -143,19 +202,38 @@ stanzas = \markup {
               "Lieb und Gunst hat ihn gezogen,"
               "Uns, die Satanas betrogen,"
               "Zu besuchen aus der Höh."
-              \null
+              \vspace #3.2
             }
           }
 
           \line {
             \column { "5. " }
             \column {
-              "Jacobs Stern ist aufgegangen,"
-              "Stillt das sehnliche Verlangen,"
-              "bricht den Kopf der alten Schlangen"
-              "und zerstört der Höllen Reich."
+              \override #'(direction . 1) { \dir-column {
+              \line { Jacobs Stern ist aufgegangen, }
+              \line { \fontsize #-6 {\dynamic p \cresc #18 \empt #1 \dynamic f \empt #1 \decresc #3 } }
+              }}
+              \vspace #0.4
+
+              \override #'(direction . 1) { \dir-column {
+              \line { Stillt das sehnliche Verlangen, }
+              \line { \fontsize #-6 {\dynamic p \cresc #7 \empt #10 \decresc #8 \dynamic pp } }
+              }}
+              \vspace #0.4
+    
+              \override #'(direction . 1) { \dir-column {
+              \line { bricht den Kopf der alten Schlangen }
+              \line { \fontsize #-6 { \dynamic f \cresc #11 \empt #13 \decresc #9 } }
+              }}
+              \vspace #0.4
+    
+              \override #'(direction . 1) { \dir-column {
+              \line { und zerstört der Höllen Reich. }
+              \line { \fontsize #-6 { \cresc #16.5 \dynamic ff \empt #3 \decresc #6 } }
+              }}
+              \vspace #0.4
               \null
-            }
+            } 
           }
         }
         %space between the two columns of stanzas
@@ -176,7 +254,7 @@ stanzas = \markup {
               "Und mit Sorgen ohne Maßen"
               "Uns das Herze selbst abfraßen,"
               "ist entzwei und wir sind frei."
-              \null
+              \vspace #4
             }
           }
 
@@ -187,7 +265,7 @@ stanzas = \markup {
               "Da wir das von Herzensgrunde"
               "Glauben, und mit unserm Munde"
               "Danken dir, o Jesulein."
-              \null
+              \vspace #4
             }
           }
 

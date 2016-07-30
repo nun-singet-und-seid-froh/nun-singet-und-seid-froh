@@ -140,7 +140,7 @@
     >>
     \stafftovoice
   }
-}
+} 
 
 % tenor2
 \book {
