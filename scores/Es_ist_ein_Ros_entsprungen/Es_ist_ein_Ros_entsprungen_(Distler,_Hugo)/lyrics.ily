@@ -352,6 +352,7 @@ tenLyricsVerseFive = \lyricmode {
   drin wol -- len wir dich lo -- ben.
   O Gott, uns das ver -- leih.
 }
+
 basLyricsVerseFive = \lyricmode {
   <<
     {

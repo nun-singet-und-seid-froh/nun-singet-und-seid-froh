@@ -30,30 +30,30 @@
   \score { %score for first stanza
     \new SemiChoirStaff <<
       \new Staff \with {
-        \consists "Ambitus_engraver" 
+        \consists "Ambitus_engraver"
         \consists "Volta_engraver"
       } <<
         \set Staff.instrumentName = "Sopran"
-        \new Voice = "sop" { \global \sopVoiceVerseOne }
+        \new Voice = "sop" { \globalOne << \sopVoiceVerseOne \breaksOne >> }
       >>
       \new Lyrics \lyricsto "sop" { \sopLyricsVerseOne }
 
       \new Staff \with { \consists "Ambitus_engraver" } <<
         \set Staff.instrumentName = "Alt"
-        \new Voice = "alt" { \global \altVoiceVerseOne }
+        \new Voice = "alt" { \globalOne << \altVoiceVerseOne \breaksOne >> }
       >>
       \new Lyrics \lyricsto "alt" { \altLyricsVerseOne }
 
       \new Staff \with { \consists "Ambitus_engraver" } <<
         \set Staff.instrumentName = "Tenor"
-        \new Voice = "ten" { \clef "G_8" \global \tenVoiceVerseOne }
+        \new Voice = "ten" { \clef "G_8" \globalOne << \tenVoiceVerseOne \breaksOne >> }
       >>
       \new Lyrics \lyricsto "ten" { \tenLyricsVerseOne }
 
 
       \new Staff \with { \consists "Ambitus_engraver" } <<
         \set Staff.instrumentName = "Bass"
-        \new Voice = "bas" { \clef bass \global \basVoiceVerseOne }
+        \new Voice = "bas" { \clef bass \globalOne << \basVoiceVerseOne \breaksOne >> }
       >>
       \new Lyrics \lyricsto "bas" { \basLyricsVerseOne }
     >> %end of SemiChoirStaff
@@ -64,13 +64,18 @@
         \remove "Default_bar_line_engraver"
         \remove "Repeat_acknowledge_engraver"
         \remove "Volta_engraver"
+        \remove "Forbid_line_break_engraver"
       }
-
       \context {
         \Staff
         \consists "Timing_translator"
         \consists "Default_bar_line_engraver"
         \consists "Repeat_acknowledge_engraver"
+        \remove "Forbid_line_break_engraver"
+      }
+      \context {
+        \Voice
+        \remove "Forbid_line_break_engraver"
       }
     }
   } %end of first stanza score
@@ -80,33 +85,38 @@
   \score { %score for second stanza
     \new SemiChoirStaff <<
       \new Staff \with {
-        printPartCombineTexts = ##f
         \consists "Ambitus_engraver"
         \consists "Volta_engraver"
       } <<
         \set Staff.instrumentName = "Sopran"
-        \new Voice = "sop" { \globalTwo \sopVoiceVerseTwo }
+        \new Voice = "sop" { \globalTwo << \sopVoiceVerseTwo \breaksTwo >> }
         \new Lyrics { \sopLyricsVerseTwoFirstVolta }
         \new Lyrics { \sopLyricsVerseTwoSecondVolta }
       >>
 
-      \new Staff \with { printPartCombineTexts = ##f \consists "Ambitus_engraver" } <<
+      \new Staff \with {
+        \consists "Ambitus_engraver"
+      } <<
         \set Staff.instrumentName = "Alt"
-        \new Voice = "alt" { \globalTwo \altVoiceVerseTwo }
+        \new Voice = "alt" { \globalTwo << \altVoiceVerseTwo \breaksTwo >> }
         \new Lyrics \lyricsto "alt" { \altLyricsVerseTwoFirstVolta }
         \new Lyrics { \altLyricsVerseTwoSecondVolta }
       >>
 
-      \new Staff \with { \consists "Ambitus_engraver" } <<
+      \new Staff \with {
+        \consists "Ambitus_engraver"
+      } <<
         \set Staff.instrumentName = "Tenor"
-        \new Voice = "ten" { \clef "G_8" \globalTwo \tenVoiceVerseTwo }
+        \new Voice = "ten" { \clef "G_8" \globalTwo << \tenVoiceVerseTwo \breaksTwo >> }
         \new Lyrics \lyricsto "ten" { \tenLyricsVerseTwoFirstVolta }
         \new Lyrics { \tenLyricsVerseTwoSecondVolta }
       >>
 
-      \new Staff \with { \consists "Ambitus_engraver" } <<
+      \new Staff \with {
+        \consists "Ambitus_engraver"
+      } <<
         \set Staff.instrumentName = "Bass"
-        \new Voice = "bas" { \clef bass \globalTwo \basVoiceVerseTwo }
+        \new Voice = "bas" { \clef bass \globalTwo << \basVoiceVerseTwo \breaksTwo >> }
         \new Lyrics \lyricsto "bas" { \basLyricsVerseTwoFirstVolta }
         \new Lyrics { \basLyricsVerseTwoSecondVolta }
       >>
@@ -118,6 +128,7 @@
         \remove "Default_bar_line_engraver"
         \remove "Repeat_acknowledge_engraver"
         \remove "Volta_engraver"
+        \remove "Forbid_line_break_engraver"
       }
 
       \context{
@@ -125,73 +136,94 @@
         \consists "Timing_translator"
         \consists "Default_bar_line_engraver"
         \consists "Repeat_acknowledge_engraver"
+        \remove "Forbid_line_break_engraver"
+      }
+      \context {
+        \Voice
+        \remove "Forbid_line_break_engraver"
       }
     }
   }%end of second stanza score
 
   \markup{ \magnify #1.5 { Strophe 3 } }
-  \score {
-    %score for third stanza
+  \score { %score for third stanza
     \new StaffGroup <<
       \new SemiChoirStaff<<
         \new Staff \with {
-          printPartCombineTexts = ##f
+          %printPartCombineTexts = ##f
           \consists "Ambitus_engraver"
           \consists "Volta_engraver"
         }
         <<
           \set Staff.instrumentName = "Sopran"
-          \new Voice = "sop" { \globalThree \sopVoiceVerseThree }
+          \new Voice = "sop" { \globalThree << \sopVoiceVerseThree \breaksThree >> }
         >>
         \new Lyrics \lyricsto "sop" { \sopLyricsVerseThree }
 
-        \new Staff \with { printPartCombineTexts = ##f \consists "Ambitus_engraver" }
-        <<
+        \new Staff \with {
+          \consists "Ambitus_engraver"
+        } <<
           \set Staff.instrumentName = "Alt"
-          \new Voice = "alt" { \globalThree \altVoiceVerseThree }
+          \new Voice = "alt" { \globalThree << \altVoiceVerseThree \breaksThree >> }
         >>
         \new Lyrics \lyricsto "alt" { \altLyricsVerseThree }
 
-        \new Staff \with { \consists "Ambitus_engraver" }
-        <<
+        \new Staff \with {
+          \consists "Ambitus_engraver"
+        } <<
           \set Staff.instrumentName = "Tenor"
-          \new Voice = "ten" { \clef "G_8" \globalThree \tenVoiceVerseThree }
+          \new Voice = "ten" { \clef "G_8" \globalThree << \tenVoiceVerseThree \breaksThree >> }
         >>
         \new Lyrics \lyricsto "ten" { \tenLyricsVerseThree }
       >>
       \new SemiChoirStaff \with { instrumentName = "Bass" } <<
-        \new Staff \with { \consists "Ambitus_engraver" } <<
-          \new Voice = "basI" { \clef bass \globalThree \basIVoiceVerseThree }
+        \new Staff \with {
+          \consists "Ambitus_engraver"
+        } <<
+          \new Voice = "basI" { \clef bass \globalThree << \basIVoiceVerseThree \breaksThree >> }
         >>
         \new Lyrics \lyricsto "basI" { \basLyricsVerseThree }
 
-        \new Staff \with { \consists "Ambitus_engraver" } <<
-          \new Voice = "basII" { \clef bass \globalThree \basIIVoiceVerseThree }
+        \new Staff \with {
+          \consists "Ambitus_engraver"
+        } <<
+          \new Voice = "basII" { \clef bass \globalThree << \basIIVoiceVerseThree \breaksThree >> }
         >>
-
-
       >> % end of SemiChoirStaff (basses)
     >>%end of StaffGroup
     \layout {
+      \context {
+        \StaffGroup
+        \remove "Forbid_line_break_engraver"
+      }
+      \context {
+        \SemiChoirStaff
+        \remove "Forbid_line_break_engraver"
+      }
       \context {
         \Score
         \remove "Timing_translator"
         \remove "Default_bar_line_engraver"
         \remove "Repeat_acknowledge_engraver"
         \remove "Volta_engraver"
+        \remove "Forbid_line_break_engraver"
       }
       \context{
         \Staff
         \consists "Timing_translator"
         \consists "Default_bar_line_engraver"
         \consists "Repeat_acknowledge_engraver"
+        \remove "Forbid_line_break_engraver"
+      }
+      \context {
+        \Voice
+        \remove "Forbid_line_break_engraver"
       }
     }
   }%end of third stanza score
 
   \markup{ \magnify #1.5 { Strophe 4 } }
-  \score {
-    %score for fourth stanza
+  \score { %score for fourth stanza
     \new SemiChoirStaff<<
       \new Staff \with {
         printPartCombineTexts = ##f
@@ -199,7 +231,7 @@
         \consists "Volta_engraver"
       } <<
         \set Staff.instrumentName = "Sopran"
-        \new Voice = "sop" { \globalFour \sopVoiceVerseFour }
+        \new Voice = "sop" { \globalFour << \sopVoiceVerseFour \breaksFour >> }
       >>
       \new Lyrics \lyricsto "sop" { \sopLyricsVerseFour }
 
@@ -208,21 +240,21 @@
         \consists "Ambitus_engraver"
       } <<
         \set Staff.instrumentName = "Alt"
-        \new Voice = "alt" { \globalFour \altVoiceVerseFour }
+        \new Voice = "alt" { \globalFour << \altVoiceVerseFour \breaksFour >> }
       >>
       \new Lyrics \lyricsto "alt" { \altLyricsVerseFour }
 
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
         \set Staff.instrumentName = "Tenor"
-        \new Voice = "ten" { \clef "G_8" \globalFour \tenVoiceVerseFour }
+        \new Voice = "ten" { \clef "G_8" \globalFour << \tenVoiceVerseFour \breaksFour >> }
       >>
       \new Lyrics \lyricsto "ten" { \tenLyricsVerseFour }
 
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
         \set Staff.instrumentName = "Bass"
-        \new Voice = "bas" { \clef bass \globalFour \basVoiceVerseFour }
+        \new Voice = "bas" { \clef bass \globalFour << \basVoiceVerseFour \breaksFour >> }
       >>
       \new Lyrics \lyricsto "bas" { \basLyricsVerseFour }
     >>%end of StaffGroup
@@ -233,6 +265,7 @@
         \remove "Default_bar_line_engraver"
         \remove "Repeat_acknowledge_engraver"
         \remove "Volta_engraver"
+        \remove "Forbid_line_break_engraver"
       }
 
       \context{
@@ -240,39 +273,43 @@
         \consists "Timing_translator"
         \consists "Default_bar_line_engraver"
         \consists "Repeat_acknowledge_engraver"
+        \remove "Forbid_line_break_engraver"
+      }
+      \context {
+        \Voice
+        \remove "Forbid_line_break_engraver"
       }
     }
   }%end of fourth stanza score
 
   \markup{ \magnify #1.5 { Strophe 5 } }
-  \score {
-    %score for first stanza
+  \score { %score for fifth stanza
     \new SemiChoirStaff<<
       \new Staff \with {
         \consists "Ambitus_engraver"
         \consists "Volta_engraver"
       } <<
         \set Staff.instrumentName = "Sopran"
-        \new Voice = "sop" { \global \sopVoiceVerseOne }
+        \new Voice = "sop" { \globalFive \sopVoiceVerseFive }
       >>
       \new Lyrics \lyricsto "sop" { \sopLyricsVerseFive }
 
       \new Staff \with { \consists "Ambitus_engraver" } <<
         \set Staff.instrumentName = "Alt"
-        \new Voice = "alt" { \global \altVoiceVerseOne }
+        \new Voice = "alt" { \globalFive \altVoiceVerseFive }
       >>
       \new Lyrics \lyricsto "alt" { \altLyricsVerseFive }
 
       \new Staff \with { \consists "Ambitus_engraver" } <<
         \set Staff.instrumentName = "Tenor"
-        \new Voice = "ten" { \clef "G_8" \global \tenVoiceVerseOne }
+        \new Voice = "ten" { \clef "G_8" \globalFive \tenVoiceVerseFive }
       >>
       \new Lyrics \lyricsto "ten" { \tenLyricsVerseFive }
 
 
       \new Staff \with { \consists "Ambitus_engraver" } <<
         \set Staff.instrumentName = "Bass"
-        \new Voice = "bas" { \clef bass \global \basVoiceVerseOne }
+        \new Voice = "bas" { \clef bass \globalFive \basVoiceVerseFive }
       >>
       \new Lyrics \lyricsto "bas" { \basLyricsVerseFive }
     >>%end of StaffGroup
@@ -283,6 +320,7 @@
         \remove "Default_bar_line_engraver"
         \remove "Repeat_acknowledge_engraver"
         \remove "Volta_engraver"
+        \remove "Forbid_line_break_engraver"
       }
 
       \context{
@@ -290,6 +328,11 @@
         \consists "Timing_translator"
         \consists "Default_bar_line_engraver"
         \consists "Repeat_acknowledge_engraver"
+        \remove "Forbid_line_break_engraver"
+      }
+      \context {
+        \Voice
+        \remove "Forbid_line_break_engraver"
       }
     }
   }%end of fifth stanza score
@@ -297,9 +340,31 @@
 }%end of book
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                            the MIDI producing part:           	           %
+%                            the MIDI producing part:           	                 %
 %    1 midi per each voice per each stanza with the respective voice highlighted   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+stafftovoice = \midi {
+  \context {
+    \Score
+    \remove "Timing_translator"
+    \remove "Repeat_acknowledge_engraver"
+  }
+  \context {
+    \Staff
+    \remove "Staff_performer"
+    \consists "Timing_translator"
+    \consists "Default_bar_line_engraver"
+    \consists "Repeat_acknowledge_engraver"
+  }
+  \context {
+    \Voice
+    \consists "Staff_performer"
+    \consists "Timing_translator"
+    \consists "Default_bar_line_engraver"
+    \consists "Repeat_acknowledge_engraver"
+  }
+}
 
 %%%%%%%%%%%%%%%%%%%%
 %   first stanza   %
@@ -312,10 +377,10 @@
     \unfoldRepeats
     \new Staff <<
       \commonVoice
-      \new Voice = "sop" { \highlightedVoice  \global \sopVoiceVerseOne }
-      \new Voice = "alt" { \global \altVoiceVerseOne }
-      \new Voice = "ten" { \global \tenVoiceVerseOne }
-      \new Voice = "bas" { \global \basVoiceVerseOne }
+      \new Voice = "sop" { \highlightedVoice  \globalOne \sopVoiceVerseOne }
+      \new Voice = "alt" { \globalOne \altVoiceVerseOne }
+      \new Voice = "ten" { \globalOne \tenVoiceVerseOne }
+      \new Voice = "bas" { \globalOne \basVoiceVerseOne }
     >>
     \stafftovoice
   }
