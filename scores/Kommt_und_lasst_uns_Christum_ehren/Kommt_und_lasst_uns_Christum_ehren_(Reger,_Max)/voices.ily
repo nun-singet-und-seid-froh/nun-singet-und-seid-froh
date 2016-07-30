@@ -7,6 +7,13 @@
 
 % based on templates/SATTB/SATTB/modern/voices.ily
 
+piuf =
+#(make-dynamic-script
+  (markup #:line
+          (#:normal-text
+           #:italic "più"
+           #:dynamic "f")))
+
 % common settings of all voices
 global = {
   \autoBeamOff
@@ -21,7 +28,7 @@ sopArt = {
   %{01%} s2\f\< s4
   %{02%} s4 s4\! s4
   %{03%} s2.
-  %{04%} s2\> s4\!
+  %{04%} s2\> s4
   %{05%} s2\< s4
   %{06%} s4\! s2
   %{07%} s2 s4\>
@@ -29,12 +36,12 @@ sopArt = {
   %{09%} s2\f\< s4
   %{10%} s4 s4\! s4
   %{11%} s2.
-  %{12%} s2.
-  %{13%} s2\<\f s4
+  %{12%} s2\> s4
+  %{13%} s2^\piuf\< s4
   %{14%} s2 s4\!
-  %{15%} s4 s4\> s4
+  %{15%} s4 s4 s4\>
   \once \override Script.script-priority = #-100
-  %{16%} s2.^\markup{\fermata}\p \bar"|."
+  %{16%} s2.\p\fermata \bar"|."
 }
 
 altArt = \sopArt
@@ -76,11 +83,11 @@ altVoice = <<
   {
     %{01%} a2\f\< a4
     %{02%} g2 fis4
-    %{03%} fis2 d4
+    %{03%} fis2 b4
     %{04%} gis2 gis4
     %{05%} a( e) e
     %{06%} fis( a) d,
-    %{07%} fis4.( e8) cis4
+    %{07%} fis4.( e8) dis4
     %{08%} e2 b4
     %{09%} a'2 a4
     %{10%} a4.( gis8) fis4
@@ -101,17 +108,17 @@ tenIVoice = <<
     %{02%} g2 cis,4
     %{03%} b2 fis'4
     %{04%} gis2 e4
-    %{05%} e( a) gis
-    %{06%} fis( e) d
-    %{07%} c2 b4
-    %{08%} b2 gis4
+    %{05%} e^-( a^-) gis^-
+    %{06%} fis^-( e^-) d^-
+    %{07%} cis2^- b4^-
+    %{08%} b2^- gis4^-
     %{09%} a2 a4
     %{10%} e'2 b4
     %{11%} e2 fis4
     %{12%} eis2 fis4
     %{13%} d4.( cis8) b4
-    %{14%} cis4.( d8) e4
-    %{15%} e( d8[ cis]) b4
+    %{14%} cis4.( d8) e4~
+    %{15%} e d8[ cis] b4
     %{16%} a2.
   }
 >>
@@ -147,13 +154,13 @@ basVoice = <<
     %{02%} e2 fis4
     %{03%} b,( cis) d
     %{04%} e2 e4
-    %{05%} a2 a,4
+    %{05%} a2 cis,4
     %{06%} d( a) b
     %{07%} fis'2 b,4
     %{08%} e2 e4
-    %{09%} a4.( gis8) f4
+    %{09%} a4.( gis8) fis4
     %{10%} cis2 dis4
-    %{11%} e2 d?4
+    %{11%} e2 d!4
     %{12%} cis2 fis4
     %{13%} b,2 e4
     %{14%} a,2 cis4

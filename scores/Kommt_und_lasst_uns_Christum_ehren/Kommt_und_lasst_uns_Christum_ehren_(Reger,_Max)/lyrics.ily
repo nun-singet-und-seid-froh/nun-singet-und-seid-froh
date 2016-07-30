@@ -15,13 +15,13 @@ sopLyrics = \lyricmode {
       Herz und Sin -- nen zu ihm keh -- ren;
       sing -- et fröh -- lich,
       lasst euch hö -- ren,
-      wer -- tes Volk __ der Chri -- sten -- heit.
+      wer -- tes Volk der Chri -- sten -- heit.
     }
     \new Lyrics
     {
       \set associatedVoice = "sop"
       \set stanza = "[2. ]"
-      Sünd und Höl -- le mag __ sich grä -- men,
+      Sünd und Höl -- le mag sich grä -- men,
       Tod und Teu -- fel mag sich schä -- men:
       Wir, die un -- ser Heil an -- neh -- men,
       wer -- fen al -- len Kum -- mer hin.
@@ -36,16 +36,16 @@ altLyrics = \lyricmode {
       Kommt und lasst uns Chris -- tum eh -- ren,
       Herz und Sin -- nen zu ihm keh -- ren;
       sing -- et fröh -- lich,
-      lasst __ euch hö -- ren,
-      wer -- tes Volk der __ Chri -- sten -- heit.
+      lasst euch hö -- ren,
+      wer -- tes Volk der Chri -- sten -- heit.
     }
     \new Lyrics
     {
       \set associatedVoice = "alt"
       \set stanza = "[2. ]"
       Sünd und Höl -- le mag sich grä -- men,
-      Tod und Teu -- fel mag __ sich schä -- men:
-      Wir, die un -- ser Heil __ an -- neh -- men,
+      Tod und Teu -- fel mag sich schä -- men:
+      Wir, die un -- ser Heil an -- neh -- men,
       wer -- fen al -- len Kum -- mer hin.
     }
   >>
@@ -59,7 +59,7 @@ tenILyrics = \lyricmode {
       Herz und Sin -- nen zu ihm keh -- ren;
       sing -- et fröh -- lich,
       lasst euch hö -- ren,
-      wer -- tes Volk __ der Chri -- sten -- heit.
+      wer -- tes Volk der Chri -- sten -- heit.
     }
     \new Lyrics
     {
@@ -87,9 +87,9 @@ tenIILyrics = \lyricmode {
     {
       \set associatedVoice = "tenII"
       \set stanza = "[2.] "
-      Sünd __ und Höl -- le mag sich grä -- men,
+      Sünd und Höl -- le mag sich grä -- men,
       Tod und Teu -- fel mag sich schä -- men:
-      Wir, die un -- ser __ Heil an -- neh -- men,
+      Wir, die un -- ser Heil an -- neh -- men,
       wer -- fen al -- len Kum -- mer hin.
     }
   >>
@@ -109,7 +109,7 @@ basLyrics = \lyricmode {
     {
       \set associatedVoice = "bas"
       \set stanza = "[2. ]"
-      Sünd __ und Höl -- le mag __ sich grä -- men,
+      Sünd und Höl -- le mag sich grä -- men,
       Tod und Teu -- fel mag sich schä -- men:
       Wir, die un -- ser Heil an -- neh -- men,
       wer -- fen al -- len Kum -- mer hin.
