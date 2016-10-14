@@ -290,26 +290,26 @@
         \consists "Volta_engraver"
       } <<
         \set Staff.instrumentName = "Sopran"
-        \new Voice = "sop" { \globalFive \sopVoiceVerseFive }
+        \new Voice = "sop" { \globalFive << \sopVoiceVerseFive \breaksFive >> }
       >>
       \new Lyrics \lyricsto "sop" { \sopLyricsVerseFive }
 
       \new Staff \with { \consists "Ambitus_engraver" } <<
         \set Staff.instrumentName = "Alt"
-        \new Voice = "alt" { \globalFive \altVoiceVerseFive }
+        \new Voice = "alt" { \globalFive << \altVoiceVerseFive \breaksFive >> }
       >>
       \new Lyrics \lyricsto "alt" { \altLyricsVerseFive }
 
       \new Staff \with { \consists "Ambitus_engraver" } <<
         \set Staff.instrumentName = "Tenor"
-        \new Voice = "ten" { \clef "G_8" \globalFive \tenVoiceVerseFive }
+        \new Voice = "ten" { \clef "G_8" \globalFive << \tenVoiceVerseFive \breaksFive >>}
       >>
       \new Lyrics \lyricsto "ten" { \tenLyricsVerseFive }
 
 
       \new Staff \with { \consists "Ambitus_engraver" } <<
         \set Staff.instrumentName = "Bass"
-        \new Voice = "bas" { \clef bass \globalFive \basVoiceVerseFive }
+        \new Voice = "bas" { \clef bass \globalFive << \basVoiceVerseFive \breaksFive >>}
       >>
       \new Lyrics \lyricsto "bas" { \basLyricsVerseFive }
     >>%end of StaffGroup

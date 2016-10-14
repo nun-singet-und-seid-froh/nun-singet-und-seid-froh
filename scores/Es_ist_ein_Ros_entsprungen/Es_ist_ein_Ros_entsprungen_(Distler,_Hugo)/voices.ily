@@ -294,7 +294,7 @@ tenVoiceVerseTwo = \relative c' {
     { e2. r4 | }
   }
   r2 r4 gis\mp |
-  fis dis? \bar "" e8[\> dis] cis4 | % to enable origBreak here
+  fis dis! \bar "" e8[\> dis] cis4 | % to enable origBreak here
   << { \voiceOne dis4 } \new Voice { \voiceTwo { b4 } } >> \oneVoice r4\! r2 |
   r2 r4 r8 b'8\p |
   b4 b cis b |
@@ -316,7 +316,7 @@ basVoiceVerseTwo = \relative c {
     e e } \new Voice { \voiceTwo e e2 } >> \oneVoice fis4 e |
     dis( fis4. e8[ cis b]) |
     cis2 r4 e |
-    b e g, b |
+    b e gis, b |
   }
   \alternative {
     {
@@ -383,7 +383,7 @@ sopVoiceVerseThree = \relative c'' {
   \time 3/2
   gis gis b4.( gis8[ fis gis] e4~ |
   \time 4/4
-  e8) \breathe cis8--^\markup{ Zögern } e4.-- fis8-- gis4--\fermata |
+  e8) \breathe cis8-- e4.-- fis8-- gis4--\fermata |
 }
 
 altVoiceVerseThree = \relative c' {
@@ -501,7 +501,7 @@ breaksThree = {
   s4*14 \origBreak
   s4*4 s8 \tempo "Zögern" s8 s4*3 \mark \default \tempo "Tempo I" s4*6 \origBreak
   s4*15 \origBreak
-  \tempo "Zög." s4*3 \bar "||" \tempo "Tempo I, sehr zart" s4*11 \mark \default s4*4 \origBreak
+  \tempo "Zögern" s4*3 \bar "||" \tempo "Tempo I, sehr zart" s4*11 \mark \default s4*4 \origBreak
   s4*14 \tempo "Zögern" s4*4 \bar "||"
 }
 
@@ -569,7 +569,7 @@ sopVoiceVerseFour = \relative c'' {
   ais8([\! b] cis2) cis4\> |
   b1 |
   R1\! |
-  r4 dis^\markup{ innig } ais4( gis~ |
+  r4 dis ais4( gis~ |
   gis) \breathe dis' ais( gis8) gis-- |
   gis4.( fis8 e4) fis-- |
   dis4.(\> fis8 dis2)\! \breathe |
@@ -615,7 +615,7 @@ altVoiceVerseFour = \relative c' {
   gis2 gis4. gis8 |
   ais8 ais << { \voiceOne ais4\> b2\! } \new Voice { \voiceTwo gis4 gis2\! } >> \oneVoice |
   r4 b4^\markup{ \italic più \dynamic f } gis( fis~ |
-  fis) e fis8([ gis] a?4~ |
+  fis) e fis8([ gis] a!4~ |
   \time 3/2
   a) a gis2. \breathe b4 |
   \time 3/4
@@ -635,7 +635,7 @@ altVoiceVerseFour = \relative c' {
   gis4 gis2 gis4 |
   ais8 ais << { \voiceOne ais2\> b4\! } \new Voice { \voiceTwo gis2 gis4 } >> \oneVoice |
   r4 b4^\markup{ \dynamic p \italic zart } gis( fis~ |
-  fis) e fis8([ gis] a?4~ |
+  fis) e fis8([ gis] a!4~ |
   \time 3/2
   a) a gis2. \breathe b4 |
   \time 3/4
@@ -662,7 +662,7 @@ altVoiceVerseFour = \relative c' {
   gis2 gis4. gis8 |
   ais8 ais\> gis2 gis4\! |
   r b gis( fis~ |
-  fis) e fis8([ gis] a?4~ |
+  fis) e fis8([ gis] a!4~ |
   \time 3/2
   a) a gis2. \breathe b4 |
   gis( fis) \breathe b gis( fis) \breathe b |
@@ -822,4 +822,15 @@ tenVoiceVerseFive = \tenVoiceVerseOne
 
 basVoiceVerseFive = \basVoiceVerseOne
 
-breaksFive = \breaksOne
+%copied from breaksOne, only difference is the closing bar-line
+breaksFive =  {
+  \tempo "Choral, ganz schlicht" 4 = 84
+  s4*18 \origBreak |
+  \tempo "Zögern"
+  s4*4
+  \tempo "Zögern"
+  s4*4
+  \tempo "Tempo I"
+  s4*10 \origBreak | \mark \default
+  s4*20 \bar "|."
+}
