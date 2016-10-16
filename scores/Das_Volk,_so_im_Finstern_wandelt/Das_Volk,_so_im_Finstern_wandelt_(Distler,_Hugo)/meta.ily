@@ -12,7 +12,7 @@ arranger_lifedata = "" % e.g. "1685-1750"
 poet              = ""
 poet_lifedata     = "" % e.g. "1685-1750"
 
-opus              = "Die Weihnachtsgeschichte" 
+opus              = "Die Weihnachtsgeschichte, op. 10" 
 no_in_opus        = "1"
 title_in_opus     = ""
 

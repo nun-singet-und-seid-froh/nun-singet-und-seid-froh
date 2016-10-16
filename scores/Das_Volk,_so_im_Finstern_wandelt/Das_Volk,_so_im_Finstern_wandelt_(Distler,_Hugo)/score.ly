@@ -3,12 +3,12 @@
 % local information (for this particular piece)
 \include "meta.ily"             % metadata for this piece
 \include "voices.ily"           % the tunes, dynamic and articulation marks
-\include "lyrix.ily"            % the lyrics within the staves
+\include "lyrics.ily"            % the lyrics within the staves
 \include "output.ily"           % the paper and midi settings for this piece
 
 % global information (identical for all pieces)
 \include "../../../include/version.ily"    % the lilypond version
-\include "../../../include/sheet.ily"      % the layout information
+\include "../../../include/paper.ily"      % the layout information
 \include "../../../include/sound.ily"      % variable declarations for midi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -17,38 +17,38 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \book {
-  \include "../../../include/paper.ily"
+  \include "../../../include/header.ily"
 
   \score {
     %for PDF
-    \new StaffGroup<<
+    \new ChoirStaff<<
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
         \set Staff.instrumentName = "Sopran"
         \new Voice = "sop" { \global \sopVoice }
       >>
-      \new Lyrics \lyricsto "sop" { \sopLyrix }
+      \new Lyrics \lyricsto "sop" { \sopLyrics }
 
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
         \set Staff.instrumentName = "Alt"
         \new Voice = "alt" { \global \altVoice }
       >>
-      \new Lyrics \lyricsto "alt" { \altLyrix }
+      \new Lyrics \lyricsto "alt" { \altLyrics }
 
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
         \set Staff.instrumentName = "Tenor"
         \new Voice = "teni" { \clef "G_8" \global \tenVoice }
       >>
-      \new Lyrics \lyricsto "teni" { \tenLyrix }
+      \new Lyrics \lyricsto "teni" { \tenLyrics }
 
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
         \set Staff.instrumentName = "Bass"
         \new Voice = "bas" { \clef bass \global \basVoice }
       >>
-      \new Lyrics \lyricsto "bas" { \basLyrix }
+      \new Lyrics \lyricsto "bas" { \basLyrics }
     >> %end of StaffGroup
     \stanzas
 
