@@ -21,7 +21,7 @@
   \include "../../../include/header.ily"
   \score {
     %for PDF
-    \new ChoirStaff<<
+    \new SemiChoirStaff<<
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
         \set Staff.instrumentName = "Sopran"
