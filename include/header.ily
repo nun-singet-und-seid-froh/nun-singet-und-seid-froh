@@ -95,11 +95,13 @@ stencil."
   copyright = \markup {
     \column {
       \center-align {
-        \abs-fontsize #20 { \italic \with-url  #"http://www.nun-singet-und-seid-froh.info" { "www.nun-singet-und-seid-froh.info" } }
+          
+        \epsfile #X #45 #"../../../include/logo.eps"          
+        \vspace #2
+        \abs-fontsize #20 { \with-url  #"http://www.nun-singet-und-seid-froh.info" { "nun-singet-und-seid-froh.info" } }
         \vspace #0.5
         \line { \abs-fontsize #20 { "– Nr. " \noInNsusf " –"} }
-        \vspace #7
-
+        \vspace #2
       }
     }
   }
@@ -137,7 +139,9 @@ stencil."
           \line { \abs-fontsize #55 { \my-wordwrap-field #CENTER #'header:title } }
           \vspace #5
           \line { \abs-fontsize #20 \instrumentation }
-          \vspace #10
+          \vspace #1
+          
+
         }
       }
     }
