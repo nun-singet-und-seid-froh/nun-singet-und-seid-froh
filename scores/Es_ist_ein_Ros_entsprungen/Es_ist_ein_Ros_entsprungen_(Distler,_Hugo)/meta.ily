@@ -39,7 +39,7 @@ opus                    = "Die Weihnachtsgeschichte, op. 10"
 noInOpus                = ""
 titleInOpus             = ""
 
-lastEdited              = "15. September 2016" % e.g. "19. September 2015"
+lastEdited              = "27. Juli 2017" % e.g. "19. September 2015"
 vers                    = "1.1.0" % write "0.0.0" for the first draft
 noInNsusf               = "4" % write "X" as long piece is not ready to be published
 
