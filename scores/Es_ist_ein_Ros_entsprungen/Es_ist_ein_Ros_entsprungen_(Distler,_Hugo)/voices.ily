@@ -39,12 +39,13 @@ sopVoiceVerseOne = \relative c'' {
   \alternative {
     {
       \time 3/2 \partial 1
-      << { \voiceOne e1 } \new Voice{ \voiceTwo { e4.( fis8) gis2 } } >> \oneVoice |
-      %\once \override Staff.BarLine.allow-span-bar = ##t
+      << \voiceTwo { e4.( fis8 gis2) } \new Voice { \voiceOne e1 } >> \oneVoice |
+      % the odd order of \voiceTwo and \voiceOne is necessary for the correct lyrics spanner
     }
     {
       \time 3/2
-      << { \voiceOne e1 } \new Voice{ \voiceTwo { e4.( fis8) gis2 \breathe } } >> \oneVoice gis2 |
+      <<  \voiceTwo { e4.( fis8 gis2) } \new Voice { \voiceOne e1 \breathe } >> \oneVoice gis2 |
+      % the odd order of \voiceTwo and \voiceOne is necessary for the correct lyrics spanner
     }
   }
   \time 4/4
@@ -54,7 +55,8 @@ sopVoiceVerseOne = \relative c'' {
   b2 gis \breathe |
   a2 gis4 fis~ |
   fis \tempo "Zögern" e2 dis4 |
-  << { \voiceOne e1 } \new Voice{ \voiceTwo { e4.( fis8) gis2 } } >> |
+  << \voiceTwo { e4.( fis8 gis2) } \new Voice { \voiceOne { e1 } } >> |
+     % the odd order of \voiceTwo and \voiceOne is necessary for the correct lyrics spanner
 }
 
 altVoiceVerseOne = \relative c' {
@@ -80,8 +82,8 @@ altVoiceVerseOne = \relative c' {
   }
   e e gis4.( fis8) e4 |
   \time 4/4
-  \times 2/3 { fis8.[(^\markup{ \italic "ruhig" } g16 e8] } fis2) \breathe e4 |
-  e fis a a \time 4/4 |
+  \times 2/3 { fis8.[(^\markup{ \italic "ruhig" } gis16 e8] } fis2) \breathe e4 |
+  e fis a a |
   gis4 (fis8[ e] fis2) |
   e4 \breathe e dis b |
   cis4.( dis8 e4) fis |
@@ -109,7 +111,7 @@ tenVoiceVerseOne = \relative c' {
   }
   b2 gis4 cis cis |
   \time 4/4
-  dis8[(^\markup{ \italic "ruhig" } cis] b4) b2 |
+  dis8[(^\markup{ \italic "ruhig" } cis] b4)\breathe b2 |
   \time 3/2
   b4 cis e e dis2 |
   \time 5/4
@@ -179,7 +181,7 @@ sopVoiceVerseTwo = \relative c' {
     << { \voiceOne b b } \new Voice = "sopTemp" { \voiceTwo b2 } >> \oneVoice cis4 b |
     \time 3/2
     b4.( a4 gis8 e4 fis2) |
-    << { gis1 } { s2 \bar "" s2 } >> r2 | % to enable origBreak here
+    << { gis2~ \bar"" gis } { s2 \bar "" s2 } >> r2 | % to enable origBreak here
     r2 a gis4 fis |
     e4.^\markup{\italic fließend }( fis8[ a gis b8. a16 gis8]) gis4( fis8) |
   }
@@ -198,13 +200,13 @@ sopVoiceVerseTwo = \relative c' {
   \time 3/4
   e4.(\> dis8) cis4 |
   \time 3/2
-  b4. \breathe b'8\p \bar ";" b4 b cis b |
+  b4. \breathe b'8\p \bar "!" b4 b cis b |
   b( a4. gis8[ fis e] fis2) |
   gis1 r2 |
   r2 a gis4 fis |
   e4.( fis8[^\markup{ \italic "fließend" } a gis b8. a16 gis8]) gis4( fis8) |
   \time 4/4
-  << { \voiceTwo e1 } \new Voice { \voiceOne { e8([ fis] b2.) } } >> \bar "||"  |
+  << { \voiceOne { e8([ fis] b2.) } } \new Voice { \voiceTwo e,1 } >> \bar "||"  |
 }
 
 altVoiceVerseTwo =  \relative c' {
@@ -245,7 +247,7 @@ altVoiceVerseTwo =  \relative c' {
       cis8\repeatTie
       <<
         {
-          \voiceOne cis8 b2
+          \voiceOne cis8 b2\breathe
         }
         \new Voice {
           \voiceTwo a8 gis2
@@ -256,7 +258,7 @@ altVoiceVerseTwo =  \relative c' {
   \time 3/2
   cis4 ais b2( ais4)\> gis |
   \time 4/4
-  << { fis2. } { s2 \bar ";" s4 } >> r8\! e'\p |
+  << { fis2. } { s2 \bar "!" s4 } >> r8\! e'\p |
   e4 e fis e |
   \time 3/2
   e( cis4. e8[ cis b] gis4. b8) |
@@ -264,7 +266,7 @@ altVoiceVerseTwo =  \relative c' {
   cis2 r |
   R1 |
   r4 d4 cis b |
-  a8([ b16 cis] b4) b8 b cis4~ |
+  a8([ b16 cis] b4) b8\breathe b cis4~ |
   cis8 << { \voiceOne cis8 b2.} \new Voice { \voiceTwo { a8 gis2. } } >> |
 }
 
@@ -294,7 +296,7 @@ tenVoiceVerseTwo = \relative c' {
     { e2. r4 | }
   }
   r2 r4 gis\mp |
-  fis dis! \bar "" e8[\> dis] cis4 | % to enable origBreak here
+  fis dis? \bar "" e8([\> dis]) cis4 | % to enable origBreak here
   << { \voiceOne dis4 } \new Voice { \voiceTwo { b4 } } >> \oneVoice r4\! r2 |
   r2 r4 r8 b'8\p |
   b4 b cis b |
@@ -314,7 +316,7 @@ basVoiceVerseTwo = \relative c {
     R1 |
     r2 e4\p << { \voiceOne e~ |
     e e } \new Voice { \voiceTwo e e2 } >> \oneVoice fis4 e |
-    dis( fis4. e8[ cis b]) |
+    d( fis4. e8[ cis b]) |
     cis2 r4 e |
     b e gis, b |
   }
@@ -329,9 +331,9 @@ basVoiceVerseTwo = \relative c {
   \time 3/2
   R1. |
   \time 4/4
-  << { R1 } { s2 \bar ";" s2 } >> |
+  << { R1 } { s2 \bar "!" s2 } >> |
   r2 r4 cis'\mp |
-  b gis4 a8([ gis]) fis4 |
+  b gis4 a8\>([ gis]) fis4 |
   \time 3/2
   e4. \breathe e'8\p e4 e fis e |
   \time 4/4
@@ -347,7 +349,7 @@ breaksTwo = {
   s4*16 \origBreak
   \tempo "Zög." s4*2 \tempo "Tempo I" s4*2 \tempo "Zög." s4*2 \tempo "Tempo I" s4*8 \origBreak
   s4*2 \mark \default s4*16 \origBreak
-  s4*12 \tempo "Zög." s4*4 \bar "||"
+  s4*12 \tempo "Zögern" s4*4 \bar "||"
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -359,36 +361,36 @@ globalThree = {
 
 sopVoiceVerseThree = \relative c'' {
   \time 2/4
-  gis2\p |
+  << gis2\p { s4 \bar "!" s4 } >>|
   \time 4/4
   gis4. b8 b4 gis4 |
-  fis4.( gis8) dis4-- \breathe gis |
+  fis4.( gis8) dis4^- \breathe gis |
   dis dis cis gis' |
   b4.( gis8[ fis gis] e4~ |
   e8) \breathe cis8 e2.~\> |
   e4\! r gis2\p |
   gis4. b8 \bar "" b4 gis | % to enable origBreak here
-  fis4.( gis8) dis4-- \breathe gis |
+  fis4.( gis8) dis4^- \breathe gis |
   dis2( cis4) gis'4 |
   b4.( gis8[ fis gis] e4~ |
-  e8[ cis] \bar "" e4.)\> fis8 gis4\! |
+  e8[ cis] \bar "" e4.)\> fis8 gis4 |
   \time 5/4
-  dis'2^\markup{ \italic meno \dynamic p } dis cis4 |
+  dis'2\!^\markup{ \italic meno \dynamic p } dis cis4 |
   \time 3/2
   b gis b2. r4 |
   gis2\p gis4. b8 \bar "" b4 gis | % to enable origBreak here
   \time 3/4
-  fis4.( gis8) dis4-- \breathe |
+  fis4.( gis8) dis4^- \breathe |
   gis dis dis |
   \time 3/2
   gis gis b4.( gis8[ fis gis] e4~ |
   \time 4/4
-  e8) \breathe cis8-- e4.-- fis8-- gis4--\fermata |
+  e8) \breathe cis8^- e4.^- fis8^- gis4^-\fermata |
 }
 
 altVoiceVerseThree = \relative c' {
   \time 2/4
-  r4 cis\p |
+  r4 \bar"!" cis\p |
   \time 4/4
   gis'4. gis8 fis4 e |
   \time 3/2
@@ -405,9 +407,9 @@ altVoiceVerseThree = \relative c' {
   \time 6/4
   cis4.( dis8) e4 e4.( dis8 cis4 |
   \time 4/4
-  b4) \bar "" a\> b2\! |
+  b4) \bar "" a\> b2 |
   \time 5/4
-  b'2^\markup{ \italic meno \dynamic p } ais gis4 |
+  b'2\!^\markup{ \italic meno \dynamic p } ais gis4 |
   \time 3/2
   fis4.( e8[ fis gis] fis4. e8) dis4 |
   b \breathe cis\p gis'4. gis8 \bar "" fis4 e | % to enable origBreak here
@@ -420,7 +422,7 @@ altVoiceVerseThree = \relative c' {
 
 tenVoiceVerseThree = \relative c' {
   \time 2/4
-  b2\p |
+  << b2^\markup{ \italic { (m) } \dynamic p \italic { mit Ausdruck} } { s4\bar"!" s4 } >> |
   \time 3/2
   b4 b cis b b2 |
   \time 6/4
@@ -444,9 +446,9 @@ tenVoiceVerseThree = \relative c' {
   gis2 \breathe a4 gis2 fis4 |
   \time 4/4
   e2 cis2 |
-  << { e1 } { s4 \bar "" s2. } >> | % to enable origBreak here
+  << { e2~\> \bar "" e2 } { s4 \bar "" s2. } >> | % to enable origBreak here
   \time 5/4
-  gis'2^\markup{ \italic meno \dynamic p } fis dis4 |
+  gis'2\!^\markup{ \italic meno \dynamic p } fis dis4 |
   \time 3/2
   e8([ dis]) cis4 << \voiceOne { dis2. } \new Voice { \voiceTwo b2. } >> \oneVoice r4 |
   b2^\markup{ \italic (m) \dynamic p } b4 b \bar "" cis b | % to enable origBreak here
@@ -459,6 +461,7 @@ tenVoiceVerseThree = \relative c' {
 
 basIVoiceVerseThree = \relative c {
   \time 3/4 s4
+  \bar"!"
   \set Timing.measurePosition = #(ly:make-moment 0)
   e4\pp^\markup{ \italic { Bass stets unterordnen } } << { \voiceOne e2 } \new Voice { \voiceTwo b2 } >> \breathe \oneVoice |
   \repeat unfold 3 {
@@ -479,6 +482,7 @@ basIVoiceVerseThree = \relative c {
 basIIVoiceVerseThree = \relative c {
   \dynamicDown
   \time 3/4 s4
+  \bar"!"
   \set Timing.measurePosition = #(ly:make-moment 0)
   a\pp e2 \breathe |
   \repeat unfold 3 {
@@ -530,7 +534,7 @@ sopVoiceVerseFour = \relative c'' {
     }
   >> \oneVoice
   \time 4/4 << { \voiceOne dis'4 } \new Voice { \voiceTwo dis,4 \breathe } >> \oneVoice dis'4 dis4. dis8 |
-  fis8 fis\> dis4 dis\! \breathe e4^\markup{ \italic più \dynamic f } |
+  fis8 fis\> dis4 dis \breathe e4\!^\markup{ \italic più \dynamic f } |
   cis4( b2) gis4 |
   ais8([ b] cis2) cis4 |
   b2. \breathe e4 |
@@ -571,7 +575,7 @@ sopVoiceVerseFour = \relative c'' {
   R1\! |
   r4 dis ais4( gis~ |
   gis) \breathe dis' ais( gis8) gis-- |
-  gis4.( fis8 e4) fis-- |
+  gis4.( fis8 e4) fis^- |
   dis4.(\> fis8 dis2)\! \breathe |
   \time 3/2
   b'2\p b4. b8 cis cis b4~( |
@@ -599,7 +603,7 @@ sopVoiceVerseFour = \relative c'' {
   \time 4/4
   cis4( b2) gis4 |
   ais8[(-- b]-- cis2--\>) cis4-- |
-  b1--\! \fermata |
+  << b1--\fermata { s2. s4\! } >> |
 }
 
 altVoiceVerseFour = \relative c' {
@@ -613,8 +617,8 @@ altVoiceVerseFour = \relative c' {
   e2) dis \breathe r |
   \time 4/4
   gis2 gis4. gis8 |
-  ais8 ais << { \voiceOne ais4\> b2\! } \new Voice { \voiceTwo gis4 gis2\! } >> \oneVoice |
-  r4 b4^\markup{ \italic più \dynamic f } gis( fis~ |
+  ais8 ais << { \voiceOne ais4\> b2 } \new Voice { \voiceTwo gis4 gis2 } >> \oneVoice |
+  r4\! b4^\markup{ \italic più \dynamic f } gis( fis~ |
   fis) e fis8([ gis] a!4~ |
   \time 3/2
   a) a gis2. \breathe b4 |
@@ -649,7 +653,7 @@ altVoiceVerseFour = \relative c' {
   r4 gis4^\markup{ \italic meno \dynamic p } fis( dis~ |
   dis) \breathe gis fis( dis~ |
   dis) \breathe gis fis dis |
-  e4.( dis8 cis4) cis |
+  e4.( dis8 cis4) cis^- |
   b8\>([ cis] b4. a8 b4~ |
   b4) \breathe fis'4\p dis b |
   fis' \breathe fis dis b |
@@ -665,6 +669,7 @@ altVoiceVerseFour = \relative c' {
   fis) e fis8([ gis] a!4~ |
   \time 3/2
   a) a gis2. \breathe b4 |
+  \time 3/4
   gis( fis) \breathe b gis( fis) \breathe b |
   \time 4/4
   gis( fis2) e4\> |
@@ -681,8 +686,8 @@ tenVoiceVerseFour = \relative c' {
   a2) gis4 \breathe gis gis a |
   \time 4/4
   cis4( b4. cis8 dis4 |
-  cis2\>) gis2\! |
-  r2 r4 fis'4^\markup{ \italic più \dynamic f } |
+  cis2\>) gis2 |
+  << r2 { s4\! s4 } >> r4 fis'4^\markup{ \italic più \dynamic f } |
   dis( cis4. b8) a4 |
   b8([ cis] dis4. cis8 b4 \breathe |
   cis8[ dis] e4. \once \override Beam.breakable = ##t dis8[ cis \breathe cis8 | % to enable origBreak here
@@ -690,7 +695,7 @@ tenVoiceVerseFour = \relative c' {
   e \breathe fis dis( cis~ |
   cis8[ b]) a4 b4\> cis |
   \time 3/2
-  b1\! r2 |
+  b1 r2\! |
   R1. |
   dis4\mp dis2 dis4 e8 e dis4~ |
   dis dis \breathe e8 e dis4.( cis8 b4 |
@@ -709,9 +714,9 @@ tenVoiceVerseFour = \relative c' {
   cis8[ b]) a4 b\> cis b2\! |
   \time 4/4
   r4 dis4^\markup{ \italic meno \dynamic p } cis( ais~ |
-  ais) \breathe dis cis( ais~ |
+  ais?) \breathe dis cis( ais~ |
   ais) \breathe dis cis ais |
-  b4.( ais8 gis4) gis-- |
+  b4.( ais8 gis4) gis^- |
   fis4.\>( gis8 fis4. e8\! |
   \time 3/2
   << { \voiceOne fis2) } \new Voice { \voiceTwo dis2 } >> \oneVoice r1 |
@@ -739,16 +744,15 @@ basVoiceVerseFour = \relative c' {
   b2^\markup{ \italic poco \dynamic f } b b |
   cis1 b2 |
   b1. |
-  << { gis1. } { s1 \bar "" s2 } >> | % to enable origBreak here
-  % gis1~ \bar "" gis2 | % to enable origBreak here
-  R1. |
+  gis1\>~\bar "" gis2  | % to enable origBreak here
+  << R1. { s2\! s s } >> |
   \time 4/4
   r2 r4 b^\markup{ \italic più \dynamic f } |
   gis fis e4.(^\markup{ \italic "gleichmäßig" } dis8[ |
   e fis] gis4. \once \override Beam.breakable = ##t fis8[ e \breathe e | % to enable origBreak here
   fis gis] a4. gis8) fis4 |
   \time 3/2
-  e4 \breathe cis dis( e2) c4 |
+  e4 \breathe cis dis( e2) cis4 |
   \time 4/4
   e1~\> |
   e2\! r |
@@ -773,14 +777,13 @@ basVoiceVerseFour = \relative c' {
   fis( dis2) \breathe gis4 |
   \time 3/2
   fis dis e4.( dis8 b4 cis~ |
-  cis) fis,4-- b1~\> |
-  b2\! r1 |
+  cis) fis,4^- b1~\> |
+  b2 r1\! |
   R1. |
   b'2^\markup{ \italic (m) \dynamic p \italic { nur sehr zart hervor } } b2 b2 |
   cis1 b2 |
   b1. |
-  << { gis1.\> } { s1 \bar "" s2 } >> | % to enable origBreak here
-  % gis1~\> \bar "" gis2
+  gis1~\> \bar "" gis2
   R1.\! |
   \time 4/4
   r2 r4 b4 |
@@ -812,17 +815,141 @@ breaksFour = {
 %          Verse 5           %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-globalFive = \globalOne
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%          Verse 5           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-sopVoiceVerseFive = \sopVoiceVerseOne
+globalFive = {
+  \global
+  \set Score.voltaSpannerDuration = #(ly:make-moment 3/4)
+  \time 3/2
+}
 
-altVoiceVerseFive = \altVoiceVerseOne
+sopVoiceVerseFive = \relative c'' {
+  \repeat volta 2 {
+    \partial 2
+    b2\p |
+    \time 4/4 |
+    b4 b cis b |
+    b2 gis \breathe |
+    a gis4 fis4~ |
+    fis e2 dis4 |
+  }
+  \alternative {
+    {
+      \time 3/2 \partial 1
+      << \voiceTwo { e4.( fis8 gis2) } \new Voice { \voiceOne e1 } >> \oneVoice |
+      % the odd order of \voiceTwo and \voiceOne is necessary for the correct lyrics spanner
+    }
+    {
+      \time 3/2
+      <<  \voiceTwo { e4.( fis8 gis2) } \new Voice { \voiceOne e1 \breathe } >> \oneVoice gis2^\markup{ \italic meno \dynamic p }|
+      % the odd order of \voiceTwo and \voiceOne is necessary for the correct lyrics spanner
+    }
+  }
+  \time 4/4
+  fis4 dis e cis |
+  b2 \breathe b'\pp |
+  \mark \default b4 b cis b |
+  b2 gis \breathe |
+  a2 gis4 fis~ |
+  fis \tempo "Zögern" e2 dis4 |
+  << \voiceTwo { e4.( fis8 gis2) } \new Voice { \voiceOne { e1 } } >> |
+     % the odd order of \voiceTwo and \voiceOne is necessary for the correct lyrics spanner
+}
 
-tenVoiceVerseFive = \tenVoiceVerseOne
+altVoiceVerseFive = \relative c' {
+  \repeat volta 2 {
+    \partial 2
+    r4 e\p |
+    \time 4/4
+    e fis a a |
+    gis4( fis8[ e] fis2) |
+    e4 \breathe e dis b |
+    cis4.( dis8 e4) fis |
+  }
 
-basVoiceVerseFive = \basVoiceVerseOne
+  \alternative {
+    {
+      \time 3/2 \partial 1
+      gis4.( fis8 e2) |
+    }
+    {
+      \time 5/4
+      gis4.( fis8 e2) \breathe e4^\markup{ \italic meno \dynamic p } |
+    }
+  }
+  e e gis4.( fis8) e4 |
+  \time 4/4
+  \times 2/3 { fis8.[(^\markup{ \italic "ruhig" } gis16 e8] } fis2) \breathe e4\pp |
+  e fis a a |
+  gis4 (fis8[ e] fis2) |
+  e4 \breathe e dis b |
+  cis4.( dis8 e4) fis |
+  gis4. (fis8 e2) |
+}
 
-%copied from breaksOne, only difference is the closing bar-line
+tenVoiceVerseFive = \relative c' {
+  \repeat volta 2 {
+    \partial 2
+    r4 b\p |
+    b cis e e dis2 |
+    \time 5/4
+    cis4 \breathe cis2 cis4 cis |
+    e4.( dis8 b4 cis) b |
+  }
+  \alternative {
+    {
+      \time 3/2 \partial 1
+      gis8[( a b cis] b2) |
+    }
+    {
+      \time 5/4
+      gis8[( a b cis] b2) \breathe b4^\markup{ \italic meno \dynamic p } |
+    }
+  }
+  b2 gis4 cis cis |
+  \time 4/4
+  dis8[(^\markup{ \italic "ruhig" } cis] b4)\breathe b2\pp |
+  \time 3/2
+  b4 cis e e dis2 |
+  \time 5/4
+  cis4 \breathe cis2 cis4 cis |
+  e4.( dis8 b4 cis) b |
+  \time 4/4
+  gis8([ a b cis] b2) |
+}
+
+basVoiceVerseFive = \relative c' {
+  \repeat volta 2 {
+    \partial 2
+    r2 |
+    \time 4/4
+    r1 |
+    r2 r4 cis4~\p |
+    cis a2 b4 |
+    gis2 fis |
+  }
+  \alternative {
+    {
+      \time 3/2 \partial 1
+      e4. (cis8 e2) |
+    }
+    {
+      \time 3/2
+      e4. (cis8 e2) \breathe e^\markup{ \italic meno \dynamic p } |
+    }
+  }
+  \time 4/4
+  b4 cis e e |
+  b2. r4 |
+  r1 |
+  r2 r4 cis'4~\pp |
+  cis a2 b4 |
+  gis2 fis |
+  e1 |
+}
+
 breaksFive =  {
   \tempo "Choral, ganz schlicht" 4 = 84
   s4*18 \origBreak |
