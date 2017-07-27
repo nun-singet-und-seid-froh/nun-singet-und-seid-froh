@@ -96,10 +96,9 @@ stencil."
     \column {
       \center-align {
           
-        \epsfile #X #45 #"../../../include/logo.eps"          
+        \epsfile #X #30 #"../../../include/logo.eps"          
         \vspace #2
-        \abs-fontsize #20 { \with-url  #"http://www.nun-singet-und-seid-froh.info" { "nun-singet-und-seid-froh.info" } }
-        \vspace #0.5
+        \abs-fontsize #20 { \with-url  #"http://www.nun-singet-und-seid-froh.info" { "www.nun-singet-und-seid-froh.info" } }
         \line { \abs-fontsize #20 { "– Nr. " \noInNsusf " –"} }
         \vspace #2
       }
@@ -117,7 +116,7 @@ stencil."
 
           \fill-line {
             \line { #(string-append "LilyPond " (lilypond-version)) }
-            \line { \italic \with-url  #"http://www.nun-singet-und-seid-froh.info" { "www.nun-singet-und-seid-froh.info" } }
+            \line { \with-url  #"http://www.nun-singet-und-seid-froh.info" { "www.nun-singet-und-seid-froh.info" } }
             \line { "Revision Nr. " \vers"| " \lastEdited }
           }
         }
