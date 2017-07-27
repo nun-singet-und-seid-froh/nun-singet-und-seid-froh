@@ -95,11 +95,12 @@ stencil."
   copyright = \markup {
     \column {
       \center-align {
-        \abs-fontsize #20 { \italic \with-url  #"http://www.nun-singet-und-seid-froh.info" { "www.nun-singet-und-seid-froh.info" } }
-        \vspace #0.5
+          
+        \epsfile #X #30 #"../../../include/logo.eps"          
+        \vspace #2
+        \abs-fontsize #20 { \with-url  #"http://www.nun-singet-und-seid-froh.info" { "www.nun-singet-und-seid-froh.info" } }
         \line { \abs-fontsize #20 { "– Nr. " \noInNsusf " –"} }
-        \vspace #7
-
+        \vspace #2
       }
     }
   }
@@ -115,7 +116,7 @@ stencil."
 
           \fill-line {
             \line { #(string-append "LilyPond " (lilypond-version)) }
-            \line { \italic \with-url  #"http://www.nun-singet-und-seid-froh.info" { "www.nun-singet-und-seid-froh.info" } }
+            \line { \with-url  #"http://www.nun-singet-und-seid-froh.info" { "www.nun-singet-und-seid-froh.info" } }
             \line { "Revision Nr. " \vers"| " \lastEdited }
           }
         }
@@ -137,7 +138,9 @@ stencil."
           \line { \abs-fontsize #55 { \my-wordwrap-field #CENTER #'header:title } }
           \vspace #5
           \line { \abs-fontsize #20 \instrumentation }
-          \vspace #10
+          \vspace #1
+          
+
         }
       }
     }
