@@ -35,19 +35,19 @@ sopVoice = <<
 %{04%} f es d d
 %{05%} es1~
 %{06%} es4 d g8 f e d
-%{07%} d4  cis8 e a[ g] d[ a] 
-%{08%} c4 bes a r
+%{07%} d4  cis8 e a([ g]) d([ a])
+%{08%} c4 bes? a r
 %{09%} r2 r4 g'
 %{10%} fis2( ges4) f
-%{11%} g( es2) c4
+%{11%} g?( es2) c4
 %{12%} bes r r2
 %{13%} r4 g fis2~
-%{14%} ges4 f g f
-%{15%} f2( e)
-%{16%} r1
+%{14%} ges4 f? g f?
+%{15%} f?2( e)
+%{16%} R1
 %{17%} r4 c' b c
 %{18%} g'( es c) g
-%{19%} es2( d)
+%{19%} as2( g)
 %{20%} g4 g c f
 %{21%} f8([ es f d] c4) b
 %{22%} c c es as 
@@ -73,9 +73,9 @@ altVoice = <<
 %{11%} g4( c2) as4
 %{12%} g r r2
 %{13%} r2 r4 es
-%{14%} d d es des
+%{14%} d? d es? des
 %{15%} bes?2( c)
-%{16%} r1 
+%{16%} R1 
 %{17%} r4 as' g as
 %{18%} g2( es~
 %{19%} es4) g f( es)
@@ -91,7 +91,7 @@ tenVoice = <<
   \tenArt
   \relative c'
     {  
-%{01%} r1
+%{01%} R1
 %{02%} r4 c b c
 %{03%} es2( d4) c
 %{04%} c2( f4 g)
@@ -99,7 +99,7 @@ tenVoice = <<
 %{06%} fis4. e8 d4 g8 f
 %{07%} e2( e8) d e f
 %{08%} d2. r4 
-%{09%} r1
+%{09%} R1
 %{10%} r4 es? d d 
 %{11%} es2 f
 %{12%} g4 r r fis,
@@ -122,7 +122,7 @@ basVoice = <<
   \basArt
   \relative c'
     {     
-%{01%} r1
+%{01%} R1
 %{02%} r4 as g as
 %{03%} g2( f4) es
 %{04%} d( c b b')
@@ -131,9 +131,9 @@ basVoice = <<
 %{07%} a4. g8 f4 f
 %{08%} g g, d'\breathe d'
 %{09%} es2. d4
-%{10%} c\melisma ces\melismaEnd bes2
+%{10%} c( ces) bes2
 %{11%} es,2( es'
-%{12%} es,4)\breathe d es2~
+%{12%} es,4)\breathe d es?2~
 %{13%} es4 d c ces
 %{14%} bes2( <<es, es'~>>
 %{15%} es4 des c bes)
@@ -144,7 +144,7 @@ basVoice = <<
 %{20%} g4 f es d
 %{21%} es( as8[ f] g4.) f8
 %{22%} es4 d c b
-%{23%} c( g as) g'
+%{23%} c( f, g) g'
 %{24%} <<g1 c,1>>
     }
 >>

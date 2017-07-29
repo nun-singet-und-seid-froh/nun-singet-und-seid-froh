@@ -15,7 +15,7 @@ title                   = "Es ist ein Reis entsprungen"
 composerChristianName   = "" % e.g. "Johann Sebastian"
 composerSurName	        = "" % e.g. "Bach"
 composerLifedata        = "" % e.g. "1685-1750"
-melodyDate	        = ""
+melodyDate	            = ""
 
 % arranger is the one who composed the voices
 arrangerChristianName   = "Alban" % e.g. "Johann Sebastian"
@@ -39,7 +39,7 @@ opus                    = ""
 noInOpus                = ""
 titleInOpus             = ""
 
-lastEdited              = "12. Juli 2016" % e.g. "19. September 2015"
+lastEdited              = "30. Juli 2017" % e.g. "19. September 2015"
 vers                    = "1.0.0" % write "0.0.0" for the first draft
 noInNsusf               = "5" % write "X" as long piece is not ready to be published
 
