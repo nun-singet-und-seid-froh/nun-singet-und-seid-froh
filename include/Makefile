@@ -12,13 +12,11 @@ midi: $(DIRNAME).midi
 
 zip: $(DIRNAME).zip
 
-mediawiki: mediawiki.txt
-
-mediawiki.txt: $(META) ../../../tools/meta.ily2MediaWiki.py
-	../../../tools/meta.ily2MediaWiki.py
-
 $(DIRNAME).zip: $(DIRNAME).pdf $(DIRNAME).midi
 	zip "$(DIRNAME)" *.pdf *.midi
+
+$(DIRNAME)_(midis).zip: $(DIRNAME).pdf $(DIRNAME).midi
+	zip "$(DIRNAME)" *.midi
 
 $(DIRNAME).pdf $(DIRNAME).midi: $(LYS)
 	lilypond -dno-point-and-click -o "$(DIRNAME)" $<
