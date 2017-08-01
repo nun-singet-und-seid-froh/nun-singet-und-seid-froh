@@ -1,13 +1,20 @@
-% based on templates/SATTB/SATTB/modern/score.ly
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%         This file is part of the edition www.nun-singet-und-seid-froh.info            %
+% This file as well as the music or data represented in it is within the public domain. %
+%      If you think that this file violates your copyright or other rights of you,      %
+%               please contact us at mail@nun-singet-und-seid-froh.info                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% based ontemplates/SATTB/SATTB/modern/score.ly
 
 % local information (for this particular piece)
 \include "meta.ily"             % metadata for this piece
 \include "voices.ily"           % the tunes, dynamic and articulation marks
-\include "lyrix.ily"            % the lyrics within the staves
+\include "lyrics.ily"            % the lyrics within the staves
 \include "output.ily"           % the paper and midi settings for this piece
 
 % global information (identical for all pieces)
-\include ".:/../../include/version.ily"    % the lilypond version
+\include "../../../include/version.ily"    % the lilypond version
 \include "../../../include/paper.ily"      % the layout information
 \include "../../../include/sound.ily"      % variable declarations for midi
 
@@ -21,41 +28,41 @@
 
   \score {
     %for PDF
-    \new StaffGroup<<
+    \new SemiChoirStaff<<
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
         \set Staff.instrumentName = "Sopran"
         \new Voice = "sop" { \global \sopVoice }
       >>
-      \new Lyrics \lyricsto "sop" { \sopLyrix }
+      \new Lyrics \lyricsto "sop" { \sopLyrics }
 
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
         \set Staff.instrumentName = "Alt"
         \new Voice = "alt" { \global \altVoice }
       >>
-      \new Lyrics \lyricsto "alt" { \altLyrix }
+      \new Lyrics \lyricsto "alt" { \altLyrics }
 
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
         \set Staff.instrumentName = "Tenor I"
-        \new Voice = "teni" { \clef "G_8" \global \teniVoice }
+        \new Voice = "tenI" { \clef "G_8" \global \tenIVoice }
       >>
-      \new Lyrics \lyricsto "teni" { \teniLyrix }
+      \new Lyrics \lyricsto "tenI" { \tenILyrics }
 
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
         \set Staff.instrumentName = "Tenor II"
-        \new Voice = "tenii" { \clef "G_8" \global \teniiVoice }
+        \new Voice = "tenII" { \clef "G_8" \global \tenIIVoice }
       >>
-      \new Lyrics \lyricsto "tenii" { \teniiLyrix }
+      \new Lyrics \lyricsto "tenII" { \tenIILyrics }
 
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
         \set Staff.instrumentName = "Bass"
         \new Voice = "bas" { \clef bass \global \basVoice }
       >>
-      \new Lyrics \lyricsto "bas" { \basLyrix }
+      \new Lyrics \lyricsto "bas" { \basLyrics }
     >> %end of StaffGroup
 
     \layout { }
@@ -69,13 +76,13 @@
       \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
-      \new Voice = "teni" { \global \teniVoice }
-      \new Voice = "tenii" { \global \teniiVoice }
+      \new Voice = "tenI" { \global \tenIVoice }
+      \new Voice = "tenII" { \global \tenIIVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
     \stafftovoice
   } %end of score (MIDI)
-  
+
 } %end of book
 
 
@@ -90,11 +97,11 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sop" { \highlightedVoice  \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
-      \new Voice = "teni" { \global \teniVoice }
-      \new Voice = "tenii" { \global \teniiVoice }
+      \new Voice = "tenI" { \global \tenIVoice }
+      \new Voice = "tenII" { \global \tenIIVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
     \stafftovoice
@@ -107,11 +114,11 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \highlightedVoice \global \altVoice }
-      \new Voice = "teni" { \global \teniVoice }
-      \new Voice = "tenii" { \global \teniiVoice }
+      \new Voice = "tenI" { \global \tenIVoice }
+      \new Voice = "tenII" { \global \tenIIVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
     \stafftovoice
@@ -124,11 +131,11 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
-      \new Voice = "teni" { \highlightedVoice \global \teniVoice }
-      \new Voice = "tenii" { \global \teniiVoice }
+      \new Voice = "tenI" { \highlightedVoice \global \tenIVoice }
+      \new Voice = "tenII" { \global \tenIIVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
     \stafftovoice
@@ -141,11 +148,11 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
-      \new Voice = "teni" { \global \teniVoice }
-      \new Voice = "tenii" { \highlightedVoice \global \teniiVoice }
+      \new Voice = "tenI" { \global \tenIVoice }
+      \new Voice = "tenII" { \highlightedVoice \global \tenIIVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
     \stafftovoice
@@ -158,11 +165,11 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
-      \new Voice = "teni" { \global \teniVoice }
-      \new Voice = "tenii" { \global \teniiVoice }
+      \new Voice = "tenI" { \global \tenIVoice }
+      \new Voice = "tenII" { \global \tenIIVoice }
       \new Voice = "bas" { \highlightedVoice \global \basVoice }
     >>
     \stafftovoice
