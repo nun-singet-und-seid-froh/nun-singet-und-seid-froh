@@ -4,7 +4,7 @@ DIRNAME=$(shell basename "$(PWD)")
 META=meta.ily
 LYS=score.ly voices.ily $(META) lyrics.ily output.ily ../../../include/header.ily ../../../include/paper.ily ../../../include/sound.ily ../../../include/version.ily
 
-all: standalone midi zip mediawiki
+all: standalone midi zip
 
 standalone: $(DIRNAME).pdf
 
