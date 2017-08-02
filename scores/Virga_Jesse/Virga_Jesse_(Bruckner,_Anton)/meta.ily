@@ -40,4 +40,4 @@ instrumentation   = "SATB" % "SATB", "SSAATTBB", "(SATB)(SATB)" for double-choir
 difficulty        = "" % "sehr leicht", "leicht", "mittelschwer", "schwer", "sehr schwer"
 form              = "" % "Motette", "Strophenlied", "Durchkomponiertes Lied"
 root              = ""
-noInNsusf         = "10"
+noInNsusf         = "9"
