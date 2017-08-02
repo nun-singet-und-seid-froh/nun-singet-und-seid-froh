@@ -210,7 +210,7 @@ commonDynArt = {
   s s s 
   s s s
   s s s
-  s s s\bar"||"
+  s s s\bar"|."
 }
 
 sopTune = \relative c' {
@@ -933,7 +933,7 @@ basTune = \relative c {
     a2 a4\breathe bes |
   \time 6/2
     a2( g1 a2\breathe g a\breathe |
-    g f g a1.~\> |
+    g f g a1.~\>
     a) << { \voiceOne e'1.\! } \new Voice { \voiceTwo e,1. } >> \oneVoice
 }
 
