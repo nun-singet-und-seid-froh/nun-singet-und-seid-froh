@@ -15,7 +15,7 @@
 %                  the PDF & main MIDI producing part:             %
 %                       4 staves for 4 voices                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-#(set-global-staff-size 15)
+#(set-global-staff-size 14)
 
 \book {
   \include "../../../include/header.ily"
@@ -50,7 +50,6 @@
       >>
       \new Lyrics \lyricsto "bas" { \basLyrics }
     >> %end of StaffGroup
-    \stanzas
 
     \layout { 
     \context {

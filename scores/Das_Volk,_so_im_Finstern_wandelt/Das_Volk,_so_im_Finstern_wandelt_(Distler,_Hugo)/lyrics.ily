@@ -38,7 +38,7 @@ altLyrics = \lyricmode {
     Das Volk, so im Fin -- stern wan -- delt,
     so im Fin -- stern wan -- delt,
     sie -- het ein Licht, ein Licht, ein Licht, 
-    ein Licht, ein groß __ Licht,
+    sie -- het ein groß __ Licht,
     und ü -- ber die, die da woh -- nen,
     die da woh -- nen im fin -- stern Lan -- de
     schei -- net es hel -- le, schei -- net es hel -- le,
@@ -82,7 +82,7 @@ altLyrics = \lyricmode {
 tenLyrics = \lyricmode {
    Das Volk, so im Fin -- stern, so im Fin -- stern  wan -- delt,
    sie -- het ein Licht, ein Licht, ein groß Licht, __
-   sie -- het ein groß, ein groß, ein groß __ Licht,
+   sie -- het ein groß, ein groß, ein groß Licht,
    und ü -- ber die, die da woh -- nen im fin -- stern Lan -- de,
    schei -- net es hel -- le.
    Denn uns ist ein Kind ge -- bo -- ren,

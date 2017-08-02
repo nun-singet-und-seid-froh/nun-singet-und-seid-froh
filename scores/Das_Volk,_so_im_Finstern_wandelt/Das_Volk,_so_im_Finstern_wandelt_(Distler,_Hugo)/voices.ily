@@ -114,7 +114,7 @@ commonDynArt = {
   s s s 
   s s \tempo "Zögern" s \oPageBreak
   
-  s s \stopTextSpan \tempo "Sehr ruhig" 4=84 s s
+  s s \tempo "Sehr ruhig" 4=84 s s
   s s s s 
   
   s s s s \tempo "Zögern" s s\oBreak \mark \default 
@@ -210,7 +210,7 @@ commonDynArt = {
   s s s 
   s s s
   s s s
-  s s s\stopTextSpan\bar"||"
+  s s s\bar"||"
 }
 
 sopTune = \relative c' {
@@ -236,7 +236,7 @@ sopTune = \relative c' {
     e4\breathe cis8 |  
   \time 3/4
     fis8\breathe b, e\breathe cis fis\breathe d |
-    g4( e8[ d e\breathe g] |
+    g4^-( e8[ d e\breathe g] |
     % tempo "zart"
     e[\breathe g e d e\breathe g] |
     e[\breathe g e\> d] e4) |
@@ -287,9 +287,9 @@ sopTune = \relative c' {
     % \tempo "Zögern, schlicht"
     d4\>( e fis8[ e] ) |
   \time 4/4
-    e4\!\breathe %{\tempo "Langsamer" 4=69 %} e,4. e8 d4
+    e4\breathe %{\tempo "Langsamer" 4=69 %} e,4.\! e8 d4
   \time 3/2
-    f!2( e4 c d) d\> |
+    f?2( e4 c d) d\> |
   % Rehearsal Mark (E)
   \time 1/4
   % \tempo "Voran" 4=84
@@ -303,7 +303,7 @@ sopTune = \relative c' {
     g4^-\breathe %{ \tempo "Im Zeitmaß, aber ruhig" %} g8 g |
   \time 3/4
     e4 d\breathe e8 e |
-    b4 a\breathe bes8 bes |
+    b4^\markup{ \italic { sempre dim. } } a\breathe bes8 bes |
     g4 d\breathe f'8 f |
     d4 c\breathe d8 d |
     a4 g\breathe %{\tempo "Zögern"%} a8 a8 |
@@ -408,7 +408,7 @@ sopTune = \relative c' {
 altTune = \relative c' {
     r4 |
   \time 2/4
-    r4 c |
+    r4 c^\markup{ \italic meno \dynamic p } |
   \time 3/4
     e4. c4 c8 |
   \time 4/4 |
@@ -417,10 +417,10 @@ altTune = \relative c' {
     r4 r c8 c8 |
     e2 e4 |
   \time 4/4 
-    b2 b\fermata |
+    b2\> b\fermata |
   % Rehearsal Mark (A)
   \time 3/8
-    R4. |
+    R4.\! |
     R4. |
     R4. |
     a'8\mp a fis |
@@ -429,7 +429,7 @@ altTune = \relative c' {
   \time 3/4  
     b4\breathe b b8 g |
   \time 3/8  
-    c4( a8 |
+    c4^-( a8 |
     g4 a8 |
     c4 a8 |
     g4 a8 |
@@ -437,7 +437,7 @@ altTune = \relative c' {
     c4 a8[\> g] a4) |
   % Rehearsal Mark (B)
   \time 4/4
-    gis2.\! r4 |
+    gis2. r4\! |
     r e2^\markup{ \italic meno \dynamic p } e8 e |
   \time 3/4
     e4\breathe e a |
@@ -451,7 +451,7 @@ altTune = \relative c' {
   \time 3/8
     e8^\mp e d |
     a'4 e8\breathe |
-    fis fis d |
+    e e d |
     a'4 e8\breathe |
     fis8 fis e |
     b'4 fis8\breathe |
@@ -477,7 +477,7 @@ altTune = \relative c' {
   \time 3/4
     b2\>( a4) |
   \time 4/4
-    b4\breathe b, a g |
+    b4\breathe b,\! a g |
   \time 3/2
     a2( c4. b8 a4) b\> |
   % Rehearsal Mark (E)
@@ -489,7 +489,7 @@ altTune = \relative c' {
     bes^-\breathe |
     c4^-\breathe d8 d |
   \time 3/4
-    a4 g\breathe \bar"" a8 a |
+    a4 g\breathe \bar"" a8^\markup{ \italic { sempre dim. } } a |
     e4 d\breathe c'8 c |
     g4 f\breathe a8 a |
     e4 d \breathe a'8 a |
@@ -538,7 +538,7 @@ altTune = \relative c' {
   \time 4/4
     b2 b4\breathe fis |
   \time 3/2
-    bes2 bes4\breathe g c~ \bar"" c |
+    b2 b4\breathe g c~ \bar"" c |
   \time 3/4
     c\breathe c2 |
     bes4 g f |
@@ -577,7 +577,7 @@ altTune = \relative c' {
     b4 gis fis |
   \time 3/2
     gis2 fis e\> |
-    fis gis\breathe e4\!^\markup{ \dynamic p \italic { e dim. sempre } } e |
+    fis gis\!\breathe e4^\markup{ \dynamic p \italic { e dim. sempre } } e |
   % Rehearsal Mark (L)
   \time 2/2
     a2 g!4 g |
@@ -585,7 +585,7 @@ altTune = \relative c' {
     e2 e4\breathe d |
   \time 6/2
     e2( g1 e2\breathe g2 e2\breathe |
-    g2 a2 g2 << { \voiceOne e1.~ e2 f1) gis1. } \new Voice { \voiceTwo e1.~ e e } >> \oneVoice 
+    g2 a2 g2 << { \voiceOne e1.~ e2 fis1) gis1. } \new Voice { \voiceTwo e1.~ e e } >> \oneVoice 
 }
 
 tenTune = \relative c' {
@@ -595,12 +595,12 @@ tenTune = \relative c' {
   \time 4/4
   c4( a8[\breathe a b a] c4~
   \time 3/4
-  c8[ a b a b e]
+  c8[ a b\breathe a b e]
   b4) b\breathe \bar"" a8 a
   \time 2/4
   c4 b
   \time 4/4
-  << { \voiceOne a2 b4 \times 2/3 { b8 b a } } \new Voice { \voiceTwo a2 g\fermata }  >>\oneVoice
+  << { \voiceOne a2\> b4 \times 2/3 { b8\mp b a } } \new Voice { \voiceTwo a2 g\fermata }  >>\oneVoice
   % Rehearsal Mark (A)
   \time 3/8
     e'4\breathe b8
@@ -657,7 +657,7 @@ tenTune = \relative c' {
   \time 6/8
     fis4\>( e d8[ e]) |
   \time 4/4  
-    e4\!\breathe g,4. g8 g4 |
+    e4\breathe g,4.\! g8 g4 |
   \time 3/2
     a2( b4 a4. g8) fis4\> |
   % Rehearsal Mark (E)
@@ -669,7 +669,7 @@ tenTune = \relative c' {
     g^-\breathe |
   \time 3/4
     e^-\breathe e8 e |
-    b4\bar"" a\breathe c8 c |
+    b4\bar"" a^\markup{ \italic { sempre dim. } }\breathe c8 c |
     g4 f\breathe d'8 d |
     a4 g\breathe c8 c |
     g4 f\breathe a8 a |
@@ -705,12 +705,12 @@ tenTune = \relative c' {
   \time 2/2
     d2 d4 c |
   \time 4/2
-    bes1( a2\breathe bes |
+    d1( c2\breathe d |
   \time 5/2
-    c bes a bes1) |
+    e d c d1)
   % Rehearsal Mark (H)
   \time 3/4
-    bes2. |
+    d2. |
     R2. |
     R2. |
     R2. |
@@ -718,7 +718,7 @@ tenTune = \relative c' {
     r4 e2\mf |
     d4\breathe fis2 |
     e4\breathe g2 |
-    f!4 d c |
+    f?4 d c |
     d2 d4 |
     r g2 |
     f4 d c |
@@ -756,7 +756,7 @@ tenTune = \relative c' {
     r4 b a |
     b b b\> |
   \time 3/2
-    cis2 e\breathe c!4\!^\markup{ \dynamic p \italic { e dim. sempre } } c |
+    cis2 e\!\breathe c!4^\markup{ \dynamic p \italic { e dim. sempre } } c |
   % Rehearsal Mark (L)
   \time 2/2
     f2 e4 e |
@@ -765,25 +765,25 @@ tenTune = \relative c' {
   \time 6/2
     c2( d1 c2\breathe d c\breathe |
     d e d1 c2\> b |
-    a1.) e1.\!
+    a1.) e'1.\!
 }
 
 basTune = \relative c {
     r4
   \time 2/4
-    r4 e4
+    r4 e4^\markup{ \italic meno \dynamic p }
   \time 3/4
     a4. e4 e8
   \time 4/4
-    e4 g4 g e
+    e4 a4 a e
   \time 3/4
     r4 r e8 e
     f2 f4
   \time 4/4
-    e4 e2.\fermata
+    e4\> e2.\fermata
   % Rehearsal Mark (A)
   \time 3/8 
-    R4. |
+    R4.\! |
     R4. |
     R4. |
     R4. |
@@ -796,7 +796,7 @@ basTune = \relative c {
     a2.\> |
   % Rehearsal Mark (B)
   \time 4/4
-    e2.\! r4 |
+    e2. r4\! |
     r e2^\markup{ \italic meno \dynamic p } e8 e |
   \time 3/4
     e4 e d |
@@ -816,8 +816,8 @@ basTune = \relative c {
     e e d |
     << { a'2. } {s4. s\>} >>|
   \time 3/8
-    gis4.\!
-    R4.
+    gis4.
+    R4.\!
   % Rehearsal Mark (D)
   \time 7/8  
     e4\p e4. e8 e |
@@ -829,7 +829,7 @@ basTune = \relative c {
   \time 3/2
     e4. e8 e4 e\> e e  |
   \time 5/4
-    e e\breathe c bes d |
+    e e\!\breathe c bes d |
     a4.( g8 f4 g) g\> |
   % Rehearsal Mark (E)
   \time 2/4
@@ -840,7 +840,7 @@ basTune = \relative c {
   \time 3/4
     es,^-\breathe c'8 c |
     a4 e!\breathe a8 a |
-    f4 c\breathe d8 d |
+    f4^\markup{ \italic { sempre dim. } } c\breathe d8 d |
     c4 a\breathe d8 d |
     c4 a\breathe d8 d |
     c4 a\breathe d8 d |
@@ -858,8 +858,8 @@ basTune = \relative c {
     r4 a2\p |
     g4 f e |
     e e fis |
-    a2 a4~ |
-    a r r |
+    b2 b4~ |
+    b r r |
     R2. |
     r4 a2 |
     g4\breathe b2 |
@@ -870,7 +870,7 @@ basTune = \relative c {
     a2 a a |
     f1\> c2\!
   % Rehearsal Mark (G)
-    r2 a2. a4 |
+    r2 a'2. a4 |
   \time 2/2
     g2 g4 a |
   \time 4/2
@@ -925,7 +925,7 @@ basTune = \relative c {
     r4 e d |
     e e fis\> |
   \time 3/2
-    b2 e\!^\markup{ \dynamic p \italic { e dim, sempre } }\breathe a,4 a 
+    b2 e,\!\breathe a,4^\markup{ \dynamic p \italic { e dim, sempre } } a 
   % Rehearsal Mark (L)
   \time 2/2
     f2 g4 g |
@@ -934,7 +934,7 @@ basTune = \relative c {
   \time 6/2
     a2( g1 a2\breathe g a\breathe |
     g f g a1.~\> |
-    a << { \voiceOne e'1.)\! } \new Voice { \voiceTwo e,1. } >> \oneVoice
+    a) << { \voiceOne e'1.\! } \new Voice { \voiceTwo e,1. } >> \oneVoice
 }
 
 

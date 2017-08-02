@@ -9,7 +9,7 @@
 % this is version 1.0 of the meta.ily
 
 % the meta-data printed in the sheet
-title                   = "Das Volk, so im Finstern Wandelt"
+title                   = "Das Volk, so im Finstern wandelt"
 
 % composer is the one who wrote the melody (leave this empty if it is identical to the arranger)
 composerChristianName   = "" % e.g. "Johann Sebastian"
@@ -39,8 +39,8 @@ opus                    = "Die Weihnachtsgeschichte, op. 10"
 noInOpus                = "1"
 titleInOpus             = "Einleitung"
 
-lastEdited              = "18.Oktober 2016" % e.g. "19. September 2015"
-vers                    = "0.1.1" % write "0.0.0" for the first draft
+lastEdited              = "3. August 2017" % e.g. "19. September 2015"
+vers                    = "0.2.0" % write "0.0.0" for the first draft
 noInNsusf               = "X" % write "X" as long piece is not ready to be published
 
 % other meta-data, used for the MediaWiki-output
