@@ -26,14 +26,14 @@ commonDynArt = {
   s s
   s s s 
   s s s s
-  s s s \oBreak
+  s s s \oBreak \noPageBreak
   s s s\noBreak
   s s s s\mark \default 
   
   s8 s s
   s8 s s
   s8 s s
-  s8 s s \oBreak
+  s8 s s \oBreak \noPageBreak
   s8 s s 
   s8 s s 
   
@@ -47,7 +47,7 @@ commonDynArt = {
   s s s s 
   
   s s s 
-  s s s \oBreak
+  s s s \oBreak \noPageBreak
   
   s s s s 
   s s s s 
@@ -62,14 +62,14 @@ commonDynArt = {
       " )"
     }
   }
-    \oBreak
+    \oBreak \noPageBreak
   
   s8 s s 
   s s s 
   s s s
   s s s 
   s s s 
-  s s s \oBreak
+  s s s \oBreak \noPageBreak
   s s s 
   s s s
   s \tempo "zart" s s
@@ -85,12 +85,12 @@ commonDynArt = {
   s 
   
   s s s
-  s s s\oBreak
+  s s s\oBreak \noPageBreak
   
   s s s s
   
   \tempo "Zögern, schlicht"
-  s s s 
+  s s s \noPageBreak \noBreak
   
   s 
   \tempo "Langsamer" 4=69 s4. s8 s4
@@ -108,7 +108,7 @@ commonDynArt = {
   s s
   s \tempo "Im Zeitmaß, aber ruhig" s
   
-  s s s 
+  s s s \oBreak \noPageBreak
   s s s 
   s s s  
   s s s 
@@ -132,7 +132,7 @@ commonDynArt = {
   s s s 
   s s s 
   s s s 
-  s s s\oBreak
+  s s s\oBreak \noPageBreak
   s s s 
   s s s
   s s s
@@ -149,7 +149,7 @@ commonDynArt = {
   s s s s s s s s s s\mark \default
   % 3/4
   s \tempo "Wie vorher" s s
-  s s s \oBreak
+  s s s \oBreak \noPageBreak
   s s s 
   % 4/4
   s s s s 

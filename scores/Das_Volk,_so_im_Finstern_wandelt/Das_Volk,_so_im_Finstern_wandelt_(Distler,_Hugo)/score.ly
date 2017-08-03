@@ -6,6 +6,8 @@
 \include "lyrics.ily"            % the lyrics within the staves
 \include "output.ily"           % the paper and midi settings for this piece
 
+#(set-global-staff-size 17)
+
 % global information (identical for all pieces)
 \include "../../../include/version.ily"    % the lilypond version
 \include "../../../include/paper.ily"      % the layout information
@@ -15,7 +17,6 @@
 %                  the PDF & main MIDI producing part:             %
 %                       4 staves for 4 voices                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-#(set-global-staff-size 14)
 
 \book {
   \include "../../../include/header.ily"
@@ -51,7 +52,7 @@
       \new Lyrics \lyricsto "bas" { \basLyrics }
     >> %end of StaffGroup
 
-    \layout { 
+    \layout {
     \context {
     \Score
        \remove "Timing_translator"
@@ -154,3 +155,73 @@
     \stafftovoice
   }
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                      the MIDI producing part: 	           %
+%    1 midi per each voice with the respective voice highlighted   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% sopran
+\book {
+  \bookOutputSuffix "sopran"
+  \score {
+    \unfoldRepeats
+    \new Staff <<
+      \commonVoice
+      \new Voice = "sop" { \highlightedVoice  \global \sopVoice }
+      \new Voice = "alt" { \global \altVoice }
+      \new Voice = "ten" { \global \tenVoice }
+      \new Voice = "bas" { \global \basVoice }
+    >>
+    \stafftovoice
+  }
+}
+
+% alt
+\book {
+  \bookOutputSuffix "alt"
+  \score {
+    \unfoldRepeats
+    \new Staff <<
+      \commonVoice
+      \new Voice = "sop" { \global \sopVoice }
+      \new Voice = "alt" { \highlightedVoice \global \altVoice }
+      \new Voice = "teni" { \global \tenVoice }
+      \new Voice = "bas" { \global \basVoice }
+    >>
+    \stafftovoice
+  }
+}
+
+% tenor
+\book {
+  \bookOutputSuffix "tenor"
+  \score {
+    \unfoldRepeats
+    \new Staff <<
+      \commonVoice
+      \new Voice = "sop" { \global \sopVoice }
+      \new Voice = "alt" { \global \altVoice }
+      \new Voice = "teni" { \highlightedVoice \global \tenVoice }
+      \new Voice = "bas" { \global \basVoice }
+    >>
+    \stafftovoice
+  }
+}
+
+% bass
+\book {
+  \bookOutputSuffix "bass"
+  \score {
+    \unfoldRepeats
+    \new Staff <<
+      \commonVoice
+      \new Voice = "sop" { \global \sopVoice }
+      \new Voice = "alt" { \global \altVoice }
+      \new Voice = "ten" { \global \tenVoice }
+      \new Voice = "bas" { \highlightedVoice \global \basVoice }
+    >>
+    \stafftovoice
+  }
+}
+
