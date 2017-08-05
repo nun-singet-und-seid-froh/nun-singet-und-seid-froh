@@ -9,7 +9,7 @@
 
 % the lyrics within the staves
 
-commonLyrics = \lyricmode {
+sopLyrics = \lyricmode {
   <<
     { \set stanza = "1." Wie soll ich dich emp -- fan -- gen und wie be -- gegn' ich dir? }
     \new Lyrics {
@@ -18,18 +18,48 @@ commonLyrics = \lyricmode {
     }
   >>
   O Je -- -- su, Je -- su, set -- ze mir selbst die Fac -- kel bei, da -- mit,
-  was Dich er -- göt -- ze mir kund und wis -- send sei!
-
+  was dich er -- göt -- ze mir kund und wis -- send sei!
+}
+altLyrics = \lyricmode {
+  <<
+    { \set stanza = "1." Wie soll ich dich emp -- fan -- gen und wie be -- gegn' ich dir? }
+    \new Lyrics {
+      \set associatedVoice = "soprani"
+      O al -- ler Welt ver -- lan -- gen, o mei -- ner See -- len Zier!
+    }
+  >>
+  O Je -- -- su, Je -- su, set -- ze mir selbst die Fac -- kel bei, da -- mit,
+  was dich er -- göt -- ze mir kund und wis -- send sei! __
 }
 
-sopLyrics = \commonLyrics
-altLyrics = \commonLyrics
-tenLyrics = \commonLyrics
-basLyrics = \commonLyrics
+tenLyrics = \lyricmode {
+  <<
+    { \set stanza = "1." Wie soll ich dich emp -- fan -- gen und wie be -- gegn' ich dir? }
+    \new Lyrics {
+      \set associatedVoice = "soprani"
+      O al -- ler Welt ver -- lan -- gen, o mei -- ner See -- len Zier!
+    }
+  >>
+  O Je -- -- su, Je -- su, set -- ze mir selbst die Fac -- kel bei, da -- mit,
+  was dich er -- göt -- ze mir kund und wis -- send sei! __
+}
+
+basLyrics = \lyricmode {
+  <<
+    { \set stanza = "1." Wie soll ich dich emp -- fan -- gen und wie be -- gegn' ich dir? }
+    \new Lyrics {
+      \set associatedVoice = "soprani"
+      O al -- ler Welt ver -- lan -- gen, o mei -- ner See -- len Zier!
+    }
+  >>
+  O Je -- -- su, Je -- su, set -- ze mir selbst die Fac -- kel bei, da -- mit,
+  was dich er -- göt -- ze mir kund und wis -- send sei! __
+}
 
 stanzas=
 
 \markup {
+  \abs-fontsize #11
   \vspace #2
   \hspace #-4
   \line {

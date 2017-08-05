@@ -13,6 +13,8 @@
 \include "lyrics.ily"            % the lyrics within the staves
 \include "output.ily"           % the paper and midi settings for this piece
 
+#(set-global-staff-size 18)
+
 % global information (identical for all pieces)
 \include "../../../include/version.ily"    % the lilypond version
 \include "../../../include/paper.ily"      % the layout information
@@ -25,7 +27,6 @@
 
 \book {
   \include "../../../include/header.ily"
-
   \score {
     %for PDF
     \new SemiChoirStaff<<

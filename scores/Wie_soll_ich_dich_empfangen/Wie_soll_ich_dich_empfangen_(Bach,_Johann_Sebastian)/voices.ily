@@ -12,6 +12,7 @@ global = {
   \key c \major
   \time 4/4 
   \partial 4
+  \autoBeamOff
 }
 
 sopVoice = {
@@ -22,7 +23,7 @@ sopVoice = {
           e4 
           a g f e
           d2 e4\fermata b'
-          c c b8(c16 d16) b4\noBreak
+          c c b8([ c16 d]) b4\noBreak
           a2.\once \override Staff.BarLine.allow-span-bar = ##t  \break
         }
       c4 
@@ -33,7 +34,7 @@ sopVoice = {
       b8(c) d4 c b
       a2 b4 \fermata e,
       f e d g8(f)
-      e2( e4) \fermata \bar "|." \once \override Staff.BarLine.allow-span-bar = ##t
+      e2. \fermata \bar "|." \once \override Staff.BarLine.allow-span-bar = ##t
     }
 } 
 
@@ -42,19 +43,19 @@ altVoice = {
     {
       \repeat volta 2
       {
-        e8( d) 
+        e8([ d]) 
         c([ d]) d( e) e[( d)] d( c)
-        c4( b8[ a]) b4 e
+        c4( b8[ a]) b4\fermata e
         e a a gis
         e2.
       }
-      a8 g 
-      f4 e8 d c4 f
-      f e8 d e4 e
-      f bes,8(a) a( g) a(d) cis2. d4
-      d g g8 fis g4
-      g(fis) g g
-      c,8 d c4 f, d'
+      a8[ g] 
+      f4 e8[ d] c4 f
+      f( e8[ d]) e4\fermata e
+      f bes,8([ a]) a([ g]) a([ d]) cis2.\fermata d4
+      d g g8[ fis] g4
+      g( fis) g\fermata g
+      c,8[ d] c4 f, d'
       d(c b) \fermata
     }
 }
@@ -66,9 +67,9 @@ tenVoice = {
       \repeat volta 2
       {
         gis4 
-        a b c8(d) g,4
-        a8(gis) a4 gis \fermata gis
-        a8 b c4 f e8 d
+        a b c8([ d]) g,4
+        a8([ gis] a4) gis \fermata gis
+        a8[ b] c4 f e8[ d]
         e2. 
       }
       e4
@@ -76,9 +77,9 @@ tenVoice = {
       a4(g8 f) g4 \fermata c
       c8([ d]) e4 d8([ cis]) d([gis,]) 
       a2. \fermata a4
-      g8 a b4 c8 d e4
-      e(d) d c\fermata
-      c8(b) b(a) a4 g8a
+      g8[ a] b4 c8[ d] e4
+      e(d) d\fermata c
+      c8([ b]) b([ a]) a4 g8[ a]
       b4(a gis) \fermata
     }
 }
@@ -89,19 +90,19 @@ basVoice = {
       \repeat volta 2
       {
         e4
-        f g a8 b c4
-        f,2 e4 e
-        a8[ g] f e d b e4
+        f g a8[ b] c4
+        f,2 e4\fermata e
+        a8[ g] f[ e] d[ b] e4
         a,2.
       }
       a'4 
-      d, e f8e d4
-      a8(b c4) c c
+      d, e f8[ e] d4
+      a8([ b] c4) c\fermata c
       f8([ e]) d([ cis]) d4 d
-      a2. fis'4
+      a2.\fermata fis'4
       g4. fis8 e4. d8
-      c(a d4) g, c8 b
-      a b c4 c8[ b] b a
-      gis4( a e')
+      c([ a] d4) g,\fermata c8[ b]
+      a[ b] c4 c8[ b] b[ a]
+      gis4( a e')\fermata
     }
 }
