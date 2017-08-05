@@ -62,7 +62,7 @@ sopVoice = <<
 %{07%}  cis( dis) e e( fis) dis
 %{08%}  e2 e4 fis2 e4
 %{09%}  fis2 e4 fis( e) d
-%{10%}  cis2 e4 fis2 e4
+%{10%}  cis2 e?4 fis2 e4
 %{11%}  fis2 e4 fis( e) d
 %{12%}  cis2 e4 a,2 a4
 %{13%}  d2 cis4 b2 e4
@@ -104,11 +104,11 @@ tenIVoice = <<
 %{03%}  e2 e4 d( cis) b
 %{04%}  cis2 e4 dis2 e4
 %{05%}  e( fis) e8([ dis]) cis4.( fis8) fis4
-%{06%}  e2 fis4 cis4.( dis8) e4
+%{06%}  e2 fis4 cis4.( dis8) e?4
 %{07%}  cis( fis) e8([ dis]) cis4.( fis8) fis4
 %{08%}  e2 e4 d2 e4
 %{09%}  cis( d) e d8([ cis] b4.) a8
-%{10%}  gis2 e'8([ cis]) a4( fis') g
+%{10%}  gis2 e'?8([ cis]) a4( fis') g
 %{11%}  fis4.( d8) e([ a]) a([ fis] g4.) d8
 %{12%}  a2 e'4 fis( a) e8([ cis])
 %{13%}  d4.( e8) e([ fis]) b,2 a4
@@ -131,7 +131,7 @@ tenIIVoice = <<
 %{07%}  a2 gis4 cis2 b4
 %{08%}  b2 cis4 d4.( c8) b4
 %{09%}  cis( b) a a( e) fis8([ d'])
-%{10%}  gis,2 cis2 c4 b
+%{10%}  gis,?2 cis2 c4 b
 %{11%}  cis?( d) cis c( b) bes
 %{12%}  a2 b4 a2 a4
 %{13%}  a4( gis) a8([ fis]) gis2 e'4
@@ -150,7 +150,7 @@ basVoice = <<
 %{03%}  a( b,) cis d4.( b8) e4
 %{04%}  a,2 a4 b2 e4
 %{05%}  a,4( fis') cis a'8([ gis a fis]) b4 
-%{06%}  e,2 d4 cis( fis) gis
+%{06%}  e,2 d?4 cis( fis) gis
 %{07%}  a4( fis) cis a2 b4
 %{08%}  e2 a4 d,( fis) g
 %{09%}  fis( b,) cis d( e) b
@@ -158,8 +158,8 @@ basVoice = <<
 %{11%}  ais,( b) cis dis( e) g
 %{12%}  a2 gis4 fis2 cis4
 %{13%}  b2 cis8([ dis]) e2 cis4
-%{14%}  d( gis,) ais b2 <<e4 e,4>>
-%{15%}  <<e'2 a,2>>  
+%{14%}  d( gis,) ais b2 <<\voiceOne e4  \new Voice { \voiceTwo e,4 }>> \oneVoice
+%{15%}  <<\voiceOne e'2 \new Voice { \voiceTwo a,2} >>  
     }
 >>
  
