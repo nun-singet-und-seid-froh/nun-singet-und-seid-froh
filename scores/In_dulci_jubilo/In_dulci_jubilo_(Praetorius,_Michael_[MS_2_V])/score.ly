@@ -32,7 +32,7 @@
         \new Staff <<
           \set Staff.instrumentName = \markup{ \center-column { 
             { \smallCaps { "Cantus" } }
-            { \italic \teeny "Sopran I" } } 
+            { \teeny "Sopran I" } } 
           }
           \new Voice = "sopI" \with { \consists "Ambitus_engraver" }  { \incipit \sopIincipit \global \sopIVoice }
         >>
@@ -41,7 +41,7 @@
         \new Staff <<
           \set Staff.instrumentName = \markup{ \center-column { 
             { \smallCaps { "Altus" } }
-            { \italic \teeny "Alt I" } } 
+            { \teeny "Alt I" } } 
           }
           \new Voice = "altI" \with { \consists "Ambitus_engraver" } { \incipit \altIincipit \global \altIVoice }
         >>
@@ -50,7 +50,7 @@
         \new Staff <<
           \set Staff.instrumentName =   \markup{ \center-column { 
             { \smallCaps { "Tenor" } }
-            { \italic \teeny "Tenor I" } } 
+            { \teeny "Tenor I" } } 
           }
           \new Voice = "tenI" \with { \consists "Ambitus_engraver" } { \incipit \tenIincipit \global  \clef "G_8" \tenIVoice }
         >>
@@ -59,7 +59,7 @@
         \new Staff <<
           \set Staff.instrumentName =  \markup{ \center-column { 
             { \smallCaps { "Bassus" } }
-            { \italic \teeny "Bass I" } } 
+            { \teeny "Bass I" } } 
           }
           \new Voice = "basI" \with { \consists "Ambitus_engraver" } { \incipit \basIincipit \global \clef bass \basIVoice }
         >>
@@ -71,7 +71,7 @@
           \set Staff.instrumentName = 
           \markup{ \center-column { 
             { \smallCaps { "Quinta Vox" } }
-            { \italic \teeny "Sopran II" } } 
+            { \teeny "Sopran II" } } 
           }
           
           \new Voice = "sopII" \with { \consists "Ambitus_engraver" } { \incipit \sopIIincipit \global \sopIIVoice }
@@ -81,7 +81,7 @@
         \new Staff <<
           \set Staff.instrumentName = \markup{ \center-column { 
             { \smallCaps { "Sexta Vox" } }
-            { \italic \teeny "Alt II" } } 
+            { \teeny "Alt II" } } 
           }
           \new Voice = "altII" \with { \consists "Ambitus_engraver" }  { \incipit \altIIincipit \global \altIIVoice }
         >>
@@ -90,7 +90,7 @@
         \new Staff <<
           \set Staff.instrumentName = \markup{ \center-column { 
             { \smallCaps { "Septima Vox" } }
-            { \italic \teeny "Tenor II" } } 
+            { \teeny "Tenor II" } } 
           }
           \new Voice = "tenII" \with { \consists "Ambitus_engraver" } { \incipit \tenIIincipit \global \clef "G_8" \tenIIVoice }
         >>
@@ -100,7 +100,7 @@
         \new Staff <<
           \set Staff.instrumentName = \markup{ \center-column { 
             { \smallCaps { "Octava Vox"} }
-            { \italic \teeny "Bass II" } } 
+            { \teeny "Bass II" } } 
           }
           \new Voice = "basII" \with { \consists "Ambitus_engraver" } { \incipit \basIIincipit \global \clef bass \basIIVoice }
         >>

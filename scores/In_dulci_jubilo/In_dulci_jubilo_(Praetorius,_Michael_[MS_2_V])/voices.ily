@@ -17,52 +17,114 @@ global = {
 }
 
 % the incipites
+CDrei = \markup \concat {
+	\musicglyph #"timesig.mensural44"
+	\lower #0.5
+	\override #'(font-name . "LucidaBlackletter") { "3 " }
+}
+
+IncipitLayout = {
+	\override NoteHead.style = #'neomensural
+	\override Rest.style = #'neomensural
+	\override NoteHead.font-size = #2.0
+	\override Stem.thickness = #3.0
+	\override Staff.KeySignature.extra-offset = #'(-0.75 . 0)
+	\override Staff.Clef.extra-offset = #'(0.75 . 0)
+	\override Staff.TimeSignature.extra-offset = #'(-0.75 . 0)
+	\override Staff.TimeSignature.font-size = #1.125
+	\override Staff.TimeSignature.X-extent = #'(0 . 1.5)
+	\override Score.SpacingSpanner.uniform-stretching = ##t
+	\override Score.SpacingSpanner.strict-note-spacing = ##t
+	\set Score.proportionalNotationDuration = #(ly:make-moment 1/1)
+}
+
 sopIincipit = {
-  \clef "mensural-c1"
-  \key f \major
-  \time 3/2
+    \IncipitLayout
+    \clef "petrucci-c1"
+    \key f \major
+    \time 4/4
+    \override Staff.TimeSignature.stencil = #ly:text-interface::print
+    \override Staff.TimeSignature.text = #(markup CDrei)
+    f'1 s1 s1 s1 s1 s1 s1 s1 s1
 }
 
 altIincipit = {
-  \clef "mensural-c2"
-  \key f \major
-  \time 3/2
+	\IncipitLayout
+	\clef "petrucci-c3"
+	\key f \major
+	\time 4/4
+	\override Staff.TimeSignature.stencil = #ly:text-interface::print
+	\override Staff.TimeSignature.text = #(markup CDrei)
+	r\longa*1/4 r\breve*1/2
+	f'1 s1 s1 s1 s1 s1 s1
 }
 
 tenIincipit = {
-  \clef "mensural-c4"
-  \key f \major
-  \time 3/2
+	\IncipitLayout
+	\clef "petrucci-c4"
+	\key f \major
+	\time 4/4
+	\override Staff.TimeSignature.stencil = #ly:text-interface::print
+	\override Staff.TimeSignature.text = #(markup CDrei)
+	r\longa*1/4 r\longa*1/4 c'\longa*1/4\rest c'\longa*1/4\rest r\longa*1/4
+	c'1 s1 s1 s1
 }
 
 basIincipit = {
-  \clef "mensural-f"
-  \key f \major
-  \time 3/2
+	\IncipitLayout
+	\override Staff.Clef.font-size = #1.5 % only for mensural.f clef
+	\clef "mensural-f"
+	\key f \major
+	\time 4/4
+	\override Staff.TimeSignature.stencil = #ly:text-interface::print
+	\override Staff.TimeSignature.text = #(markup CDrei)
+	r\longa*1/4 r\longa*1/4 f\longa*1/4\rest f\longa*1/4\rest r\longa*1/4
+	f,1 s1 s1 s1
 }
 
 sopIIincipit = {
-  \clef "mensural-c1"
-  \key f \major
-  \time 3/2
+	\IncipitLayout
+	\clef "petrucci-c1"
+	\key f \major
+	\time 4/4
+	\override Staff.TimeSignature.stencil = #ly:text-interface::print
+	\override Staff.TimeSignature.text = #(markup CDrei)
+	e'\breve*1/2\rest
+	f'1 s1 s1 s1 s1 s1 s1 s1
 }
 
 altIIincipit = {
-  \clef "mensural-c2"
-  \key f \major
-  \time 3/2
+	\IncipitLayout
+	\clef "petrucci-c3"
+	\key f \major
+	\time 4/4
+	\override Staff.TimeSignature.stencil = #ly:text-interface::print
+	\override Staff.TimeSignature.text = #(markup CDrei)
+	r\longa*1/4 r\longa*1/4 e'\longa*1/4\rest
+	f'1 s1 s1 s1 s1 s1
 }
 
 tenIIincipit = {
-  \clef "mensural-c4"
-  \key f \major
-  \time 3/2
+	\IncipitLayout
+	\clef "petrucci-c4"
+	\key f \major
+	\time 4/4
+	\override Staff.TimeSignature.stencil = #ly:text-interface::print
+	\override Staff.TimeSignature.text = #(markup CDrei)
+	r\longa*1/4 r\longa*1/4 c'\longa*1/4\rest
+	f1 s1 s1 s1 s1 s1
 }
 
 basIIincipit = {
-  \clef "mensural-f"
-  \key f \major
-  \time 3/2
+	\IncipitLayout
+	\override Staff.Clef.font-size = #1.5 % only for mensural.f clef
+	\clef "mensural-f"
+	\key f \major
+	\time 4/4
+	\override Staff.TimeSignature.stencil = #ly:text-interface::print
+	\override Staff.TimeSignature.text = #(markup CDrei)
+	r\longa*1/4 r\longa*1/4 f\longa*1/4\rest f\longa*1/4\rest r\longa*1/4 r\longa*1/4 b,\breve*1/2\rest
+	c1 s1
 }
 
 % common marks

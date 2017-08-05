@@ -26,9 +26,9 @@ arrangerLifedata        = "" % e.g. "1685-1750"
 arrangementDate         = ""
 
 % poet is the one who wrote (the main part of) the lyrics (also see translator)
-poetChristianName       = "" % e.g. "Paul"
-poetSurName             = "" % e.g. "Gerhardt"
-poetLifedata            = "" % e.g. "1607-1676"
+poetChristianName       = "Heinrich" % e.g. "Paul"
+poetSurName             = "Seuse" % e.g. "Gerhardt"
+poetLifedata            = "1295-1366" % e.g. "1607-1676"
 textDate                = ""
 
 % if the lyrics are a translation 
@@ -41,9 +41,9 @@ opus                    = "Musae Sioniae, Bd. 2"
 noInOpus                = "5"
 titleInOpus             = ""
 
-lastEdited              = "" % e.g. "19. September 2015"
+lastEdited              = "5. August 2017" % e.g. "19. September 2015"
 vers                    = "0.0.0" % write "0.0.0" for the first draft
-noInNsusf               = "17" % write "X" as long piece is not ready to be published
+noInNsusf               = "13" % write "X" as long piece is not ready to be published
 
 % other meta-data, used for the MediaWiki-output
 epoque                  = "" 
