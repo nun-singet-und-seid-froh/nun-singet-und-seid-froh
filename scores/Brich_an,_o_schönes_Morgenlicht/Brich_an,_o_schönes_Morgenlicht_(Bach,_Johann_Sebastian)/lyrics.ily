@@ -1,6 +1,6 @@
 % based on templates/SATB/two-systems/modern/lyrix.ily
 
-commonLyrics = \lyricmode {
+sopLyrics = \lyricmode {
   <<
     {
       \set stanza = "1. "
@@ -19,6 +19,10 @@ commonLyrics = \lyricmode {
   da -- zu den Sa -- tan zwin -- gen
   und letzt -- lich Frie -- de brin -- gen!
 }
+
+altLyrics = \sopLyrics
+tenLyrics = \sopLyrics
+basLyrics = \sopLyrics
 
 stanzas =
 \markup {

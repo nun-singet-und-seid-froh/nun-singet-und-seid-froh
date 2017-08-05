@@ -19,19 +19,19 @@ melodyDate	        = ""
 
 % arranger is the one who composed the voices
 arrangerChristianName   = "Johann Sebastian" % e.g. "Johann Sebastian"
-arrangerSurname	        = "Bach" % e.g. "Bach"
+arrangerSurName	        = "Bach" % e.g. "Bach"
 arrangerLifedata        = "1685-1750" % e.g. "1685-1750"
 arrangementDate         = "1734"
 
 % poet is the one who wrote (the main part of) the lyrics (also see translator)
 poetChristianName       = "Johann" % e.g. "Paul"
-poetSurname             = "Rist" % e.g. "Gerhardt"
+poetSurName             = "Rist" % e.g. "Gerhardt"
 poetLifedata            = "1607-1667" % e.g. "1607-1676"
 textDate                = "1641"
 
 % if the lyrics are a translation 
 translatorChristianName = "" % e.g. "Martin"
-translatorSurname       = "" % e.g. "Luther"
+translatorSurName       = "" % e.g. "Luther"
 translatorLifedata      = "" % e.g. "1483-1546"
 translationDate         = ""
 

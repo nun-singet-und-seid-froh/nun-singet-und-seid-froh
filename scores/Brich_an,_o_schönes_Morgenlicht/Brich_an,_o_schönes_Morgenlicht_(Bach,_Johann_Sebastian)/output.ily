@@ -1,7 +1,7 @@
 \paper{
-  % system-count = 3
+   system-count = 3
   % systems-per-page = 3
-  % page-count = 1
+   page-count = 2
 }
 
 \midi {

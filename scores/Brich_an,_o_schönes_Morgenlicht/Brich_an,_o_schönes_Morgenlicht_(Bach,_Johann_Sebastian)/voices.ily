@@ -4,7 +4,6 @@
 global = {
   \override Staff.BarLine.allow-span-bar = ##f
   \autoBeamOff
-  
   \key g \major
   \time 4/4 
   \partial 4 
@@ -41,7 +40,7 @@ sopVoice = <<
 %{13%} g b, c b
 %{14%} a2 a4\fermata d
 %{15%} e d c b8[ c]
-%{16%} a2 g4\fermata\bar"|."
+%{16%} a2 g4\fermata\bar"|."\noPageBreak
        \once \override Staff.BarLine.allow-span-bar = ##t
     }
 >>
@@ -53,19 +52,22 @@ altVoice = <<
       \repeat volta 2 {
 %{00%}	  d4
 %{01/05%} e fis d8[ e] fis4
-%{02/06%} e8[ fis] g4 fis4%{\fermata%} fis
+%{02/06%} e8[ fis] g4 fis4\fermata fis
 %{03/07%} e d8[ e] fis4 g 
 %{04/08%} g( fis) d
+       \once \override Staff.BarLine.allow-span-bar = ##t
+
       }
        fis8[ g]
 %{09%} a4. gis8 a([ gis]) a4
-%{10%} a gis4 e%{\fermata%} e8[ dis]
+%{10%} a gis4 e\fermata e8[ dis]
 %{11%} e4 e e8([ fis]) g([ fis])
-%{12%} fis[ g] a4 g4%{\fermata%} a
+%{12%} fis([ g]) a4 g4\fermata a
 %{13%} g8[ a] b4 b8[ a] a[ g]
-%{14%} g2 fis4%{\fermata%} g8[ fis]
+%{14%} g2 fis4\fermata g8[ fis]
 %{15%} e4 fis g8[ a] d,4
-%{16%} e( d) d%{\fermata%}
+%{16%} e( d) d\fermata
+       \once \override Staff.BarLine.allow-span-bar = ##t
     }
 >>
 
@@ -79,6 +81,7 @@ tenVoice = <<
 %{02/06%} a a a\fermata b8[ a]
 %{03/07%} g[ a] b[ c] d4 d
 %{04/08%} d4.( c8) b4
+       \once \override Staff.BarLine.allow-span-bar = ##t
       }
        d8[ e]
 %{09%} fis[ e] d4 e fis
@@ -89,6 +92,7 @@ tenVoice = <<
 %{14%} e8([ d e cis]) d4\fermata d
 %{15%} d8([ c?]) c([ b]) b([ a]) g4
 %{16%} g8([ fis16 e] fis4) b4\fermata
+       \once \override Staff.BarLine.allow-span-bar = ##t
     }
 >>    
 
@@ -99,19 +103,21 @@ basVoice = <<
        \repeat volta 2 {
 %{00%}	  g8[ fis]
 %{01/05%} e4 d g fis8[ g]
-%{02/06%} a4 a, d%{\fermata%} dis
+%{02/06%} a4 a, d\fermata dis
 %{03/07%} e8[ fis] g[ c,] c'[ b] a[ g] 
 %{04/08%} d'4( d,) g
+       \once \override Staff.BarLine.allow-span-bar = ##t
       }
        d4 
 %{09%} d'8[ c] b4 a dis,
-%{10%} e e a,%{\fermata%} e'8[ fis]
+%{10%} e e a,\fermata e'8[ fis]
 %{11%} g4 gis a ais
-%{12%} b b, e%{\fermata%} d'8[ c]
+%{12%} b b, e\fermata d'8[ c]
 %{13%} b[ a] g[ fis] e[ fis] g[ e]
-%{14%} cis[ b cis a] d4%{\fermata%} b 
+%{14%} cis[ b cis a] d4\fermata b 
 %{15%} c? d e8[ fis] g4
-%{16%} c,( d) g,%{\fermata%}
+%{16%} c,( d) g,\fermata
+       \once \override Staff.BarLine.allow-span-bar = ##t
     }
 >>
  
