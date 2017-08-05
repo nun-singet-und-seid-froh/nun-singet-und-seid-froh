@@ -26,7 +26,7 @@ translatorSurName       = "" % e.g. "Luther"
 translatorLifedata      = "" % e.g. "1483-1546"
 translationDate         = ""
 
-opus              = "Sechs Sprüche für achtstimmigen Chor (MWV SD 42)"
+opus              = "Sechs Sprüche (MWV B 42)"
 noInOpus          = "1"
 titleInOpus       = "Weihnachten"
 
