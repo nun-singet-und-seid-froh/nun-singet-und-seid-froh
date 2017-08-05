@@ -1,6 +1,6 @@
 % based on templates/SATB/two-systems/modern/lyrix.ily
 
-lyrix = \lyricmode {
+commonLyrics = \lyricmode {
   <<
     {
       \set stanza = "1. "
