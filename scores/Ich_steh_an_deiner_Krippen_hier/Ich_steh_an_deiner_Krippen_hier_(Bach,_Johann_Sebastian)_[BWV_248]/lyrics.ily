@@ -32,7 +32,7 @@ altLyrics = \lyricmode {
     {
       \set stanza = "1. "
       Ich steh an dei -- ner Krip -- pen hier,
-      o Je -- su -- lein, mein Le -- ben;
+      o __ Je -- su -- lein, mein Le -- ben;
     }
     \new Lyrics {
     \set associatedVoice = "alt"

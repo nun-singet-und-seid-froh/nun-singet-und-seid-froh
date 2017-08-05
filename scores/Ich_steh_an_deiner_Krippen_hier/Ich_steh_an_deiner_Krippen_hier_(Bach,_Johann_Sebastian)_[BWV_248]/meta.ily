@@ -27,7 +27,7 @@ arrangementDate         = "1734"
 poetChristianName       = "Paul" % e.g. "Paul"
 poetSurName             = "Gerhardt" % e.g. "Gerhardt"
 poetLifedata            = "1607-1676" % e.g. "1607-1676"
-textDate                = ""
+textDate                = "1653"
 
 % if the lyrics are a translation 
 translatorChristianName = "" % e.g. "Martin"
@@ -40,7 +40,7 @@ noInOpus                = "59"
 titleInOpus             = ""
 
 lastEdited              = "5. August 2017" % e.g. "19. September 2015"
-vers                    = "0.0.0" % write "0.0.0" for the first draft
-noInNsusf               = "X" % write "X" as long piece is not ready to be published
+vers                    = "1.0.0" % write "0.0.0" for the first draft
+noInNsusf               = "15" % write "X" as long piece is not ready to be published
 
 instrumentation         = "SATB" % "SATB", "SSAATTBB", etc.
