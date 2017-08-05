@@ -42,7 +42,7 @@ noInOpus                = "5"
 titleInOpus             = ""
 
 lastEdited              = "5. August 2017" % e.g. "19. September 2015"
-vers                    = "0.0.0" % write "0.0.0" for the first draft
+vers                    = "1.0.0" % write "0.0.0" for the first draft
 noInNsusf               = "13" % write "X" as long piece is not ready to be published
 
 % other meta-data, used for the MediaWiki-output
