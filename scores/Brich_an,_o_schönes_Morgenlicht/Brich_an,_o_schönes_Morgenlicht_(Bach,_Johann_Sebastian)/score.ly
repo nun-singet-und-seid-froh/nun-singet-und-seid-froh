@@ -67,8 +67,9 @@
 
   \score {
     %for MIDI
+    \unfoldRepeats
     \new Staff <<
-      \backgroundVoice
+      \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "ten" { \global \tenVoice }
@@ -79,9 +80,8 @@
 
 } %end of book
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                      the MIDI producing part: 	           %
+%                      the MIDI producing part: 	               %
 %    1 midi per each voice with the respective voice highlighted   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -91,7 +91,8 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \backgroundVoice
+      \commonVoice
+>>>>>>> a1be532abb2fce8e8b10ffb23e2f0b6f8a1666e0
       \new Voice = "sop" { \highlightedVoice  \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "ten" { \global \tenVoice }
@@ -107,7 +108,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \backgroundVoice
+      \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \highlightedVoice \global \altVoice }
       \new Voice = "ten" { \global \tenVoice }
@@ -123,7 +124,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \backgroundVoice
+      \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "ten" { \highlightedVoice \global \tenVoice }
@@ -139,7 +140,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \backgroundVoice
+      \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "ten" { \global \tenVoice }

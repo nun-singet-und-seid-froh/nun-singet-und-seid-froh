@@ -38,7 +38,6 @@ translationDate         = ""
 opus                    = "Weihnachtsoratorium (BWV 248)" 
 noInOpus                = "12"
 titleInOpus             = ""
-
 lastEdited              = "5. August 2017" % e.g. "19. September 2015"
 vers                    = "1.0.0" % write "0.0.0" for the first draft
 noInNsusf               = "17" % write "X" as long piece is not ready to be published
