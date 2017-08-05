@@ -7,4 +7,7 @@ all: $(SUBDIRS)
 $(SUBDIRS):
 	cd "$@" && $(MAKE)
 
-.PHONY: all $(SUBDIRS)
+clean:
+	$(foreach dir,$(SUBDIRS),$(MAKE) -C "$(dir)" clean;)
+
+.PHONY: all clean $(SUBDIRS)

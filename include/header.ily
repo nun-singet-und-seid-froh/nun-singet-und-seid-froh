@@ -42,8 +42,8 @@ stencil."
      (define subtitle (string-append subtitle ": »" titleInOpus "«"))
      #f
      )
-#(if (> (string-length melodyDate) 0)
-     (define subtitle (string-append subtitle " (" melodyDate ")"))
+#(if (> (string-length arrangementDate) 0)
+     (define subtitle (string-append subtitle " (" arrangementDate ")"))
      #f
      )
 
@@ -95,11 +95,12 @@ stencil."
   copyright = \markup {
     \column {
       \center-align {
-        \abs-fontsize #20 { \italic \with-url  #"http://www.nun-singet-und-seid-froh.info" { "www.nun-singet-und-seid-froh.info" } }
-        \vspace #0.5
+          
+        \epsfile #X #30 #"../../../include/logo.eps"          
+        \vspace #2
+        \abs-fontsize #20 { \with-url  #"http://www.nun-singet-und-seid-froh.info" { "www.nun-singet-und-seid-froh.info" } }
         \line { \abs-fontsize #20 { "– Nr. " \noInNsusf " –"} }
-        \vspace #7
-
+        \vspace #2
       }
     }
   }
@@ -115,7 +116,7 @@ stencil."
 
           \fill-line {
             \line { #(string-append "LilyPond " (lilypond-version)) }
-            \line { \italic \with-url  #"http://www.nun-singet-und-seid-froh.info" { "www.nun-singet-und-seid-froh.info" } }
+            \line { \with-url  #"http://www.nun-singet-und-seid-froh.info" { "www.nun-singet-und-seid-froh.info" } }
             \line { "Revision Nr. " \vers"| " \lastEdited }
           }
         }
@@ -132,12 +133,14 @@ stencil."
       \column {
         \center-align {
           \vspace #13
-          \line { \abs-fontsize #35 { \caps { \arrangerChristianName " " \arrangerSurName } } }
+          \line { \abs-fontsize #35 {  \override #'(font-name . "EBGaramondSC") { \arrangerChristianName " " \arrangerSurName } } }
           \vspace #2
-          \line { \abs-fontsize #55 \my-wordwrap-field #CENTER #'header:title }
+          \line { \abs-fontsize #55 { \my-wordwrap-field #CENTER #'header:title } }
           \vspace #5
           \line { \abs-fontsize #20 \instrumentation }
-          \vspace #10
+          \vspace #1
+          
+
         }
       }
     }
@@ -149,7 +152,7 @@ stencil."
   \line{
     \column {
       \fill-line {
-        \override #'(font-name . "EBGaramond") \center-align \abs-fontsize #25 \caps
+        \override #'(font-name . "EBGaramondSC") \center-align \abs-fontsize #25
         \title
       }
       \fill-line {
@@ -161,14 +164,14 @@ stencil."
       \fill-line {
         \line {
           \column{
-            { { \override #'(font-name . "EBGaramond") \abs-fontsize #12 \caps \poetBlock } }
-            { { \override #'(font-name . "EBGaramond") \abs-fontsize #12 \caps \translatorBlock } }
+            { { \override #'(font-name . "EBGaramondSC") \abs-fontsize #12 \poetBlock } }
+            { { \override #'(font-name . "EBGaramondSC") \abs-fontsize #12 \translatorBlock } }
           }
         }
         \line {
           \column{
-            { { \override #'(font-name . "EBGaramond") \abs-fontsize #12 \caps \arrangerBlock } }
-            { { \override #'(font-name . "EBGaramond") \abs-fontsize #12 \caps \composerBlock } }
+            { { \override #'(font-name . "EBGaramondSC") \abs-fontsize #12 \arrangerBlock } }
+            { { \override #'(font-name . "EBGaramondSC") \abs-fontsize #12 \composerBlock } }
           }
         }
       }

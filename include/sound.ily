@@ -20,6 +20,14 @@ commonVoice = {
   \set Staff.midiInstrument = #"recorder"
 }
 
+backgroundVoice = {
+  \set Staff.midiInstrument = #"recorder"
+  \set Staff.midiMinimumVolume = #0.0
+  \set Staff.midiMaximumVolume = #0.3
+}
+
 highlightedVoice= {
   \set midiInstrument = #"trumpet"
+  \set Staff.midiMinimumVolume = #0.0
+  \set Staff.midiMaximumVolume = #1.0
 }
