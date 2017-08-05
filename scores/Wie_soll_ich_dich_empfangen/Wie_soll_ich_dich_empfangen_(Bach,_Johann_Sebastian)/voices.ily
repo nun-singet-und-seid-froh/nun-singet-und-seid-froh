@@ -23,7 +23,7 @@ sopVoice = {
           a g f e
           d2 e4\fermata b'
           c c b8(c16 d16) b4\noBreak
-          a2.\once \override Staff.BarLine.allow-span-bar = ##t 
+          a2.\once \override Staff.BarLine.allow-span-bar = ##t  \break
         }
       c4 
       b8(a) g4 a b  
@@ -43,8 +43,8 @@ altVoice = {
       \repeat volta 2
       {
         e8( d) 
-        c[( d)] d( e) e[( d)] d( c)
-        c4 b8 a b4 e
+        c([ d]) d( e) e[( d)] d( c)
+        c4( b8[ a]) b4 e
         e a a gis
         e2.
       }
@@ -72,9 +72,9 @@ tenVoice = {
         e2. 
       }
       e4
-      [d8 c] b4 [a8(g)] f(g)
+      d8[ c] b4 a8([g]) f([g ])
       a4(g8 f) g4 \fermata c
-      c8(d) e4 [d8(cis)] d(gis,) 
+      c8([ d]) e4 d8([ cis]) d([gis,]) 
       a2. \fermata a4
       g8 a b4 c8 d e4
       e(d) d c\fermata
@@ -91,17 +91,17 @@ basVoice = {
         e4
         f g a8 b c4
         f,2 e4 e
-        [a8 g] f e d b e4
+        a8[ g] f e d b e4
         a,2.
       }
       a'4 
       d, e f8e d4
       a8(b c4) c c
-      [f8(e)] d(cis) d4 d
+      f8([ e]) d([ cis]) d4 d
       a2. fis'4
       g4. fis8 e4. d8
       c(a d4) g, c8 b
-      a b c4 [c8 b] b a
+      a b c4 c8[ b] b a
       gis4( a e')
     }
 }

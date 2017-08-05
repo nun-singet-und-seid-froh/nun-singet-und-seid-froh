@@ -5,7 +5,7 @@
 %               please contact us at mail@nun-singet-und-seid-froh.info                 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% based ontemplates/SATB/(SA)(TB)/modern/score.ly
+% based ontemplates/SATB/SATB/modern/score.ly
 
 % local information (for this particular piece)
 \include "meta.ily"             % metadata for this piece
@@ -20,49 +20,48 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                  the PDF & main MIDI producing part:             %
-% 	              2 staves with 2 voices each		   %
+%                       4 staves for 4 voices                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \book {
-  \include "../../../include/header.ily"      % the header and tagline information
+  \include "../../../include/header.ily"
 
   \score {
     %for PDF
-    \new SemiChoirStaff <<
-      \new Staff = "women" <<
-        \set Staff.instrumentName = \markup { \center-column { Sopran \line { Alt } } }
-        \new Voice = "sop" \with { \consists "Ambitus_engraver" }
-        { \voiceOne \global \sopVoice }
-        \new Voice = "alt"  \with { \consists "Ambitus_engraver"}
-        {
-          \override Ambitus.X-offset = #2.0
-          \voiceTwo \global \altVoice
-        }
+    \new SemiChoirStaff<<
+      \new Staff \with { \consists "Ambitus_engraver" }
+      <<
+        \set Staff.instrumentName = "Sopran"
+        \new Voice = "sop" { \global \sopVoice }
       >>
-      \new Lyrics \with {
-        \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #2
-        \override VerticalAxisGroup.nonstaff-unrelatedstaff-spacing.padding = #2
-      }
-      \lyricsto "sop"{\commonLyrics}
+      \new Lyrics \lyricsto "sop" { \sopLyrics }
 
-      \new Staff = "men" <<
-        \set Staff.instrumentName = \markup { \center-column { Tenor \line { Bass } } }
-        \new Voice = "ten" \with { \consists "Ambitus_engraver" }
-        { \voiceOne \global \clef bass \tenVoice }
-
-        \new Voice = "bas" \with { \consists "Ambitus_engraver"}
-        {
-          \override Ambitus.X-offset = #2.0
-          \voiceTwo \basVoice
-        }
+      \new Staff \with { \consists "Ambitus_engraver" }
+      <<
+        \set Staff.instrumentName = "Alt"
+        \new Voice = "alt" { \global \altVoice }
       >>
+      \new Lyrics \lyricsto "alt" { \altLyrics }
+
+      \new Staff \with { \consists "Ambitus_engraver" }
+      <<
+        \set Staff.instrumentName = "Tenor"
+        \new Voice = "ten" { \clef "G_8" \global \tenVoice }
+      >>
+      \new Lyrics \lyricsto "ten" { \tenLyrics }
+
+      \new Staff \with { \consists "Ambitus_engraver" }
+      <<
+        \set Staff.instrumentName = "Bass"
+        \new Voice = "bas" { \clef bass \global \basVoice }
+      >>
+      \new Lyrics \lyricsto "bas" { \basLyrics }
     >> %end of StaffGroup
-    \layout { }
 
+    \layout { }
   } %end of score (PDF)
 
   \stanzas
-  \stanzastwo
 
   \score {
     %for MIDI
@@ -75,9 +74,10 @@
       \new Voice = "bas" { \global \basVoice }
     >>
     \stafftovoice
-    \midi { }
   } %end of score (MIDI)
+
 } %end of book
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                      the MIDI producing part: 	           %
