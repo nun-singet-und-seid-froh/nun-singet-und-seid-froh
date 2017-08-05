@@ -92,7 +92,6 @@
     \unfoldRepeats
     \new Staff <<
       \commonVoice
->>>>>>> a1be532abb2fce8e8b10ffb23e2f0b6f8a1666e0
       \new Voice = "sop" { \highlightedVoice  \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "ten" { \global \tenVoice }
