@@ -39,14 +39,13 @@ opus                    = "Zwölf deutsche geistliche Gesänge (WoO VI/13)"
 noInOpus                = "1"
 titleInOpus             = "Adventlied"
 
-lastEdited              = "17. Februar 2016" % e.g. "19. September 2015"
+lastEdited              = "5. August 2017" % e.g. "19. September 2015"
 vers                    = "0.0.0" % write "0.0.0" for the first draft
-noInNsusf               = "X" % write "X" as long piece is not ready to be published
+noInNsusf               = "14" % write "X" as long piece is not ready to be published
 
 % other meta-data, used for the MediaWiki-output
 epoque                  = "Romantik" 
 language                = "deutsch" 
 instrumentation         = "SATTB" % "SATB", "SSAATTBB", etc.
 difficulty              = "mittelschwer" % "sehr leicht", "leicht", "mittelschwer", "schwer", "sehr schwer"
-form                    = "Strophenlied" % "Motette", "Strophenlied", "Durchkomponiertes Lied"
-root                    = "Machet die Tore weit"
+

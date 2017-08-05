@@ -18,6 +18,7 @@ global = {
 
 % articulation, dynamics, fermata and breathing marks
 sopArt = { \override Hairpin.minimum-length = #5
+        \tempo "Con moto."
 %{00%}  s4\f\< s4 s2
 %{01%}  s2\! s2 s4 s4\>
 %{02%}  <<{s8 s4.\!} s2\fermata>> s4\ff\< s2 s4\!
