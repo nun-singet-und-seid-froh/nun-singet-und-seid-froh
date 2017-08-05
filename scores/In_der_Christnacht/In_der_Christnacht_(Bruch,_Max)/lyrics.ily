@@ -3,7 +3,7 @@
 % the lyrics within the staves
 
 sopLyrics = \lyricmode {
-      \set stanza = "1. "
+      \set stanza = "1."
       Dies ist die Nacht, da mir er -- schie -- nen
       des gro -- ßen Got -- tes Freund -- lich -- keit!
       Das Kind, dem al -- le Eng -- gel die -- nen __
@@ -14,7 +14,7 @@ sopLyrics = \lyricmode {
       weicht __ hun -- dert -- tau -- send Son -- nen nicht!
 }
 soptwoLyrics = \lyricmode {
-      \set stanza = "2. "
+      \set stanza = "2."
       Lass dich er -- leuch -- ten, mei -- ne See -- le,
       ver -- säu -- me nicht den Gna -- den -- schein!
       Der Glanz in die -- ser klei -- nen Höh -- le __
@@ -26,7 +26,7 @@ soptwoLyrics = \lyricmode {
 }
 
 altLyrics = \lyricmode {
-      \set stanza = "1. "
+      \set stanza = "1."
       Dies ist die Nacht, die Nacht, da mir er -- schie -- nen
       des gro -- ßen Got -- tes Freund -- lich -- keit!
       Das Kind, dem al -- le En -- gel die -- nen
@@ -38,7 +38,7 @@ altLyrics = \lyricmode {
 }
 
 alttwoLyrics = \lyricmode {
-      \set stanza = "2. "
+      \set stanza = "2."
       Lass dich er -- leuch -- ten, 
       er -- leuch -- ten, mei -- ne See -- le,
       ver -- säu -- me nicht den Gna -- den -- schein!
@@ -51,7 +51,7 @@ alttwoLyrics = \lyricmode {
 }
 
 tenLyrics = \lyricmode {
-      \set stanza = "1. "
+      \set stanza = "1."
       Dies ist die Nacht, die __ Nacht, da mir er -- schie -- nen
       des gro -- ßen Got -- tes Freund -- lich -- keit!
       Das Kind, dem En -- gel die -- nen
@@ -63,7 +63,7 @@ tenLyrics = \lyricmode {
 }
 
 tentwoLyrics = \lyricmode {
-      \set stanza = "2. "
+      \set stanza = "2."
       Lass dich er -- leuch -- ten, 
       er -- leuch -- ten, mei -- ne See -- le,
       ver -- säu -- me nicht den Gna -- den -- schein!
@@ -77,7 +77,7 @@ tentwoLyrics = \lyricmode {
 
 
 basLyrics = \lyricmode {
-     \set stanza = "1. "
+     \set stanza = "1."
       Dies ist die Nacht, da mir __ er -- schie -- nen
       des gro -- ßen Got -- tes Freund -- lich -- keit!
       Das Kind, dem  al -- le __ En -- gel __ die -- nen
@@ -89,7 +89,7 @@ basLyrics = \lyricmode {
 }
 
 bastwoLyrics = \lyricmode {
-      \set stanza = "2. "
+      \set stanza = "2."
       Lass dich er -- leuch -- ten, mei -- ne See -- le,
       ver -- säu -- me nicht den Gna -- den -- schein!
       Der Glanz in __ die -- ser klei -- nen Höh -- le

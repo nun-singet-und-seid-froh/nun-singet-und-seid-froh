@@ -9,54 +9,39 @@
 
 % common settings of all voices
 global = {
-  \key as \major
-  \time 3/4
+  \key f \major
+  \time 3/2
   \partial 4
   \dynamicUp
   \autoBeamOff
   \override DynamicLineSpanner.staff-padding = #3
 }
 
-%incipites
+% the incipites
 
 sopIncipit = {
   \clef "mensural-c1"
   \key f \major
   \time 3/2
-  g'\breve g'1
 }
 
 altIncipit = {
   \clef "mensural-c2"
   \key f \major
   \time 3/2
-  d'\breve d'1
 }
 
 tenIncipit = {
   \clef "mensural-c4"
   \key f \major
   \time 3/2
-  bes\breve bes1
 }
 
 basIncipit = {
   \clef "mensural-f"
   \key f \major
   \time 3/2
-  g\breve g1
 }
-
-% articulation, dynamics, fermata and breathing marks
-sopArt = {
-
-}
-
-altArt = \sopArt
-
-tenArt = \sopArt
-
-basArt = \sopArt
 
 
 % the tunes
@@ -64,8 +49,6 @@ sopVoice = <<
   \sopArt
   \relative c'
   {
-    \tempo "Andante."
-    %{00%}
   }
 >>
 
