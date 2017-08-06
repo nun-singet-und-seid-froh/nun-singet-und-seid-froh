@@ -67,7 +67,7 @@
     }
   }
 
-  system-separator-markup = \slashSeparator
+  %system-separator-markup = \slashSeparator
   #(define fonts
      (make-pango-font-tree "EBGaramond"
        "Nimbus Sans"

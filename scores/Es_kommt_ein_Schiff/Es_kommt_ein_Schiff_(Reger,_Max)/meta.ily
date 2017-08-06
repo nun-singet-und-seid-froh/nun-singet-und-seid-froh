@@ -3,20 +3,26 @@
 % the meta-data printed in the sheet
 title             = "Es kommt ein Schiff, geladen"
 
-composerPrename	= "" % e.g. "Johann Sebastian"
-composerSurname	= "" % e.g. "Bach"
+composerChristianName	= "" % e.g. "Johann Sebastian"
+composerSurName	= "" % e.g. "Bach"
 composerLifedata = "" % e.g. "1685-1750"
 compositionDate	= ""
 
-arrangerPrename	= "Max" % e.g. "Johann Sebastian"
-arrangerSurname	= "Reger" % e.g. "Bach"
+arrangerChristianName	= "Max" % e.g. "Johann Sebastian"
+arrangerSurName	= "Reger" % e.g. "Bach"
 arrangerLifedata = "1873-1916" % e.g. "1685-1750"
-melodyDate	= "1899"
+arrangementDate	= "1899"
 
-poetPrename	= "" % e.g. "Paul"
-poetSurname	= "" % e.g. "Gerhardt"
+poetChristianName	= "" % e.g. "Paul"
+poetSurName	= "" % e.g. "Gerhardt"
 poetLifedata     = "" % e.g. "1607-1676"
 textDate	= ""
+
+% if the lyrics are a translation 
+translatorChristianName = "" % e.g. "Martin"
+translatorSurName       = "" % e.g. "Luther"
+translatorLifedata      = "" % e.g. "1483-1546"
+translationDate         = ""
 
 opus              = "Zwölf deutsche geistliche Gesänge (WoO VI/13)" 
 noInOpus        = "2"
