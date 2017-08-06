@@ -11,6 +11,7 @@ global = {
  \key g \major
  \time 4/4
  \dynamicUp
+ \autoBeamOff
  
  %\override DynamicLineSpanner.staff-padding = #3
 }
@@ -26,7 +27,7 @@ commonMarks = {
 %{08%}	s1
 %{09%}	s1
 %{10%}	s1
-%{11%}	s4 s\pp s2
+%{11%}	s4 s\pp s s
 %{12%}	s1
 %{13%}	s2 s4\cresc s4\!
 %{14%}	s4\f s4 s2
@@ -44,7 +45,7 @@ commonMarks = {
 %{26%}  s1
 %{27%}	s1
 %{28%}	s1
-%{29%}	s4 s4\f s2
+%{29%}	s2 s4\f s4
 %{30%}	s1
 %{31%}	s2 s4\decr s4
 %{32%}	s2 s4\! s4
@@ -112,7 +113,7 @@ altIMarks = {
 %{16%}	s1
 %{17%}	s2 s4\decr s4
 %{18%}	s4 s4\! s2
-%{19%}  s4 s8\mf s8 s2
+%{19%}  s4 s8 s8 s2
 }
 
 altIIMarks = {
@@ -181,7 +182,7 @@ tenIIMarks = {
 %{16%}	s1
 %{17%}	s2. s4\decr
 %{18%}	s4 s4\! s2
-%{19%}  s4 s8\mf s8 s2
+%{19%}  s4 s8 s8 s2
 }
 
 basIMarks = {
@@ -245,7 +246,7 @@ sopIVoice = \relative c'' {<<
 %{06%}	d8) d d2 c4
 %{07%}	b( c d2 
 %{08%}	d4) c b2
-%{09%}	g4 e'2 b8[ c]
+%{09%}	g4 e'2 b8([ c])
 %{10%}	d2 d2(
 %{11%}	d4) a a a8. a16
 %{12%}	d2 d
@@ -253,18 +254,18 @@ sopIVoice = \relative c'' {<<
 %{14%}	fis2 fis
 %{15%}	a,4\rest fis'4 e e8 e
 %{16%}	e2.( dis4)
-%{17%}	e b8[ c] d4 c8 b
+%{17%}	e b8([ c]) d?4 c8 b
 %{18%}	a4 a8 b c4 c8 c
 %{19%}	b4 d g2
 %{20%}	d d(
 %{21%}	d4) g, c2
 %{22%}	a4\rest g d'4. d8
-%{23%}	d4 c8[ b8] c4( g'4
+%{23%}	d4 c8([ b8]) c4( g'4
 %{24%}	g4 fis8 e d4) c
 %{25%}  b2 a4\rest cis
 %{26%}  d2 a4\rest c?8[ d] 
 %{27%}	e4 d8 c b4 b8 c
-%{28%}	d4 c8 b a4 a8[ b]
+%{28%}	d4 c8 b a4 a8([ b])
 %{29%}	d2 g,4 g
 %{30%}	g2 e'2(
 %{31%}	e) d2(
@@ -294,9 +295,9 @@ sopIIVoice = \relative c'' {<<
 %{14%}  d2 d
 %{15%}  r4 d4 d d8 d
 %{16%}  d4( c b2)
-%{17%}  b4 g8 a b4 a8 g
+%{17%}  b4 g8([ a]) b4 a8 g
 %{18%}  fis4 fis8 g a4 a8 a
-%{19%}  g4 b8 a g2
+%{19%}  g4 b8([ a]) g2
 %{20%}  c4. b8 a4 g4(
 %{21%}	g) r r g
 %{22%}	d'2. c4 
@@ -304,8 +305,8 @@ sopIIVoice = \relative c'' {<<
 %{24%}	d4.) d8 d2
 %{25%}	r1
 %{26%}	r4 a d c?8 b
-%{27%}	c4 b8 a g( a) b4(
-%{28%}	b) a8 g g4 fis8 g
+%{27%}	c4 b8 a g([ a]) b4(
+%{28%}	b) a8([ g]) g4 fis8([ g])
 %{29%}	g2 g4 g
 %{30%}  g2 c2(
 %{31%}  c) b2(
@@ -341,10 +342,10 @@ altIVoice = \relative c' {<<
 %{20%}  e r r g
 %{21%}	g d8 d d4 d8 d
 %{22%}	g2 e4 a
-%{23%}	b( a8 g fis4.) fis8
-%{24%}	g4 g8 a b4 a8 g
+%{23%}	b( a8[ g] fis4.) fis8
+%{24%}	g4 g8([ a]) b4 a8 g
 %{25%}	fis4 f8 g a4 g8 g
-%{26%}	g4. d8 b'8 a g4
+%{26%}	g4. d8 b'8([ a]) g4
 %{27%}	g fis8 g d4 d
 %{28%}	d2 d4 g
 %{29%}	g1
@@ -380,11 +381,11 @@ altIIVoice = \relative c' {<<
 %{18%}  fis d r2
 %{19%}  r1
 %{20%}  r
-%{21%}	r4 e8 f g4 f8 e
+%{21%}	r4 e8([ f]) g4 f8 e
 %{22%}	d4 d8 e fis?4 fis8 fis
 %{23%}	g4. e8 e4 e
 %{24%}	g4. d8 d2
-%{25%}	r4 e8 fis g4 fis8 e
+%{25%}	r4 e8([ fis]) g4 fis8 e
 %{26%}	d4  d8 d d4( e8 f)
 %{27%}	g4 r r g
 %{28%}	g d8 d d4 d
@@ -407,7 +408,7 @@ tenIVoice = \relative c' {<<
 %{04%}  a2 c4 d4(
 %{05%}  d) a a fis
 %{06%}  fis2 d'2(
-%{07%}  d4) d8[ d] d4 b
+%{07%}  d4) d8 d d4 b
 %{08%}  g'2 f
 %{09%}  e4. c8 c4 d
 %{10%}  d2 a2( 
@@ -419,14 +420,14 @@ tenIVoice = \relative c' {<<
 %{16%}  b4( c fis, b)
 %{17%}  b2 b4 e
 %{18%}  a,( d) d2
-%{19%}  r4 b8 c d4 c8 b
+%{19%}  r4 b8([ c]) d4 c8 b
 %{20%}  a4 a8 b c4 d8 d
 %{21%}	e4. d8 c4 c
 %{22%}	d4. d8 d2
-%{23%}	r4 c8 d e4 d8 c
+%{23%}	r4 c8([ d]) e4 d8 c
 %{24%}	b4 b8 c d4 d8 d
 %{25%}	d4. d8 cis4 r
-%{26%}	r2 r4 g'8 f
+%{26%}	r2 r4 g'8([ f])
 %{27%}	e4 e8 fis? g4 b,8 a
 %{28%}	g4 a8 b d4 c
 %{29%}	b2 d4 d
@@ -467,7 +468,7 @@ tenIIVoice = \relative c' {<<
 %{23%}	g4. g8 g4 g
 %{24%}	g4. g8 d'2
 %{25%}	r4 b4( g) a
-%{26%}	a a8 a a4 c8 g
+%{26%}	a a8 a a4 c8([ g])
 %{27%}	g4 r g g
 %{28%}	d d8 d d'4 d
 %{29%}	d2 b4 b
@@ -501,14 +502,14 @@ basIVoice = \relative c { <<
 %{16%}  a4( fis2 a4)
 %{17%}  g2 r4 c4(
 %{18%}  c) b a2
-%{19%}  b4 g8 a b4 a8 g
+%{19%}  b4 g8([ a]) b4 a8 g
 %{20%}  fis4 fis8 g a4 b8 b
 %{21%}	c4. g8 g4 g
 %{22%}	g2 d4 d
 %{23%}	b'4( c2) a4
 %{24%}	d, d d'4. d8
 %{25%}	g,2 r
-%{26%}	r4 a8 g f4 g8 g
+%{26%}	r4 a8([ g]) f4 g8 g
 %{27%}	g2 r4 g8 a
 %{28%}	b4 c8 d d,4 d
 %{29%}	d2 g4 g
@@ -546,12 +547,12 @@ basIIVoice = \relative c {
 %{18%}  d2 d4 d
 %{19%}  g,2 g
 %{20%}  r1
-%{21%}	r4 c8 d e4 d8 c
+%{21%}	r4 c8([ d]) e4 d8 c
 %{22%}	b4 b8 c d4 d8 d
 %{23%}	e4. e8 a,4 a
 %{24%}	d2 d
 %{25%}	e2. a,4
-%{26%}	d4 d8 e f4 e8 d
+%{26%}	d4 d8([ e]) f4 e8 d
 %{27%}	c4 c8 d e4 e8 e
 %{28%}	d2 d
 %{29%}	g,2 g'4 g

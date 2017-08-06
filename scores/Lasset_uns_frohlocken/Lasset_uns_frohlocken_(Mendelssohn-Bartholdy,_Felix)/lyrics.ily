@@ -11,26 +11,26 @@ sopILyrics = \lyricmode {
   Las -- set uns froh -- loc -- ken,
   las -- set uns froh -- loc -- ken,
   las -- set uns froh -- loc -- ken,  
-  las -- set uns froh _ -- loc -- ken,
+  las -- set uns froh -- loc -- ken,__
   es nah -- et der Hei -- land,
   es nah -- et der Hei -- land,
   den Gott uns ver -- hei -- ßen.
-  Der _ Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit,
-  in E -- wig -- keit, in E -- wig -- keit, in _ E -- wig -- keit ge -- lobt, 
-  der _ Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- _ keit.
+  Der Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit,
+  in E -- wig -- keit, in E -- wig -- keit, in E -- wig -- keit ge -- lobt, 
+  der Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit.
   Hal -- le -- lu -- ja,
   Hal -- le -- lu -- ja!
 }
 
 sopIILyrics = \lyricmode {
   Las -- set uns froh -- loc -- ken,
-  las -- set uns froh -- loc -- ken,
+  las -- set uns froh -- loc -- ken,__
   es nah -- et der Hei -- land,
   es nah -- et der Hei -- land,
   den Gott uns ver -- hei -- ßen.
-  Der _ Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- _ keit,
-  sei ge -- lo -- bet in E -- wig -- keit, in E -- wig -- keit, 
-  Der Na -- me des Herrn sei ge -- lo -- bet in _ E -- wig -- _ keit,
+  Der Na -- me des Herrn sei ge -- lo -- bet in E -- wig --  keit,
+  sei ge -- lo -- bet__ in E -- wig -- keit, in E -- wig -- keit, 
+  Der Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit,
   Hal -- le -- lu -- ja,
   Hal -- le -- lu -- ja!
 }
@@ -38,14 +38,14 @@ sopIILyrics = \lyricmode {
 altILyrics = \lyricmode {
   Las -- set uns froh -- loc -- ken,
   las -- set uns froh -- loc -- ken,
-  uns froh -- loc -- ken,
+  uns froh -- loc -- ken,__
   es nah -- et der Hei -- land,
   es nah -- et der Hei -- land,
   den Gott uns ver -- hei -- ßen.
   den Gott uns ver -- hei -- ßen.
   uns ver -- hei -- ßen.
   Der Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit,
-  der _ Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit, _
+  der  Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit, 
   ge -- lo -- bet in E -- wig -- keit,
   Hal -- le -- lu -- ja,
   Hal -- le -- lu -- ja!
@@ -54,14 +54,14 @@ altILyrics = \lyricmode {
 altIILyrics = \lyricmode {
   Las -- set uns froh -- loc -- ken,
   las -- set uns,
-  las -- set uns froh -- loc -- ken,
+  las -- set uns froh -- loc -- ken,__
   es nah -- et der Hei -- land,
   es nah -- et der Hei -- land,
   den Gott uns ver -- hei -- ßen,
   uns ver -- hei -- ßen.
-  Der _ Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit,
+  Der  Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit,
   in E -- wig -- keit,
-  der _ Na -- me des Herrn sei ge -- lo -- bet,
+  der  Na -- me des Herrn sei ge -- lo -- bet,
   ge -- lo -- bet in E -- wig -- keit
   Hal -- le -- lu -- ja,
   Hal -- le -- lu -- ja!
@@ -73,29 +73,29 @@ tenILyrics = \lyricmode {
   las -- set uns froh -- loc -- ken,
   las -- set uns froh -- loc -- ken,
   las -- set uns froh -- loc -- ken,
-  las -- set uns froh -- loc -- ken,
-  es nah -- et der Hei -- land,
-  es nah -- et der Hei -- land,
-  den Gott uns ver -- hei -- ßen,
-  uns ver -- hei -- ßen.
-  Der _ Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit,
-  in E -- wig -- keit,
-  der _ Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit,
-  der _ Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit.
-  Hal -- le -- lu -- ja,
-  Hal -- le -- lu -- ja!
-}
-
-tenIILyrics = \lyricmode {
-  Las -- set uns froh -- loc -- ken,
-  froh -- loc -- ken,
+  las -- set uns froh -- loc -- ken,__
   es nah -- et der Hei -- land,
   es nah -- et der Hei -- land,
   den Gott uns ver -- hei -- ßen,
   uns ver -- hei -- ßen.
   Der Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit,
   in E -- wig -- keit,
-  sei ge -- lo -- bet in E -- wig -- _ keit,
+  der Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit,
+  der Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit.
+  Hal -- le -- lu -- ja,
+  Hal -- le -- lu -- ja!
+}
+
+tenIILyrics = \lyricmode {
+  Las -- set uns froh -- loc -- ken,__
+  froh -- loc -- ken,__
+  es nah -- et der Hei -- land,
+  es nah -- et der Hei -- land,
+  den Gott uns ver -- hei -- ßen,
+  uns ver -- hei -- ßen.
+  Der Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit,
+  in E -- wig -- keit,
+  sei ge -- lo -- bet in E -- wig --  keit,
   sei ge -- lo -- bet in E -- wig -- keit
   
   Hal -- le -- lu -- ja, 
@@ -106,15 +106,15 @@ basILyrics = \lyricmode {
   Las -- set uns froh -- loc -- ken,
   las -- set uns,
   las -- set uns froh -- loc -- ken,
-  uns froh -- loc -- ken,
+  uns froh -- loc -- ken,__
   es nah -- et der Hei -- land,
   es nah -- et der Hei -- land,
   den Gott uns ver -- hei -- ßen,
   uns ver -- hei -- ßen.
-  Der _ Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit, 
+  Der Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit, 
   ge -- lo -- bet in E -- wig -- keit,
   in E -- wig -- keit,
-  der _ Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit, 
+  der Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit, 
   Hal -- le -- lu -- ja, 
   Hal -- le -- lu -- ja!
 }
@@ -123,14 +123,14 @@ basIILyrics = \lyricmode {
   Las -- set uns froh -- loc -- ken,
   las -- set uns froh -- loc -- ken,
   uns froh -- loc -- ken,
-  uns froh -- loc -- ken,
+  uns froh -- loc -- ken,__
   es nah -- et der Hei -- land,
   es nah -- et der Hei -- land,
   den Gott uns ver -- hei -- ßen,
   den Gott uns ver -- hei -- ßen.
-  Der _ Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit, 
+  Der Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit, 
   in E -- wig -- keit ge -- lobt,
-  der _ Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit, 
+  der Na -- me des Herrn sei ge -- lo -- bet in E -- wig -- keit, 
   Hal -- le -- lu -- ja, 
   Hal -- le -- lu -- ja!
 }
