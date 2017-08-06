@@ -19,7 +19,7 @@ melodyDate	        = ""
 
 % arranger is the one who composed the voices
 arrangerChristianName   = "Felix" % e.g. "Johann Sebastian"
-arrangerSurName	        = "Mendelssohn-Bartholdy" % e.g. "Bach"
+arrangerSurName	        = "Mendelssohn Bartholdy" % e.g. "Bach"
 arrangerLifedata        = "1809-1847" % e.g. "1685-1750"
 arrangementDate         = ""
 
