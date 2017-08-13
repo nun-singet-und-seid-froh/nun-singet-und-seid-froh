@@ -251,52 +251,14 @@ def texify(array,filename,newBoxDelimiter, newLineDelimiter):
   
   print('output written to ' + os.path.splitext(filename)[0] + '.iltex')
 
-#still to do: check whether template_begin and template_end exist and give an error if they do not
-def create_standalone_tex(filename):
-	print('creating standalone .tex...')
-	with open('template_begin.tex') as f:
-		lines = f.readlines()
-		with open(os.path.splitext(filename)[0] + ".tex", "w") as f1:
-			f1.writelines(lines)
-	with open(os.path.splitext(filename)[0] + '.iltex') as f: 
-		lines = f.readlines()
-		with open(os.path.splitext(filename)[0] + ".tex", "a") as f1:
-			f1.writelines(lines)
-	with open('template_end.tex') as f:
-		lines = f.readlines()
-		with open(os.path.splitext(filename)[0] + ".tex", "a") as f1:
-			f1.writelines(lines)
-	print('succesfully created standalone ' + os.path.splitext(filename)[0] + ".tex")
-
-def tex2pdf(filename):
-	try:
-		subprocess.call(["pdflatex", "-aux-directory=" + os.path.dirname(filename) + "/aux", "-output-directory=" + os.path.dirname(filename), os.path.splitext(filename)[0] + ".tex"])
-		# clean the auxiliary files needed by pdflatex to produce pdf
-		os.remove(os.path.splitext(filename)[0] + ".aux")
-		os.remove(os.path.splitext(filename)[0] + ".tex")
-		os.remove(os.path.splitext(filename)[0] + ".log")
-	  #open the output pdf
-		print(sys.platform)
-		if sys.platform == 'linux':
-			subprocess.call(["xdg-open", os.path.splitext(filename)[0] + ".pdf"])
-		else:
-			os.startfile(os.path.splitext(filename)[0] + ".pdf")
-		  
-	except OSError as e:
-		  if e.errno == os.errno.ENOENT:
-		      print("file not found")
-		  else:
-		      "Could not find pdflatex on your computer"
-		      raise
   
 def main():
 	root = tk.Tk()
 	root.withdraw()
-	filename = filedialog.askopenfilename() # get the filename from opendialog
-	# filename = sys.argv[1] # take the filepath from the argument given with the call
+	# filename = filedialog.askopenfilename() # get the filename from opendialog
+	filename = sys.argv[1] # take the filepath from the argument given with the call
 	newBoxDelimiter = '\t'
 	newLineDelimiter = '#'
 	texify(readfile(filename,newBoxDelimiter),filename,newBoxDelimiter,newLineDelimiter)
-	create_standalone_tex(filename)
-	tex2pdf(filename)
+
 main()

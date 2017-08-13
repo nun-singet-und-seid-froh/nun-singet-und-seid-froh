@@ -1,0 +1,1 @@
+Der Zweig Jesses hat geblüht, die Jungfrau hat den Gott und den Menschen geboren. Gott stellt den Frieden wieder her, indem er in sich selbst das Niedrigste mit dem Höchsten versöhnt. Hallelujah! (Lobt Gott!)

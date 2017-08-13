@@ -1,0 +1,36 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[top=2cm, inner=3cm]{geometry}
+\usepackage{ebgaramond}
+\usepackage[german=guillemets]{csquotes}
+\usepackage[german]{babel}
+
+\usepackage{stackengine} % responsible for building the blocks
+\usepackage{titlesec} % change appearance of the section headers
+	\titleformat{\section}[block]{\LARGE\scshape\filcenter}{}{1em}{}
+	\titleformat{\subsection}[block]{\Large\scshape\filcenter}{}{1em}{}
+	\titleformat{\subsubsection}[block]{\large\itshape\filcenter}{}{1em}{}
+
+\begin{document}
+    \setlength{\parindent}{0pt}			
+    \setstackgap{L}{10pt}
+
+	\renewcommand{\thepage}{\roman{page}} % roman numerals for page counter
+    \begin{center}
+    	\Huge \scshape Text
+    \end{center}
+    
+    \section{Aussprache}
+		\input{pronunciation.itex}
+    
+    \section{Kommentar}
+        \input{commentary.itex}
+
+    \section{Übersetzung}
+    	\subsection{Prosa-Übersetzung}
+			\input{prose-translation.itex}    	
+    	\subsection{Interlinear-Übersetzung}
+    		\input{interlinear-translation.iltex}
+
+\end{document}
