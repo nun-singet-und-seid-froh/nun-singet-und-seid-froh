@@ -24,10 +24,10 @@ arrangerLifedata        = "1908-1942" % e.g. "1685-1750"
 arrangementDate         = ""
 
 % poet is the one who wrote (the main part of) the lyrics (also see translator)
-poetChristianName       = "" % e.g. "Paul"
-poetSurName             = "" % e.g. "Gerhardt"
-poetLifedata            = "" % e.g. "1607-1676"
-textDate                = ""
+poetChristianName	    = "Friedrich" % e.g. "Paul"
+poetSurName       		= "Spee" % e.g. "Gerhardt"
+poetLifedata      		= "1591-1634" % e.g. "1607-1676"
+textDate 				= ""
 
 % if the lyrics are a translation 
 translatorChristianName = "" % e.g. "Martin"
@@ -35,7 +35,7 @@ translatorSurName       = "" % e.g. "Luther"
 translatorLifedata      = "" % e.g. "1483-1546"
 translationDate         = ""
 
-opus                    = "Der Jahrkreis" 
+opus                    = "Der Jahrkreis (op. 5)" 
 noInOpus                = "1"
 titleInOpus             = ""
 
