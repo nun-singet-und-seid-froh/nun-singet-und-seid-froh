@@ -1,9 +1,8 @@
 sudo: false
 language: minimal
-before_install:
-    - wget https://bitbucket.org/georgd/eb-garamond/downloads/EBGaramond-0.016.zip
 install:
     - mkdir tmp && pushd tmp
+    - wget https://bitbucket.org/georgd/eb-garamond/downloads/EBGaramond-0.016.zip
     - unzip EBGaramond-0.016.zip
     - mkdir -p $HOME/.fonts
     - cp EBGaramond-0.016/otf/*.otf $HOME/.fonts/
