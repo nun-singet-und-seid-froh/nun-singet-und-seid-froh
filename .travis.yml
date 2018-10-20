@@ -2,8 +2,8 @@ sudo: false
 language: minimal
 install:
     - mkdir tmp && pushd tmp
-    - wget http://lilypond.org/download/binaries/linux-64/lilypond-2.18.2-1.linux-64.sh
-    - sh lilypond-2.18.2-1.linux-64.sh --batch
+    - wget http://lilypond.org/download/binaries/linux-64/lilypond-2.19.82-1.linux-64.sh
+    - sh lilypond-2.19.82-1.linux-64.sh --batch
     - popd && rm -r tmp
     - mkdir tmp && pushd tmp
     - wget https://bitbucket.org/georgd/eb-garamond/downloads/EBGaramond-0.016.zip
