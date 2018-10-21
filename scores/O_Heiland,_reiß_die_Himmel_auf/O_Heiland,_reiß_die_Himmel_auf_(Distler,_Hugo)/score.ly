@@ -76,14 +76,13 @@
         \remove "Forbid_line_break_engraver"
       }
     } 	
-	}
-  \stanzas
+    %\stanzas
   } %end of score (PDF)
 
 
   \score {
     %for MIDI
-    \commonVoice
+    %\commonVoice
     \new Staff <<
       \backgroundVoice
       \new Voice = "sopI" { \global \sopIVoice }
