@@ -344,6 +344,7 @@
 %    1 midi per each voice per each stanza with the respective voice highlighted   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% overwrite stafftovoice to avoid errors with polyrhythmic bars
 stafftovoice = \midi {
   \context {
     \Score
