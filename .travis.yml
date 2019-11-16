@@ -18,3 +18,5 @@ jobs:
           script: true
         - stage: compile-lilypond
           script: pushd scores && make && popd
+        - stage: deploy
+          script: pushd scores && make deploy && popd
