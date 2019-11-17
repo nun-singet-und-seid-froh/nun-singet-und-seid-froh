@@ -8,7 +8,7 @@
 #(set-global-staff-size 18)
 
 \paper{
-   system-count = 3
+  % system-count = 3
   % systems-per-page = 3
   % page-count = 2
 }

@@ -39,25 +39,25 @@ sopIVoice = <<
       a1 a2\!
       cis1 d2
       e1( fis2
-      e1) e2^\markup{ \italic più \dynamic f }
+      e1) \bar "" e2^\markup{ \italic più \dynamic f }
       a,1\< a2\!
       cis1 d2
-      e1\>( fis2
-      e1.\!) 
+      e1\>( fis2 %\noBreak
+      e1.\!)
       e1^\markup{ \italic meno \dynamic f } fis2\<
       %10
       e1 d2\!
       cis1.\>
-      a1 a2\<
+      a1 \bar "" a2\<
       b1 b2\!
       cis1 b2
       a1\>( b2
-      cis1\p) cis2\f\<
+      cis1\p) \bar "" cis2\f\<
       e1 fis2
       e1 d2\!
       cis1.\>
       %20
-      a1 a2\p\<
+      a1 \bar "" a2\p\<
       b1 b2
       cis1 b2
       a1( b2\!
@@ -266,8 +266,6 @@ basIIVoice = <<
       cis( eis) fis
       d( b) cis
       a1.\fermata
-      
-    
     }
 >>
  
