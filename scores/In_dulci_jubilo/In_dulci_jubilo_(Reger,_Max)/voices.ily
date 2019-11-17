@@ -127,7 +127,7 @@ altVoice = <<
       cis2( a'4 gis) fis2
       e( gis fis
       b,1.)
-      cis2( e2) e4( d)
+      cis2( e2~ e4) d
       e2( a4 gis) fis2
       fis1( eis2)
       fis1 fis2
@@ -135,7 +135,7 @@ altVoice = <<
       b( a) b
       cis,( fis d
       a'1) fis2
-      e( gis) fis g( e) fis
+      e( gis) fis gis( e) fis
       e1.
       d1 e2
       d2( fis) gis
@@ -146,7 +146,7 @@ altVoice = <<
       gis'2( fis) e
       cis1( d2
       e1.)
-      e2( gis) fis
+      eis2( gis) fis
       fis( d) e
       e1.\fermata
     }
@@ -171,15 +171,15 @@ tenVoice = <<
       cis1 d2
       d1 e2
       e1 d2
-      cis( d~ d
-      cis1) cis2
+      cis( d1
+      cis) cis2
       cis( b) fis'
       b,( a) d
       e2( cis1)
       fis e2
-      d( fis) gis
-      gis( fis) b
-      cis,( d1
+      b1 e2
+      e( d) d
+      cis( d1
       a1.)
       a2( cis) d
       b( d) gis
@@ -235,8 +235,8 @@ basIIVoice = <<
   \relative c
     { 
       a2
-      d( cis) e
-      d( ais) b
+      d( cis) fis
+      e( ais,) b
       gis( a d
       a1) e'2
       fis( cis) d
@@ -264,8 +264,8 @@ basIIVoice = <<
       fis( e d
       cis b a)
       cis( eis) fis
-      d( b) cis
-      a1.\fermata
+      d( b) e
+      a,1.\fermata
     }
 >>
  
