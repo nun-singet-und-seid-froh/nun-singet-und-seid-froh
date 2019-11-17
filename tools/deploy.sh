@@ -1,3 +1,3 @@
 #!/bin/sh
 
-pwd
+echo "Deploying $(pwd)"

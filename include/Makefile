@@ -14,7 +14,7 @@ midi: $(DIRNAME).midi
 zip: $(DIRNAME).zip
 
 deploy: $(DIRNAME).pdf $(DIRNAME).midi $(DIRNAME).zip
-	$(DEPLOY) .
+	$(DEPLOY)
 
 $(DIRNAME).zip: $(DIRNAME).pdf $(DIRNAME).midi
 	zip "$(DIRNAME)" *.pdf *.midi
