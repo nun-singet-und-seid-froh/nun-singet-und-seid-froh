@@ -45,7 +45,7 @@ The layout of every language can be defined in the yaml header. The following co
 + large
 
 ### an example of the syntax
-The following minimal example illustrates the syntactic rules described above. (Take note that `#` mark line breaks after `triumphantes` and `bethlehem.)
+The following minimal example illustrates the syntactic rules described above. (Take note that `#` mark line breaks after `triumphantes` and `bethlehem. To the contrary, there is no such mark after `Fideles`, hence the block break after `Fidelis` in the interlinear file will not appear in the output.)
 
 ```
 ---
@@ -56,14 +56,14 @@ lannguages:
 ---
 
 Adeste           Fideles,
-Imp. Pl. ADESSE  Nom. Pl. \FIDELIS
+Imp. Pl. ADESSE  Nom. Pl. FIDELIS
 Seid hier        die Treuen
 
 laeti          triumphantes#
-m. Pl. LAETUS  Pl. PPA \emph{triumphare} \enquote{triumphieren}
+m. Pl. LAETUS  Pl. Part. Präs. Akt. TRIUMPHARE
 freudig        triumphierend
 
-venite,          venite          in    bethlehem!#
-Imp. Pl. VENIRE  Imp.Pl. VENIRE  IN    Akk. Sgl. BETHLEHEM
-kommt,           kommt           nach  Bethlehem!
+venite,          venite           in    bethlehem!#
+Imp. Pl. VENIRE  Imp. Pl. VENIRE  IN    Akk. Sgl. BETHLEHEM
+kommt,           kommt            nach  Bethlehem!
 ```
