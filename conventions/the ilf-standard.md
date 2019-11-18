@@ -1,6 +1,6 @@
-#conventions for of writing an interlinear translation
+# conventions for writing an interlinear translation
 ## the concept of an interlinear translation
-The problem with typesetting interlinear translations is the fact that different lines (which represent different languages) do not have the same amount of words. For example a declined word in latin can only be translated into english by using a preposition, e.g. "filius dei" may be translated as "son of god". In this example one would want the words to be aligned something like this:
+The problem with typesetting interlinear translations is the fact that different lines (which represent the different languages) do not necessarily consist of the same amount of words. For example, a declined word in latin can only be translated into english by using a preposition, e.g. "filius dei" may be translated as "son of god". In this example one would want the words to be aligned something like this:
 
 ```
 filius  dei
@@ -8,10 +8,10 @@ filius  dei
 ```
 
 ## the ilf-standard
-For that purpose we defined a file format that makes it easy to create a .tex-file which align the texts of the different languages correctly using LaTex. We called it *.ilf* (which stands for "**i**nter**l**inear **f**ile")
+This is not easy with common text editors or writing programmes such as MS Word or others. There is a way to achieve this alignment in LaTex and also in html, but writing the tex-file or the html-file is quite cumbersome. That's why we defined a file format that can (comparetively) easy be entered, read and edited in a simple text editor. Files in this format can then automatically be preprocessed to a .tex or a .html file by a python script we have written. We call this format *.ilf* (which stands for "**i**nter**l**inear **f**ile").
 
 ### boxes
-The ilf-standard uses a concept of *boxes* to achieve the desired alignment-behaviour of the interlinear translation: A box can contain multiple words, and the boxes of the different languages are aligned to each other, so that the first box of each language will be aligned with the first box of the original language, the second box of each language will be aligned with the second box of the original language, and so on.
+The ilf-standard uses a concept of *boxes* to achieve the desired alignment-behaviour of the interlinear translation: A box can contain multiple words, and the boxes of the different languages are aligned to each other, so that the first box of each language will be aligned with the first box of the original language, the second box of each language will be aligned with the second box of the original language, and so on:
 
 ```
  1st box | 2nd box 
@@ -21,31 +21,19 @@ The ilf-standard uses a concept of *boxes* to achieve the desired alignment-beha
 -------------------
 ```
 
-### rows
-An ilf consists of a user-defined number of *rows*. Each row itself consists of boxes and represents a language. 
+### syntax rules
+An .ilf is a text file that fulfills the following syntactic rules:
 
-### syntactic rules
-Ab .ilf is a .txt-file that fulfills the following syntactic rules:
+0. Every .ilf starts with a yaml-header enclosed in lines that consist of dashes only. The yaml header contains at least the key `languages` that defines the languages together with their formatting. (For a definition of the yaml-format, have a look at wikipedia[https://en.wikipedia.org/wiki/YAML#Syntax])
 
-1. It has n *rows* and consists of k\*(n+1) lines, (take notice that *lines* are the lines in the text-file while *rows* are the different languages of the translation) where k is the number of 
-languages and can be arbitrarily chosen.
-2. If l is the line number of the input file, every line l with l= x*(n+1)+1 
-contains the original language, every line l with l = x*(n+1)+2 contains the 
-first translation language, and so on up to every line l with 
-l = (x+1)*(n+1), which has to be an empty line (be aware that this implies 
-that the last line of the *.ilf must be empty.) We will call a number of lines 
-from l ..l+(n+1) a "block" - a block represents a part of the original text with
-all its translations, and the *.ilf consists of k blocks.
-4. The first block will not be typeset and contains header-information for 
-formatting each row in the LaTex-output
-5. A box-break in a row is defined by either a TAB or by starting a new block. 
-The fact that TAB can be used as box-delimiter makes input easily 
-readable when using a text-editor that works with so-called *elastic tabs*
-6. If the original text has linebreaks, every linebreak is marked by a 
- "#"-sign in the first row.
+1. Every .ilf has n *languages*.
+2. Empty lines are ignored, so you can use them freely to structure the input to improve its readability.
+3. Every ilf consists of *blocks*. A block represents a part of the original text with all its translations.
+4. In every language, a box-break is defined by either a TAB, multiple (more than 1) spaces or by starting a new block. (The fact that TAB can be used as box-delimiter makes input easily readable when using a text-editor that works with so-called *elastic tabs*)
+5. If the original text has linebreaks, every linebreak is marked by a trailing "#"-sign in the first row.
 
 ### formatting the output
-The output of every line can be styled, by writing the style-information in the row that corresponds to the certain language in the header (i.e., as you might remember, the first block). The following commands are possible and can be written in any order:
+The layout of every language can be defined in the yaml header. The following commands are possible and can be written in any order:
 
 + bold
 + italic
@@ -56,34 +44,26 @@ The output of every line can be styled, by writing the style-information in the 
 + small
 + large
 
-For formatting the output within the rows LaTex-markup commands can be used, for quotations the command \enquote{} shall be used.
+### an example of the syntax
+The following minimal example illustrates the syntactic rules described above. (Take note that `#` mark line breaks after `triumphantes` and `bethlehem.)
 
-### an illustration of the syntactic schema
-The following minimal example illustrates the syntactic rules described above:
-
-1. The first three lines define the markup for the different languages. (The grammar information of the latin original is treated as a separate language and printed small between the latin original and the german translation.) 
-2. A line break is forced by the "#"-sign after "triumphantes".
-3. The first two blocks consist each of one box, while the last block consists of multiple boxes which are separated with a TAB (in each row). In a text editor the last two blocks are shown correctly aligned if the editor is using *elastic tabs* - the separator between "laeti" and "triumphantes" is a tab as well as between "m. Pl. \emph{laetus} \enquote{freudig}" and "Pl. PPA \emph{triumphare} \enquote{triumphieren}" and "freudig" and "triumphierend"
-4. The last line of the input is empty (because it is part of the last block).
 ```
-bold 
-small sans
-italic sans
+---
+lannguages:
+    Latin: uppercase 
+    Grammar: small sans
+    German: normal
+---
 
-Adeste 
-Imp. Pl. \emph{adesse} \enquote{dasein}
-Seid hier
+Adeste           Fideles,
+Imp. Pl. ADESSE  Nom. Pl. \FIDELIS
+Seid hier        die Treuen
 
-Fideles,
-Nom. Pl. \emph{fidelis} \enquote{treu}
-die Treuen
+laeti          triumphantes#
+m. Pl. LAETUS  Pl. PPA \emph{triumphare} \enquote{triumphieren}
+freudig        triumphierend
 
-laeti  triumphantes#
-m. Pl. \emph{laetus} \enquote{freudig}  Pl. PPA \emph{triumphare} \enquote{triumphieren}
-freudig triumphierend
-
-venite, venite  in  bethlehem!#
-Imp.Pl. \emph{venire} \enquote{kommen}  Imp.Pl. \emph{venire} \enquote{kommen}  nach  Akk. Sgl. \emph{Bethlehem}
-kommt,  kommt nach  Bethlehem!
-
+venite,          venite          in    bethlehem!#
+Imp. Pl. VENIRE  Imp.Pl. VENIRE  IN    Akk. Sgl. BETHLEHEM
+kommt,           kommt           nach  Bethlehem!
 ```
