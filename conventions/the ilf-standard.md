@@ -11,7 +11,7 @@ filius  dei
 This is not easy with common text editors or writing programmes such as MS Word or others. There is a way to achieve this alignment in LaTex and also in html, but writing the tex-file or the html-file is quite cumbersome. That's why we defined a file format that can (comparetively) easy be entered, read and edited in a simple text editor. Files in this format can then automatically be preprocessed to a .tex or a .html file by a python script we have written. We call this format *.ilf* (which stands for "**i**nter**l**inear **f**ile").
 
 ### boxes
-The ilf-standard uses a concept of *boxes* to achieve the desired alignment-behaviour of the interlinear translation: A box can contain multiple words, and the boxes of the different languages are aligned to each other, so that the first box of each language will be aligned with the first box of the original language, the second box of each language will be aligned with the second box of the original language, and so on:
+The ilf-standard uses a concept of *boxes* to achieve the desired alignment-behaviour of the interlinear translation: A box can contain multiple words, and the boxes of the different languages are aligned to each other:
 
 ```
  1st box | 2nd box 
