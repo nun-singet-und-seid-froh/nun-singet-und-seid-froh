@@ -35,14 +35,14 @@ An .ilf is a text file that fulfills the following syntactic rules:
 ### formatting the output
 The layout of every language can be defined in the yaml header. The following commands are possible and can be written in any order:
 
-+ bold
-+ italic
-+ caps
-+ uppercase
-+ sans (for using a sans serif font)
-+ tiny
-+ small
-+ large
++ `bold`
++ `italic`
++ `caps`
++ `uppercase`
++ `sans` (for using a sans serif font)
++ `tiny`
++ `small`
++ `large`
 
 ### an example of the syntax
 The following minimal example illustrates the syntactic rules described above. (Take note that `#` mark line breaks after `triumphantes` and `bethlehem. To the contrary, there is no such mark after `Fideles`, hence the block break after `Fidelis` in the interlinear file will not appear in the output.)
