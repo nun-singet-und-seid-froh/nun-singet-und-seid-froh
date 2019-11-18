@@ -8,9 +8,7 @@
 #(set-global-staff-size 18.5)
 
 \paper{
-   system-count = 2
    systems-per-page = 2
-   page-count = 3
 }
 
 \midi {
