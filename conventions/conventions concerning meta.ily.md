@@ -1,5 +1,5 @@
 # conventions concerning meta.ily
-The *meta.ily* of a certain piece contains the meta-data of that piece, i.e. information *about* the piece which transcend the pure information on the (musical and lyrical) text of the piece. These data are in part (the data concerning title, composer, arranger and poet) printed on the sheet, in part used for the generation of the generic MediaWiki-article. Enter the meta-data as described:
+The *meta.ily* of a certain piece contains the meta-data of that piece, i.e. information *about* the piece which transcend the pure information on the (musical and lyrical) text of the piece. These data are in part (the data concerning title, composer, arranger and poet) printed on the sheet, in part used for the catalogue filter on the website. Enter the meta-data as described:
 
 ## title
 	title             = ""
