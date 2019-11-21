@@ -45,14 +45,14 @@
 
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
-        \set Staff.instrumentName = "tenor I"
+        \set Staff.instrumentName = "Tenor I"
         \new Voice = "tenI" { \clef "G_8" \global \tenIVoice }
       >>
       \new Lyrics \lyricsto "tenI" { \tenILyrics }
 
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
-        \set Staff.instrumentName = "tenor II"
+        \set Staff.instrumentName = "Tenor II"
         \new Voice = "tenII" { \clef "G_8" \global \tenIIVoice }
       >>
       \new Lyrics \lyricsto "tenII" { \tenIILyrics }
@@ -78,8 +78,10 @@
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "tenI" { \global \tenIVoice }
-      \new Voice = "bas" { \global \basVoice }
+      \new Voice = "tenII" { \global \tenIIVoice }
+     \new Voice = "bas" { \global \basVoice }
     >>
+    \midi {}
   } %end of score (MIDI)
 
 } %end of book
@@ -100,9 +102,10 @@
       \new Voice = "sop" { \highlightedVoice  \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "tenI" { \global \tenIVoice }
-      \new Voice = "tenII" { global \tenIIVoice }
+      \new Voice = "tenII" {\global \tenIIVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
+    \midi {}
   }
 }
 
@@ -116,9 +119,10 @@
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \highlightedVoice \global \altVoice }
       \new Voice = "tenI" { \global \tenIVoice }
-      \new Voice = "tenII" { global \tenIIVoice }
+      \new Voice = "tenII" { \global \tenIIVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
+    \midi {}
   }
 }
 
@@ -132,9 +136,10 @@
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "tenI" { \highlightedVoice \global \tenIVoice }
-      \new Voice = "tenII" { global \tenIIVoice }
+      \new Voice = "tenII" { \global \tenIIVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
+    \midi {}
   }
 }
 
@@ -147,10 +152,11 @@
       \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
-      \new Voice = "tenI" { global \tenIVoice }
+      \new Voice = "tenI" { \global \tenIVoice }
       \new Voice = "tenII" { \highlightedVoice \global \tenIIVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
+    \midi {}
   }
 }
 
@@ -164,8 +170,9 @@
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "tenI" { \global \tenIVoice }
-      \new Voice = "tenII" { global \tenIIVoice }
+      \new Voice = "tenII" { \global \tenIIVoice }
       \new Voice = "bas" { \highlightedVoice \global \basVoice }
     >>
+    \midi {}
   }
 }
