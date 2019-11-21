@@ -102,7 +102,11 @@
       \new Voice = "sop" { \highlightedVoice  \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "tenI" { \global \tenIVoice }
+<<<<<<< HEAD
       \new Voice = "tenII" {\global \tenIIVoice }
+=======
+      \new Voice = "tenII" { \global \tenIIVoice }
+>>>>>>> ad38f83be83c24624bfdd310196096378390cbcf
       \new Voice = "bas" { \global \basVoice }
     >>
     \midi {}
