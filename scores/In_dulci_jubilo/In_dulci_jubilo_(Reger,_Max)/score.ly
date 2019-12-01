@@ -74,6 +74,8 @@
     >>%end of ChoirStaff
   }%end of score (PDF)
 
+  \stanzas
+
   \score {
     %for MIDI
     \unfoldRepeats
