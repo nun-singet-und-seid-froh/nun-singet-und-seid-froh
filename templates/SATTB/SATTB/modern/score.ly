@@ -5,7 +5,7 @@
 %               please contact us at mail@nun-singet-und-seid-froh.info                 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% based ontemplates/SATTB/SATTB/modern/score.ly
+% based on templates/SATTB/SATTB/modern/score.ly
 
 % local information (for this particular piece)
 \include "meta.ily"             % metadata for this piece
@@ -67,6 +67,7 @@
 
     \layout { }
   } %end of score (PDF)
+
   \stanzas
 
   \score {
@@ -78,17 +79,17 @@
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "tenI" { \global \tenIVoice }
       \new Voice = "tenII" { \global \tenIIVoice }
-      \new Voice = "bas" { \global \basVoice }
+     \new Voice = "bas" { \global \basVoice }
     >>
-    \stafftovoice
+    \midi {}
   } %end of score (MIDI)
 
 } %end of book
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                      the MIDI producing part: 	           %
-%    1 MIDI per each voice with the respective voice highlighted   %
+%                      the MIDI producing part:                    %
+%    1 midi per each voice with the respective voice highlighted   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % sopran
@@ -101,10 +102,10 @@
       \new Voice = "sop" { \highlightedVoice  \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "tenI" { \global \tenIVoice }
-      \new Voice = "tenII" { \global \tenIIVoice }
+      \new Voice = "tenII" {\global \tenIIVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
-    \stafftovoice
+    \midi {}
   }
 }
 
@@ -121,13 +122,13 @@
       \new Voice = "tenII" { \global \tenIIVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
-    \stafftovoice
+    \midi {}
   }
 }
 
-% tenor1
+% tenor I
 \book {
-  \bookOutputSuffix "tenor1"
+  \bookOutputSuffix "tenorI"
   \score {
     \unfoldRepeats
     \new Staff <<
@@ -138,13 +139,13 @@
       \new Voice = "tenII" { \global \tenIIVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
-    \stafftovoice
+    \midi {}
   }
 }
 
-% tenor2
+% tenor II
 \book {
-  \bookOutputSuffix "tenor2"
+  \bookOutputSuffix "tenorII"
   \score {
     \unfoldRepeats
     \new Staff <<
@@ -155,7 +156,7 @@
       \new Voice = "tenII" { \highlightedVoice \global \tenIIVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
-    \stafftovoice
+    \midi {}
   }
 }
 
@@ -172,6 +173,6 @@
       \new Voice = "tenII" { \global \tenIIVoice }
       \new Voice = "bas" { \highlightedVoice \global \basVoice }
     >>
-    \stafftovoice
+    \midi {}
   }
 }

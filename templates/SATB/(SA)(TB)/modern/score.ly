@@ -53,7 +53,7 @@
         \new Voice = "bas" \with { \consists "Ambitus_engraver"}
         {
           \override Ambitus.X-offset = #2.0
-          \voiceTwo \basVoice
+          \voiceTwo \global \basVoice
         }
       >>
     >> %end of StaffGroup

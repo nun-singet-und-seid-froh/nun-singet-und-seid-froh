@@ -83,7 +83,7 @@ tenLyrics =\lyricmode {
   
   in se, in se, in se
   re -- con -- ci -- li -- ans
-  i -- ma sum -- mis
+  i -- ma sum -- mis.
   Al -- le -- lu -- ja, 
   al -- le -- lu -- ja,
   al -- le -- lu -- ja,
@@ -118,7 +118,7 @@ basLyrics = \lyricmode {
   
   in se, in se, in se
   re -- con -- ci -- li -- ans 
-  i -- ma sum -- mis
+  i -- ma sum -- mis.
   
   Al -- le -- lu -- ja, 
   al -- le -- lu -- ja,

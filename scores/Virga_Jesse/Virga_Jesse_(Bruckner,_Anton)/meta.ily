@@ -4,21 +4,27 @@
 title             = "Virga Jesse"
 
 %composer is the one who wrote the melody
-composerPrename	  = "" % e.g. "Johann Sebastian"
-composerSurname	  = "" % e.g. "Bach"
+composerChristianName	  = "" % e.g. "Johann Sebastian"
+composerSurName	  = "" % e.g. "Bach"
 composerLifedata  = "" % e.g. "1685-1750"
-melodyDate	      = ""
+compositionDate	      = ""
 
 %arranger is the one who composed the voices
-arrangerPrename	  = "Anton" % e.g. "Johann Sebastian"
-arrangerSurname	  = "Bruckner" % e.g. "Bach"
+arrangerChristianName	  = "Anton" % e.g. "Johann Sebastian"
+arrangerSurName	  = "Bruckner" % e.g. "Bach"
 arrangerLifedata  = "1824-1896" % e.g. "1685-1750"
 arrangementDate   = "1885"
 
-poetPrename	  = "" % e.g. "Paul"
-poetSurname       = "" % e.g. "Gerhardt"
+poetChristianName	  = "" % e.g. "Paul"
+poetSurName       = "" % e.g. "Gerhardt"
 poetLifedata      = "" % e.g. "1607-1676"
 textDate          = ""
+
+% if the lyrics are a translation 
+translatorChristianName = "" % e.g. "Martin"
+translatorSurName       = "" % e.g. "Luther"
+translatorLifedata      = "" % e.g. "1483-1546"
+translationDate = ""
 
 opus              = "(WAB 52)" 
 noInOpus          = ""
@@ -34,4 +40,4 @@ instrumentation   = "SATB" % "SATB", "SSAATTBB", "(SATB)(SATB)" for double-choir
 difficulty        = "" % "sehr leicht", "leicht", "mittelschwer", "schwer", "sehr schwer"
 form              = "" % "Motette", "Strophenlied", "Durchkomponiertes Lied"
 root              = ""
-noInNsusf         = "10"
+noInNsusf         = "9"

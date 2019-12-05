@@ -16,3 +16,8 @@
 \midi {
   % \tempo 4 = 100
 }
+
+\layout {
+  indent = 5\cm
+  incipit-width = 3\cm
+}
