@@ -32,45 +32,44 @@
     \new StaffGroup <<
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
-        \set Staff.instrumentName = "Sopran"
-        \new Voice = "sopI" { \global \sopIVoice }
+        \set Staff.instrumentName = "Sopran I + II"
+            \new Voice = "sopI" { \global \sopIVoice }
+            \new Lyrics{ \sopILyrics }
       >>
-      \new Lyrics \lyricsto "sopI" { \sopILyrics }
 
       \new Staff
       <<
-        %\set Staff.instrumentName = "Sopran II"
         \new Voice = "sopII" { \global \sopIIVoice }
+        \new Lyrics { \sopIILyrics }
       >>
-      \new Lyrics \lyricsto "sopII" { \sopIILyrics }
 
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
         \set Staff.instrumentName = "Alt"
         \new Voice = "alt" { \global \altVoice }
+        \new Lyrics { \altLyrics }
       >>
-      \new Lyrics \lyricsto "alt" { \altLyrics }
 
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
         \set Staff.instrumentName = "Tenor"
         \new Voice = "ten" { \clef "G_8" \global \tenVoice }
+        \new Lyrics { \tenLyrics }
       >>
-      \new Lyrics \lyricsto "ten" { \tenLyrics }
-
-      \new Staff
-      <<
-        %\set Staff.instrumentName = "Bass I"
-        \new Voice = "basI" { \clef bass \global \basIVoice }
-      >>
-      \new Lyrics \lyricsto "basI" { \basILyrics }
 
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
-        \set Staff.instrumentName = "Bass"
-        \new Voice = "basII" { \clef bass \global \basIIVoice }
+        \set Staff.instrumentName = "Bass I + II"
+            \new Voice = "basI" { \clef bass \global \basIVoice }
+            \new Lyrics{ \basILyrics }
       >>
-      \new Lyrics { \basIILyrics }
+
+      \new Staff
+      <<
+        \set Staff.instrumentName = "Bass II"
+        \new Voice = "basII" { \clef bass \global \basIIVoice }
+        \new Lyrics { \basIILyrics }
+      >>
     >>%end of ChoirStaff
   }%end of score (PDF)
 

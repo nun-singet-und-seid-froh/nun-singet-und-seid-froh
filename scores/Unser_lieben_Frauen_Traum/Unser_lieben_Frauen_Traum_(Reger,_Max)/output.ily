@@ -5,20 +5,19 @@
 %               please contact us at mail@nun-singet-und-seid-froh.info                 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-#(set-global-staff-size 17)
+#(set-global-staff-size 15.5)
 
 \paper{
-  % system-count = 3
-  % systems-per-page = 3
    page-count = 3
+   system-count = 5
 }
 
 \layout {
   \context {
     \Staff
-    \RemoveEmptyStaves 
+    \RemoveEmptyStaves
   }
-  
+
   \context {
     \Score
     % Remove all-rest staves also in the first system

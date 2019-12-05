@@ -30,6 +30,12 @@ splitStaffBarLineMarkup = \markup \with-dimensions #'(0 . 0) #'(0 . 0) {
   \arrow-at-angle #-45 #(sqrt 8) ##t
 }
 
+spacerVoice = \new Voice {
+  \override MultiMeasureRest.transparent = ##t
+  \override MultiMeasureRest.minimum-length = #16
+  R2.
+}
+
 splitStaffBarLine = {
   \once \override Staff.BarLine.stencil =
   #(lambda (grob)
@@ -87,13 +93,13 @@ commonMarks =  {
     s2. |
     s2.\> |
     s2\! s4\pp |
-    s2. |
+    s2. | \break \noPageBreak
     s2. |
     s4. s8 s4\> |
-    s8. s16\pp s4 s4\mp\< |
-    s2.|
+    s8. s16\pp s4 s4\mp |
+    s2.\<|
     s2. |
-    s4\!\mf s8 s8\> s4 |
+    s4\!\mf s8 s8\> s4 | \break \noPageBreak
     s2\! s4\< |
     s2\! s4\> |
     s4 s4\!\p s4 |
@@ -101,14 +107,17 @@ commonMarks =  {
   }
   \alternative {
     { s2\! }
-    { s2.\bar"||" }
+    { << { s2.\bar"||" } \\ { \spacerVoice }>>}
   }
+
+  \pageBreak
+
   \time 4/4
   s2\f s2 |
   s2 s4 s\< |
   s2 s\! |
   s1 |
-  s2 s4 s\> |
+  s2 s2\> |
   s4\! s s s\f\< |
 
   s2 s4 s4\! |
@@ -116,10 +125,10 @@ commonMarks =  {
   s2\> s8\! s8\< s4 |
   s2 s4 s4\! |
   s2\ff s2\> |
-  s2\! s2\mp |
+  s2\!^\fermata s2\mp |
   s2 s2\> |
   s1 |
-  s1\!\pp
+  s1\!\pp^\fermata\bar "|."
 }
 
 sopIMarks = {
@@ -160,24 +169,24 @@ sopIVoice = \relative c'' {
         c( d) a |
         g2~ g4 |
         f2 c'4 |
-        d4.( c8) b4 |
-        c4( a) b |
+        d4.( c8) bes4 |
+        c4( a) bes |
         a4.( g8) fis4 |
         g2 g4 |
-        f!4( a) b|
-        c( d) b |
+        f!4( a) bes |
+        c( d) b! |
         << e2( {s4 s8 s8} >> d4) |
         c2 c4 |
-        b2 a4 |
+        b!2 a4 |
         << g2 {s4 s4} >> a4 |
-        d4. << b!8 {s16 s16} >> g4 |
+        d4. \(bes!8\)  g4 |
       }
       \alternative {
         { f2 }
         { f2. }
-      }\break
-      \splitStaffBarLine
+      }
 
+      \splitStaffBarLine
 
       g2 a4 f |
       e!2 r4 a |
@@ -191,10 +200,10 @@ sopIVoice = \relative c'' {
       b4 c |
       d2 d |
       es2 es |
-      d2^\fermata e!
+      d2 e!
       c2 d |
       b4( a) g2 |
-      f1^\fermata\bar "|."
+      f1
     }
 
   >>
@@ -202,6 +211,7 @@ sopIVoice = \relative c'' {
 
 sopIIVoice = \relative c' {
   <<
+    { \commonMarks }
     { \sopIIMarks }
     {
       s4 |
@@ -216,14 +226,14 @@ sopIIVoice = \relative c' {
       g2 r4 g4 |
       g2 es |
 
-      es2^> d4( e) |
+      es2 d4( e) |
       fis2 g4 g |
       a2 b |
       b2 a |
-      d,2^\fermata c'2 |
+      d,2  c'2 |
       a2 a |
       b4( f d) e |
-      f1^\fermata
+      f1
     }
   >>
 }
@@ -247,11 +257,11 @@ altVoice = \relative c' {
         d4( e) g |
         g4( a) g |
 
-        g4.( a8 b!4) |
+        g4.( a8 bes!4) |
         a2 a4 |
         g4( f) f |
         d2 f4 |
-        f4. f8 e4 |
+        f4. \(f8\) e4 |
       }
       \alternative {
         { c2 }
@@ -260,19 +270,19 @@ altVoice = \relative c' {
       bes2 c4 f |
       cis2 r4 e |
       d2 f |
-      e!2 a4 g |
+      e2 a4 g |
       f2 g4( f) |
       e2 r4 d |
-      b'2 a |
+      bes'2 a |
 
-      f2 b,4( g') |
+      f2 bes,4( g') |
       fis2 d4 c |
       f!2 f |
       es2 c' |
-      b2^\fermata g2 |
+      b2 g2 |
       g2 f |
       f2. e4 |
-      c1^\fermata
+      c1
     }
   >>
 }
@@ -285,15 +295,15 @@ tenVoice = \relative c' {
     {
       \repeat volta 2{
         a4 |
-        a4.(  b8) a4 |
+        a4.(  bes8) a4 |
         f'4( d) d |
-        g,4.( a8  b4) |
+        g,4.( a8  bes4) |
         a2 c4 |
 
         a2 d4 |
-        c2 b4 |
+        c2 bes4 |
         c2 a4 |
-        b2 c4 |
+        bes2 c4 |
         a4( c) d |
         c4( f) d |
 
@@ -301,22 +311,22 @@ tenVoice = \relative c' {
         e2 d4 |
         d2 c4 |
         b2 d4 |
-        d4. d8 b!4 |
+        d4. \(d8\) bes!4 |
       }
       \alternative {
         { a2 }
         { a2. }
       }
 
-      g2 c8[ a] d4 |
+      g2 c8([ a]) d4 |
       cis2 r4 cis |
       a2 d |
       g2 f4 e |
       d2 d |
-      c2 r4 d |
+      e2 r4 d |
       es2 es |
 
-      es4^>( a,) d2 |
+      es4( a,) d2 |
       c2 d4 g, |
       d'2 d |
       g2 es |
@@ -328,40 +338,11 @@ tenVoice = \relative c' {
   >>
 }
 
-basIVoice = \relative c' {
-  <<
-    { \basIMarks }
-    {
-      s4 |
-      s2.*16
-      s2
 
-      bes2 a4 a |
-      a2 r4 a |
-      f2 f |
-      b2 a4 a |
-      d2 g, |
-      g2 r4 b4 |
-      g2 a |
-
-
-      a2^> b |
-      c2 g4 c |
-      c2 b |
-      d2 c |
-      g2 g |
-      a2 a |
-      g4( a) b2 |
-      a1
-    }
-  >>
-}
-
-
-basIIVoice = \relative c {
+basIVoice = \relative c {
   <<
     { \commonMarks }
-    { \basIIMarks }
+    { \basIMarks }
     {
       \repeat volta 2 {
         f4 |
@@ -380,25 +361,56 @@ basIIVoice = \relative c {
         c2( g4) |
         a2 f4 |
         g( d) f |
-        g2 d4 | 
-        
-        b'!4.\( g8\) c,4 |
+        g2 d4 |
+
+        bes'4.\( g8\) c,4 |
       }
       \alternative {
         { f2 }
         { f2. }
       }
+
       \splitStaffBarLine
 
-      es2 c4 d |
+      bes2 a4 a |
+      a2 r4 a |
+      f2 f |
+      bes2 a4 a |
+      d2 g, |
+      g2 r4 bes4 |
+      g2 a |
+
+
+      a2 bes |
+      c2 g4 c |
+      c2 bes |
+      d2 c |
+      g2 g |
+      a2 a |
+      g4( a) b2 |
+      a1
+    }
+  >>
+}
+
+basIIVoice = \relative c' {
+  <<
+    { \commonMarks }
+    { \basIIMarks }
+    {
+      s4 |
+      s2.*16
+      s2
+
+      es,2 c4 d |
       a2 r4 a'4 |
-      f2 b, |
+      f2 bes, |
       g2 a4 a |
-      b2 g |
+      bes2 g |
       c2 r4 g' |
       es2 c |
 
-      d^> b |
+      d bes |
       a2 g4 es' |
       d2 g |
       c,2 fis |
@@ -409,3 +421,4 @@ basIIVoice = \relative c {
     }
   >>
 }
+
