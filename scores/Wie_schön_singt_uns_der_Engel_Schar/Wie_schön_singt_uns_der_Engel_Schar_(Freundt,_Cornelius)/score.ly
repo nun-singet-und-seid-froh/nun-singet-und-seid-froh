@@ -31,29 +31,41 @@
     \new StaffGroup <<
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
-        \set Staff.instrumentName = "Discantus"
-        \new Voice = "sop" { \incipit \sopIncipit \global \sopVoice }
+        \set Staff.instrumentName = \markup{ \center-column { 
+          { \smallCaps { "Discantus" } }
+          { \teeny "Sopran" } }
+        }
+        \new Voice = "sop" { \global \sopVoice }
       >>
       \new Lyrics \lyricsto "sop" { \sopLyrics }
 
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
-        \set Staff.instrumentName = "Altus"
-        \new Voice = "alt" { \incipit \altIncipit \global \altVoice }
+        \set Staff.instrumentName = \markup{ \center-column { 
+          { \smallCaps { "Altus" } }
+          { \teeny "Alt" } }
+        }
+        \new Voice = "alt" { \global \altVoice }
       >>
       \new Lyrics \lyricsto "alt" { \altLyrics }
 
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
-        \set Staff.instrumentName = "Tenor"
-        \new Voice = "ten" { \incipit \tenIncipit \clef "G_8" \global \tenVoice }
+        \set Staff.instrumentName = \markup{ \center-column { 
+          { \smallCaps { "Tenor" } }
+          { \teeny "Tenor" } }
+        }
+        \new Voice = "ten" { \clef "G_8" \global \tenVoice }
       >>
       \new Lyrics \lyricsto "ten" { \tenLyrics }
 
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
-        \set Staff.instrumentName = "Bassus"
-        \new Voice = "bas" { \incipit \basIncipit \clef bass \global \basVoice }
+        \set Staff.instrumentName = \markup{ \center-column { 
+          { \smallCaps { "Bassus" } }
+          { \teeny "Bass" } }
+        }
+        \new Voice = "bas" { \clef bass \global \basVoice }
       >>
       \new Lyrics \lyricsto "bas" { \basLyrics }
     >> %end of StaffGroup
@@ -63,8 +75,6 @@
         \Staff
         \hide Staff.BarLine
       }
-      indent = 5\cm
-      incipit-width = 3\cm
     }
   } %end of score (PDF)
 
