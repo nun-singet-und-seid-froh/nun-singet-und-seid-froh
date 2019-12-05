@@ -1,9 +1,16 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%         This file is part of the edition www.nun-singet-und-seid-froh.info            %
+% This file as well as the music or data represented in it is within the public domain. %
+%      If you think that this file violates your copyright or other rights of you,      %
+%               please contact us at mail@nun-singet-und-seid-froh.info                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % based on templates/SATB/SATB/modern/score.ly
 
 % local information (for this particular piece)
 \include "meta.ily"             % metadata for this piece
 \include "voices.ily"           % the tunes, dynamic and articulation marks
-\include "lyrics.ily"            % the lyrics within the staves
+\include "lyrics.ily"           % the lyrics within the staves
 \include "output.ily"           % the paper and midi settings for this piece
 
 % global information (identical for all pieces)
@@ -21,7 +28,7 @@
 
   \score {
     %for PDF
-    \new StaffGroup<<
+    \new StaffGroup <<
       \new Staff \with { \consists "Ambitus_engraver" }
       <<
         \set Staff.instrumentName = "Sopran"
@@ -54,7 +61,7 @@
 
     \layout { }
   } %end of score (PDF)
-  
+
   \score {
     %for MIDI
     \unfoldRepeats
@@ -67,7 +74,6 @@
     >>
     \stafftovoice
   } %end of score (MIDI)
-  
 } %end of book
 
 
@@ -82,7 +88,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sop" { \highlightedVoice  \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "ten" { \global \tenVoice }
@@ -98,10 +104,10 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \highlightedVoice \global \altVoice }
-      \new Voice = "tenI" { \global \tenVoice }
+      \new Voice = "ten" { \global \tenVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
     \stafftovoice
@@ -114,10 +120,10 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
-      \new Voice = "tenI" { \highlightedVoice \global \tenVoice }
+      \new Voice = "ten" { \highlightedVoice \global \tenVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
     \stafftovoice
@@ -130,7 +136,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "ten" { \global \tenVoice }

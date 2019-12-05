@@ -1,5 +1,5 @@
-#conventions concerning meta.ily
-The *meta.ily* of a certain piece contains the meta-data of that piece, i.e. information *about* the piece which transcend the pure information on the (musical and lyrical) text of the piece. These data are in part (the data concerning title, composer, arranger and poet) printed on the sheet, in part used for the generation of the generic MediaWiki-article. Enter the meta-data as described:
+# conventions concerning meta.ily
+The *meta.ily* of a certain piece contains the meta-data of that piece, i.e. information *about* the piece which transcend the pure information on the (musical and lyrical) text of the piece. These data are in part (the data concerning title, composer, arranger and poet) printed on the sheet, in part used for the catalogue filter on the website. Enter the meta-data as described:
 
 ## title
 	title             = ""
@@ -68,7 +68,7 @@ The variable *epoque* names the epoque the music piece is ascribed to. (The epoq
 
 The variable *language* names the language of the lyrics. If a piece contains multiple languages, all languages are named, separated by comma.
 
-## instrumnetation
+## instrumentation
 	instrumentation   = ""
 
 The variable *instrumentation* reflects the voices as well as their order. So, for example, while "SSAATTBB" is used for a piece of eight separate voices, "(SATB)(SATB)" is used for a eight-voice-piece whose voices appear as as double-choir.
