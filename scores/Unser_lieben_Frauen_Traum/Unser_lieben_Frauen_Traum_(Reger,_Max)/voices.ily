@@ -194,15 +194,15 @@ sopIVoice = \relative c'' {
       e!2 cis4 cis |
       d2 d |
       g,2 r4 g |
-      b2 c |
+      bes2 c |
       f,2 g |
       a2
-      b4 c |
+      bes4 c |
       d2 d |
       es2 es |
       d2 e!
       c2 d |
-      b4( a) g2 |
+      bes4( a) g2 |
       f1
     }
 
@@ -213,26 +213,30 @@ sopIIVoice = \relative c' {
   <<
     { \commonMarks }
     { \sopIIMarks }
-    {
-      s4 |
-      s2.*16
-      s2
+    { 
+      \repeat volta 2 {
+        s4 |
+        s2.*15
+      } \alternative {
+        { s2 }
+        { s2. }
+      }
 
       es2 es4 d4
       e!2 r4 a |
-      a2 b |
-      b2 f4 a |
-      a2 b4( a) |
+      a2 bes |
+      bes2 f4 a |
+      a2 bes4 a) |
       g2 r4 g4 |
       g2 es |
 
       es2 d4( e) |
       fis2 g4 g |
-      a2 b |
-      b2 a |
+      a2 bes |
+      bes2 a |
       d,2  c'2 |
       a2 a |
-      b4( f d) e |
+      bes4( f d) e |
       f1
     }
   >>
@@ -293,7 +297,7 @@ tenVoice = \relative c' {
     { \commonMarks }
     { \tenIMarks }
     {
-      \repeat volta 2{
+      \repeat volta 2 {
         a4 |
         a4.(  bes8) a4 |
         f'4( d) d |
@@ -387,7 +391,7 @@ basIVoice = \relative c {
       d2 c |
       g2 g |
       a2 a |
-      g4( a) b2 |
+      g4( a) bes2 |
       a1
     }
   >>
@@ -397,10 +401,14 @@ basIIVoice = \relative c' {
   <<
     { \commonMarks }
     { \basIIMarks }
-    {
-      s4 |
-      s2.*16
-      s2
+    { 
+      \repeat volta 2 {
+        s4 |
+        s2.*15
+      } \alternative {
+        { s2 }
+        { s2. }
+      }
 
       es,2 c4 d |
       a2 r4 a'4 |
