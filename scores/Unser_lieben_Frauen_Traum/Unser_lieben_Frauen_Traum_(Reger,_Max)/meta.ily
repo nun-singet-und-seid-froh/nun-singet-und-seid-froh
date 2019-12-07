@@ -39,7 +39,7 @@ opus                    = "Acht Geistliche Gesänge (op. 138)"
 noInOpus                = "4"
 titleInOpus             = ""
 
-lastEdited              = "4. Dezember 2019" % e.g. "19. September 2015"
+lastEdited              = "7. Dezember 2019" % e.g. "19. September 2015"
 vers                    = "1.0.0" % write "0.0.0" for the first draft
 noInNsusf               = "21" % write "X" as long piece is not ready to be published
 
