@@ -15,8 +15,18 @@ global = {
   \dynamicUp
 }
 
+piuF = \markup { \italic più \dynamic f }
+
 % articulation, dynamics, fermata and breathing marks
-sopIArt = { }
+sopIArt = {
+  s2\f\<
+  s1 s2\!
+  s1.
+  s1 s2\>
+  s1 s2\!\piuF
+  s1.\<
+  s1.\!
+}
 
 sopIIArt = { }
 
@@ -35,41 +45,41 @@ sopIVoice = <<
   \relative c''
     {  
       %00
-      a2\f\<
-      a1 a2\!
+      a2
+      a1 a2
       cis1 d2
       e1( fis2
-      e1) \bar "" e2^\markup{ \italic più \dynamic f }
-      a,1\< a2\!
+      e1) \bar "" e2
+      a,1 a2
       cis1 d2
-      e1\>( fis2 %\noBreak
-      e1.\!)
-      e1^\markup{ \italic meno \dynamic f } fis2\<
-      %10
-      e1 d2\!
-      cis1.\>
-      a1 \bar "" a2\<
-      b1 b2\!
-      cis1 b2
-      a1\>( b2
-      cis1\p) \bar "" cis2\f\<
+      e1( fis2 %\noBreak
+      e1.)
       e1 fis2
-      e1 d2\!
-      cis1.\>
-      %20
-      a1 \bar "" a2\p\<
+      %10
+      e1 d2
+      cis1.
+      a1 \bar "" a2
       b1 b2
       cis1 b2
-      a1( b2\!
-      cis1.\f\>)
-      fis,1\p\< fis2
+      a1( b2
+      cis1) \bar "" cis2
+      e1 fis2
+      e1 d2
+      cis1.
+      %20
+      a1 \bar "" a2
+      b1 b2
+      cis1 b2
+      a1( b2
+      cis1.)
+      fis,1 fis2
       gis1 gis2
       a1.(
-      e'1.\ff)
-      cis1\pp cis2
+      e'1.)
+      cis1 cis2
       %{30%}
-      b1\> b2
-      a1.\!\fermata\bar"|."
+      b1 b2
+      a1. \fermata \bar "|."
     }
 >>
 
