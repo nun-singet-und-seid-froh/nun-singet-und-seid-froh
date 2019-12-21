@@ -21,7 +21,7 @@ melodyDate				= ""
 arrangerChristianName   = "Ruben" % e.g. "Johann Sebastian"
 arrangerSurName	        = "Liljefors" % e.g. "Bach"
 arrangerLifedata        = "1871-1936" % e.g. "1685-1750"
-arrangementDate         = ""
+arrangementDate         = "1909"
 
 % poet is the one who wrote (the main part of) the lyrics (also see translator)
 poetChristianName       = "Jeanna" % e.g. "Paul"
@@ -35,11 +35,11 @@ translatorSurName       = "" % e.g. "Luther"
 translatorLifedata      = "" % e.g. "1483-1546"
 translationDate         = ""
 
-opus                    = "" 
-noInOpus                = ""
+opus                    = "19" 
+noInOpus                = "3"
 titleInOpus             = ""
 
-lastEdited              = "" % e.g. "19. September 2015"
+lastEdited              = "21. Dezember 2019" % e.g. "19. September 2015"
 vers                    = "0.0.0" % write "0.0.0" for the first draft
 noInNsusf               = "X" % write "X" as long piece is not ready to be published
 
