@@ -20,38 +20,38 @@ global = {
 sopArt = {
   s4\pp_\markup{\italic {c. b. ch.}} s2.
   s2. s4\p
-  s4\< s4 s4\> s8\! s8\<
-  s4. s8\> s4. s8\p
+  s4\< s8 s8\! s4\> s8\! s8\<
+  s4 s8\! s8\> s4.\! s8\p
   s1
-  s2.\< s4\mf
+  s2\< s4\! s4\mf
   s2 s4. s8\<
-  s4 s8\> s8 s4 s8 s8\p
+  s8 s8\! s8\> s8 s4.\! s8\p
   s1
-  s2.\> s8\breathe s8\p
-  s4\< s4 s4\> s4
-  s2 s\p s4 \mf
-  s4. s8\> s4\!
-  s4\>^\markup{\italic{ ritard. }} s4 s4^\fermata s8\<\p^\markup{\italic{a tempo}} s8
-  s4.\> s8 s4 s8\< s8 
-  s2 s8\! s8 s4
+  s2\> s8 s8\! s8\breathe s8\p
+  s4\< s8 s8\! s4\> s8 s8\!
+  s4\> s8 s8\! s4\p s4\mf
+  s4. s8\> s4 s4\!
+  s4\>^\markup{\italic{ ritard. }} s8 s8\! s4^\fermata s8\<\p^\markup{\italic{a tempo}} s8
+  s4.\> s8 s4\! s8\< s8 
+  s8 s4.\! s4 s4
   s2.\> s4\! \bar "||"\break
 
   s4\pp_\markup{\italic {c. b. ch.}} s2.
   s2. s4\p
-  s4\< s4 s4\> s8\! s8\<
-  s4\> s4 s4\! s8 s8\p
+  s4 s4 s4 s8 s8\<
+  s8\! s8\> s4 s4\! s8 s8\p
   s1
-  s2.\< s4\mf
-  s2 s4. s8\<
-  s4 s8\> s8 s4 s8 s8\p
+  s2\> s8 s8\! s4\mf
+  s2. s4\<
+  s8\! s8\> s8 s8\! s4. s8\p
   s1
-  s2.\> s8 s8\<
-  s2.\f\< s8\! s8
-  s4 s8\< s8 s4 s8\! s8
-  s4\> s4 s2
-  s4^\markup{\italic{ ritard. }} s4 s4\!^\fermata \bar "" \break s8\mf^\markup{\italic {a tempo}} s8
+  s2.\> s16\! s8.\<
+  s2\f\< s2\!
+  s4 s8\< s8 s8 s4\! s8
+  s1\>
+  s4^\markup{\italic{ ritard. }} s8 s8\! s4^\fermata \bar "" \break s8\mf^\markup{\italic {a tempo}} s8
   s2 s4 s8\< s8
-  s2 s4\f s4
+  s4 s4\! s4\f s4
   s1\>
   s4\pp_\markup{\italic{c. b. ch.}} s4 s2
   s1\bar"|."
