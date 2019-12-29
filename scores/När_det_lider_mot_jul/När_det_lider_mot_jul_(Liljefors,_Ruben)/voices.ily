@@ -106,7 +106,7 @@ sopVoice = <<
     c4 a8 bes g4 a8 fis!
     g2. f4
     d' f,8 a c4 bes8 d
-    e4 bes8 c d4. d8
+    es4 bes8 c d4. d8
     c4 a8 bes g4 a8 fis!
     g2.~g8 bes8
 
@@ -116,9 +116,9 @@ sopVoice = <<
     g4 f8 es8 f4 d8 f
     bes4. g8 f4 a8 bes
     c2 bes4 a
-    g1
+    bes1
     \new Voice = "con bocca chiusa" { 
-      d'4( c8[ a] bes4 g
+      d4( c8[ a] bes4 g
       a2 bes) 
     } \oneVoice
   }
@@ -247,7 +247,7 @@ basVoice = <<
     bes, bes8 bes g4 g8 g'
     es4 es8 es bes4. bes8
     c4 d8 bes c4 a8 d
-    g,4 a8 bes bes4( c8) d
+    g,4 a8 c bes4( c8) d
     es4 es8 d8 c4 es8 c
     f4 f8 es8 d4 d
     g4 f8 es8 f4 es8 d
