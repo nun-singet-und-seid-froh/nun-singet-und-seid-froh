@@ -3,6 +3,7 @@ SHELL=/bin/bash
 DIRNAME=$(shell basename "$(PWD)")
 META=meta.ily
 DEPLOY=../../../tools/deploy.sh
+DEPLOY_PARAMS=--path=$(DIRNAME)
 LYS=score.ly voices.ily $(META) lyrics.ily output.ily ../../../include/header.ily ../../../include/paper.ily ../../../include/sound.ily ../../../include/version.ily
 NSUSF := $(shell git rev-parse --show-toplevel)
 LILYHOST := $(shell command -v lilypond)
@@ -19,7 +20,7 @@ midi: $(DIRNAME).midi
 zip: $(DIRNAME).zip
 
 deploy: $(DIRNAME).pdf $(DIRNAME).midi $(DIRNAME).zip
-	$(DEPLOY)
+	$(DEPLOY) $(DEPLOY_PARAMS)
 
 $(DIRNAME).zip: $(DIRNAME).pdf $(DIRNAME).midi
 	zip "$(DIRNAME)" *.pdf *.midi
