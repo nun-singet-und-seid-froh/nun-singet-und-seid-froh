@@ -5,4 +5,12 @@
 %               please contact us at mail@nun-singet-und-seid-froh.info                 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\version "2.19.82"
+#(set-global-staff-size 18.5)
+
+\paper{
+   systems-per-page = 2
+}
+
+\midi {
+  % \tempo 4 = 100
+}

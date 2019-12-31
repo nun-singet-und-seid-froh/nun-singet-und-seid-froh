@@ -516,7 +516,8 @@ stafftovoice = \midi {
       \new Voice = "sop" { \highlightedVoice  \global \sopVoiceVerseThree }
       \new Voice = "alt" { \global \altVoiceVerseThree }
       \new Voice = "ten" { \global \tenVoiceVerseThree }
-      \new Voice = "bas" { \global \basVoiceVerseThree }
+      \new Voice = "basI" { \global \basIVoiceVerseThree }
+      \new Voice = "basII" { \global \basIIVoiceVerseThree }
     >>
     \stafftovoice
   }
@@ -532,7 +533,8 @@ stafftovoice = \midi {
       \new Voice = "sop" { \global \sopVoiceVerseThree }
       \new Voice = "alt" { \highlightedVoice \global \altVoiceVerseThree }
       \new Voice = "ten" { \global \tenVoiceVerseThree }
-      \new Voice = "bas" { \global \basVoiceVerseThree }
+      \new Voice = "basI" { \global \basIVoiceVerseThree }
+      \new Voice = "basII" { \global \basIIVoiceVerseThree }
     >>
     \stafftovoice
   }
@@ -548,7 +550,8 @@ stafftovoice = \midi {
       \new Voice = "sop" { \global \sopVoiceVerseThree }
       \new Voice = "alt" { \global \altVoiceVerseThree }
       \new Voice = "ten" { \highlightedVoice \global \tenVoiceVerseThree }
-      \new Voice = "bas" { \global \basVoiceVerseThree }
+      \new Voice = "basI" { \global \basIVoiceVerseThree }
+      \new Voice = "basII" { \global \basIIVoiceVerseThree }
     >>
     \stafftovoice
   }
@@ -556,7 +559,7 @@ stafftovoice = \midi {
 
 % bass
 \book {
-  \bookOutputSuffix "3-bass"
+  \bookOutputSuffix "3-bass1"
   \score {
     \unfoldRepeats
     \new Staff <<
@@ -564,7 +567,25 @@ stafftovoice = \midi {
       \new Voice = "sop" { \global \sopVoiceVerseThree }
       \new Voice = "alt" { \global \altVoiceVerseThree }
       \new Voice = "ten" { \global \tenVoiceVerseThree }
-      \new Voice = "bas" { \highlightedVoice \global \basVoiceVerseThree }
+      \new Voice = "basI" { \highlightedVoice \global \basIVoiceVerseThree }
+      \new Voice = "basII" { \global \basIIVoiceVerseThree }
+    >>
+    \stafftovoice
+  }
+}
+
+% bass
+\book {
+  \bookOutputSuffix "3-bass2"
+  \score {
+    \unfoldRepeats
+    \new Staff <<
+      \commonVoice
+      \new Voice = "sop" { \global \sopVoiceVerseThree }
+      \new Voice = "alt" { \global \altVoiceVerseThree }
+      \new Voice = "ten" { \global \tenVoiceVerseThree }
+      \new Voice = "basI" { \global \basIVoiceVerseThree }
+      \new Voice = "basII" { \highlightedVoice \global \basIIVoiceVerseThree }
     >>
     \stafftovoice
   }

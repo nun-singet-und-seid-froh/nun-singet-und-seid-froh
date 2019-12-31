@@ -98,11 +98,11 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \backgroundVoice
+      \commonVoice
       \new Voice = "sop" { \highlightedVoice  \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "tenI" { \global \tenIVoice }
-      \new Voice = "tenII" {\global \tenIIVoice }
+      \new Voice = "tenII" { \global \tenIIVoice }
       \new Voice = "bas" { \global \basVoice }
     >>
     \midi {}
@@ -115,7 +115,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \backgroundVoice
+      \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \highlightedVoice \global \altVoice }
       \new Voice = "tenI" { \global \tenIVoice }
@@ -132,7 +132,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \backgroundVoice
+      \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "tenI" { \highlightedVoice \global \tenIVoice }
@@ -149,7 +149,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \backgroundVoice
+      \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "tenI" { \global \tenIVoice }
@@ -166,7 +166,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \backgroundVoice
+      \commonVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "tenI" { \global \tenIVoice }
