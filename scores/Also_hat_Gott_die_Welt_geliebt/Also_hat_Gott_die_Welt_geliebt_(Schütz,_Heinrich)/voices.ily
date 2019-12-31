@@ -38,18 +38,16 @@ sopVoice= {
           b1 a\bar "||"
           \undo \hide Staff.BarLine
        
-       \time 6/2
-        {
+       \time 6/2 \set Score.tempoHideNote = ##t \tempo 2 = 120
           e2 fis g a2. g4 fis2 \hide Staff.BarLine
           e e a b2. a4 g2
           fis fis b d2. c4 b2
-          a a d e2. d4 c2\undo \hide Staff.BarLine
-      }
+          a a d e2. d4 c2 %\undo \hide Staff.BarLine
           b g fis e1.         
           \undo \hide Staff.BarLine
+          \time 4/2 \tempo 4 = 120
         }
     
-     \time 4/2
        {
          r2 d' e d4 c  \hide Staff.BarLine
          b2 g fis1
@@ -195,10 +193,10 @@ tenIIVoice = {
         \undo \hide Staff.BarLine
       
       \time 6/2 {
-        r\breve.\hide Staff.BarLine
+        R\breve.\hide Staff.BarLine
         r1. e2 g a
         b2. a4 g2 fis d r
-        r r g g2. g4 e2
+        r1 g2 g2. g4 e2
         g b b b1.
         \undo \hide Staff.BarLine
       }
@@ -246,9 +244,10 @@ basVoice = {
         \undo \hide Staff.BarLine
         \time 6/2{
           a2 d e fis2. e4 d2 \hide Staff.BarLine
-          a2 a r2 r1.
-          r\breve.
-          r2 r g c2. g4 a2
+          a2 a r2
+          r1.
+          R\breve.
+          r1 g2 c2. g4 a2
           e' e b e,1.
           \undo \hide Staff.BarLine
         }
