@@ -6,9 +6,9 @@ global = {
 
 sopIncipit = {
   \clef "mensural-g"
-  \key g \major
+  \key c \major
   \time 4/4
-  g'\breve	
+  d''1 e''1
 }
 
 sopVoice= {
@@ -61,8 +61,8 @@ sopVoice= {
 altIncipit = {
   \clef "mensural-c2"
   \time 4/4
-  \key g \major
-  e'\breve
+  \key c \major
+  a'1 a'1
 }
 
 altVoice = {
@@ -112,9 +112,9 @@ altVoice = {
 
 
 tenIIncipit = {
-  \clef "petrucci-c3"
-  \key g \major
-  a1
+  \clef "mensural-c3"
+  \key c \major
+  d'1 cis'1
 }
 
 tenIVoice = {
@@ -163,8 +163,8 @@ tenIVoice = {
 
 tenIIIncipit = {
   \clef "mensural-c3"
-  \key g \major
-  c'1
+  \key c \major
+  f'1 e'1
 }
 
 tenIIVoice = {
@@ -194,7 +194,7 @@ tenIIVoice = {
         gis8[ fis] gis2\melismaEnd a1
         \undo \hide Staff.BarLine
       
-      \time 6/2{
+      \time 6/2 {
         r\breve.\hide Staff.BarLine
         r1. e2 g a
         b2. a4 g2 fis d r
@@ -203,9 +203,9 @@ tenIIVoice = {
         \undo \hide Staff.BarLine
       }
     }
-    \time 4/2{
+    \time 4/2 {
       r2 g g g4 e \hide Staff.BarLine
-      e2 b b1
+      e2 b' b1
       b\breve\fermata
       \undo \hide Staff.BarLine
     }
@@ -215,8 +215,8 @@ tenIIVoice = {
 basIncipit = {
   \clef "mensural-f"
   \time 4/4
-  \key g \major
-  a,1
+  \key c \major
+  d1 a1
 }
 
 basVoice = {

@@ -22,7 +22,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                  the PDF & main MIDI producing part:             %
-%                       4 staves for 4 voices                      %
+%                       5 staves for 5 voices                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \book {
@@ -36,7 +36,7 @@
 
         \set Staff.instrumentName = \markup{
           \center-column {
-            { \smallCaps { "Cantus"} }
+            { \smallCaps { "Cantus" } }
             { \italic \teeny "Sopran" }
           }
         }
@@ -48,7 +48,7 @@
       <<
         \set Staff.instrumentName = \markup{
           \center-column {
-            { \smallCaps { "Altus"} }
+            { \smallCaps { "Altus" } }
             { \italic \teeny "Alt" }
           }
         }
@@ -60,8 +60,8 @@
       <<
         \set Staff.instrumentName = \markup{
           \center-column {
-            { \smallCaps { "Tenor"} }
-            { \italic \teeny "Tenor" }
+            { \smallCaps { "Tenor" } }
+            { \italic \teeny "Tenor I" }
           }
         }
         \new Voice = "tenI" { \incipit \tenIIncipit \clef "G_8" \global \tenIVoice }
@@ -72,7 +72,7 @@
       <<
         \set Staff.instrumentName = \markup{
           \center-column {
-            { \smallCaps { "Quintus	"} }
+            { \smallCaps { "Quintus" } }
             { \italic \teeny "Tenor II" }
           }
         }
@@ -85,7 +85,7 @@
       <<
         \set Staff.instrumentName = \markup{
           \center-column {
-            { \smallCaps { "Bassus"} }
+            { \smallCaps { "Bassus" } }
             { \italic \teeny "Bass" }
           }
         }
@@ -111,7 +111,7 @@
       \new Voice = "tenorII" { \global \tenIIVoice }
       \new Voice = "bass" { \global \basVoice }
     >>
-    \midi { }
+    \stafftovoice
   } %end of score (MIDI)
 
 } %end of book
@@ -125,7 +125,7 @@
 
 % sopran
 \book {
-  \bookOutputSuffix "tenorI"
+  \bookOutputSuffix "sopran"
   \score {
     \unfoldRepeats
     \new Staff <<
@@ -136,14 +136,14 @@
       \new Voice = "tenorII" { \global \tenIIVoice }
       \new Voice = "bass" { \global \basVoice }
     >>
-    \midi { }
+    \stafftovoice
   }
 }
 
 
 % alt
 \book {
-  \bookOutputSuffix "tenorI"
+  \bookOutputSuffix "alt"
   \score {
     \unfoldRepeats
     \new Staff <<
@@ -154,12 +154,12 @@
       \new Voice = "tenorII" { \global \tenIIVoice }
       \new Voice = "bass" { \global \basVoice }
     >>
-    \midi { }
+    \stafftovoice
   }
 }
 % tenor 1
 \book {
-  \bookOutputSuffix "tenorI"
+  \bookOutputSuffix "tenor1"
   \score {
     \unfoldRepeats
     \new Staff <<
@@ -170,13 +170,13 @@
       \new Voice = "tenorII" { \global \tenIIVoice }
       \new Voice = "bass" { \global \basVoice }
     >>
-    \midi { }
+    \stafftovoice
   }
 }
 
 % tenor 2
 \book {
-  \bookOutputSuffix "tenorI"
+  \bookOutputSuffix "tenor2"
   \score {
     \unfoldRepeats
     \new Staff <<
@@ -187,7 +187,7 @@
       \new Voice = "tenorII" { \highlightedVoice \global \tenIIVoice }
       \new Voice = "bass" { \global \basVoice }
     >>
-    \midi { }
+    \stafftovoice
   }
 }
 
@@ -195,7 +195,7 @@
 
 % bass
 \book {
-  \bookOutputSuffix "tenorI"
+  \bookOutputSuffix "bass"
   \score {
     \unfoldRepeats
     \new Staff <<
@@ -206,6 +206,6 @@
       \new Voice = "tenorII" { \global \tenIIVoice }
       \new Voice = "bass" { \highlightedVoice \global \basVoice }
     >>
-    \midi { }
+    \stafftovoice
   }
 }
