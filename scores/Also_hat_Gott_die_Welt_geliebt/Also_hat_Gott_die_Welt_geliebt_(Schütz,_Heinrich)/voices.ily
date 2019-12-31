@@ -37,14 +37,28 @@ sopVoice= {
           gis e' cis4 d2 c4 
           b1 a\bar "||"
           \undo \hide Staff.BarLine
-       
-       \time 6/2 \set Score.tempoHideNote = ##t \tempo 2 = 120
+
+          \tempo \markup {
+            \concat {
+              (
+                \smaller \general-align #Y #DOWN \note #"2" #1
+                " ~ "
+                \smaller \general-align #Y #DOWN \note #"4" #1
+                " "
+              )
+            }
+          }
+          \time 6/2 \set Score.tempoHideNote = ##t \tempo 2 = 120
+
           e2 fis g a2. g4 fis2 \hide Staff.BarLine
           e e a b2. a4 g2
           fis fis b d2. c4 b2
           a a d e2. d4 c2 %\undo \hide Staff.BarLine
           b g fis e1.         
           \undo \hide Staff.BarLine
+          \unset Score.tempoHideNode
+          \tempo "Tempo I"
+          \set Score.tempoHideNode = ##t
           \time 4/2 \tempo 4 = 120
         }
     
