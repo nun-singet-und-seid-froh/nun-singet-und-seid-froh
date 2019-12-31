@@ -240,7 +240,7 @@ basVoice = {
         r2 a, e' a,4 d2 
         g,4 c g d'2 d4 d
         cis d g,2 c4 a2 e'4
-        b2 r1.
+        b2 r2 r1
         g'4 g a2 fis4 g2 e4
         b1 e
         \undo \hide Staff.BarLine
