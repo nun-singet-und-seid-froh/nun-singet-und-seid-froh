@@ -55,8 +55,6 @@
     \layout { }
   } %end of score (PDF)
 
-  \stanzas
-
   \score {
     %for MIDI
     \commonVoice

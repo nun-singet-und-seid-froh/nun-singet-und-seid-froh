@@ -9,8 +9,8 @@
 
 % common settings of all voices
 global = {
-  \key as \major
-  \time 3/4
+  \key g \major
+  \time 6/4
   \partial 4
   \dynamicUp
   \autoBeamOff
@@ -27,30 +27,80 @@ sopIIArt = \sopIIArt
 altArt = \sopIIArt
 
 % the tunes
-sopITune = \relative c' {
-    %{00%}
+sopITune = \relative c'' {
+    r4 
+    r4 b b b g a
+    b4.( d8 e4) dis \breathe e2
+    \time 5/4
+    d!4 b g2 a4
+    \time 2/4
+    b\breathe g
+    \time 4/4
+    b d e e 
+    \time 8/4
+    d4( b4. d8[ e] d4 b8.[ a16 g8] a2)
+    \time 2/4
+    g4\breathe a 
+    \time 5/4
+    b4 a g fis2
+    \time 6/4
+    e1.~
+    e1 r4 
+    \bar "|."
 }
 
 
-soppIIVoice = <<
-	\sopIIArt
-  	\sopIITune
+sopIVoice = <<
+	\sopIArt
+	\sopITune
 >>
 
 sopIITune = \relative c' {
-    %{00%}
+    e4
+    e2 e4 fis2 fis4
+    g(a b) b2\breathe b4
+    \time 5/4
+    a4 a e2 fis4
+    \time 2/4
+    g4\breathe g
+    \time 4/4 
+    fis a b b
+    \time 8/4
+    a( fis4. g8[ a d a g] f4. g8 a4)
+    \time 2/4
+    b\breathe fis
+    \time 5/4
+    g4 fis e2 dis!4 
+    \time 6/4
+    e4.( fis8[ a b d b] a2
+    b1) r4
 }
 
-soppIIVoice = <<
+sopIIVoice = <<
 	\sopIIArt
-  	\sopIITune
+	\sopIITune
 >>
 
-altVoice = \relative c' {
-    %{00%}
+altTune = \relative c' {
+    r4
+    r e d c e2 
+    e4 e2 b4 \breathe g'2
+    \time 5/4
+    e4 d c4.( b8) a4 
+    \time 2/4
+    e'2~
+    \time 4/4
+    e2 r4 g, 
+    b d e2~
+    e4 e <<{\voiceOne c d \breathe d} \newVoice {\voiceTwo c a d}>> \oneVoice d
+    \time 5/4
+    b d e b2
+    \time 6/4
+    e4.( c8[ e fis a] fis4 e8 fis4
+    gis!1) r4
 }
 
-soppIIVoice = <<
-	\sopIIArt
-  	\sopIITune
+altVoice = <<
+	\altArt
+	\altTune
 >>

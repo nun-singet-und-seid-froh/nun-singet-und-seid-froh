@@ -9,18 +9,18 @@
 % this is version 1.0 of the meta.ily
 
 % the meta-data printed in the sheet
-title                   = ""
+title                   = "Es kommt ein Schiff, geladen"
 
 % composer is the one who wrote the melody (leave this empty if it is identical to the arranger)
 composerChristianName   = "" % e.g. "Johann Sebastian"
 composerSurName	        = "" % e.g. "Bach"
 composerLifedata        = "" % e.g. "1685-1750"
-melodyDate	        = ""
+melodyDate				= ""
 
 % arranger is the one who composed the voices
-arrangerChristianName   = "" % e.g. "Johann Sebastian"
-arrangerSurName	        = "" % e.g. "Bach"
-arrangerLifedata        = "" % e.g. "1685-1750"
+arrangerChristianName   = "Hugo" % e.g. "Johann Sebastian"
+arrangerSurName	        = "Distler" % e.g. "Bach"
+arrangerLifedata        = "1908-1942" % e.g. "1685-1750"
 arrangementDate         = ""
 
 % poet is the one who wrote (the main part of) the lyrics (also see translator)
@@ -35,11 +35,11 @@ translatorSurName       = "" % e.g. "Luther"
 translatorLifedata      = "" % e.g. "1483-1546"
 translationDate         = ""
 
-opus                    = "" 
-noInOpus                = ""
+opus                    = "Der Jahrkreis (op. 5)" 
+noInOpus                = "4"
 titleInOpus             = ""
 
-lastEdited              = "" % e.g. "19. September 2015"
+lastEdited              = "1. Januar 2020" % e.g. "19. September 2015"
 vers                    = "0.0.0" % write "0.0.0" for the first draft
 noInNsusf               = "X" % write "X" as long piece is not ready to be published
 
