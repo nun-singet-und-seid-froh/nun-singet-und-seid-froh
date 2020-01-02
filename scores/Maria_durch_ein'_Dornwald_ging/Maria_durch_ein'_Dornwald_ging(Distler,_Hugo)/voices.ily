@@ -24,9 +24,9 @@ commonArt = {
     s1 \break
     s1
     \time 6/4
-    s1 \breathe s2
+    s1 \breathe s2 
     \time 4/4
-    s1
+    s1 \break
     s1
     s1
     s1
