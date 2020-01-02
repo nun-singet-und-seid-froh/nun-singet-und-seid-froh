@@ -55,8 +55,6 @@
     \layout { }
   } %end of score (PDF)
 
-  \stanzas
-
   \score {
     %for MIDI
     \commonVoice
@@ -64,9 +62,8 @@
       \backgroundVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
-      \new Voice = "alt" { \global \menVoice }
+      \new Voice = "men" { \global \menVoice }
     >>
-    \stafftovoice
   } %end of score (MIDI)
 
 } %end of book
@@ -88,7 +85,6 @@
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "men" { \global \menVoice }
     >>
-    \stafftovoice
   }
 }
 
@@ -103,7 +99,6 @@
       \new Voice = "alt" { \highlightedVoice \global \altVoice }
       \new Voice = "men" { \global \menVoice }
     >>
-    \stafftovoice
   }
 }
 
@@ -118,6 +113,5 @@
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "men" { \highlightedVoice \global \altVoice }
     >>
-    \stafftovoice
   }
 }

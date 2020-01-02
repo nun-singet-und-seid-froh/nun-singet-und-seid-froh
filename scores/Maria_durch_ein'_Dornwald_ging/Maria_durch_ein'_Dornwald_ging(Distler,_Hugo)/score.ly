@@ -65,17 +65,28 @@
 
   \score {
     %for MIDI
-    \commonVoice
     \new Staff <<
-      \new Voice = "sop" { \global \sopVoice }
+      \new Voice = "sop" { \backgroundVoice \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "men" { \global \menVoice }
     >>
-    \stafftovoice
+      \stafftovoice
+
   } %end of score (MIDI)
 
 } %end of book
 
+\book {
+  \bookOutputSuffix ""
+  \score {
+    \unfoldRepeats
+    \new Staff <<
+      \new Voice = "sop" { \backgroundVoice \global \sopVoice }
+      \new Voice = "alt" { \global \altVoice }
+      \new Voice = "men" { \global \menVoice }
+    >>
+  }
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                      the MIDI producing part: 	           %
@@ -121,7 +132,7 @@
       \backgroundVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
-      \new Voice = "men" { \highlightedVoice \global \altVoice }
+      \new Voice = "men" { \highlightedVoice \global \menVoice }
     >>
     \stafftovoice
   }

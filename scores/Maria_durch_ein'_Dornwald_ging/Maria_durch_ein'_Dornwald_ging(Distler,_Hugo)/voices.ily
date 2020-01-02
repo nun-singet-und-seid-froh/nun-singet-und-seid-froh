@@ -20,21 +20,29 @@ global = {
 commonArt = {
   \repeat volta 2 {
     s4
-    s1 * 3
+    s1
+    s1 \break
+    s1
     \time 6/4
-    s1. 
+    s1 \breathe s2
     \time 4/4
-    s1 * 5
+    s1
+    s1
+    s1
+    s1
+    s1
     s2.
   } \break
 
   \time 4/4
   s4
-  s1  
+  s1
   \time 6/4
   s1. \breathe
   \time 4/4
-  s1 * 3
+  s1
+  s1
+  s1
   \time 3/4
   s2.
   \time 6/8
@@ -42,7 +50,9 @@ commonArt = {
   \time 6/4
   s1.
   \time 4/4
-  s1 * 3\bar "|."
+  s1
+  s1
+  s1 \bar "|."
 }
 
 sopArt = { 
@@ -100,16 +110,14 @@ sopVoice = <<
     g4. a8 bes4 d 
     bes a8([ g]) a2
     bes4 bes8 bes c2
-    
     % \time 6/4
     d1 r4 bes8([ c])
-    
     % \time 4/4
     % fix position of dot getting positioned differently 
     % due to invisible voice
     \once \override Dots.extra-offset = #'(-1.2 . 0)
-    d4. d8 d4 f
-    \once \override Dots.extra-offset = #'(-1.2 . 0)
+    d4. d8 d4 f4
+    \once \override Dots.extra-offset = #'(-1.2 . -1)
     c4. bes8 c4 d
     bes4. a8 bes bes c bes 
     \once \override Dots.extra-offset = #'(0 . -1)
@@ -133,6 +141,7 @@ sopVoice = <<
     % \time 6/4
     a4 a8 d8 a1
     % \time 4/4
+    \override Slur.positions = #'(1 . -3)
     g4.( a8 bes4 c~
     c) bes4 a g
     a2 b!
@@ -159,7 +168,22 @@ sopTwoVoice =
     
     d4
     g4. a8 bes4 d 
-    bes8 bes a8 g 
+    \override Slur.transparent = ##f
+    \override Stem.transparent = ##f
+    \override Dots.transparent = ##f
+    \override Beam.transparent = ##f
+    \override NoteHead.transparent = ##f
+    \override NoteColumn.force-hshift = 1.2 
+
+    bes8 bes 
+    
+    \override Slur.transparent = ##t
+    \override Stem.transparent = ##t
+    \override Dots.transparent = ##t
+    \override Beam.transparent = ##t
+    \override NoteHead.transparent = ##t
+    \override NoteColumn.force-hshift = 0
+      a8 g 
     \override Slur.transparent = ##f
     \override Stem.transparent = ##f
     \override Dots.transparent = ##f
@@ -232,11 +256,11 @@ altVoice = <<
     r4
     R1
     R1
-    4. f8 f([ es]) bes'4
+    d4. f8 f([ es]) bes'4
     % \time 6/4
     a2( g) r4 bes
     % \time 4/4
-    a4 a4.\breathe a8 a4
+    a4 \once \override Dots.extra-offset = #'(0 . -1) a4.\breathe a8 a4
     a a8 a g4.( f8
     es4 d2) c4
     d1
@@ -313,36 +337,36 @@ menVoice = <<
   \menArt
   \relative g
   {
-      r4
-      R1
-      R1
-      g4 a8 f8 g2
-      % \time 6/4
-      g1 r2
-      % \time 4/4
-      R1 * 4
-      c4 a2 a8 g
-      es4( f) g
+    r4
+    R1
+    R1
+    g4 a8 f8 g2
+    % \time 6/4
+    g1 r2
+    % \time 4/4
+    R1 * 4
+    c4 a2 a8 g
+    es4( f) g
 
-      % end of volta
-      bes4 
-      a g8 f es4 bes
-      \time 6/4
-      f'4 f8 f g2 d \breathe
-      \time 4/4
-      d'4 d8 d c2
-      g r
-      R1
-      \time 3/4
-      R2.
-      \time 6/8
-      R2.
-      \time 6/4
-      R1.
-      \time 4/4
-      c2( bes4 as!~
-      as) es es es 
-      f2 g
+    % end of volta
+    bes4 
+    a g8 f es4 bes
+    % \time 6/4
+    f'4 f8 f g2 d \breathe
+    % \time 4/4
+    d'4 d8 d c2
+    g r
+    R1
+    % \time 3/4
+    R2.
+    % \time 6/8
+    R2.
+    % \time 6/4
+    R1.
+    % \time 4/4
+    c2( bes4 as!~
+    as) es es es 
+    f2 g
   }
 >>
 
