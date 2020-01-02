@@ -70,26 +70,13 @@
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "men" { \global \menVoice }
     >>
-      \stafftovoice
-
+    \stafftovoice
   } %end of score (MIDI)
-
 } %end of book
 
-\book {
-  \bookOutputSuffix ""
-  \score {
-    \unfoldRepeats
-    \new Staff <<
-      \new Voice = "sop" { \backgroundVoice \global \sopVoice }
-      \new Voice = "alt" { \global \altVoice }
-      \new Voice = "men" { \global \menVoice }
-    >>
-  }
-}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                      the MIDI producing part: 	           %
+%                      the MIDI producing part:	           %
 %    1 midi per each voice with the respective voice highlighted   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

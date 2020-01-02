@@ -38,17 +38,17 @@ commonArt = {
   s4
   s1
   \time 6/4
-  s1. \breathe
+  s1. \breathe \break
   \time 4/4
   s1
   s1
-  s1
+  s1 \break
   \time 3/4
   s2.
   \time 6/8
   s2.
   \time 6/4
-  s1.
+  s1. \break
   \time 4/4
   s1
   s1
