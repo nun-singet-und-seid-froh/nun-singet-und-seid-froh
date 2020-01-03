@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass{book}
 
 \usepackage{fontspec}
   \setmainfont{EB Garamond}
@@ -14,12 +14,22 @@
 \newcounter{mysubsection}[section]
 \newcounter{mysubsubsection}[mysubsection]
 
-
 \usepackage{titlesec}
   \titleformat{\section}{\Huge\scshape\filcenter}{}{1em}{}
   \titleformat{\subsection}{\Large\scshape\filcenter}{\stepcounter{mysubsection} \themysubsection
 }{1em}{}
   \titleformat{\subsubsection}{\large\filcenter}{\stepcounter{mysubsubsection}\themysubsection.\themysubsubsection}{1em}{}
+
+\pagenumbering{roman}
+
+
+\usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhf{} % sets both header and footer to nothing
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyhead[LO, RE]{\thepage}
+  \fancyfoot{}
+
 
 \begin{document}
 
@@ -36,13 +46,12 @@ sowie die Erstausgabe\footnote{Hugo Distler: \emph{Der Jahrkreis. Eine
   Sammlung von 52 zwei- und dreistimmigen geistlichen Chormusiken zum
   Gebrauch in Kirchen-, Schul- und Laienchören.} Bärenreiter-Ausgabe
   676, Bärenreiter, Kassel 1933 {[}Erstausgabe{]}, S. 5.} von Distlers
-\emph{Der Jahrkreis} (op. 5).subsubsection{Entscheidungen}
+\emph{Der Jahrkreis} (op. 5).
 
 \subsection{Entscheidungen}
 
 Die beiden Quellen stimmen hinsichtlich des Notentextes weitgehend
 überein. Sie unterscheiden sich an den folgenden Stellen:
-
 
 \begin{enumerate}
 \item
