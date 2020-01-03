@@ -1,17 +1,22 @@
 \documentclass{book}
 
 \usepackage[margin=1.5cm]{geometry}
+\setlength{\parindent}{0cm} 
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
 \usepackage[german]{babel}
 
 \usepackage{fontspec}
   \setmainfont{EB Garamond}
 
+\usepackage[german=guillemets]{csquotes}
 \usepackage[hidelinks]{hyperref}
- 
+
 \usepackage{multicol}
   \setlength{\columnsep}{1cm}
 
+% format section, subsection and subsubsection headings
 \newcounter{mysubsection}[section]
 \newcounter{mysubsubsection}[mysubsection]
 
@@ -19,17 +24,36 @@
   \titleformat{\section}{\Huge\scshape\filcenter}{}{1em}{}
   \titleformat{\subsection}{\Large\scshape\filcenter}{\stepcounter{mysubsection} \themysubsection
 }{1em}{}
-  \titleformat{\subsubsection}{\large\filcenter}{\stepcounter{mysubsubsection}\themysubsection.\themysubsubsection}{1em}{}
+  \titleformat{\subsubsection}{\large\filcenter}{\stepcounter{mysubsubsection}\themysubsection . \themysubsubsection}{1em}{}
 
 \pagenumbering{roman}
 
+% provide number of last page to be used by fancyhdr 
+\usepackage{zref-abspage,zref-lastpage}
+\makeatletter
+\newcommand*{\iffancylastpage}{%
+    \ifnum\zref@extractdefault{LastPage}{abspage}{-1}%
+        =\numexpr\value{abspage}+1\relax
+      \expandafter\@firstoftwo
+    \else
+      \expandafter\@secondoftwo
+    \fi
+  }
+\makeatother
 \usepackage{fancyhdr}
   \pagestyle{fancy}
-  \fancyhf{} % sets both header and footer to nothing
-  \renewcommand{\headrulewidth}{0pt}
-  \fancyhead[LO, RE]{\thepage}
-  \fancyfoot{}
+  \fancyhf{} % clear header and footer
+  \renewcommand{\headrulewidth}{0pt}  % remove headrule
+  \fancyhead[LO, RE]{\thepage}  % book-like pagenumbering in header
+  
+  \fancyfoot[R]{  % Version on last page
+    \iffancylastpage{Version 1.0.0}{}%
+  }
 
+
+% necessary things for the interlinear translation
+\usepackage{stackengine}
+  \setstackEOL{\cr}
 
 \begin{document}
 
@@ -57,22 +81,21 @@ Die beiden Quellen stimmen hinsichtlich des Notentextes weitgehend
 \item
   Das Manuskript schreibt im vierten Takt vor der Generalpause in allen
   Stimmen ein Atemzeichen. Dieses Atemzeichen ist im Druck nicht
-  enthalten. Das Atemzeichen mag aufgrund der Generalpause techninsch
+  enthalten. Das Atemzeichen mag aufgrund der Generalpause technisch
   nicht notwendig erscheinen. Atemzeichen beinhalten bei Distler häufig
-  jedoch nicht nur eine technische, sondern auch eine semantische
-  Aussage. Daher schreibt die vorliegende Ausgabe das Atemzeichen.
+  jedoch nicht nur eine technische, sondern auch eine Gliederungsfunktion. Daher schreibt die vorliegende Ausgabe das Atemzeichen.
 \item
   Das Manuskript schreibt dem Sopran im Takt 5 auf der vierten Zählzeit
   -- der üblichen Melodie des Liedes folgend -- das Melisma
-  \texttt{es\textquotesingle{}8({[}\ d\textquotesingle{}8{]})}, während
+  \texttt{es'{}8({[}\ d\textquotesingle{}8{]})} zu, während
   in der gedruckten Erstausgabe an selber Stelle eine Viertelnote
-  \texttt{f\textquotesingle{}4} steht. Die vorliegende Ausgabe folgt der
+  \texttt{f'{}4} steht. Die vorliegende Ausgabe folgt der
   Variante im Erstdruck, da eine solche Abweichung von der bekannten
   Melodie nur sehr unwahrscheinlicherweise auf einen korrigierenden
   Eingriff des Herausgebers zurückgeht, sondern höchstwahrscheinlich
   eine Korrektur Distlers darstellt.
 \item
-  Das Melisma \texttt{f8({[}\ es8{]})} auf der dritten Zählzeit im Takt
+  Das Melisma \texttt{f'8({[}\ es'8{]})} auf der dritten Zählzeit im Takt
   drei des Alt ist im Manuskript nur durch die Textverteilung
   ausgezeichnet; im Druck ist das Melisma zusätzlich durch einen Bogen
   und durch die Balkung der Achtelnoten ausgedrückt. Da hinsichtlich der
@@ -99,12 +122,6 @@ Die beiden Quellen stimmen hinsichtlich des Notentextes weitgehend
   Distlers vor Drucklegung vermuten lässt, folgt die vorliegende Ausgabe
   hier dem Erstdruck.
 \end{enumerate}
-
-Der Notensatz ist quellengetreu wiedergeben, das betrifft unter anderem
-die Erinnerungsvorzeichen, insbesondere das als nicht notwendig
-erscheinende Vorzeichen des \texttt{es} Takt 6 des zweiten Satzes der
-Altstimme und auch die taktüberspannende Bebalkung in der Altstimme
-zwischen Takt 9 und 10 des zweiten Satzes.subsubsection{Eingriffe}
 
 \subsection{Eingriffe}
 
@@ -206,5 +223,34 @@ Dabei erschien es wegen der Kürze des Stücks praktikabel, die Takte
 fortlaufend zu nummerieren, d.h. über die Grenze der beiden Sätze der
 Motette hinweg.
 
+\subsection{Aufnahme in das Korpus}
+
+Das Lied \emph{Maria durch ein' Dornwald ging} ist heute ein bekanntes Adventslied. Ursprünglich war es ein Wallfahrtslied, möglicherweise auch ein Lied zum Fest Visitatio Mariae (\enquote{Mariä Heimsuchung}), das den Besuch Marias bei Elisabeth feiert, wie er in Lk Lk 1,39–56\footnote{vgl. etwa die Einheitsübersetzung, \url{https://www.bibleserver.com/EU/Lukas1\%2C39-56} } beschrieben ist. Zwar liegt der Festtag Mariä Heimsuchung nicht in der Adventszeit; der Besuch Marias bei Elisabeth ist aber wegen der Thematisierung der Schwangerschaft Marias und Elisabeths insbesondere in der Kirchenmusik stark mit der Adventszeit assoziiert; so ist etwa Johann Eccards noch eindeutiger dem Fest Mariä Heimsuchung zuzuordnendes \emph{Übers Gebirg Maria geht} fest im Advent etabliert; ebenso ist es üblich, in der Adventszeit Chorsätze des \emph{Ave Maria} und auch des \emph{Magnificat} zu singen, welche beide in Lk 1,39–56 wurzeln.
+
+Die Motette wird auch im Inhaltsverzeichnis der Erstausgabe von \emph{Der Jahrkreis} dem Advent zugeordnet. Damit ist die Zugehörigkeit der Motette zum Korpus der in der Weihnachts- und Adventszeit gesungenen Weihnachts-, Advents- und Winterlieder unstrittig.
+
 \end{multicols}
+\section{Übersetzung und Transkription}
+
+\input{translation_il}
+
+\subsection{Abkürzungen}
+\begin{multicols}{4}
+  \noindent Abl.: \textit{Ablativ} \\
+  Akk.: \textit{Akkusativ} \\
+  Akt.: \textit{Aktiv} \\
+  Dat.: \textit{Dativ} \\
+  Dim.: \textit{Diminutiv} \\
+  Ind.: \textit{Indikativ} \\
+  Nom.: \textit{Nominativ} \\
+  Part.: \textit{Partizip} \\
+  Perf.: \textit{Perfekt} \\
+  Pers.: \textit{Person} \\
+  Pl.: \textit{Plural} \\
+  Präs.: \textit{Präsens} \\
+  Prät.: \textit{Präteritum} \\
+  Sgl.: \textit{Singular} \\
+\end{multicols} 
+
+
 \end{document}

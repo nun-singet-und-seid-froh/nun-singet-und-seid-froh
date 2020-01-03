@@ -1,0 +1,82 @@
+languages:
+  german: normal
+  grammar: scriptsize, italic
+  ipa: normal
+  english: italic
+---
+
+Maria                    	durch          	ein’                   	Dornwald                    	ging,#
+Nom. Sgl. \enquote{Maria}	\enquote{durch}	Akk. Sgl. \enquote{ein}	Akk. Sgl. \enquote{Dornwald}	3. Pers. Sgl. Prät. Ind. \enquote{gehen}
+maˈʁiːa                  	dʊʁç           	aɪ̯n                   	ˈdɔʁnvalt                   	ɡɪŋ
+Mary                     	through        	a                      	thorny wood                 	went
+
+Kyrieleison!#
+\enquote{Kyrieleison}
+ˌkyːʁiː ʔeˈlɛɪ̯zɔn
+Kyrieleison!
+
+Maria                    	durch          	ein’                   	Dornwald                    	ging,#
+Nom. Sgl. \enquote{Maria}	\enquote{durch}	Akk. Sgl. \enquote{ein}	Akk. Sgl. \enquote{Dornwald}	3. Pers. Sgl. Prät. Ind. \enquote{gehen}
+maˈʁiːa                  	dʊʁç           	aɪ̯n                   	ˈdɔʁnvalt                   	ɡɪŋ
+Mary                     	through        	a                      	thorny wood                 	went
+
+der             	hat                               	in          	sieben          	Jahrn                  	kein          	Laub                    	getrag’n#
+Reflexivpronomen	3. Pers. Sgl. aux. \enquote{haben}	\enquote{in}	\enquote{sieben}	Dat. Pl. \enquote{Jahr}	\enquote{kein}	Akk. Sgl. \enquote{Laub}	Part. Perf. \enquote{tragen}
+deːɐ̯           	hat                               	    ɪn      	    ˈziːbm̩     	    jaːɐ̯n             	kaɪ̯n         	laʊ̯p                   	ɡəˈtʁaːɡn̩ 
+which           	had                               	in          	seven           	years                  	no            	greenery                	beared
+
+Jesus          	und          	Maria!#
+\enquote{Jesus}	\enquote{und}	\enquote{Maria}
+ˈjeːzʊs        	ʊnt          	maˈʁiːa 
+Jesus          	and          	Mary!
+
+Was  	trug                             	Maria            	unter  	ihrem                            	Herzen?#
+\enquote{was}	3. Pers. Prät. Akt. Ind. \enquote{tragen}	Nom. Sgl. \enquote{Maria}	\enquote{unter}	Dat. Sgl. Poss. Pronomen 3. Pers.	Dat. Sgl. \enquote{Herz}
+vas  	tʁuːk                            	maˈʁiːa          	ˈʊntɐ  	ˈiːʁəm                           	ˈhɛʁt͡sn̩
+What 	did carry                        	Mary             	under  	her                              	heart?
+
+Kyrieleison!#
+\enquote{Kyrieleison}
+ˌkyːʁiː ʔeˈlɛɪ̯zɔn
+Kyrieleison!
+
+ein          	kleines               	Kindlein           	ohne          	Schmerzen,#
+aɪ̯n         	ˈklaɪ̯nəs             	kɪntlaɪ̯n          	ˈoːnə         	ˈʃmɛʁt͡sn̩ 
+\enquote{ein}	Neutr. \enquote{klein}	Dim. \enquote{Kind}	\enquote{ohne}	Akk. Pl. \enquote{Schmerz}
+a            	little                	child              	without       	any pain
+
+das          	trug                                     	Maria                    	unter          	ihrem                              	Herzen.#
+\enquote{das}	3. Pers. Prät. Akt. Ind. \enquote{tragen}	Nom. Sgl. \enquote{Maria}	\enquote{unter}	Dat. Sgl. Poss.-Pron. \enquote{ihr}	Dat. Sgl. \enquote{Herz}
+das          	tʁuːk                                    	maˈʁiːa                  	ˈʊntɐ          	ˈiːʁəm                             	ˈhɛʁt͡sn̩
+that         	carried                                  	Mary                     	under          	her                                	heart
+
+Jesus          	und          	Maria!#
+\enquote{Jesus}	\enquote{und}	\enquote{Maria}
+ˈjeːzʊs        	ʊnt          	maˈʁiːa
+Jesus          	and          	Mary
+
+Da          	haben                                       	die          	Dornen                 	Rosen                  	getrag’n!#
+\enquote{da}	3. Pers. Pl. Präs. Akt. Ind. \enquote{haben}	\enquote{die}	Nom. Pl. \enquote{Dorn}	Akk. Pl. \enquote{Rose}	Part. Perf. \enquote{tragen}
+daː         	ˈhaːbn̩                                     	diː          	ˈdɔʁnən                	ˈʁoːzn̩                	ɡəˈtʁaːɡn̩
+There       	have                                        	the          	thorns                 	roses                  	beared
+
+Kyrieleison!#
+\enquote{Kyrieleison}
+ˌkyːʁiː ʔeˈlɛɪ̯zɔn
+Kyrieleison!
+
+Als          	das          	Kindlein           	durch          	den                    	Wald                    	getrag’n,#
+\enquote{als}	\enquote{das}	Dim. \enquote{Kind}	\enquote{durch}	Akk. Sgl. \enquote{der}	Akk. Sgl. \enquote{Wald}	Part. Perf. \enquote{tragen}
+als          	das          	kɪntlaɪ̯n          	dʊʁç           	deːn                   	valt                    	ɡəˈtʁaːɡn̩
+When         	the          	child              	through        	the                    	wood                    	carried
+
+da          	haben          	die          	Dornen                  	Rosen                  	getrag’n.#
+\enquote{da}	\enquote{haben}	\enquote{die}	Nom. Pl. \enquote{Dorne}	Akk. Pl. \enquote{Rose}	Part. Perf. \enquote{tragen}
+daː         	ˈhaːbn̩        	diː          	ˈdɔʁnən                 	ˈʁoːzn̩                	ɡəˈtʁaːɡn̩
+Then        	have           	the          	thorns                  	roses                  	beared
+
+
+Jesus          	und          	Maria!#
+\enquote{Jesus}	\enquote{und}	\enquote{Maria}
+ˈjeːzʊs        	ʊnt          	maˈʁiːa
+Jesus          	and          	Mary

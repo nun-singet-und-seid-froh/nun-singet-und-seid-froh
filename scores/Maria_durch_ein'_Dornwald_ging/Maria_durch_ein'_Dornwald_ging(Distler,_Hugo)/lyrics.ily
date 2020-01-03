@@ -9,17 +9,17 @@
 
 sopOneLyrics = \lyricmode {
   \set stanza = "1. " 
-  Ma -- ri -- a durch ein' Dorn -- wald ging,
+  Ma -- ri -- a durch ein’ Dorn -- wald ging,
   Ky -- ri -- e -- lei -- son!
-  Ma -- ri -- a durch ein' Dorn -- wald ging,
-  der hat in sie -- ben Jahr'n kein Laub ge -- trag'n.
+  Ma -- ri -- a durch ein’ Dorn -- wald ging,
+  der hat in sie -- ben Jahr’n kein Laub ge -- trag’n.
   Je -- sus und Ma -- ri  -- a!
 
   \set stanza = "3. "
   Da ha -- ben die Dor -- nen Ro -- sen ge -- tra -- gen.
   Ky -- ri -- e -- lei -- son!
-  Als das Kind -- lein durch den Wald ge -- trag'n,
-  da ha -- ben die Dor -- nen Ro -- sen ge -- trag'n.
+  Als das Kind -- lein durch den Wald ge -- trag’n,
+  da ha -- ben die Dor -- nen Ro -- sen ge -- trag’n.
   Je -- sus und Ma -- ri  -- a!
 
 }
@@ -36,15 +36,15 @@ altLyrics = \lyricmode {
   Ky -- ri -- e -- lei -- son!
 
   \set stanza = "1. " 
-  Ma -- ri -- a, Ma -- ri -- a durch ein' Dorn -- wald ging,
+  Ma -- ri -- a, Ma -- ri -- a durch ein’ Dorn -- wald ging,
   Je -- sus und Ma -- ri  -- a!
 
 
   \set stanza = "3. "
   Da ha -- ben die Dor -- nen Ro -- sen ge -- tra -- gen.
   Ky -- ri -- e -- lei -- son!
-  Als __ das Kind -- lein durch den Wald ge -- trag'n,
-  da ha -- ben die Dor -- nen Ro -- sen ge -- trag'n.
+  Als __ das Kind -- lein durch den Wald ge -- trag’n,
+  da ha -- ben die Dor -- nen Ro -- sen ge -- trag’n.
   Je -- sus, Je -- sus und Ma -- ri  -- a!
 }
 

@@ -9,7 +9,7 @@
 % this is version 1.0 of the meta.ily
 
 % the meta-data printed in the sheet
-title                   = "Maria durch ein' Dornwald ging"
+title                   = "Maria durch ein’ Dornwald ging"
 
 % composer is the one who wrote the melody (leave this empty if it is identical to the arranger)
 composerChristianName   = "" % e.g. "Johann Sebastian"
