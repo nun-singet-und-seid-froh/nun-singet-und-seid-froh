@@ -45,6 +45,7 @@ clean:
 	rm -f *.midi
 	rm -f *.zip
 	rm -f *.aux
+	rm -f *.log
 
 
 .PHONY: all clean commentary combined midi sheet  zip
