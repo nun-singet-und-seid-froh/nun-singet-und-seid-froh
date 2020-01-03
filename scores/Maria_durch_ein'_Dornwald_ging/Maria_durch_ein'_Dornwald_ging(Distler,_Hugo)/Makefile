@@ -31,7 +31,9 @@ $(DIRNAME)-sheet.pdf $(DIRNAME).midi: $(LYS)
 	mv "$(DIRNAME)".pdf "$(DIRNAME)-sheet.pdf"
 
 $(DIRNAME)-commentary.pdf:
+	# Unfortunately, running xelatex twice is necessary to get correct ouput
 	xelatex commentary.tex
+	xelatex commentary.tex 
 	mv commentary.pdf "$(DIRNAME)-commentary.pdf"
 
 $(DIRNAME).zip: $(DIRNAME).pdf $(DIRNAME).midi
@@ -46,6 +48,7 @@ clean:
 	rm -f *.zip
 	rm -f *.aux
 	rm -f *.log
+	rm -f *.out
 
 
 .PHONY: all clean commentary combined midi sheet  zip
