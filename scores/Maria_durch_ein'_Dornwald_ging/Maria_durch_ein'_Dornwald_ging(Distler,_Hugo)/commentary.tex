@@ -11,18 +11,22 @@
 \usepackage{multicol}
   \setlength{\columnsep}{1cm}
 
+\newcounter{mysubsection}[section]
+\newcounter{mysubsubsection}[mysubsection]
 
 
-\title{Kritischer Bericht}
-
+\usepackage{titlesec}
+  \titleformat{\section}{\Huge\scshape\filcenter}{}{1em}{}
+  \titleformat{\subsection}{\Large\scshape\filcenter}{\stepcounter{mysubsection} \themysubsection
+}{1em}{}
+  \titleformat{\subsubsection}{\large\filcenter}{\stepcounter{mysubsubsection}\themysubsection.\themysubsubsection}{1em}{}
 
 \begin{document}
-\maketitle
 
+\section{Editorische Anmerkungen}
 \begin{multicols}{2}
 
-
-\section{Quellen}
+\subsection{Quellen}
 
 Dem Notentext liegen zugrunde das offenbar von Distler für die
 Veröffentlichunug erstellte Manuskript\footnote{Hugo Distler: \emph{Der
@@ -32,12 +36,13 @@ sowie die Erstausgabe\footnote{Hugo Distler: \emph{Der Jahrkreis. Eine
   Sammlung von 52 zwei- und dreistimmigen geistlichen Chormusiken zum
   Gebrauch in Kirchen-, Schul- und Laienchören.} Bärenreiter-Ausgabe
   676, Bärenreiter, Kassel 1933 {[}Erstausgabe{]}, S. 5.} von Distlers
-\emph{Der Jahrkreis} (op. 5).
+\emph{Der Jahrkreis} (op. 5).subsubsection{Entscheidungen}
 
-\section{Entscheidungen}
+\subsection{Entscheidungen}
 
 Die beiden Quellen stimmen hinsichtlich des Notentextes weitgehend
-überein. Unterschiede sind:
+überein. Sie unterscheiden sich an den folgenden Stellen:
+
 
 \begin{enumerate}
 \item
@@ -90,11 +95,11 @@ Der Notensatz ist quellengetreu wiedergeben, das betrifft unter anderem
 die Erinnerungsvorzeichen, insbesondere das als nicht notwendig
 erscheinende Vorzeichen des \texttt{es} Takt 6 des zweiten Satzes der
 Altstimme und auch die taktüberspannende Bebalkung in der Altstimme
-zwischen Takt 9 und 10 des zweiten Satzes.
+zwischen Takt 9 und 10 des zweiten Satzes.subsubsection{Eingriffe}
 
-\section{Eingriffe}
+\subsection{Eingriffe}
 
-\subsection{Der Satz der 2. Strophe}
+\subsubsection{Der Satz der 2. Strophe}
 
 Die Textverteilung weicht von der Textverteilung in den Quellen ab: Der
 Text der zweiten Gedichtstrophe steht in den Quellen frei zwischen dem
@@ -110,12 +115,12 @@ eine Ausnahme von dieser allgemeinen Regel.
 Um die praktische Arbeit mit der Note zu erleichtern, wurde die zweite
 Strophe unterlegt den Notentext gesetzt.
 
-\subsection{Volta}
+\subsubsection{Volta}
 
 Entsprechend den Notensatzkonventionen wurde der doppelte Taktstrich am
 Ende des ersten Satzes durch den Volta-Taktstrich ersetzt.
 
-\subsection{Textverteilung}
+\subsubsection{Textverteilung}
 
 Da die Metren des ersten und zweiten Gedichtstrophe verschieden sind,
 wurde durch das Aussetzen der zweiten Gedichtstrophe in den Notentext
@@ -184,7 +189,7 @@ die die Quellen in der Frage der Textverteilung der zweiten Strophe
 hinterlassen, dann erscheint die in dieser Ausgabe gewählte strenger
 durchführbare Analogie zur ersten Strophe als die zwanglosere Adaption.
 
-\section{Taktnummerierung}
+\subsubsection{Taktnummerierung}
 
 Die Takte sind in keiner Quelle nummeriert. Aus praktischen
 Gesichtspunkten wurden die Takte in der vorliegenden Ausgabe nummeriert.
