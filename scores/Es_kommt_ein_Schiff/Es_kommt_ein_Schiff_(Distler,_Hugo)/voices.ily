@@ -18,39 +18,113 @@ global = {
 }
 
 % articulation, dynamics, fermata and breathing marks
-sopIArt = {
 
+commonArt = {
+    s4 
+    s1. * 2
+    \time 5/4
+    s4 * 5
+    \time 2/4
+    s2
+    \time 4/4
+    s1
+    \time 8/4
+    s1 * 2
+    \time 2/4
+    s4\breathe s 
+    \time 5/4
+    s4 * 5
+    \time 6/4
+    s1.
+    s1 s4\bar "|."
 }
 
-sopIIArt = \sopIIArt
+sopIArt = {
+    s4 
+    s1.
+    s1 \breathe s2
+    % \time 5/4
+    s4 * 5
+    % \time 2/4
+    s4\breathe s
+    % \time 4/4
+    s1
+    % \time 8/4
+    s1 * 2
+    % \time 2/4
+    s2
+    % \time 5/4
+    s4 * 5
+    % \time 6/4
+    s1.
+    s1 s4
+}
 
-altArt = \sopIIArt
+sopIIArt = {
+    s4
+    s1.
+    s4 * 5 \breathe s4
+    % \time 5/4
+    s4 * 5
+    % \time 2/4
+    s4\breathe s
+    % \time 4/4 
+    s1
+    % \time 8/4
+    s1 * 2
+    % \time 2/4
+    s2
+    % \time 5/4
+    s4 * 5
+    % \time 6/4
+    s1.
+    s1 s4
+}
+
+altArt = {
+    s4
+    s1.
+    s1 \breathe s2
+    % \time 5/4
+    s4 * 5
+    % \time 2/4
+    s2
+    % \time 4/4
+    s1 
+    % \time 8/4
+    s1 * 2
+    % \time 5/4
+    s4 * 5
+    % \time 6/4
+    s1.
+    s1 s4
+}
 
 % the tunes
 sopITune = \relative c'' {
     r4 
     r4 b b b g a
-    b4.( d8 e4) dis \breathe e2
-    \time 5/4
+    b4.( d8 e4) dis! e2
+    % \time 5/4
     d!4 b g2 a4
-    \time 2/4
-    b\breathe g
-    \time 4/4
+    % \time 2/4
+    b g
+    % \time 4/4
     b d e e 
-    \time 8/4
+    % \time 8/4
     d4( b4. d8[ e] d4 b8.[ a16 g8] a2)
-    \time 2/4
-    g4\breathe a 
-    \time 5/4
+    % \time 2/4
+    g4 a 
+    % \time 5/4
     b4 a g fis2
-    \time 6/4
+    % \time 6/4
     e1.~
     e1 r4 
-    \bar "|."
 }
 
 
 sopIVoice = <<
+    \commonArt
 	\sopIArt
 	\sopITune
 >>
@@ -77,6 +151,7 @@ sopIITune = \relative c' {
 }
 
 sopIIVoice = <<
+    \commonArt
 	\sopIIArt
 	\sopIITune
 >>
@@ -92,7 +167,7 @@ altTune = \relative c' {
     \time 4/4
     e2 r4 g, 
     b d e2~
-    e4 e <<{\voiceOne c d \breathe d} \newVoice {\voiceTwo c a d}>> \oneVoice d
+    e4 e <<\voiceOne { c2 d4 \breathe d} \new Voice {\voiceTwo c2 g4 d'}>> \oneVoice
     \time 5/4
     b d e b2
     \time 6/4
@@ -101,6 +176,7 @@ altTune = \relative c' {
 }
 
 altVoice = <<
+    \commonArt
 	\altArt
 	\altTune
 >>

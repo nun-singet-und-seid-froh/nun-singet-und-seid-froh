@@ -18,3 +18,83 @@ sopIILyrics = \sopILyrics
 
 altLyrics = \sopILyrics
 
+stanzas =
+\markup {
+  \magnify #1.2 {
+    \fill-line {
+      \center-column {
+        \line {
+          %left column of stanzas
+          \column {
+            \line {
+              \column { "2. " }
+              \column {
+                "Das Schiff geht still im Triebe,"
+                "es trägt ein’ teure Last;"
+                "das Segel ist die Liebe"
+                "Der heilig’ Geist der Mast."
+                \null
+              }
+            }
+
+            \line {
+              \column { "3. " }
+              \column {
+                "Der Anker haft’t auf Erden"
+                "da ist das Schiff am Land:"
+                "das Wort soll Fleisch uns werden,"
+                "der Sohn ist uns gesandt."
+                \null
+              }
+            }
+          }
+          %space between the two columns of stanzas
+          \column {
+            \line {
+              \column {
+                \hspace #5
+              }
+            }
+          }
+
+          %right column of stanzas
+          \column {
+            \line {
+              \column { "4. " }
+              \column {
+                "Zu Bethlehem geboren"
+                "im Stall ein Kindelein,"
+                "gibt sich für uns verloren;"
+                "gelobet muss es sein."
+                \null
+              }
+            }
+
+            \line {
+              \column { "5. " }
+              \column {
+                "Und wer dies Kind mit Freuden"
+                "umfangen, küssen will"
+                "muss vorher mit ihm leiden"
+                "groß’ Pein und Marter viel,"
+                \null
+              }
+            }
+          }
+        }
+
+        %last stanza, below the others and centered
+        \line{
+          \column { "6. " }
+          \column {
+            "danach mit ihm auch sterben"
+            "und geistlich aufersteh’n,"
+            "das Leben zu ererben,"
+            "wie an ihm ist gescheh’n."
+            \null
+          }
+        }
+      }
+    }
+  }
+}

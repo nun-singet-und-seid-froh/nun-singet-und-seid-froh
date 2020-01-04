@@ -54,10 +54,11 @@
 
     \layout { }
   } %end of score (PDF)
+  
+  \stanzas
 
   \score {
     %for MIDI
-    \commonVoice
     \new Staff <<
       \backgroundVoice
       \new Voice = "sopI" { \global \sopIVoice }
