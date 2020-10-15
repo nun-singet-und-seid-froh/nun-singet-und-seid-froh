@@ -76,14 +76,14 @@ For processing the LaTex file, the following packages must be loaded:
 # file with the same name and the filename-extension ".iltex"
 
 import os
-import re	
+import re    
 import sys
 if sys.version_info >= (3, 0):
-	import tkinter as tk
-	from tkinter import filedialog
+    import tkinter as tk
+    from tkinter import filedialog
 else:
-	import Tkinter as tk
-	from Tkinter import FileDialog as filedialog
+    import Tkinter as tk
+    from Tkinter import FileDialog as filedialog
 
 import subprocess
 
@@ -102,6 +102,7 @@ def num_oflangs(filename):
   print ("detected " + str(n) + " languages...")
   ilf.close()
   return n+1
+
 
 def readfile(filename,newBoxDelimiter):
   ilf = open(filename,'r')    
@@ -164,10 +165,10 @@ def readfile(filename,newBoxDelimiter):
         for b in range(0,(num_lines//num_langs)):
           for x in lines[(b*num_langs)+a].split(newBoxDelimiter):
             ## *TEXT* -> \emph{TEXT}:
-          	x = re.sub(r'\*(.*)\*','\emph{' + r'\g<1>}',x)
-						## *TEXT* -> \emph{TEXT}:	
-          	x = re.sub(r'\"(.*)\"','\enquote{' + r'\g<1>}',x)
-          	interlinear[a].append(x.replace('\n','')) 
+              x = re.sub(r'\*(.*)\*','\emph{' + r'\g<1>}',x)
+                        ## *TEXT* -> \emph{TEXT}:    
+              x = re.sub(r'\"(.*)\"','\enquote{' + r'\g<1>}',x)
+              interlinear[a].append(x.replace('\n','')) 
             
       #check whether all rows have same number of boxes        
       for l in range(0,num_langs-1):
@@ -178,21 +179,22 @@ def readfile(filename,newBoxDelimiter):
         print("input file is well formated...")
   return interlinear
 
-def texify(array,filename,newBoxDelimiter, newLineDelimiter):  
+
+def texify(array,filename, newBoxDelimiter, newLineDelimiter):  
 # the output file
   o = open(os.path.splitext(filename)[0] + '.iltex','w')
 
-	# write tex-preamble to set up the tex-macro     
+    # write tex-preamble to set up the tex-macro     
   o.write("\\setstackEOL{\\cr}\n\\def\\word")
   for i in range(0,len(array)):
     if i < len(array)-1:
-    	o.write('#' + str(i+1) +'|')
+        o.write('#' + str(i+1) +'|')
     else:
       o.write('#'+ str(i+1)+'+++')
   o.write('{\\mbox{\\hspace{2pt}\\Longstack{')
 
-  for i in range(0,len(array)):	
-		# set font specifications of each row
+  for i in range(0,len(array)):    
+        # set font specifications of each row
     brackets = 0
     if "italics" in array[i][0]:
       o.write('\\textit{')
@@ -202,6 +204,9 @@ def texify(array,filename,newBoxDelimiter, newLineDelimiter):
       brackets += 1
     if "caps" in array[i][0]:
       o.write('\\scshape{ ')
+      brackets += 1
+    if "scriptsize" in array[i][0]:
+      o.write('\\scriptsize{ ')
       brackets += 1
     if "tiny" in array[i][0]:
       o.write('\\tiny{')
@@ -216,8 +221,8 @@ def texify(array,filename,newBoxDelimiter, newLineDelimiter):
       o.write('\sffamily{')
       brackets += 1
     if "uppercase" in array[i][0]:
-    	o.write("\\uppercase{")
-    	brackets += 1
+        o.write("\\uppercase{")
+        brackets += 1
     o.write('#'+str(i+1))
     # close all open brackets for this word    
     for i in range(0,brackets):
@@ -251,52 +256,60 @@ def texify(array,filename,newBoxDelimiter, newLineDelimiter):
   
   print('output written to ' + os.path.splitext(filename)[0] + '.iltex')
 
-#still to do: check whether template_begin and template_end exist and give an error if they do not
+
 def create_standalone_tex(filename):
-	print('creating standalone .tex...')
-	with open('template_begin.tex') as f:
-		lines = f.readlines()
-		with open(os.path.splitext(filename)[0] + ".tex", "w") as f1:
-			f1.writelines(lines)
-	with open(os.path.splitext(filename)[0] + '.iltex') as f: 
-		lines = f.readlines()
-		with open(os.path.splitext(filename)[0] + ".tex", "a") as f1:
-			f1.writelines(lines)
-	with open('template_end.tex') as f:
-		lines = f.readlines()
-		with open(os.path.splitext(filename)[0] + ".tex", "a") as f1:
-			f1.writelines(lines)
-	print('succesfully created standalone ' + os.path.splitext(filename)[0] + ".tex")
+    print('creating standalone .tex...')
+    SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
+    TEMPLATE_BEGIN = os.path.join(SCRIPT_DIR,'template_begin.tex')
+    TEMPLATE_END = os.path.join(SCRIPT_DIR,'template_end.tex')
+
+    with open(TEMPLATE_BEGIN) as f:
+        lines = f.readlines()
+        with open(os.path.splitext(filename)[0] + ".tex", "w") as f1:
+            f1.writelines(lines)
+    with open(os.path.splitext(filename)[0] + '.iltex') as f: 
+        lines = f.readlines()
+        with open(os.path.splitext(filename)[0] + ".tex", "a") as f1:
+            f1.writelines(lines)
+    with open(TEMPLATE_END) as f:
+        lines = f.readlines()
+        with open(os.path.splitext(filename)[0] + ".tex", "a") as f1:
+            f1.writelines(lines)
+    print('succesfully created standalone ' + os.path.splitext(filename)[0] + ".tex")
+
 
 def tex2pdf(filename):
-	try:
-		subprocess.call(["pdflatex", "-aux-directory=" + os.path.dirname(filename) + "/aux", "-output-directory=" + os.path.dirname(filename), os.path.splitext(filename)[0] + ".tex"])
-		# clean the auxiliary files needed by pdflatex to produce pdf
-		os.remove(os.path.splitext(filename)[0] + ".aux")
-		os.remove(os.path.splitext(filename)[0] + ".tex")
-		os.remove(os.path.splitext(filename)[0] + ".log")
-	  #open the output pdf
-		print(sys.platform)
-		if sys.platform == 'linux':
-			subprocess.call(["xdg-open", os.path.splitext(filename)[0] + ".pdf"])
-		else:
-			os.startfile(os.path.splitext(filename)[0] + ".pdf")
-		  
-	except OSError as e:
-		  if e.errno == os.errno.ENOENT:
-		      print("file not found")
-		  else:
-		      "Could not find pdflatex on your computer"
-		      raise
+    try:
+        subprocess.call(["pdflatex", "-aux-directory=" + os.path.dirname(filename) + "/aux", "-output-directory=" + os.path.dirname(filename), os.path.splitext(filename)[0] + ".tex"])
+        # clean the auxiliary files needed by pdflatex to produce pdf
+        os.remove(os.path.splitext(filename)[0] + ".aux")
+        os.remove(os.path.splitext(filename)[0] + ".tex")
+        os.remove(os.path.splitext(filename)[0] + ".log")
+      #open the output pdf
+        print(sys.platform)
+        if sys.platform == 'linux':
+            subprocess.call(["xdg-open", os.path.splitext(filename)[0] + ".pdf"])
+        else:
+            os.startfile(os.path.splitext(filename)[0] + ".pdf")
+          
+    except OSError as e:
+          if e.errno == os.errno.ENOENT:
+              print("file not found")
+          else:
+              "Could not find pdflatex on your computer"
+              raise
   
 def main():
-	root = tk.Tk()
-	root.withdraw()
-	filename = filedialog.askopenfilename() # get the filename from opendialog
-	# filename = sys.argv[1] # take the filepath from the argument given with the call
-	newBoxDelimiter = '\t'
-	newLineDelimiter = '#'
-	texify(readfile(filename,newBoxDelimiter),filename,newBoxDelimiter,newLineDelimiter)
-	create_standalone_tex(filename)
-	tex2pdf(filename)
+    try:
+        filename=sys.argv[1]
+    except IndexError:
+        root = tk.Tk()
+        root.withdraw()
+        filename = filedialog.askopenfilename() # get the filename from opendialog
+
+    newBoxDelimiter = '\t'
+    newLineDelimiter = '#'
+    texify(readfile(filename,newBoxDelimiter),filename,newBoxDelimiter,newLineDelimiter)
+    create_standalone_tex(filename)
+    # tex2pdf(filename)
 main()
