@@ -26,7 +26,7 @@ sopVoice = <<
   \sopArt
   \relative c''
   {
-    \tempo "Feierlich langsam"
+    \tempo "Allabreve, feierlich langsam"
 %{01%}
   b2.\p b4
   b2 b

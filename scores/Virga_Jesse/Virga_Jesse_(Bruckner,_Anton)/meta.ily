@@ -31,7 +31,7 @@ noInOpus          = ""
 titleInOpus       = ""
 
 lastEdited        = "18. Juli 2016" % e.g. "19. September 2015"
-vers              = "1.0.0" % e.g. "1.0.0"
+vers              = "1.0.1" % e.g. "1.0.0"
 
 % other meta-data, used for the mediawiki-output
 epoque            = "Romantik" 
