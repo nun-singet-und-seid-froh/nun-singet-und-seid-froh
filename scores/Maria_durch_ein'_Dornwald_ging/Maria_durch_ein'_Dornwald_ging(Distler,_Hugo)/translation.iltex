@@ -1,0 +1,97 @@
+\setstackEOL{\cr}
+\def\word#1|#2|#3|#4+++{\mbox{\hspace{2pt}\Longstack{#1\cr\textit{\scriptsize{ #2}}\cr#3\cr\textit{#4}\cr}}\hspace{2pt}}
+ \word Maria                    |Nom. Sgl. \enquote{Maria}|maˈʁiːa                  |Mary                     +++
+ \word durch          |\enquote{durch}|dʊʁç           |through        +++
+ \word ein’                   |Akk. Sgl. \enquote{ein}|aɪ̯n                   |a                      +++
+ \word Dornwald                    |Akk. Sgl. \enquote{Dornwald}|ˈdɔʁnvalt                   |thorny wood                 +++
+ \word ging,|3. Pers. Sgl. Prät. Ind. \enquote{gehen}|ɡɪŋ|went+++
+\vspace{6pt}
+
+ \word Kyrieleison!|\enquote{Kyrieleison}|ˌkyːʁiː ʔeˈlɛɪ̯zɔn|Kyrieleison!+++
+\vspace{6pt}
+
+ \word Maria                    |Nom. Sgl. \enquote{Maria}|maˈʁiːa                  |Mary                     +++
+ \word durch          |\enquote{durch}|dʊʁç           |through        +++
+ \word ein’                   |Akk. Sgl. \enquote{ein}|aɪ̯n                   |a                      +++
+ \word Dornwald                    |Akk. Sgl. \enquote{Dornwald}|ˈdɔʁnvalt                   |thorny wood                 +++
+ \word ging,|3. Pers. Sgl. Prät. Ind. \enquote{gehen}|ɡɪŋ|went+++
+\vspace{6pt}
+
+ \word der             |Reflexivpronomen|deːɐ̯           |which           +++
+ \word hat                               |3. Pers. Sgl. aux. \enquote{haben}|hat                               |had                               +++
+ \word in          |\enquote{in}|    ɪn      |in          +++
+ \word sieben          |\enquote{sieben}|    ˈziːbm̩     |seven           +++
+ \word Jahrn                  |Dat. Pl. \enquote{Jahr}|    jaːɐ̯n             |years                  +++
+ \word kein          |\enquote{kein}|kaɪ̯n         |no            +++
+ \word Laub                    |Akk. Sgl. \enquote{Laub}|laʊ̯p                   |greenery                +++
+ \word getrag’n|Part. Perf. \enquote{tragen}|ɡəˈtʁaːɡn̩ |beared+++
+\vspace{6pt}
+
+ \word Jesus          |\enquote{Jesus}|ˈjeːzʊs        |Jesus          +++
+ \word und          |\enquote{und}|ʊnt          |and          +++
+ \word Maria!|\enquote{Maria}|maˈʁiːa |Mary!+++
+\vspace{6pt}
+
+ \word Was  |\enquote{was}|vas  |What +++
+ \word trug                             |3. Pers. Prät. Akt. Ind. \enquote{tragen}|tʁuːk                            |did carry                        +++
+ \word Maria            |Nom. Sgl. \enquote{Maria}|maˈʁiːa          |Mary             +++
+ \word unter  |\enquote{unter}|ˈʊntɐ  |under  +++
+ \word ihrem                            |Dat. Sgl. Poss. Pronomen 3. Pers.|ˈiːʁəm                           |her                              +++
+ \word Herzen?|Dat. Sgl. \enquote{Herz}|ˈhɛʁt͡sn̩|heart?+++
+\vspace{6pt}
+
+ \word Kyrieleison!|\enquote{Kyrieleison}|ˌkyːʁiː ʔeˈlɛɪ̯zɔn|Kyrieleison!+++
+\vspace{6pt}
+
+ \word ein          |aɪ̯n         |\enquote{ein}|a            +++
+ \word kleines               |ˈklaɪ̯nəs             |Neutr. \enquote{klein}|little                +++
+ \word Kindlein           |kɪntlaɪ̯n          |Dim. \enquote{Kind}|child              +++
+ \word ohne          |ˈoːnə         |\enquote{ohne}|without       +++
+ \word Schmerzen,|ˈʃmɛʁt͡sn̩ |Akk. Pl. \enquote{Schmerz}|any pain+++
+\vspace{6pt}
+
+ \word das          |\enquote{das}|das          |that         +++
+ \word trug                                     |3. Pers. Prät. Akt. Ind. \enquote{tragen}|tʁuːk                                    |carried                                  +++
+ \word Maria                    |Nom. Sgl. \enquote{Maria}|maˈʁiːa                  |Mary                     +++
+ \word unter          |\enquote{unter}|ˈʊntɐ          |under          +++
+ \word ihrem                              |Dat. Sgl. Poss.-Pron. \enquote{ihr}|ˈiːʁəm                             |her                                +++
+ \word Herzen.|Dat. Sgl. \enquote{Herz}|ˈhɛʁt͡sn̩|heart+++
+\vspace{6pt}
+
+ \word Jesus          |\enquote{Jesus}|ˈjeːzʊs        |Jesus          +++
+ \word und          |\enquote{und}|ʊnt          |and          +++
+ \word Maria!|\enquote{Maria}|maˈʁiːa|Mary+++
+\vspace{6pt}
+
+ \word Da          |\enquote{da}|daː         |There       +++
+ \word haben                                       |3. Pers. Pl. Präs. Akt. Ind. \enquote{haben}|ˈhaːbn̩                                     |have                                        +++
+ \word die          |\enquote{die}|diː          |the          +++
+ \word Dornen                 |Nom. Pl. \enquote{Dorn}|ˈdɔʁnən                |thorns                 +++
+ \word Rosen                  |Akk. Pl. \enquote{Rose}|ˈʁoːzn̩                |roses                  +++
+ \word getrag’n!|Part. Perf. \enquote{tragen}|ɡəˈtʁaːɡn̩|beared+++
+\vspace{6pt}
+
+ \word Kyrieleison!|\enquote{Kyrieleison}|ˌkyːʁiː ʔeˈlɛɪ̯zɔn|Kyrieleison!+++
+\vspace{6pt}
+
+ \word Als          |\enquote{als}|als          |When         +++
+ \word das          |\enquote{das}|das          |the          +++
+ \word Kindlein           |Dim. \enquote{Kind}|kɪntlaɪ̯n          |child              +++
+ \word durch          |\enquote{durch}|dʊʁç           |through        +++
+ \word den                    |Akk. Sgl. \enquote{der}|deːn                   |the                    +++
+ \word Wald                    |Akk. Sgl. \enquote{Wald}|valt                    |wood                    +++
+ \word getrag’n,|Part. Perf. \enquote{tragen}|ɡəˈtʁaːɡn̩|carried+++
+\vspace{6pt}
+
+ \word da          |\enquote{da}|daː         |Then        +++
+ \word haben          |\enquote{haben}|ˈhaːbn̩        |have           +++
+ \word die          |\enquote{die}|diː          |the          +++
+ \word Dornen                  |Nom. Pl. \enquote{Dorne}|ˈdɔʁnən                 |thorns                  +++
+ \word Rosen                  |Akk. Pl. \enquote{Rose}|ˈʁoːzn̩                |roses                  +++
+ \word getrag’n.|Part. Perf. \enquote{tragen}|ɡəˈtʁaːɡn̩|beared+++
+\vspace{6pt}
+
+ \word Jesus          |\enquote{Jesus}|ˈjeːzʊs        |Jesus          +++
+ \word und          |\enquote{und}|ʊnt          |and          +++
+ \word Maria!|\enquote{Maria}|maˈʁiːa|Mary+++
+\vspace{6pt}

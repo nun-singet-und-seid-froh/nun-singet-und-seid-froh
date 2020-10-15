@@ -1,9 +1,7 @@
-languages:
-  german: normal
-  grammar: scriptsize, italic
-  ipa: normal
-  english: italic
----
+german: normal
+grammar: scriptsize, italics
+ipa: normal
+english: italics
 
 Maria                    	durch          	ein’                   	Dornwald                    	ging,#
 Nom. Sgl. \enquote{Maria}	\enquote{durch}	Akk. Sgl. \enquote{ein}	Akk. Sgl. \enquote{Dornwald}	3. Pers. Sgl. Prät. Ind. \enquote{gehen}
@@ -75,8 +73,8 @@ da          	haben          	die          	Dornen                  	Rosen       
 daː         	ˈhaːbn̩        	diː          	ˈdɔʁnən                 	ˈʁoːzn̩                	ɡəˈtʁaːɡn̩
 Then        	have           	the          	thorns                  	roses                  	beared
 
-
 Jesus          	und          	Maria!#
 \enquote{Jesus}	\enquote{und}	\enquote{Maria}
 ˈjeːzʊs        	ʊnt          	maˈʁiːa
 Jesus          	and          	Mary
+
