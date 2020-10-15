@@ -15,7 +15,7 @@ combined: commentary sheet
 
 sheet: $(DIRNAME)-sheet.pdf
 
-commentary: $(DIRNAME)-commentary.pdf
+commentary: translation $(DIRNAME)-commentary.pdf
 
 midi: $(DIRNAME).midi
 
@@ -26,6 +26,11 @@ combined: sheet commentary
 	rm "$(DIRNAME)-sheet.pdf"
 	rm "$(DIRNAME)-commentary.pdf"
 
+translation: $(wildcard translation.ilf)
+ifeq (,"$(wildcard translation.ilf)")
+	python3 ../../../tools/ilf2iltex.py translation.ilf
+endif
+
 $(DIRNAME)-sheet.pdf $(DIRNAME).midi: $(LYS)
 	$(LILY) -dno-point-and-click -o "$(DIRNAME)" $<
 	mv "$(DIRNAME)".pdf "$(DIRNAME)-sheet.pdf"
@@ -35,6 +40,7 @@ $(DIRNAME)-commentary.pdf:
 	xelatex commentary.tex
 	xelatex commentary.tex 
 	mv commentary.pdf "$(DIRNAME)-commentary.pdf"
+
 
 $(DIRNAME).zip: $(DIRNAME).pdf $(DIRNAME).midi
 	zip "$(DIRNAME)" *.pdf *.midi
@@ -49,6 +55,7 @@ clean:
 	rm -f *.aux
 	rm -f *.log
 	rm -f *.out
+	rm -f translation.tex
 
 
 .PHONY: all clean commentary combined midi sheet  zip
