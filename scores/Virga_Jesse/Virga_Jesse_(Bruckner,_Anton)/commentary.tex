@@ -25,9 +25,9 @@
 
 \usepackage{titlesec}
   \titleformat{\section}{\Huge\scshape\filcenter}{}{1em}{}
-  \titleformat{\subsection}{\Large\scshape\filcenter}{\stepcounter{mysubsection} \themysubsection
+  \titleformat{\subsection}{\LARGE\scshape\filcenter}{\stepcounter{mysubsection} \themysubsection
 }{1em}{}
-  \titleformat{\subsubsection}{\large\filcenter}{\stepcounter{mysubsubsection}\themysubsection . \themysubsubsection}{1em}{}
+  \titleformat{\subsubsection}{\Large\filcenter}{\stepcounter{mysubsubsection}\themysubsection . \themysubsubsection}{1em}{}
 
 \pagenumbering{roman}
 
@@ -49,8 +49,11 @@
   \renewcommand{\headrulewidth}{0pt}  % remove headrule
   \fancyhead[LO, RE]{\thepage}  % book-like pagenumbering in header
   
+  \fancyfoot[L]{
+    \iffancylastpage{Erstellt mit XeLaTex}{}%
+  }
   \fancyfoot[R]{  % Version on last page
-    \iffancylastpage{Version 1.0.0}{}%
+    \iffancylastpage{Revision 1.0.0 | 14. Oktober 2020}{}%
   }
 
 % necessary for having footnote in caption
@@ -73,7 +76,7 @@ Quelle der vorliegenden Edition ist das Autograph,\footnote{Musiksammlung der Ö
 \caption{Das erste System aus dem Autograph von \emph{Virga Jesse}}
 \end{figure}
 
-\section{Kommentar}
+\section{Kommentar zum Text}
 
 \subsection{Interlinearübersetzung}
 
@@ -98,6 +101,10 @@ Quelle der vorliegenden Edition ist das Autograph,\footnote{Musiksammlung der Ö
 
 \begin{samepage}
 
+\subsection{Ursprung des Textes}
+Der Text geht auf ein lateinisches Gradual zurück. 
+
+
 \Needspace{5\baselineskip}
 \subsection{Aspekte der Interpretation}
 
@@ -115,7 +122,7 @@ Diese Bezugnahme auf das Alte Testament und auf die Abkunft Jesu von Jesse, den 
 
 Der Stammbaum Jesu bis hinauf zu Jesse ist Gegenstand zahlreicher bildlicher Darstellungen, die vom Mittelalter über die Renaissance bis in die Moderne reichen.
 
-Der Text betont diesen Zusammenhang auch mit formensprachlichen Mitteln, indem die beiden ersten Verse grammatisch streng parallel geführt sind, und auch durch das Spiel mit der Klangähnlichkeit von VIRGA (\enquote{der Zweig}) und VIRGO (\enquote{die Jungfrau}), was eine identifzierende Analogie von Maria mit der Wurzel Jesse nahelegt. Diese Analogie wird weiter unterstützt durch die Metapher von der Blüte als dem weiblichen Geschlecht. Mithilfe dieser Mittel wird poetisch ausgedrückt, dass Maria mit der von Jesaja angekündigten Wurzel Jesse identifiziert wird.
+Der Text betont diesen Zusammenhang auch mit formensprachlichen Mitteln, indem die beiden ersten Verse grammatisch streng parallel geführt sind, und auch durch das Spiel mit der Klangähnlichkeit von VIRGA (\enquote{der Zweig}) und VIRGO (\enquote{die Jungfrau}), was eine identifzierende Analogie von Maria mit der Wurzel Jesse nahelegt. Diese Analogie wird weiter unterstützt durch den Allegorienkomplex der aus dem Zweig Jesse erblühenden Blüte, die in einer konventionellen Metapher für die Jungfräulichkeit, hier für diejenige Marias, steht.\footnote{Dieser Allegorienkomplex wird auch vom Weihnachtslied \emph{Es ist ein Ros entsprungen} verwendet.}
 
 \end{multicols}
 
