@@ -94,7 +94,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sop" { \highlightedVoice  \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "tenI" { \global \tenIVoice }
@@ -111,7 +111,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \highlightedVoice \global \altVoice }
       \new Voice = "tenI" { \global \tenIVoice }
@@ -128,7 +128,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "tenI" { \highlightedVoice \global \tenIVoice }
@@ -145,7 +145,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "tenI" { \global \tenIVoice }
@@ -162,7 +162,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sop" { \global \sopVoice }
       \new Voice = "alt" { \global \altVoice }
       \new Voice = "tenI" { \global \tenIVoice }

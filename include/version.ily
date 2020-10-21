@@ -5,4 +5,4 @@
 %               please contact us at mail@nun-singet-und-seid-froh.info                 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\version "2.14.2"
+\version "2.19.82"

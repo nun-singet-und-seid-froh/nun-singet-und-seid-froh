@@ -118,7 +118,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sopI" { \highlightedVoice  \global \sopIVoice }
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "altI" { \global \altIVoice }
@@ -138,7 +138,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sopI" { \global \sopIVoice }
       \new Voice = "sopII" { \highlightedVoice \global \sopIIVoice }
       \new Voice = "altI" { \global \altIVoice }
@@ -158,7 +158,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sopI" { \global \sopIVoice }
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "altI" { \highlightedVoice \global \altIVoice }
@@ -178,7 +178,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sopI" { \global \sopIVoice }
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "altI" { \global \altIVoice }
@@ -198,7 +198,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sopI" { \global \sopIVoice }
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "altI" { \global \altIVoice }
@@ -218,7 +218,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sopI" { \global \sopIVoice }
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "altI" { \global \altIVoice }
@@ -238,7 +238,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sopI" { \global \sopIVoice }
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "altI" { \global \altIVoice }
@@ -258,7 +258,7 @@
   \score {
     \unfoldRepeats
     \new Staff <<
-      \commonVoice
+      \backgroundVoice
       \new Voice = "sopI" { \global \sopIVoice }
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "altI" { \global \altIVoice }

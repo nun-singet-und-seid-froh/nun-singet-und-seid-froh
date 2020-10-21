@@ -18,17 +18,18 @@ compositionDate	= ""
 arrangerChristianName	= "Max" % e.g. "Johann Sebastian"
 arrangerSurName	= "Reger" % e.g. "Bach"
 arrangerLifedata = "1873-1916" % e.g. "1685-1750"
-melodyDate	= "1899"
+arrangementDate	= "1899"
 
 poetChristianName	= "" % e.g. "Paul"
 poetSurName	= "" % e.g. "Gerhardt"
 poetLifedata     = "" % e.g. "1607-1676"
 textDate	= ""
 
-translatorChristianName	= "" % e.g. "Johann Sebastian"
-translatorSurName	= "" % e.g. "Bach"
-translatorLifedata = "" % e.g. "1685-1750"
-translationDate	= ""
+% if the lyrics are a translation 
+translatorChristianName = "" % e.g. "Martin"
+translatorSurName       = "" % e.g. "Luther"
+translatorLifedata      = "" % e.g. "1483-1546"
+translationDate         = ""
 
 opus              = "Zwölf deutsche geistliche Gesänge (WoO VI/13)" 
 noInOpus        = "2"
