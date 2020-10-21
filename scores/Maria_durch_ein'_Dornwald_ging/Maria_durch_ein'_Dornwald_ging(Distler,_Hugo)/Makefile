@@ -22,9 +22,9 @@ midi: $(DIRNAME).midi
 zip: $(DIRNAME).zip
 
 combined: sheet commentary
-	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile="$(DIRNAME).pdf" "$(DIRNAME)-sheet.pdf" "$(DIRNAME)-commentary.pdf"
-	rm "$(DIRNAME)-sheet.pdf"
-	rm "$(DIRNAME)-commentary.pdf"
+	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dDOPDFMARKS=true -sOutputFile="$(DIRNAME).pdf" "$(DIRNAME)-sheet.pdf" pdfmarks "$(DIRNAME)-commentary.pdf"
+	# rm "$(DIRNAME)-sheet.pdf"
+	# rm "$(DIRNAME)-commentary.pdf"
 
 translation: $(wildcard translation.ilf)
 ifeq (,"$(wildcard translation.ilf)")
@@ -33,7 +33,8 @@ endif
 
 $(DIRNAME)-sheet.pdf $(DIRNAME).midi: $(LYS)
 	$(LILY) -dno-point-and-click -o "$(DIRNAME)" $<
-	mv "$(DIRNAME)".pdf "$(DIRNAME)-sheet.pdf"
+	gs -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile="$(DIRNAME)"-sheet.pdf "$(DIRNAME)".pdf
+	# mv "$(DIRNAME)".pdf "$(DIRNAME)-sheet.pdf"
 
 $(DIRNAME)-commentary.pdf:
 	# Unfortunately, running xelatex twice is necessary to get correct ouput
