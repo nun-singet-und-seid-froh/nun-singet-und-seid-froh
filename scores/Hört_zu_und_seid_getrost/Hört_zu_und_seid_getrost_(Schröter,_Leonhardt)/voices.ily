@@ -544,11 +544,11 @@ basVoice = <<
     %{05%} R\breve
     %{06%}  |
     %{07%} R1 |
-    %{08%} r2 c |
+    %{08%} r2 c' |
     %{09%} c d2.
     %{10%}  c4 c2 |
     %{11%} bes a |
-    %{12%} r1 f'2 |
+    %{12%} r1 f2 |
     %{13%} d4\melisma e f g a bes |
     %{14%} c bes a2\melismaEnd bes |
     %{15%} f c \[ d\melisma |
