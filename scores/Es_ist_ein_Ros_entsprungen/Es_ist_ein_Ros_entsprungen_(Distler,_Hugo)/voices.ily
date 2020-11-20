@@ -549,7 +549,7 @@ sopVoiceVerseFour = \relative c'' {
   \noBreak\time 3/2
   b8[ cis] b4. cis8 b2 gis4) |
   b2. r4 r2 |
-  gis4 gis2 fis4 b8 b
+  gis4 gis2 gis4 b8 b
   << 
     {
       \voiceOne \tieDown gis4~( \tieNeutral |
@@ -762,7 +762,7 @@ basVoiceVerseFour = \relative c' {
   cis1 b2 |
   b1. |
   gis1.\> |
-  << { R1.\! } { s2 \bar "" s1 } >> | % to enable origBreak here
+  << { r2\! r r } { s2 \bar "" s1 } >> | % to enable origBreak here
   % r2 \bar "" r1 |
   \time 4/4
   r2 r4 b4^\markup{ \dynamic p \italic zart } |
