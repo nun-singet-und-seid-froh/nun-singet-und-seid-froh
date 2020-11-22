@@ -9,6 +9,10 @@
 # Lilypond-book
 lilypond-book/
 
+# LaTex
+*.aux
+*.out
+
 # Vim
 ## swap
 [._]*.s[a-w][a-z]
