@@ -67,7 +67,7 @@ sopVoice = <<
   d4..) d16 d2
   R1^\markup{ \italic { G.P. } }\break
   c2\pp g
-  a4^\markup{ \italic cresc. }(b) bes( c)
+  a4^\markup{ \italic cresc. }( b) b( c)
   d4..^> d16 d2
   R1
   d2\mf a
@@ -164,7 +164,7 @@ altVoice = <<
   es4 f ges as)
   bes2\breathe bes
   bes4.. bes16 bes2
-  d,1^^(
+  des,1^^(
   es4 f) ges( as)
   bes4 bes2^> f4
 %{30%}
@@ -344,12 +344,12 @@ tenCommonPartFour = \relative c' {
   gis r  r2
   r4 e'8.\ff e16 e2
   e4 e8.^>\fff e16 e2~
-  e4 dis^> dis^> dis^>
+  e4 dis^> e^> dis^>
   e1^>
   gis2^> r
   e2\pp e
   dis4 dis r b8 b
-  f1\<(
+  fis1\<(
   dis\!
   cis2 b'4^\markup{ \italic dim. } a
   fis2 gis4 a)
