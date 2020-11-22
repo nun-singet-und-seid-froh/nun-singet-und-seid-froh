@@ -9,24 +9,24 @@
 % this is version 1.0 of the meta.ily
 
 % the meta-data printed in the sheet
-title                   = "Es ist ein Ros entsprungen"
+title                   = "När det lider mot jul"
 
 % composer is the one who wrote the melody (leave this empty if it is identical to the arranger)
 composerChristianName   = "" % e.g. "Johann Sebastian"
 composerSurName	        = "" % e.g. "Bach"
 composerLifedata        = "" % e.g. "1685-1750"
-melodyDate	        = ""
+melodyDate				= ""
 
 % arranger is the one who composed the voices
-arrangerChristianName   = "Hugo" % e.g. "Johann Sebastian"
-arrangerSurName	        = "Distler" % e.g. "Bach"
-arrangerLifedata        = "1908-1942" % e.g. "1685-1750"
-arrangementDate         = "1933"
+arrangerChristianName   = "Ruben" % e.g. "Johann Sebastian"
+arrangerSurName	        = "Liljefors" % e.g. "Bach"
+arrangerLifedata        = "1871-1936" % e.g. "1685-1750"
+arrangementDate         = "1909"
 
 % poet is the one who wrote (the main part of) the lyrics (also see translator)
-poetChristianName       = "" % e.g. "Paul"
-poetSurName             = "" % e.g. "Gerhardt"
-poetLifedata            = "" % e.g. "1607-1676"
+poetChristianName       = "Jeanna" % e.g. "Paul"
+poetSurName             = "Otherdahl" % e.g. "Gerhardt"
+poetLifedata            = "1879-1965" % e.g. "1607-1676"
 textDate                = ""
 
 % if the lyrics are a translation 
@@ -35,18 +35,18 @@ translatorSurName       = "" % e.g. "Luther"
 translatorLifedata      = "" % e.g. "1483-1546"
 translationDate         = ""
 
-opus                    = "Die Weihnachtsgeschichte, op. 10" 
-noInOpus                = ""
+opus                    = "19" 
+noInOpus                = "3"
 titleInOpus             = ""
 
-lastEdited              = "14. Oktober 2020" % e.g. "19. September 2015"
-vers                    = "1.2.0" % write "0.0.0" for the first draft
-noInNsusf               = "4" % write "X" as long piece is not ready to be published
+lastEdited              = "21. Dezember 2019" % e.g. "19. September 2015"
+vers                    = "1.0.0" % write "0.0.0" for the first draft
+noInNsusf               = "22" % write "X" as long piece is not ready to be published
 
 % other meta-data, used for the MediaWiki-output
-epoque                  = "Moderne" 
-language                = "deutsch" 
-instrumentation         = "" % "SATB", "SSAATTBB", etc.
-difficulty              = "schwer" % "sehr leicht", "leicht", "mittelschwer", "schwer", "sehr schwer"
-form                    = "" % "Motette", "Strophenlied", "Durchkomponiertes Lied"
-root                    = "Es ist ein Ros entsprungen"
+epoque                  = "" 
+language                = "swedish" 
+instrumentation         = "SATB" % "SATB", "SSAATTBB", etc.
+difficulty              = "leicht" % "sehr leicht", "leicht", "mittelschwer", "schwer", "sehr schwer"
+form                    = ""
+root                    = ""

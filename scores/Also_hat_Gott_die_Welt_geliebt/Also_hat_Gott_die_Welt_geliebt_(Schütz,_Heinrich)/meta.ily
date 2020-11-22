@@ -9,7 +9,7 @@
 % this is version 1.0 of the meta.ily
 
 % the meta-data printed in the sheet
-title                   = "Es ist ein Ros entsprungen"
+title                   = "Also hat Gott die Welt geliebt"
 
 % composer is the one who wrote the melody (leave this empty if it is identical to the arranger)
 composerChristianName   = "" % e.g. "Johann Sebastian"
@@ -18,10 +18,10 @@ composerLifedata        = "" % e.g. "1685-1750"
 melodyDate	        = ""
 
 % arranger is the one who composed the voices
-arrangerChristianName   = "Hugo" % e.g. "Johann Sebastian"
-arrangerSurName	        = "Distler" % e.g. "Bach"
-arrangerLifedata        = "1908-1942" % e.g. "1685-1750"
-arrangementDate         = "1933"
+arrangerChristianName   = "Heinrich" % e.g. "Johann Sebastian"
+arrangerSurName	        = "Schütz" % e.g. "Bach"
+arrangerLifedata        = "1585-1672" % e.g. "1685-1750"
+arrangementDate         = "1648"
 
 % poet is the one who wrote (the main part of) the lyrics (also see translator)
 poetChristianName       = "" % e.g. "Paul"
@@ -35,18 +35,18 @@ translatorSurName       = "" % e.g. "Luther"
 translatorLifedata      = "" % e.g. "1483-1546"
 translationDate         = ""
 
-opus                    = "Die Weihnachtsgeschichte, op. 10" 
-noInOpus                = ""
+opus                    = "Geistliche Chor-Music (op. 11)" 
+noInOpus                = "12"
 titleInOpus             = ""
 
-lastEdited              = "14. Oktober 2020" % e.g. "19. September 2015"
-vers                    = "1.2.0" % write "0.0.0" for the first draft
-noInNsusf               = "4" % write "X" as long piece is not ready to be published
+lastEdited              = "31. Dezember 2019" % e.g. "19. September 2015"
+vers                    = "1.0.0" % write "0.0.0" for the first draft
+noInNsusf               = "23" % write "X" as long piece is not ready to be published
 
 % other meta-data, used for the MediaWiki-output
-epoque                  = "Moderne" 
-language                = "deutsch" 
-instrumentation         = "" % "SATB", "SSAATTBB", etc.
-difficulty              = "schwer" % "sehr leicht", "leicht", "mittelschwer", "schwer", "sehr schwer"
-form                    = "" % "Motette", "Strophenlied", "Durchkomponiertes Lied"
-root                    = "Es ist ein Ros entsprungen"
+epoque                  = "" 
+language                = "" 
+instrumentation         = "SATTB" % "SATB", "SSAATTBB", etc.
+difficulty              = "" % "sehr leicht", "leicht", "mittelschwer", "schwer", "sehr schwer"
+form                    = "Motette" % "Motette", "Strophenlied", "Durchkomponiertes Lied"
+root                    = ""
