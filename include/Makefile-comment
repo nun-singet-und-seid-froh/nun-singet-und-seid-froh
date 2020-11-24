@@ -24,6 +24,8 @@ GSHOST := $(shell command -v gs)
 GSDOCKER := $(DOCKERRUN) docker.io/minidocks/ghostscript:latest
 GS := $(or $(GSHOST),$(GSDOCKER))
 
+ILTEX := $(patsubst %.ilf,%.iltex,$(wildcard *.ilf))
+
 all: midi zip 
 
 sheet: $(DIRNAME)-sheet.pdf
@@ -39,11 +41,12 @@ $(DIRNAME)-sheet.pdf $(DIRNAME).midi: $(LYS)
 	$(LILY) -dno-point-and-click -o "$(DIRNAME)" $<
 	mv "$(DIRNAME).pdf" "$(DIRNAME)-sheet.pdf"
 
-translation.iltex: translation.ilf
-	$(PYTHON) ../../../tools/ilf2iltex.py translation.ilf
+%.iltex: %.ilf
+	$(PYTHON) ../../../tools/ilf2iltex.py $<
 
-$(DIRNAME)-commentary.pdf: commentary.tex translation.iltex
+$(DIRNAME)-commentary.pdf: commentary.tex $(ILTEX)
 	# Unfortunately, running xelatex twice is necessary to get correct ouput
+	echo "$(ILTEX)"
 	$(XELA) commentary.tex
 	$(XELA) commentary.tex 
 	mv commentary.pdf "$(DIRNAME)-commentary.pdf"
@@ -61,7 +64,7 @@ clean:
 	rm -f *.aux
 	rm -f *.log
 	rm -f *.out
-	rm -f translation.tex
+	rm -f translation.iltex
 
 
 .PHONY: all clean midi zip
