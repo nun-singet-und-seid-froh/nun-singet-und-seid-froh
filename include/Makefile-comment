@@ -9,42 +9,38 @@ LILYHOST := $(shell command -v lilypond)
 LILYDOCKER := docker run -e LANG=C.UTF-8 -e LC_ALL=C.UTF-8 -v "$(NSUSF):$(NSUSF)$(VOLUMESUFFIX)" -w "$(PWD)" -i -t --rm docker.io/nunsingetundseidfroh/lilypond lilypond
 LILY := $(or $(LILYHOST),$(LILYDOCKER))
 XELAHOST := $(shell command -v xelatex)
-XELADOCKER := docker run -e LANG=C.UTF-8 -e LC_ALL=C.UTF-8 -v "$(NSUSF):$(NSUSF)$(VOLUMESUFFIX)" -w "$(PWD)" -i -t --rm docker.io/nunsingetundseidfroh/lilypond xelatex
+XELADOCKER := docker run -e LANG=C.UTF-8 -e LC_ALL=C.UTF-8 -v "$(NSUSF):$(NSUSF)$(VOLUMESUFFIX)" -w "$(PWD)" -i -t --rm docker.io/nunsingetundseidfroh/xelatex xelatex
 XELA := $(or $(XELAHOST),$(XELADOCKER))
+PYTHONHOST := $(shell command -v python3)
+PYTHONDOCKER := docker run -e LANG=C.UTF-8 -e LC_ALL=C.UTF-8 -v "$(NSUSF):$(NSUSF)$(VOLUMESUFFIX)" -w "$(PWD)" -i -t --rm docker.io/python:3 python
+PYTHON := $(or $(PYTHONHOST),$(PYTHONDOCKER))
+GSHOST := $(shell command -v gs)
+GSDOCKER := docker run -e LANG=C.UTF-8 -e LC_ALL=C.UTF-8 -v "$(NSUSF):$(NSUSF)$(VOLUMESUFFIX)" -w "$(PWD)" -i -t --rm docker.io/minidocks/ghostscript:latest
+GS := $(or $(GSHOST),$(GSDOCKER))
 
-all: combined midi zip 
-
-combined: commentary sheet
+all: midi zip 
 
 sheet: $(DIRNAME)-sheet.pdf
-
-commentary: translation $(DIRNAME)-commentary.pdf
 
 midi: $(DIRNAME).midi
 
 zip: $(DIRNAME).zip
 
-combined: sheet commentary
-	gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dDOPDFMARKS=true -sOutputFile="$(DIRNAME).pdf" "$(DIRNAME)-sheet.pdf" pdfmarks "$(DIRNAME)-commentary.pdf"
-	# rm "$(DIRNAME)-sheet.pdf"
-	# rm "$(DIRNAME)-commentary.pdf"
-
-translation: $(wildcard translation.ilf)
-ifeq (,"$(wildcard translation.ilf)")
-	python3 ../../../tools/ilf2iltex.py translation.ilf
-endif
+$(DIRNAME).pdf: $(DIRNAME)-sheet.pdf $(DIRNAME)-commentary.pdf
+	$(GS) -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dDOPDFMARKS=true -sOutputFile="$(DIRNAME).pdf" "$(DIRNAME)-sheet.pdf" "$(DIRNAME)-commentary.pdf"
 
 $(DIRNAME)-sheet.pdf $(DIRNAME).midi: $(LYS)
 	$(LILY) -dno-point-and-click -o "$(DIRNAME)" $<
-	gs -dBATCH -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile="$(DIRNAME)"-sheet.pdf "$(DIRNAME)".pdf
-	# mv "$(DIRNAME)".pdf "$(DIRNAME)-sheet.pdf"
+	mv "$(DIRNAME).pdf" "$(DIRNAME)-sheet.pdf"
 
-$(DIRNAME)-commentary.pdf:
+translation.iltex: translation.ilf
+	$(PYTHON) ../../../tools/ilf2iltex.py translation.ilf
+
+$(DIRNAME)-commentary.pdf: commentary.tex translation.iltex
 	# Unfortunately, running xelatex twice is necessary to get correct ouput
 	$(XELA) commentary.tex
 	$(XELA) commentary.tex 
 	mv commentary.pdf "$(DIRNAME)-commentary.pdf"
-
 
 $(DIRNAME).zip: $(DIRNAME).pdf $(DIRNAME).midi
 	zip "$(DIRNAME)" *.pdf *.midi
@@ -62,5 +58,4 @@ clean:
 	rm -f translation.tex
 
 
-.PHONY: all clean commentary combined midi sheet  zip
-
+.PHONY: all clean midi zip
