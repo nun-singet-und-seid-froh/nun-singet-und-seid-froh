@@ -9,6 +9,13 @@
 # Lilypond-book
 lilypond-book/
 
+# LaTex
+*.aux
+*.out
+
+# Commentaries
+translation.iltex
+
 # Vim
 ## swap
 [._]*.s[a-w][a-z]
