@@ -9,3 +9,8 @@ jobs:
           script: true
         - stage: compile-lilypond
           script: pushd scores && make && popd
+deploy:
+    provider: script
+    script: pushd scores && make deploy.sh && popd
+    on:
+        branch: master

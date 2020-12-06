@@ -10,4 +10,7 @@ $(SUBDIRS):
 clean:
 	$(foreach dir,$(SUBDIRS),$(MAKE) -C "$(dir)" clean;)
 
-.PHONY: all clean $(SUBDIRS)
+deploy:
+	$(foreach dir,$(SUBDIRS),$(MAKE) -C "$(dir)" deploy;)
+
+.PHONY: all clean deploy $(SUBDIRS)
