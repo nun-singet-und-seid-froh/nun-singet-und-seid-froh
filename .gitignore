@@ -6,6 +6,10 @@
 *.log
 *~
 
+# LaTex
+*.aux
+*.out
+
 # Lilypond-book
 lilypond-book/
 
