@@ -373,26 +373,26 @@ tenCommonPartFour = \relative c' {
 }
 
 tenIVoice = {
-  \partcombineAutomatic \tenCommonPartOne
-  \partcombineApart \tenIPartOne
-  \partcombineAutomatic \tenCommonPartTwo
-  \partcombineApart \tenIPartTwo
-  \partcombineAutomatic \tenCommonPartThree
-  \partcombineApart \tenIPartThree
-  \partcombineAutomatic \tenCommonPartFour
+  \partCombineAutomatic \tenCommonPartOne
+  \partCombineApart \tenIPartOne
+  \partCombineAutomatic \tenCommonPartTwo
+  \partCombineApart \tenIPartTwo
+  \partCombineAutomatic \tenCommonPartThree
+  \partCombineApart \tenIPartThree
+  \partCombineAutomatic \tenCommonPartFour
 }
 
 tenIIVoice = {
-  \partcombineAutomatic \tenCommonPartOne
-  \partcombineApart \tenIIPartOne
-  \partcombineAutomatic \tenCommonPartTwo
-  \partcombineApart \tenIIPartTwo
-  \partcombineAutomatic \tenCommonPartThree
-  \partcombineApart \tenIIPartThree
-  \partcombineAutomatic \tenCommonPartFour
+  \partCombineAutomatic \tenCommonPartOne
+  \partCombineApart \tenIIPartOne
+  \partCombineAutomatic \tenCommonPartTwo
+  \partCombineApart \tenIIPartTwo
+  \partCombineAutomatic \tenCommonPartThree
+  \partCombineApart \tenIIPartThree
+  \partCombineAutomatic \tenCommonPartFour
 }
 
-tenVoice = { \partcombine \tenIVoice \tenIIVoice }
+tenVoice = { \partCombineAutomatic \tenIVoice \tenIIVoice }
 
 basCommonPartOne =
   \relative c
@@ -521,19 +521,19 @@ basCommonPartThree = \relative c {
 }
 
 basIVoice = {
-  \partcombineAutomatic \basCommonPartOne
-  \partcombineApart \basIPartOne
-  \partcombineAutomatic \basCommonPartTwo
-  \partcombineApart \basIPartTwo
-  \partcombineAutomatic \basCommonPartThree
+  \partCombineAutomatic \basCommonPartOne
+  \partCombineApart \basIPartOne
+  \partCombineAutomatic \basCommonPartTwo
+  \partCombineApart \basIPartTwo
+  \partCombineAutomatic \basCommonPartThree
 }
 
 basIIVoice = {
-  \partcombineAutomatic \basCommonPartOne
-  \partcombineApart \basIIPartOne
-  \partcombineAutomatic \basCommonPartTwo
-  \partcombineApart \basIIPartTwo
-  \partcombineAutomatic \basCommonPartThree
+  \partCombineAutomatic \basCommonPartOne
+  \partCombineApart \basIIPartOne
+  \partCombineAutomatic \basCommonPartTwo
+  \partCombineApart \basIIPartTwo
+  \partCombineAutomatic \basCommonPartThree
 }
 
-basVoice = { \partcombine \basIVoice \basIIVoice }
+basVoice = { \partCombineAutomatic \basIVoice \basIIVoice }
