@@ -1,5 +1,5 @@
 \setstackEOL{\cr}
-\def\word#1|#2|#3|#4+++{\mbox{\hspace{2pt}\Longstack{\uppercase{#1}\cr\scriptsize{ #2}\cr\textit{#3}\cr\textit{#4}\cr}}\hspace{2pt}}
+\def\word#1|#2|#3|#4+++{\mbox{\hspace{2pt}\Longstack{\uppercase{#1}\cr#2\cr\textit{#3}\cr\textit{#4}}}\hspace{2pt}}
  \word Virga|Nom. Sgl. VIRGA|der Zweig|the branch+++
  \word Jesse|Nom.Sgl. JESSE|Jesse|Jesse+++
  \word floruit|3. Pers. Sgl. Akt. Ind. FLORARE|hat geblüht|has bloomed+++

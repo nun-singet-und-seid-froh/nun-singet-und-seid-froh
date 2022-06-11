@@ -56,9 +56,9 @@ commonDynArt = {
     \concat {
       "ruhig und zart "
       (
-      \smaller \general-align #Y #DOWN \note #"4." #1
+      \smaller \general-align #Y #DOWN \note {4.} #1
       " = "
-      \smaller \general-align #Y #DOWN \note #"4" #1
+      \smaller \general-align #Y #DOWN \note {4} #1
       " )"
     }
   }
