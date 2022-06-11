@@ -6,7 +6,7 @@ LYS=score.ly voices.ily $(META) lyrics.ily output.ily ../../../include/header.il
 
 NSUSF := $(shell git rev-parse --show-toplevel)
 VOLUMESUFFIX := $(if $(and $(shell command -v getenforce),$(findstring Enforcing,$(shell getenforce))),:Z,)
-DOCKERRUN := docker run -e LANG=C.UTF-8 -e LC_ALL=C.UTF-8 -v "$(NSUSF):$(NSUSF)$(VOLUMESUFFIX)" -w "$(PWD)" -i -t --rm
+DOCKERRUN := docker run -e LANG=C.UTF-8 -e LC_ALL=C.UTF-8 -v "$(NSUSF):$(NSUSF)$(VOLUMESUFFIX)" -w "$(PWD)" --rm
 
 LILYHOST := $(shell command -v lilypond)
 LILYDOCKER := $(DOCKERRUN) docker.io/nunsingetundseidfroh/lilypond lilypond
