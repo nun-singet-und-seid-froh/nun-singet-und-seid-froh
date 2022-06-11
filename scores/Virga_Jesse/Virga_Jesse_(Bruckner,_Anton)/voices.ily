@@ -392,7 +392,7 @@ tenIIVoice = {
   \partCombineAutomatic \tenCommonPartFour
 }
 
-tenVoice = { \partCombineAutomatic \tenIVoice \tenIIVoice }
+tenVoice = { \partCombine \tenIVoice \tenIIVoice }
 
 basCommonPartOne =
   \relative c
@@ -536,4 +536,4 @@ basIIVoice = {
   \partCombineAutomatic \basCommonPartThree
 }
 
-basVoice = { \partCombineAutomatic \basIVoice \basIIVoice }
+basVoice = { \partCombine \basIVoice \basIIVoice }
