@@ -166,9 +166,9 @@ def readfile(filename, newBoxDelimiter):
                 for b in range(0, (num_lines // num_langs)):
                     for x in lines[(b * num_langs) + a].split(newBoxDelimiter):
                         ## *TEXT* -> \emph{TEXT}:
-                        x = re.sub(r"\*(.*)\*", "\\emph{" + r"\g<1>}", x)
+                        x = re.sub(r"\*(.*)\*", "\\\emph{" + r"\g<1>}", x)
                         ## *TEXT* -> \emph{TEXT}:
-                        x = re.sub(r"\"(.*)\"", "\\enquote{" + r"\g<1>}", x)
+                        x = re.sub(r"\"(.*)\"", "\\\enquote{" + r"\g<1>}", x)
                         interlinear[a].append(x.replace("\n", ""))
 
             # check whether all rows have same number of boxes
