@@ -39,13 +39,13 @@ opus                    = "Der Jahrkreis (op. 5)"
 noInOpus                = "4"
 titleInOpus             = ""
 
-lastEdited              = "14. Oktober 2020" % e.g. "19. September 2015"
-vers                    = "1.0.0" % write "0.0.0" for the first draft
-noInNsusf               = "25" % write "X" as long piece is not ready to be published
+lastEdited              = "18. Juni 2022" % e.g. "19. September 2015"
+vers                    = "1.0.1" % write "0.0.0" for the first draft
+noInNsusf               = "23" % write "X" as long piece is not ready to be published
 
 % other meta-data, used for the MediaWiki-output
 epoque                  = "Moderne" 
 language                = "deutsch" 
-instrumentation         = "SAB" % "SATB", "SSAATTBB", etc.
+instrumentation         = "SSA" % "SATB", "SSAATTBB", etc.
 difficulty              = "leicht" % "sehr leicht", "leicht", "mittelschwer", "schwer", "sehr schwer"
 root                    = ""

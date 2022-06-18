@@ -134,7 +134,7 @@ altTune	 = \relative c' {
 	e4 e << 
 		{ \voiceOne c2 d4 d } 
 		\new Voice 
-		{ \voiceTwo c2 b4 d }
+		{ \voiceTwo c2 g4 d' }
 	>> \oneVoice
 
 	% \time 5/4
