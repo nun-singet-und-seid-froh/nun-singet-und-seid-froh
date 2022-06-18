@@ -1,0 +1,70 @@
+SHELL=/bin/bash
+
+DIRNAME=$(shell basename "$(PWD)")
+META=meta.ily
+LYS=score.ly voices.ily $(META) lyrics.ily output.ily ../../../include/header.ily ../../../include/paper.ily ../../../include/sound.ily ../../../include/version.ily
+
+NSUSF := $(shell git rev-parse --show-toplevel)
+VOLUMESUFFIX := $(if $(and $(shell command -v getenforce),$(findstring Enforcing,$(shell getenforce))),:Z,)
+DOCKERRUN := docker run -e LANG=C.UTF-8 -e LC_ALL=C.UTF-8 -v "$(NSUSF):$(NSUSF)$(VOLUMESUFFIX)" -w "$(PWD)" --rm
+
+LILYHOST := $(shell command -v lilypond)
+LILYDOCKER := $(DOCKERRUN) docker.io/nunsingetundseidfroh/lilypond lilypond
+LILY := $(or $(LILYHOST),$(LILYDOCKER))
+
+XELAHOST := $(shell command -v xelatex)
+XELADOCKER := $(DOCKERRUN) docker.io/nunsingetundseidfroh/xelatex xelatex
+XELA := $(or $(XELAHOST),$(XELADOCKER))
+
+PYTHONHOST := $(shell command -v python3)
+PYTHONDOCKER := $(DOCKERRUN) docker.io/python:3 python
+PYTHON := $(or $(PYTHONHOST),$(PYTHONDOCKER))
+
+GSHOST := $(shell command -v gs)
+GSDOCKER := $(DOCKERRUN) docker.io/minidocks/ghostscript:latest
+GS := $(or $(GSHOST),$(GSDOCKER))
+
+ILTEX := $(patsubst %.ilf,%.iltex,$(wildcard *.ilf))
+
+all: midi zip 
+
+sheet: $(DIRNAME)-sheet.pdf
+
+midi: $(DIRNAME).midi
+
+zip: $(DIRNAME).zip
+
+$(DIRNAME).pdf: $(DIRNAME)-sheet.pdf $(DIRNAME)-commentary.pdf
+	$(GS) -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dDOPDFMARKS=true -sOutputFile="$(DIRNAME).pdf" "$(DIRNAME)-sheet.pdf" "$(DIRNAME)-commentary.pdf"
+
+$(DIRNAME)-sheet.pdf $(DIRNAME).midi: $(LYS)
+	$(LILY) -dno-point-and-click -o "$(DIRNAME)" $<
+	mv "$(DIRNAME).pdf" "$(DIRNAME)-sheet.pdf"
+
+%.iltex: %.ilf
+	$(PYTHON) ../../../tools/ilf2iltex.py $<
+
+$(DIRNAME)-commentary.pdf: commentary.tex $(ILTEX)
+	# Unfortunately, running xelatex twice is necessary to get correct ouput
+	echo "$(ILTEX)"
+	$(XELA) commentary.tex
+	$(XELA) commentary.tex 
+	mv commentary.pdf "$(DIRNAME)-commentary.pdf"
+
+$(DIRNAME).zip: $(DIRNAME).pdf $(DIRNAME).midi
+	zip "$(DIRNAME)" *.pdf *.midi
+
+$(DIRNAME)_(midis).zip: $(DIRNAME).pdf $(DIRNAME).midi
+	zip "$(DIRNAME)" *.midi
+
+clean:
+	rm -f *.pdf
+	rm -f *.midi
+	rm -f *.zip
+	rm -f *.aux
+	rm -f *.log
+	rm -f *.out
+	rm -f translation.iltex
+
+
+.PHONY: all clean midi zip

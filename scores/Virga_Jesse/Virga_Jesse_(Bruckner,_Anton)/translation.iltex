@@ -1,0 +1,25 @@
+\setstackEOL{\cr}
+\def\word#1|#2|#3|#4+++{\mbox{\hspace{2pt}\Longstack{\uppercase{#1}\cr#2\cr\textit{#3}\cr\textit{#4}}}\hspace{2pt}}
+ \word Virga|Nom. Sgl. VIRGA|der Zweig|the branch+++
+ \word Jesse|Nom.Sgl. JESSE|Jesse|Jesse+++
+ \word floruit|3. Pers. Sgl. Akt. Ind. FLORARE|hat geblüht|has bloomed+++
+\vspace{6pt}
+
+ \word Virgo|Nom. Sgl. VIRGO|die Jungfrau|the virgin+++
+ \word deum|Akk. Sgl. DEUS |den Gott|the god+++
+ \word et|ET|und|and+++
+ \word hominem|Akk. Sgl. HOMO|den Menschen|the man+++
+ \word genuit|3. Pers. Sgl. Akt. Ind. GIGNERE|hat geboren|has born+++
+\vspace{6pt}
+
+ \word Pacem|Akk. Sgl. PAX|den Frieden|peace+++
+ \word deus|Nom. Sgl. DEUS|Gott|god+++
+ \word reddidit|3. Pers. Sgl. Akt. Ind. REDDERE|hat zurückgegeben|has restored+++
+\vspace{6pt}
+
+ \word in|IN|in|in+++
+ \word se|SE|sich|himself+++
+ \word reconcilians|Part. Präs. Akt. RECONCILIARE|versöhnend|reconciling+++
+ \word ima|IMA|das niedrigste|the lowest+++
+ \word summis|Dat. / Abl. Pl. SUMMUS|mit dem höchsten|with the highest+++
+\vspace{6pt}
