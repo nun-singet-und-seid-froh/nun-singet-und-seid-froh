@@ -87,15 +87,31 @@ sopArt = {
 
 altArt = { 
   s4
-  s1
-  s1
+  s1 * 2
   s1
   % \time 6/4
   s1.
-  s4 s4. \breathe s4
+  % \time 4/4
+  s4 s4. \breathe s4.
   s1 * 3 \breathe
-  s1 * 2
+  s1
+  s2.
+
   % end of volta
+  s4
+  s1
+  % \time 6/4
+  s1.
+  % \time 4/4
+  s1 * 3
+  % \time 3/4
+  s2 \breathe s4
+  % \time 6/8
+  s2.
+  % \time 6/4
+  s1. \breathe
+  % \time 4/4
+  s1 * 3
 }
 
 menArt = { }
