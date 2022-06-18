@@ -41,9 +41,9 @@ sopVoice= {
           \tempo \markup {
             \concat {
               (
-                \smaller \general-align #Y #DOWN \note #"2" #1
+                \smaller \general-align #Y #DOWN \note {2} #1
                 " ~ "
-                \smaller \general-align #Y #DOWN \note #"4" #1
+                \smaller \general-align #Y #DOWN \note {4} #1
                 " "
               )
             }
