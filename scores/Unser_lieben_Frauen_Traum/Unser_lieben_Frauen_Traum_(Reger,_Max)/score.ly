@@ -71,6 +71,12 @@
         \new Lyrics { \basIILyrics }
       >>
     >>%end of ChoirStaff
+    \layout {
+      \context {
+         \Staff \RemoveEmptyStaves
+         \override VerticalAxisGroup.remove-first = ##t
+      }
+    }
   }%end of score (PDF)
 
   \score {

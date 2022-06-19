@@ -86,7 +86,33 @@ global = {
   \override Staff.Hairpin #'minimum-length = #6
 }
 
-commonMarks =  {
+emptyPartI = {
+  \repeat volta 2 {
+    s4 |
+    s4. s8 s4 |
+    s2. |
+    s2. |
+    s2 s4 |
+    s2. | \break \noPageBreak
+    s2. |
+    s4. s8 s4 |
+    s8. s16 s4 s4 |
+    s2. |
+    s2. |
+    s4 s8 s8 s4 | \break \noPageBreak
+    s2 s4 |
+    s2 s4 |
+    s4 s4 s4 |
+    s4. s16 s16 s4 |
+  }
+  \alternative {
+    { s2 }
+    { << { s2.\bar"||" } \\ { \spacerVoice }>>}
+  }
+  
+}
+
+marksPartI = {
   \repeat volta 2 {
     s4\p\< |
     s4. s8\! s4 |
@@ -109,9 +135,9 @@ commonMarks =  {
     { s2\! }
     { << { s2.\bar"||" } \\ { \spacerVoice }>>}
   }
+}
 
-  \pageBreak
-
+marksPartII = {
   \time 4/4
   s2\f s2 |
   s2 s4 s\< |
@@ -129,6 +155,18 @@ commonMarks =  {
   s2 s2\> |
   s1 |
   s1\!\pp^\fermata\bar "|."
+}
+
+commonMarks = {
+  \marksPartI
+  \pageBreak
+  \marksPartII
+}
+
+commonMarksII = {
+  \emptyPartI
+  \pageBreak
+  \marksPartII
 }
 
 sopIMarks = {
@@ -211,7 +249,7 @@ sopIVoice = \relative c'' {
 
 sopIIVoice = \relative c' {
   <<
-    { \commonMarks }
+    { \commonMarksII }
     { \sopIIMarks }
     { 
       \repeat volta 2 {
@@ -226,7 +264,7 @@ sopIIVoice = \relative c' {
       e!2 r4 a |
       a2 bes |
       bes2 f4 a |
-      a2 bes4 a) |
+      a2 bes4( a) |
       g2 r4 g4 |
       g2 es |
 
@@ -399,7 +437,7 @@ basIVoice = \relative c {
 
 basIIVoice = \relative c' {
   <<
-    { \commonMarks }
+    { \commonMarksII }
     { \basIIMarks }
     { 
       \repeat volta 2 {
