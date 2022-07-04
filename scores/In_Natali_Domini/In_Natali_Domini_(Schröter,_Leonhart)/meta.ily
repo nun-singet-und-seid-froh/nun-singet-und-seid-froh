@@ -12,16 +12,16 @@
 title                   = "In Natali Domini"
 
 % composer is the one who wrote the melody (leave this empty if it is identical to the arranger)
-composerChristianName   = "Leonhart" % e.g. "Johann Sebastian"
-composerSurName	        = "Schröter" % e.g. "Bach"
-composerLifedata        = "1532?-1601?" % e.g. "1685-1750"
+composerChristianName   = "" % e.g. "Johann Sebastian"
+composerSurName	        = "" % e.g. "Bach"
+composerLifedata        = "" % e.g. "1685-1750"
 melodyDate	        = ""
 
 % arranger is the one who composed the voices
-arrangerChristianName   = "" % e.g. "Johann Sebastian"
-arrangerSurName	        = "" % e.g. "Bach"
-arrangerLifedata        = "" % e.g. "1685-1750"
-arrangementDate         = ""
+arrangerChristianName   = "Leonhart" % e.g. "Johann Sebastian"
+arrangerSurName	        = "Schröter" % e.g. "Bach"
+arrangerLifedata        = "1532?-1601?" % e.g. "1685-1750"
+arrangementDate         = "1587"
 
 % poet is the one who wrote (the main part of) the lyrics (also see translator)
 poetChristianName       = "" % e.g. "Paul"
@@ -46,7 +46,7 @@ noInNsusf               = "X" % write "X" as long piece is not ready to be publi
 % other meta-data, used for the MediaWiki-output
 epoque                  = "renaissance" 
 language                = "Latin" 
-instrumentation         = "DATB" % "SATB", "SSAATTBB", etc.
+instrumentation         = "SATB" % "SATB", "SSAATTBB", etc.
 difficulty              = "" % "sehr leicht", "leicht", "mittelschwer", "schwer", "sehr schwer"
 form                    = "Motette" % "Motette", "Strophenlied", "Durchkomponiertes Lied"
 root                    = ""
