@@ -110,6 +110,7 @@
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "alt" { \global \altVoice }
     >>
+	\stafftovoice
   }
 }
 
@@ -124,6 +125,7 @@
       \new Voice = "sopII" { \highlightedVoice \global \sopIIVoice }
       \new Voice = "alt" { \global \altVoice }
     >>
+	\stafftovoice
   }
 }
 
@@ -138,5 +140,6 @@
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "alt" { \highlightedVoice \global \altVoice }
     >>
+	\stafftovoice
   }
 }
