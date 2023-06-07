@@ -11,13 +11,13 @@
 
 sopILyrics = \lyricmode {
   % the incomplete Alleluia in last line may be a mistake in the original
-  Ein kindt ge -- born zu Beth -- le -- hem zu Beth -- le -- hem
-  des fre -- wet sich Je -- ru -- sa -- lem Al -- le Al -- le -- lu -- ia
+  Ein Kind ge -- bor’n zu Beth -- le -- hem, zu Beth -- le -- hem
+  des freu -- et sich Je -- ru -- sa -- lem Al -- le Al -- le -- lu -- ia
 }
 
 sopIILyrics = \lyricmode {
-  Ein kindt ge -- born zu Beth -- le -- hem zu Beth -- le -- hem
-  des fre -- wet sich Je -- ru -- sa -- lem Al -- le -- lu -- ia Al -- le -- lu -- ia Al -- le -- lu -- ia
+  Ein Kind ge -- bor’n zu Beth -- le -- hem, zu Beth -- le -- hem
+  des freu -- et sich Je -- ru -- sa -- lem Al -- le -- lu -- ia Al -- le -- lu -- ia Al -- le -- lu -- ia
 }
 
 altILyrics = \sopIILyrics

@@ -9,7 +9,7 @@
 % this is version 1.0 of the meta.ily
 
 % the meta-data printed in the sheet
-title                   = "Ein kindt geborn zu Bethlehem"
+title                   = "Ein Kind gebor’n zu Bethlehem"
 
 % composer is the one who wrote the melody (leave this empty if it is identical to the arranger)
 composerChristianName   = "" % e.g. "Johann Sebastian"
