@@ -59,17 +59,14 @@
     >> %end of SemiChoirStaff
     \layout {
       \context {
+        \enablePolymeter
         \Score
-        \remove "Timing_translator"
-        \remove "Default_bar_line_engraver"
         \remove "Repeat_acknowledge_engraver"
         \remove "Volta_engraver"
         \remove "Forbid_line_break_engraver"
       }
       \context {
         \Staff
-        \consists "Timing_translator"
-        \consists "Default_bar_line_engraver"
         \consists "Repeat_acknowledge_engraver"
         \remove "Forbid_line_break_engraver"
       }
@@ -122,10 +119,9 @@
       >>
     >>%end of SemiChoirStaff
     \layout {
+      \enablePolymeter
       \context {
         \Score
-        \remove "Timing_translator"
-        \remove "Default_bar_line_engraver"
         \remove "Repeat_acknowledge_engraver"
         \remove "Volta_engraver"
         \remove "Forbid_line_break_engraver"
@@ -133,8 +129,6 @@
 
       \context{
         \Staff
-        \consists "Timing_translator"
-        \consists "Default_bar_line_engraver"
         \consists "Repeat_acknowledge_engraver"
         \remove "Forbid_line_break_engraver"
       }
@@ -200,18 +194,15 @@
         \SemiChoirStaff
         \remove "Forbid_line_break_engraver"
       }
+      \enablePolymeter
       \context {
         \Score
-        \remove "Timing_translator"
-        \remove "Default_bar_line_engraver"
         \remove "Repeat_acknowledge_engraver"
         \remove "Volta_engraver"
         \remove "Forbid_line_break_engraver"
       }
       \context{
         \Staff
-        \consists "Timing_translator"
-        \consists "Default_bar_line_engraver"
         \consists "Repeat_acknowledge_engraver"
         \remove "Forbid_line_break_engraver"
       }
@@ -259,10 +250,9 @@
       \new Lyrics \lyricsto "bas" { \basLyricsVerseFour }
     >>%end of StaffGroup
     \layout {
+      \enablePolymeter
       \context {
         \Score
-        \remove "Timing_translator"
-        \remove "Default_bar_line_engraver"
         \remove "Repeat_acknowledge_engraver"
         \remove "Volta_engraver"
         \remove "Forbid_line_break_engraver"
@@ -270,8 +260,6 @@
 
       \context{
         \Staff
-        \consists "Timing_translator"
-        \consists "Default_bar_line_engraver"
         \consists "Repeat_acknowledge_engraver"
         \remove "Forbid_line_break_engraver"
       }
@@ -314,10 +302,9 @@
       \new Lyrics \lyricsto "bas" { \basLyricsVerseFive }
     >>%end of StaffGroup
     \layout {
+      \enablePolymeter
       \context {
         \Score
-        \remove "Timing_translator"
-        \remove "Default_bar_line_engraver"
         \remove "Repeat_acknowledge_engraver"
         \remove "Volta_engraver"
         \remove "Forbid_line_break_engraver"
@@ -325,8 +312,6 @@
 
       \context{
         \Staff
-        \consists "Timing_translator"
-        \consists "Default_bar_line_engraver"
         \consists "Repeat_acknowledge_engraver"
         \remove "Forbid_line_break_engraver"
       }
@@ -345,23 +330,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 stafftovoice = \midi {
+  \enablePolymeter
   \context {
     \Score
-    \remove "Timing_translator"
     \remove "Repeat_acknowledge_engraver"
   }
   \context {
     \Staff
     \remove "Staff_performer"
-    \consists "Timing_translator"
-    \consists "Default_bar_line_engraver"
     \consists "Repeat_acknowledge_engraver"
   }
   \context {
     \Voice
     \consists "Staff_performer"
-    \consists "Timing_translator"
-    \consists "Default_bar_line_engraver"
     \consists "Repeat_acknowledge_engraver"
   }
 }

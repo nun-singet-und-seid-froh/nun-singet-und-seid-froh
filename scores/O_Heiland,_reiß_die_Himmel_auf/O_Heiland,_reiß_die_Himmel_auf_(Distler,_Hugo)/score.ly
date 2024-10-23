@@ -55,10 +55,9 @@
     >> %end of StaffGroup
 
     \layout {
-	  \context {
+      \enablePolymeter
+      \context {
         \Score
-        \remove "Timing_translator"
-        \remove "Default_bar_line_engraver"
         \remove "Repeat_acknowledge_engraver"
         \remove "Volta_engraver"
         \remove "Forbid_line_break_engraver"
@@ -66,8 +65,6 @@
 
       \context{
         \Staff
-        \consists "Timing_translator"
-        \consists "Default_bar_line_engraver"
         \consists "Repeat_acknowledge_engraver"
         \remove "Forbid_line_break_engraver"
       }
@@ -75,7 +72,7 @@
         \Voice
         \remove "Forbid_line_break_engraver"
       }
-    } 	
+    }
     %\stanzas
   } %end of score (PDF)
 
@@ -110,7 +107,7 @@
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "alt" { \global \altVoice }
     >>
-	\stafftovoice
+    \stafftovoice
   }
 }
 
@@ -125,7 +122,7 @@
       \new Voice = "sopII" { \highlightedVoice \global \sopIIVoice }
       \new Voice = "alt" { \global \altVoice }
     >>
-	\stafftovoice
+    \stafftovoice
   }
 }
 
@@ -140,6 +137,6 @@
       \new Voice = "sopII" { \global \sopIIVoice }
       \new Voice = "alt" { \highlightedVoice \global \altVoice }
     >>
-	\stafftovoice
+    \stafftovoice
   }
 }

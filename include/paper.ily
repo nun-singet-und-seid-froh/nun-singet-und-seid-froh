@@ -62,7 +62,7 @@
     \column {
       \fill-line {
         {""}
-        { \place-folio \abs-fontsize #18 \on-the-fly #not-first-page \fromproperty #'page:page-number-string }
+        { \place-folio \abs-fontsize #18 \unless \on-first-page \fromproperty #'page:page-number-string }
       }
     }
   }
@@ -79,7 +79,7 @@
   \context {
     \Score
     %increases the size of numbers, because numbers in EB Garamond are a bit small
-    \override BarNumber #'font-size = #2
+    \override BarNumber.font-size = #2
     \override ClefModifier.font-size = #0.5 %the size of the 8 in the G_8-clef (tenor-clef)
   }
 

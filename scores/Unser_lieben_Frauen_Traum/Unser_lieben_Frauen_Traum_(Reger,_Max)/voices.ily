@@ -83,7 +83,7 @@ global = {
   \autoBeamOff
   \dynamicUp
   \phrasingSlurDashed
-  \override Staff.Hairpin #'minimum-length = #6
+  \override Staff.Hairpin.minimum-length = #6
 }
 
 emptyPartI = {

@@ -20,7 +20,7 @@ global = {
   \numericTimeSignature
   \dynamicUp
   \override Beam.breakable = ##t 
-\set Score.markFormatter = #format-mark-circle-letters  
+\set Score.rehearsalMarkFormatter = #format-mark-circle-letters  
 }
 
 commonDynArt = {
