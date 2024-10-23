@@ -9,11 +9,11 @@ VOLUMESUFFIX := $(if $(and $(shell command -v getenforce),$(findstring Enforcing
 DOCKERRUN := docker run -e LANG=C.UTF-8 -e LC_ALL=C.UTF-8 -v "$(NSUSF):$(NSUSF)$(VOLUMESUFFIX)" -w "$(PWD)" --rm
 
 LILYHOST := $(shell command -v lilypond)
-LILYDOCKER := $(DOCKERRUN) ghcr.io/nun-singet-und-seid-froh/lilypond:v0.9.1 lilypond
+LILYDOCKER := $(DOCKERRUN) ghcr.io/nun-singet-und-seid-froh/lilypond:v0.10.0 lilypond
 LILY := $(or $(LILYHOST),$(LILYDOCKER))
 
 XELAHOST := $(shell command -v xelatex)
-XELADOCKER := $(DOCKERRUN) ghcr.io/nun-singet-und-seid-froh/xelatex:v0.9.1 xelatex
+XELADOCKER := $(DOCKERRUN) ghcr.io/nun-singet-und-seid-froh/xelatex:v0.10.0 xelatex
 XELA := $(or $(XELAHOST),$(XELADOCKER))
 
 PYTHONHOST := $(shell command -v python3)

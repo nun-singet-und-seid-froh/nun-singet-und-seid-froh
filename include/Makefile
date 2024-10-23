@@ -6,7 +6,7 @@ LYS=score.ly voices.ily $(META) lyrics.ily output.ily ../../../include/header.il
 NSUSF := $(shell git rev-parse --show-toplevel)
 LILYHOST := $(shell command -v lilypond)
 VOLUMESUFFIX := $(if $(and $(shell command -v getenforce),$(findstring Enforcing,$(shell getenforce))),:Z,)
-LILYDOCKER := docker run -e LANG=C.UTF-8 -e LC_ALL=C.UTF-8 -v "$(NSUSF):$(NSUSF)$(VOLUMESUFFIX)" -w "$(PWD)" --rm ghcr.io/nun-singet-und-seid-froh/lilypond:v0.9.1 lilypond
+LILYDOCKER := docker run -e LANG=C.UTF-8 -e LC_ALL=C.UTF-8 -v "$(NSUSF):$(NSUSF)$(VOLUMESUFFIX)" -w "$(PWD)" --rm ghcr.io/nun-singet-und-seid-froh/lilypond:v0.10.0 lilypond
 LILY := $(or $(LILYHOST),$(LILYDOCKER))
 
 all: standalone midi zip
