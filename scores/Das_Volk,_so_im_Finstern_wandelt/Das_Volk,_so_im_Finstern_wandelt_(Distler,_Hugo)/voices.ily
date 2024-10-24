@@ -9,7 +9,7 @@ global = {
   \partial 4
   \autoBeamOff
   \dynamicUp
-  \set Score.markFormatter = #format-mark-circle-letters
+  \set Score.rehearsalMarkFormatter = #format-mark-circle-letters
   \override Staff.TimeSignature.style = #'numbered
 }
 

@@ -19,8 +19,8 @@ global = {
   \autoBeamOff
   \numericTimeSignature
   \dynamicUp
-  \override Beam.breakable = ##t 
-\set Score.markFormatter = #format-mark-circle-letters  
+  \override Beam.breakable = ##t
+  \set Score.rehearsalMarkFormatter = #format-mark-circle-letters  
 }
 
 commonDynArt = {
@@ -502,7 +502,7 @@ altTune = \relative c'' {
    fis4.\breathe gis8[ fis e] |
    fis4.\breathe gis8[ fis e] |
    \time 3/2
-   fis2 \bar"" gis\breathe gis4( fis?~ |
+   fis2) \bar"" gis \breathe gis4( fis?~ |
    \time 4/4
    fis8[ gis fis gis\breathe b cis b gis] |
    fis4. gis8[ fis gis] b4~ |
@@ -564,7 +564,7 @@ tenTune = \relative c' {
   e\> dis r\! |
   \time 3/4
   R2. |
-  c?2^\markup{\italic echohaft}^\markup\openBracket #25 \pp c4 |
+  c?2^\markup{\italic echohaft}^\markup\openBracket #22 \pp c4 |
   b2 a4 |
   b4.( a8 b4~ |
   \time 4/4
@@ -638,8 +638,7 @@ tenTune = \relative c' {
   d4\breathe e2 d4 e d
   e2 fis2.) fis4 |
   \time 4/4
-  e\> d\breathe |
-  fis,\p fis |
+  e\> d\breathe fis,\p fis |
   \time 3/2
   g g fis\> fis4.\! \breathe fis4^\markup{ \italic meno \dynamic p } fis8 |
   a4 g fis\> fis4.\breathe fis4\pp fis8 |
@@ -821,8 +820,7 @@ basTune = \relative c {
     
     b4 g2( a4 |
     \time 3/2
-    b4. b8 a4) |
-    4 a2\> |
+    b4. b8 a4) a a2\> |
     << { s1 s2\! } e1. >> |
     \time 4/4
     R1 |

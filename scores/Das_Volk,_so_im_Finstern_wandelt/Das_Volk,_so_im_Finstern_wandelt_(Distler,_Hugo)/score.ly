@@ -53,24 +53,21 @@
     >> %end of StaffGroup
 
     \layout {
-    \context {
-    \Score
-       \remove "Timing_translator"
-       \remove "Default_bar_line_engraver"
-       \remove "Repeat_acknowledge_engraver"
-       \remove "Volta_engraver"
-    }
+      \enablePolymeter
+      \context {
+        \Score
+        \remove "Repeat_acknowledge_engraver"
+        \remove "Volta_engraver"
+      }
 
-    \context{
-      \Staff
-        \consists "Timing_translator"
-        \consists "Default_bar_line_engraver"
+      \context{
+        \Staff
         \consists "Repeat_acknowledge_engraver"
         \consists "Volta_engraver"
-    }
+      }
     }
   } %end of score (PDF)
-  
+
   \score {
     %for MIDI
     \unfoldRepeats
@@ -83,7 +80,7 @@
     >>
     \stafftovoice
   } %end of score (MIDI)
-  
+
 } %end of book
 
 

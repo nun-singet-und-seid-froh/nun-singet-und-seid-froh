@@ -18,7 +18,7 @@ global = {
 
 % the incipites
 CDrei = \markup \concat {
-	\musicglyph #"timesig.mensural44"
+	\musicglyph "timesig.mensural44"
 	\lower #0.5
 	\override #'(font-name . "LucidaBlackletter") { "3 " }
 }

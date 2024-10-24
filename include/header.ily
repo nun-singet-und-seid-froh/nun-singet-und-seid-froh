@@ -35,57 +35,57 @@ stencil."
 
 #(define subtitle opus)
 #(if (> (string-length noInOpus) 0)
-     (define subtitle (string-append subtitle ", Nr. " noInOpus))
+     (set! subtitle (string-append subtitle ", Nr. " noInOpus))
      #f
      )
 #(if (> (string-length titleInOpus) 0)
-     (define subtitle (string-append subtitle ": »" titleInOpus "«"))
+     (set! subtitle (string-append subtitle ": »" titleInOpus "«"))
      #f
      )
 #(if (> (string-length arrangementDate) 0)
-     (define subtitle (string-append subtitle " (" arrangementDate ")"))
+     (set! subtitle (string-append subtitle " (" arrangementDate ")"))
      #f
      )
 
 #(define composerBlock (string-append composerChristianName " " composerSurName))
 #(if (> (string-length composerLifedata) 0)
-     (define composerBlock (string-append composerBlock " (" composerLifedata ")"))
+     (set! composerBlock (string-append composerBlock " (" composerLifedata ")"))
      #f
      )
 
 #(define poetBlock (string-append poetChristianName " " poetSurName))
 #(if (> (string-length poetLifedata) 0)
-     (define poetBlock (string-append poetBlock " (" poetLifedata ")"))
+     (set! poetBlock (string-append poetBlock " (" poetLifedata ")"))
      #f
      )
 
 #(define translatorBlock (string-append translatorChristianName " " translatorSurName))
 #(if (> (string-length translatorLifedata) 0)
-     (define translatorBlock (string-append translatorBlock " (" translatorLifedata ")"))
+     #(set! translatorBlock (string-append translatorBlock " (" translatorLifedata ")"))
      #f
      )
 
 #(define arrangerBlock (string-append arrangerChristianName " " arrangerSurName))
 #(if (> (string-length arrangerLifedata) 0)
-     (define arrangerBlock (string-append arrangerBlock " (" arrangerLifedata ")"))
+     (set! arrangerBlock (string-append arrangerBlock " (" arrangerLifedata ")"))
      #f
      )
 
 #(if (and (string=? poetBlock " ") (> (string-length textDate) 0 ))
-     (define poetBlock (string-append "Unbekannter Dichter: " textDate))
+     (set! poetBlock (string-append "Unbekannter Dichter: " textDate))
      #f
      )
 
 #(if (and (> (string-length composerSurName) 0) (> (string-length arrangerSurName) 0))
      (
-       define arrangerBlock (string-append "Satz: " arrangerBlock)
+       set! arrangerBlock (string-append "Satz: " arrangerBlock)
        )
      #f
      )
 
 #(if (and (> (string-length composerSurName) 0) (> (string-length arrangerSurName) 0))
      (
-       define composerBlock (string-append "Melodie: " composerBlock)
+       set! composerBlock (string-append "Melodie: " composerBlock)
        )
      #f
      )
@@ -98,7 +98,7 @@ stencil."
           
         \epsfile #X #30 #"../../../include/logo.eps"          
         \vspace #2
-        \abs-fontsize #20 { \with-url  #"http://www.nun-singet-und-seid-froh.info" { "www.nun-singet-und-seid-froh.info" } }
+        \abs-fontsize #20 { \with-url  "http://www.nun-singet-und-seid-froh.info" { "www.nun-singet-und-seid-froh.info" } }
         \line { \abs-fontsize #20 { "– Nr. " \noInNsusf " –"} }
         \vspace #2
       }
@@ -116,7 +116,7 @@ stencil."
 
           \fill-line {
             \line { #(string-append "LilyPond " (lilypond-version)) }
-            \line { \with-url  #"http://www.nun-singet-und-seid-froh.info" { "www.nun-singet-und-seid-froh.info" } }
+            \line { \with-url  "http://www.nun-singet-und-seid-froh.info" { "www.nun-singet-und-seid-froh.info" } }
             \line { "Revision Nr. " \vers"| " \lastEdited }
           }
         }
@@ -157,7 +157,7 @@ stencil."
       }
       \fill-line {
         \center-align
-        { \line { \abs-fontsize #12 \italic \subtitle} }
+        { \line { \abs-fontsize #12 \italic \subtitle } }
       }
 
       \null

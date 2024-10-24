@@ -8,7 +8,7 @@ origNoBreak = { \noBreak }
 global = {
   \autoBeamOff
   \dynamicUp
-  \set Score.markFormatter = #format-mark-circle-letters
+  \set Score.rehearsalMarkFormatter = #format-mark-circle-letters
   \key e \major
 }
 
