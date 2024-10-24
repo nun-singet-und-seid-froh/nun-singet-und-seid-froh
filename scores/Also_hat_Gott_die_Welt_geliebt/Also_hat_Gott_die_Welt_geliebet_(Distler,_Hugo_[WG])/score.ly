@@ -50,28 +50,27 @@
       \new Lyrics \lyricsto "bas" { \basLyrics }
     >> %end of StaffGroup
 
-    \layout { 
+    \layout {
+      \enablePolymeter
       \context {
-      \Score
-         \remove "Timing_translator"
-         \remove "Repeat_acknowledge_engraver"
-         \remove "Volta_engraver"
+        \Score
+        \remove "Repeat_acknowledge_engraver"
+        \remove "Volta_engraver"
       }
-  
+
       \context{
         \Staff
-          \consists "Timing_translator"
-          \consists "Repeat_acknowledge_engraver"
-          \consists "Volta_engraver"
+        \consists "Repeat_acknowledge_engraver"
+        \consists "Volta_engraver"
       }
       \context {
         \Voice
         \consists "Horizontal_bracket_engraver"
         \override HorizontalBracket.direction = #UP
-      }      
+      }
     }
   } %end of score (PDF)
-  
+
   \score {
     %for MIDI
     \unfoldRepeats
@@ -84,7 +83,6 @@
     >>
     \stafftovoice
   } %end of score (MIDI)
-  
 } %end of book
 
 
