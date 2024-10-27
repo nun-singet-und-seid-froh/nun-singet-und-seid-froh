@@ -30,8 +30,8 @@ opus              = "(WAB 52)"
 noInOpus          = ""
 titleInOpus       = ""
 
-lastEdited        = "22. November 2020" % e.g. "19. September 2015"
-vers              = "1.1.0" % e.g. "1.0.0"
+lastEdited        = "27. Oktober 2024" % e.g. "19. September 2015"
+vers              = "1.1.1" % e.g. "1.0.0"
 
 % other meta-data, used for the mediawiki-output
 epoque            = "Romantik" 
