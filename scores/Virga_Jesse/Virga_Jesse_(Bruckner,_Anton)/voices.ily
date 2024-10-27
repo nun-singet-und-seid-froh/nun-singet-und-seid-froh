@@ -369,7 +369,7 @@ tenCommonPartFour = \relative c' {
   gis4 e b^\markup{ \italic dim. } a
   gis1^\markup{ \dynamic p \italic { dim. sempre } }~
   gis
-  gis2\pp r
+  gis2\ppp r
 }
 
 tenIVoice = {
