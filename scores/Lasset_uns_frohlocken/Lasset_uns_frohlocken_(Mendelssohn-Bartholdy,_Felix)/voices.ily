@@ -266,7 +266,7 @@ sopIVoice = \relative c'' {<<
 %{26%}  d2 a4\rest c?8[ d] 
 %{27%}	e4 d8 c b4 b8 c
 %{28%}	d4 c8 b a4 a8([ b])
-%{29%}	d2 g,4 g
+%{29%}	b2 g4 g
 %{30%}	g2 e'2(
 %{31%}	e) d2(
 %{32%}	d c4) c
@@ -492,8 +492,8 @@ basIVoice = \relative c { <<
 %{06%}  b2. a4
 %{07%}  g4. g8 g2(
 %{08%}  g4) g8 g g4 b
-%{09%}  c,4. c8 e4 a
-%{10%}  b2 d,2(
+%{09%}  c,4. c8 e4 g
+%{10%}  a2 d,2(
 %{11%}  d4) d d d8. d16
 %{12%}  d2 d
 %{13%}  r4 d d d8. d16

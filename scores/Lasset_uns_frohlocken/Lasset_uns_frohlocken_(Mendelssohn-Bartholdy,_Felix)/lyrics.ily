@@ -8,10 +8,10 @@
 % based on templates/SSATTBB/[SS][AA][TT][BB]/modern/lyrics.ily
 
 sopILyrics = \lyricmode {
-  Las -- set uns froh -- loc -- ken,
-  las -- set uns froh -- loc -- ken,
-  las -- set uns froh -- loc -- ken,  
-  las -- set uns froh -- loc -- ken,__
+  Las -- set uns froh -- lo -- cken,
+  las -- set uns froh -- lo -- cken,
+  las -- set uns froh -- lo -- cken,  
+  las -- set uns froh -- lo -- cken,__
   es nah -- et der Hei -- land,
   es nah -- et der Hei -- land,
   den Gott uns ver -- hei -- ßen.
@@ -23,8 +23,8 @@ sopILyrics = \lyricmode {
 }
 
 sopIILyrics = \lyricmode {
-  Las -- set uns froh -- loc -- ken,
-  las -- set uns froh -- loc -- ken,__
+  Las -- set uns froh -- lo -- cken,
+  las -- set uns froh -- lo -- cken,__
   es nah -- et der Hei -- land,
   es nah -- et der Hei -- land,
   den Gott uns ver -- hei -- ßen.
@@ -36,9 +36,9 @@ sopIILyrics = \lyricmode {
 }
 
 altILyrics = \lyricmode {
-  Las -- set uns froh -- loc -- ken,
-  las -- set uns froh -- loc -- ken,
-  uns froh -- loc -- ken,__
+  Las -- set uns froh -- lo -- cken,
+  las -- set uns froh -- lo -- cken,
+  uns froh -- lo -- cken,__
   es nah -- et der Hei -- land,
   es nah -- et der Hei -- land,
   den Gott uns ver -- hei -- ßen.
@@ -52,9 +52,9 @@ altILyrics = \lyricmode {
 }
 
 altIILyrics = \lyricmode {
-  Las -- set uns froh -- loc -- ken,
+  Las -- set uns froh -- lo -- cken,
   las -- set uns,
-  las -- set uns froh -- loc -- ken,__
+  las -- set uns froh -- lo -- cken,__
   es nah -- et der Hei -- land,
   es nah -- et der Hei -- land,
   den Gott uns ver -- hei -- ßen,
@@ -69,11 +69,11 @@ altIILyrics = \lyricmode {
 }
 
 tenILyrics = \lyricmode {
-  Las -- set uns froh -- loc -- ken,
-  las -- set uns froh -- loc -- ken,
-  las -- set uns froh -- loc -- ken,
-  las -- set uns froh -- loc -- ken,
-  las -- set uns froh -- loc -- ken,__
+  Las -- set uns froh -- lo -- cken,
+  las -- set uns froh -- lo -- cken,
+  las -- set uns froh -- lo -- cken,
+  las -- set uns froh -- lo -- cken,
+  las -- set uns froh -- lo -- cken,__
   es nah -- et der Hei -- land,
   es nah -- et der Hei -- land,
   den Gott uns ver -- hei -- ßen,
@@ -87,8 +87,8 @@ tenILyrics = \lyricmode {
 }
 
 tenIILyrics = \lyricmode {
-  Las -- set uns froh -- loc -- ken,__
-  froh -- loc -- ken,__
+  Las -- set uns froh -- lo -- cken,__
+  froh -- lo -- cken,__
   es nah -- et der Hei -- land,
   es nah -- et der Hei -- land,
   den Gott uns ver -- hei -- ßen,
@@ -103,10 +103,10 @@ tenIILyrics = \lyricmode {
 }
 
 basILyrics = \lyricmode {
-  Las -- set uns froh -- loc -- ken,
+  Las -- set uns froh -- lo -- cken,
   las -- set uns,
-  las -- set uns froh -- loc -- ken,
-  uns froh -- loc -- ken,__
+  las -- set uns froh -- lo -- cken,
+  uns froh -- lo -- cken,__
   es nah -- et der Hei -- land,
   es nah -- et der Hei -- land,
   den Gott uns ver -- hei -- ßen,
@@ -120,10 +120,10 @@ basILyrics = \lyricmode {
 }
 
 basIILyrics = \lyricmode {
-  Las -- set uns froh -- loc -- ken,
-  las -- set uns froh -- loc -- ken,
-  uns froh -- loc -- ken,
-  uns froh -- loc -- ken,__
+  Las -- set uns froh -- lo -- cken,
+  las -- set uns froh -- lo -- cken,
+  uns froh -- lo -- cken,
+  uns froh -- lo -- cken,__
   es nah -- et der Hei -- land,
   es nah -- et der Hei -- land,
   den Gott uns ver -- hei -- ßen,
